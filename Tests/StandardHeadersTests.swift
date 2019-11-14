@@ -6,22 +6,29 @@ class StandardHeadersSpec: QuickSpec {
     override func spec() {
         let url = URL(string: "https://www.rakuten.com")
 
-        let mockBundle = BundleMock()
-        mockBundle.mockAppId = "myAppId"
-        mockBundle.mockAppName = "myAppName"
-        mockBundle.mockAppVersion = "myAppVersion"
-        mockBundle.mockDeviceModel = "myDeviceModel"
-        mockBundle.mockOsVersion = "myOsVersion"
-        mockBundle.mockSdkVersion = "mySDKVersion"
-        mockBundle.mockNotFound = "not_found"
+        let mockAppBundle = BundleMock()
+        mockAppBundle.mockRASAppId = "myRASAppId"
+        mockAppBundle.mockBundleId = "myAppName"
+        mockAppBundle.mockDeviceModel = "myDeviceModel"
+        mockAppBundle.mockOsVersion = "myOsVersion"
+        mockAppBundle.mockBundleVersion = "myAppVersion"
+        mockAppBundle.mockNotFound = "not_found"
+
+        let mockSDKBundle = BundleMock()
+        mockSDKBundle.mockRASAppId = "myRASAppId"
+        mockSDKBundle.mockBundleId = "mySDKName"
+        mockSDKBundle.mockDeviceModel = "myDeviceModel"
+        mockSDKBundle.mockOsVersion = "myOsVersion"
+        mockSDKBundle.mockBundleVersion = "mySDKVersion"
+        mockSDKBundle.mockNotFound = "not_found"
 
         let rasHeaders = [
-            "ras-sdk-name": "mySDK",
+            "ras-sdk-name": "mySDKName",
             "ras-app-name": "myAppName",
             "ras-os-version": "myOsVersion",
             "ras-device-model": "myDeviceModel",
             "ras-app-version": "myAppVersion",
-            "ras-app-id": "myAppId",
+            "ras-app-id": "myRASAppId",
             "ras-sdk-version": "mySDKVersion"
         ]
 
@@ -29,7 +36,7 @@ class StandardHeadersSpec: QuickSpec {
             it("sets the expected RAS headers when there are no existing headers") {
                 var request = URLRequest(url: url!)
 
-                request.setRASHeaders(for: "mySDK", bundle: mockBundle)
+                request.setRASHeaders(for: mockSDKBundle, appBundle: mockAppBundle)
 
                 expect(request.allHTTPHeaderFields).to(equal(rasHeaders))
             }
@@ -38,7 +45,7 @@ class StandardHeadersSpec: QuickSpec {
                 var request = URLRequest(url: url!)
                 request.setValue("myVal", forHTTPHeaderField: "myHeader")
 
-                request.setRASHeaders(for: "mySDK", bundle: mockBundle)
+                request.setRASHeaders(for: mockSDKBundle, appBundle: mockAppBundle)
 
                 expect(request.allHTTPHeaderFields?["ras-sdk-version"]).to(equal("mySDKVersion"))
             }
@@ -47,7 +54,7 @@ class StandardHeadersSpec: QuickSpec {
                 var request = URLRequest(url: url!)
                 request.setValue("myVal", forHTTPHeaderField: "myHeader")
 
-                request.setRASHeaders(for: "mySDK", bundle: mockBundle)
+                request.setRASHeaders(for: mockSDKBundle, appBundle: mockAppBundle)
 
                 expect(request.allHTTPHeaderFields?["myHeader"]).to(equal("myVal"))
             }
@@ -57,7 +64,7 @@ class StandardHeadersSpec: QuickSpec {
             it("sets the expected RAS headers when there are no existing headers") {
                 let request = NSMutableURLRequest(url: url!)
 
-                request.setRASHeaders(for: "mySDK", bundle: mockBundle)
+                request.setRASHeaders(for: mockSDKBundle, appBundle: mockAppBundle)
 
                 expect(request.allHTTPHeaderFields).to(equal(rasHeaders))
             }
@@ -66,7 +73,7 @@ class StandardHeadersSpec: QuickSpec {
                 let request = NSMutableURLRequest(url: url!)
                 request.setValue("myVal", forHTTPHeaderField: "myHeader")
 
-                request.setRASHeaders(for: "mySDK", bundle: mockBundle)
+                request.setRASHeaders(for: mockSDKBundle, appBundle: mockAppBundle)
 
                 expect(request.allHTTPHeaderFields?["ras-sdk-version"]).to(equal("mySDKVersion"))
             }
@@ -75,7 +82,7 @@ class StandardHeadersSpec: QuickSpec {
                 let request = NSMutableURLRequest(url: url!)
                 request.setValue("myVal", forHTTPHeaderField: "myHeader")
 
-                request.setRASHeaders(for: "mySDK", bundle: mockBundle)
+                request.setRASHeaders(for: mockSDKBundle, appBundle: mockAppBundle)
 
                 expect(request.allHTTPHeaderFields?["myHeader"]).to(equal("myVal"))
             }

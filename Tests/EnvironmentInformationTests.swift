@@ -14,7 +14,7 @@ class EnvironmentInformationSpec: QuickSpec {
 
             it("has the expected app id") {
                 let mockBundle = BundleMock()
-                mockBundle.mockAppId = "fooAppId"
+                mockBundle.mockRASAppId = "fooAppId"
 
                 let environment = EnvironmentInformation(bundle: mockBundle)
 
@@ -23,20 +23,20 @@ class EnvironmentInformationSpec: QuickSpec {
 
             it("has the expected app name") {
                 let mockBundle = BundleMock()
-                mockBundle.mockAppName = "fooAppName"
+                mockBundle.mockBundleId = "fooAppName"
 
                 let environment = EnvironmentInformation(bundle: mockBundle)
 
-                expect(environment.appName).to(equal("fooAppName"))
+                expect(environment.bundleName).to(equal("fooAppName"))
             }
 
-            it("has the expected app version") {
+            it("has the expected version") {
                 let mockBundle = BundleMock()
-                mockBundle.mockAppVersion = "fooAppVersion"
+                mockBundle.mockBundleVersion = "fooVersion"
 
                 let environment = EnvironmentInformation(bundle: mockBundle)
 
-                expect(environment.appVersion).to(equal("fooAppVersion"))
+                expect(environment.version).to(equal("fooVersion"))
             }
 
             it("has the expected OS version") {
@@ -56,15 +56,6 @@ class EnvironmentInformationSpec: QuickSpec {
 
                 expect(environment.deviceModel).to(equal("fooModel"))
             }
-
-            it("has the expected sdk version") {
-                let mockBundle = BundleMock()
-                mockBundle.mockSdkVersion = "fooSDKVersion"
-
-                let environment = EnvironmentInformation(bundle: mockBundle)
-
-                expect(environment.sdkVersion).to(equal("fooSDKVersion"))
-            }
         }
         context("when bundle does not have valid key values") {
             let mockBundleInvalid = BundleMock()
@@ -76,11 +67,11 @@ class EnvironmentInformationSpec: QuickSpec {
             }
 
             it("will return the 'not found' value when app name can't be read") {
-                expect(environment.appName).to(equal(mockBundleInvalid.valueNotFound))
+                expect(environment.bundleName).to(equal(mockBundleInvalid.valueNotFound))
             }
 
             it("will return the 'not found' value when app version can't be read") {
-                expect(environment.appVersion).to(equal(mockBundleInvalid.valueNotFound))
+                expect(environment.version).to(equal(mockBundleInvalid.valueNotFound))
             }
 
             it("will return the 'not found' value when device model can't be read") {
@@ -89,10 +80,6 @@ class EnvironmentInformationSpec: QuickSpec {
 
             it("will return the 'not found' value when device os version can't be read") {
                 expect(environment.osVersion).to(equal(mockBundleInvalid.valueNotFound))
-            }
-
-            it("will return the 'not found' value when sdk version can't be read") {
-                expect(environment.sdkVersion).to(equal(mockBundleInvalid.valueNotFound))
             }
         }
     }

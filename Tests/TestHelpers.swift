@@ -1,24 +1,21 @@
 @testable import RSDKUtils
 
 class BundleMock: BundleProtocol {
-    var mockAppId: String?
-    var mockAppName: String?
-    var mockAppVersion: String?
+    var mockRASAppId: String?
+    var mockBundleId: String?
+    var mockBundleVersion: String?
     var mockDeviceModel: String?
     var mockOsVersion: String?
-    var mockSdkVersion: String?
     var mockNotFound: String?
 
     func value(for key: String) -> String? {
         switch key {
         case "CFBundleIdentifier":
-            return mockAppName
-        case "CFBundleDisplayName":
-            return mockAppName
+            return mockBundleId
         case "CFBundleShortVersionString":
-            return mockAppVersion
+            return mockBundleVersion
         case "RASApplicationIdentifier":
-            return mockAppId
+            return mockRASAppId
         default:
             return nil
         }
@@ -37,6 +34,6 @@ class BundleMock: BundleProtocol {
     }
 
     func sdkVersion() -> String {
-        return mockSdkVersion ?? valueNotFound
+        return mockBundleVersion ?? valueNotFound
     }
 }

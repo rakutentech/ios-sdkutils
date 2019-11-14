@@ -1,18 +1,19 @@
 import Foundation
 
 @objc public extension NSMutableURLRequest {
-    func setRASHeaders(for sdk: String, bundle: BundleProtocol = Bundle.main) {
-        let env = EnvironmentInformation(bundle: bundle)
+    func setRASHeaders(for sdkBundle: BundleProtocol, appBundle: BundleProtocol = Bundle.main) {
+        let appEnv = EnvironmentInformation(bundle: appBundle)
+        let sdkEnv = EnvironmentInformation(bundle: sdkBundle)
 
         // NOTE: Any changes made below also need to be applied
         // to the extension in URLRequest+StandardHeaders.swift
-        setHeader("ras-app-id", env.appId)
-        setHeader("ras-device-model", env.deviceModel)
-        setHeader("ras-os-version", env.osVersion)
-        setHeader("ras-sdk-name", sdk)
-        setHeader("ras-sdk-version", env.sdkVersion)
-        setHeader("ras-app-name", env.appName)
-        setHeader("ras-app-version", env.appVersion)
+        setHeader("ras-app-id", appEnv.appId)
+        setHeader("ras-device-model", appEnv.deviceModel)
+        setHeader("ras-os-version", appEnv.osVersion)
+        setHeader("ras-app-name", appEnv.bundleName)
+        setHeader("ras-app-version", appEnv.version)
+        setHeader("ras-sdk-name", sdkEnv.bundleName)
+        setHeader("ras-sdk-version", sdkEnv.version)
     }
 
     fileprivate func setHeader(_ name: String, _ value: String) {
