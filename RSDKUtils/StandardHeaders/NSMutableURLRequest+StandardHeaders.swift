@@ -1,8 +1,7 @@
 import Foundation
 
 @objc public extension NSMutableURLRequest {
-    func setRASHeaders(for sdk: String) {
-        let env = EnvironmentInformation()
+    func setRASHeaders(for sdk: String, env: EnvironmentInformation = EnvironmentInformation()) {
 
         // NOTE: Any changes made below also need to be applied
         // to the extension in URLRequest+StandardHeaders.swift

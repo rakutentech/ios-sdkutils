@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		1E93FC4B5B8B4C60430398BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A04641D3B60ED0F410B68EB /* Foundation.framework */; };
 		2F17427BF74A50B45FA22CC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8783C5860B44767F3B2D0547 /* UIKit.framework */; };
-		EA14FDB556C9812880440D96 /* StandardHeaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DB22D78CBF2B97EF675FE /* StandardHeaderTests.swift */; };
+		6DACF499237CF05E00EEFE12 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACF498237CF05E00EEFE12 /* TestHelpers.swift */; };
+		6DACF49B237CF1FA00EEFE12 /* StandardHeadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACF49A237CF1FA00EEFE12 /* StandardHeadersTests.swift */; };
+		EA14FDB556C9812880440D96 /* EnvironmentInformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A04641D3B60ED0F410B68EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		529DB22D78CBF2B97EF675FE /* StandardHeaderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StandardHeaderTests.swift; sourceTree = "<group>"; };
+		529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnvironmentInformationTests.swift; sourceTree = "<group>"; };
+		6DACF498237CF05E00EEFE12 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		6DACF49A237CF1FA00EEFE12 /* StandardHeadersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHeadersTests.swift; sourceTree = "<group>"; };
 		83F9CA8C997CE27EA8BD1BD4 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8783C5860B44767F3B2D0547 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -69,7 +73,9 @@
 		C07BF9ACDD1012D4C6AA1A6B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				529DB22D78CBF2B97EF675FE /* StandardHeaderTests.swift */,
+				529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */,
+				6DACF498237CF05E00EEFE12 /* TestHelpers.swift */,
+				6DACF49A237CF1FA00EEFE12 /* StandardHeadersTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -133,7 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA14FDB556C9812880440D96 /* StandardHeaderTests.swift in Sources */,
+				EA14FDB556C9812880440D96 /* EnvironmentInformationTests.swift in Sources */,
+				6DACF49B237CF1FA00EEFE12 /* StandardHeadersTests.swift in Sources */,
+				6DACF499237CF05E00EEFE12 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

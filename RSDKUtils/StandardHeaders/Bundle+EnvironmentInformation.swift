@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-internal protocol BundleProtocol {
+public protocol BundleProtocol {
     var valueNotFound: String { get }
     func value(for key: String) -> String?
     func deviceModel() -> String
@@ -10,25 +10,25 @@ internal protocol BundleProtocol {
 }
 
 extension Bundle: BundleProtocol {
-    var valueNotFound: String {
+    public var valueNotFound: String {
         return ""
     }
 
-    func osVersion() -> String {
+    public func osVersion() -> String {
         return UIDevice.current.systemVersion
     }
 
-    func deviceModel() -> String {
+    public func deviceModel() -> String {
         var systemInfo = utsname()
         uname(&systemInfo)
         return String(bytes: Data(bytes: &systemInfo.machine, count: Int(_SYS_NAMELEN)), encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
     }
 
-    func sdkVersion() -> String {
+    public func sdkVersion() -> String {
         return Bundle(for: EnvironmentInformation.self).value(for: "CFBundleShortVersionString") ?? valueNotFound
     }
 
-    func value(for key: String) -> String? {
+    public func value(for key: String) -> String? {
         return self.object(forInfoDictionaryKey: key) as? String
     }
 }

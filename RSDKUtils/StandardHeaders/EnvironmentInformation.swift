@@ -1,6 +1,6 @@
 import Foundation
 
-internal class EnvironmentInformation: NSObject {
+public class EnvironmentInformation: NSObject {
     let bundle: BundleProtocol
 
     var appId: String {
@@ -22,7 +22,7 @@ internal class EnvironmentInformation: NSObject {
         return bundle.sdkVersion()
     }
 
-    init(bundle: BundleProtocol = Bundle.main) {
+    public init(bundle: BundleProtocol = Bundle.main) {
         self.bundle = bundle
     }
 }
