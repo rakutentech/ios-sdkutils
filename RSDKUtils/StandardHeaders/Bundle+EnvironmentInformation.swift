@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-public protocol BundleProtocol {
+@objc public protocol BundleProtocol {
     var valueNotFound: String { get }
     func value(for key: String) -> String?
     func deviceModel() -> String

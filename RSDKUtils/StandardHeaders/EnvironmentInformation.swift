@@ -1,6 +1,6 @@
 import Foundation
 
-public class EnvironmentInformation: NSObject {
+@objc public class EnvironmentInformation: NSObject {
     let bundle: BundleProtocol
 
     var appId: String {

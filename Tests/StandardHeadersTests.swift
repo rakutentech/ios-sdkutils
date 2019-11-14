@@ -15,8 +15,6 @@ class StandardHeadersSpec: QuickSpec {
         mockBundle.mockSdkVersion = "mySDKVersion"
         mockBundle.mockNotFound = "not_found"
 
-        let environment = EnvironmentInformation(bundle: mockBundle)
-
         let rasHeaders = [
             "ras-sdk-name": "mySDK",
             "ras-app-name": "myAppName",
@@ -31,7 +29,7 @@ class StandardHeadersSpec: QuickSpec {
             it("sets the expected RAS headers when there are no existing headers") {
                 var request = URLRequest(url: url!)
 
-                request.setRASHeaders(for: "mySDK", env: environment)
+                request.setRASHeaders(for: "mySDK", bundle: mockBundle)
 
                 expect(request.allHTTPHeaderFields).to(equal(rasHeaders))
             }
@@ -40,7 +38,7 @@ class StandardHeadersSpec: QuickSpec {
                 var request = URLRequest(url: url!)
                 request.setValue("myVal", forHTTPHeaderField: "myHeader")
 
-                request.setRASHeaders(for: "mySDK", env: environment)
+                request.setRASHeaders(for: "mySDK", bundle: mockBundle)
 
                 expect(request.allHTTPHeaderFields?["ras-sdk-version"]).to(equal("mySDKVersion"))
             }
@@ -49,7 +47,7 @@ class StandardHeadersSpec: QuickSpec {
                 var request = URLRequest(url: url!)
                 request.setValue("myVal", forHTTPHeaderField: "myHeader")
 
-                request.setRASHeaders(for: "mySDK", env: environment)
+                request.setRASHeaders(for: "mySDK", bundle: mockBundle)
 
                 expect(request.allHTTPHeaderFields?["myHeader"]).to(equal("myVal"))
             }
@@ -59,7 +57,7 @@ class StandardHeadersSpec: QuickSpec {
             it("sets the expected RAS headers when there are no existing headers") {
                 let request = NSMutableURLRequest(url: url!)
 
-                request.setRASHeaders(for: "mySDK", env: environment)
+                request.setRASHeaders(for: "mySDK", bundle: mockBundle)
 
                 expect(request.allHTTPHeaderFields).to(equal(rasHeaders))
             }
@@ -68,7 +66,7 @@ class StandardHeadersSpec: QuickSpec {
                 let request = NSMutableURLRequest(url: url!)
                 request.setValue("myVal", forHTTPHeaderField: "myHeader")
 
-                request.setRASHeaders(for: "mySDK", env: environment)
+                request.setRASHeaders(for: "mySDK", bundle: mockBundle)
 
                 expect(request.allHTTPHeaderFields?["ras-sdk-version"]).to(equal("mySDKVersion"))
             }
@@ -77,7 +75,7 @@ class StandardHeadersSpec: QuickSpec {
                 let request = NSMutableURLRequest(url: url!)
                 request.setValue("myVal", forHTTPHeaderField: "myHeader")
 
-                request.setRASHeaders(for: "mySDK", env: environment)
+                request.setRASHeaders(for: "mySDK", bundle: mockBundle)
 
                 expect(request.allHTTPHeaderFields?["myHeader"]).to(equal("myVal"))
             }
