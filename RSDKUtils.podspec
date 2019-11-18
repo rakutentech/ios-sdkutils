@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = "1.0.0"
   s.authors      = "Rakuten Ecosystem Mobile"
   s.summary      = "Rakuten's SDK Team internal utilities module."
-  s.homepage     = "https://documents.developers.rakuten.com/ios-sdk/"
+  s.homepage     = "https://github.com/rakutentech/ios-sdkutils"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.source       = { :git => "https://github.com/rakutentech/ios-sdkutils", :tag => s.version.to_s }
   s.platform     = :ios, '10.0'
