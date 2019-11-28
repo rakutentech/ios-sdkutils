@@ -9,4 +9,4 @@ before_install:
 - travis_wait pod repo update
 
 script:
-- fastlane ci
+- travis_wait fastlane ci
