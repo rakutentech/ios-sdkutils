@@ -10,4 +10,3 @@ before_install:
 
 script:
 - fastlane ci
-#- bundle exec danger #FIXME - danger cannot connect to github
