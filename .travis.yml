@@ -1,0 +1,14 @@
+language: swift
+xcode_workspace: RSDKUtils.xcworkspace
+xcode_scheme: Tests
+osx_image: xcode10.3
+
+before_install:
+- bundle install
+- gem update fastlane cocoapods --no-document
+- pod repo update
+
+script:
+- fastlane ci
+# FIXME - enable Danger when github token issue is resolved
+#- bundle exec danger
