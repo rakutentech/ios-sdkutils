@@ -6,7 +6,7 @@ osx_image: xcode10.3
 before_install:
 - bundle install
 - gem update fastlane cocoapods --no-document
-- travis_wait pod repo update
+- pod repo update
 
 script:
-- travis_wait fastlane ci
+- fastlane ci
