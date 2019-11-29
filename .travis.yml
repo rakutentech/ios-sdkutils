@@ -10,3 +10,5 @@ before_install:
 
 script:
 - fastlane ci
+# FIXME - enable Danger when github token issue is resolved
+#- bundle exec danger
