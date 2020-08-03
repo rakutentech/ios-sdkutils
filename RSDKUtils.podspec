@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RSDKUtils"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.authors      = "Rakuten Ecosystem Mobile"
   s.summary      = "Rakuten's SDK Team internal utilities module."
   s.homepage     = "https://github.com/rakutentech/ios-sdkutils"
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
     'Foundation',
   ]
   s.source_files = "RSDKUtils/**/*.{swift,m,h}"
-  s.public_header_files = "RSDKUtils/*.h,RSDKUtils/StandardHeaders/*.h"
+  s.public_header_files = "RSDKUtils/*.h,RSDKUtils/StandardHeaders/*.h,RSDKUtils/KeyStore/*.h"
   s.module_map = 'RSDKUtils/RSDKUtils.modulemap'
 end
 # vim:syntax=ruby:et:sts=2:sw=2:ts=2:ff=unix:
