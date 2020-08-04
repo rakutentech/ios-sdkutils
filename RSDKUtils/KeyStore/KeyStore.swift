@@ -6,16 +6,16 @@ import Foundation
 
     typealias KeysDictionary = [String: String]
 
-    init(service: String = Bundle.main.bundleIdentifier!) {
+    public init(service: String = Bundle.main.bundleIdentifier!) {
         self.service = service
         self.account = "\(service).rakuten.tech.keys"
     }
 
-    func key(for keyId: String) -> String? {
+    public func key(for keyId: String) -> String? {
         return keys()?[keyId]
     }
 
-    func addKey(key: String, for keyId: String) {
+    public func addKey(key: String, for keyId: String) {
         var keysDic = keys()
         guard keysDic?[keyId] == nil else {
             return // key exists
@@ -32,7 +32,7 @@ import Foundation
         }
     }
 
-    func removeKey(for keyId: String) {
+    public func removeKey(for keyId: String) {
         var keysDic = keys()
 
         keysDic?[keyId] = nil
@@ -42,7 +42,7 @@ import Foundation
         }
     }
 
-    func empty() {
+    public func empty() {
         write(keys: [:])
     }
 
