@@ -1,12 +1,7 @@
 language: swift
 xcode_workspace: RSDKUtils.xcworkspace
 xcode_scheme: Tests
-osx_image: xcode10.3
-
-before_install:
-- bundle install
-- gem update fastlane cocoapods --no-document
-- pod repo update
+osx_image: xcode10.2
 
 script:
 - fastlane ci
