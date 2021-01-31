@@ -28,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		3A04641D3B60ED0F410B68EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		45EA75A825C76660001B2049 /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = "<group>"; };
 		529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnvironmentInformationTests.swift; sourceTree = "<group>"; };
 		6DACF498237CF05E00EEFE12 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		6DACF49A237CF1FA00EEFE12 /* StandardHeadersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHeadersTests.swift; sourceTree = "<group>"; };
@@ -66,6 +67,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		45EA75A725C7624F001B2049 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */,
+				6DACF498237CF05E00EEFE12 /* TestHelpers.swift */,
+				6DACF49A237CF1FA00EEFE12 /* StandardHeadersTests.swift */,
+				D06A23E824D3FF2800E84EE2 /* KeyStoreTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		725C32805DD3F9A3B31E3A5E /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +99,7 @@
 		A9DCA0F399BA173C3556B928 = {
 			isa = PBXGroup;
 			children = (
+				45EA75A825C76660001B2049 /*  */,
 				725C32805DD3F9A3B31E3A5E /* Products */,
 				C07BF9ACDD1012D4C6AA1A6B /* Tests */,
 				D960578CECB179F85D9E2CCD /* Frameworks */,
@@ -97,11 +110,8 @@
 		C07BF9ACDD1012D4C6AA1A6B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				45EA75A725C7624F001B2049 /* Tests */,
 				D06A23EF24D4007300E84EE2 /* TestHost */,
-				529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */,
-				6DACF498237CF05E00EEFE12 /* TestHelpers.swift */,
-				6DACF49A237CF1FA00EEFE12 /* StandardHeadersTests.swift */,
-				D06A23E824D3FF2800E84EE2 /* KeyStoreTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";

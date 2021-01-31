@@ -24,8 +24,8 @@ Pod::Spec.new do |s|
   s.weak_frameworks = [
     'Foundation',
   ]
-  s.source_files = "RSDKUtils/**/*.{swift,m,h}"
-  s.public_header_files = "RSDKUtils/*.h,RSDKUtils/StandardHeaders/*.h,RSDKUtils/KeyStore/*.h"
-  s.module_map = 'RSDKUtils/RSDKUtils.modulemap'
+  s.source_files = "Sources/RSDKUtils/**/*.{swift,m,h}"
+  s.public_header_files = "Sources/RSDKUtils/*.h,Sources/RSDKUtils/StandardHeaders/*.h,Sources/RSDKUtils/KeyStore/*.h"
+  s.module_map = 'Sources/RSDKUtils/RSDKUtils.modulemap'
 end
 # vim:syntax=ruby:et:sts=2:sw=2:ts=2:ff=unix:
