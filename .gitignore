@@ -11,6 +11,7 @@ xcuserdata
 *.xcworkspace
 *.playground
 build
+.build
 
 # Cocoapods
 Pods
@@ -23,6 +24,7 @@ Pods
 
 # Jazzy-generated documentation
 docs/
+Documentation/
 
 # Use latest gem versions
 Gemfile.lock
