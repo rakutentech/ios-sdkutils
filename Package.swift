@@ -12,13 +12,14 @@ let package = Package(
             targets: ["RSDKUtils"])
     ],
     dependencies: [
-        .package(url: "https://github.com/Quick/Quick.git", .upToNextMajor(from: "2.0.0"))
+        .package(url: "https://github.com/Quick/Quick.git", .upToNextMajor(from: "4.0.0")),
+        .package(url: "https://github.com/Quick/Nimble.git", .upToNextMajor(from: "9.1.0"))
     ],
     targets: [
         .target(name: "RSDKUtils"),
         .testTarget(
             name: "Tests",
-            dependencies: ["Quick"])
+            dependencies: ["RSDKUtils", "Quick", "Nimble"])
     ],
     swiftLanguageVersions: [
         .v5

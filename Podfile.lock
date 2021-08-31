@@ -1,6 +1,6 @@
 PODS:
-  - Nimble (8.0.4)
-  - Quick (2.2.0)
+  - Nimble (9.2.0)
+  - Quick (4.0.0)
   - RSDKUtils (1.1.0)
 
 DEPENDENCIES:
@@ -9,7 +9,7 @@ DEPENDENCIES:
   - RSDKUtils (from `./RSDKUtils.podspec`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - Nimble
     - Quick
 
@@ -18,10 +18,10 @@ EXTERNAL SOURCES:
     :path: "./RSDKUtils.podspec"
 
 SPEC CHECKSUMS:
-  Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
-  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  Nimble: 4f4a345c80b503b3ea13606a4f98405974ee4d0b
+  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   RSDKUtils: 4503d352762820e0c89a36a35ce81f57c0b5d6b2
 
-PODFILE CHECKSUM: 28af16319bea95387b37864f519180b247d1d5fb
+PODFILE CHECKSUM: a4ff4357fb919ea9d8ff9f0e4a2c8a39f8d726dd
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.2

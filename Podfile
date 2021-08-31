@@ -1,5 +1,3 @@
-source 'https://github.com/CocoaPods/Specs.git'
-
 workspace 'RSDKUtils.xcworkspace'
 project 'RSDKUtils.xcodeproj'
 
