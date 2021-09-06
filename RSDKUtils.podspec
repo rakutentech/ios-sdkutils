@@ -14,7 +14,8 @@ Pod::Spec.new do |s|
     'CLANG_MODULES_AUTOLINK'                                => 'YES',
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
     'GCC_C_LANGUAGE_STANDARD'                               => 'gnu11',
-    'OTHER_CFLAGS'                                          => "'-DRPT_SDK_VERSION=#{s.version.to_s}'"
+    'OTHER_CFLAGS'                                          => "'-DRPT_SDK_VERSION=#{s.version.to_s}'",
+    'FRAMEWORK_SEARCH_PATHS'                                => '"${PODS_CONFIGURATION_BUILD_DIR}/Nimble"'
   }
   s.user_target_xcconfig = {
     'CLANG_ENABLE_MODULES'                                  => 'YES',
@@ -23,6 +24,8 @@ Pod::Spec.new do |s|
   }
   s.weak_frameworks = [
     'Foundation',
+    'XCTest',
+    'Nimble'
   ]
   s.source_files = "Sources/RSDKUtils/**/*.{swift,m,h}"
   s.public_header_files = "Sources/RSDKUtils/*.h,Sources/RSDKUtils/StandardHeaders/*.h,Sources/RSDKUtils/KeyStore/*.h"

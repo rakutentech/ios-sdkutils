@@ -32,3 +32,16 @@ extension Bundle: BundleProtocol {
         return self.object(forInfoDictionaryKey: key) as? String
     }
 }
+
+public extension Bundle {
+
+    static func sdkBundle(name: String) -> Bundle? {
+        let defaultBundle = self.init(identifier: "org.cocoapods.\(name)") ?? .bundle(bundleIdSubstring: name)
+        assert(defaultBundle != nil, "\(name) SDK is not integrated properly - framework bundle not found")
+        return defaultBundle
+    }
+
+    static func bundle(bundleIdSubstring: String) -> Bundle? {
+        return (allBundles + allFrameworks).first(where: { $0.bundleIdentifier?.contains(bundleIdSubstring) == true })
+    }
+}

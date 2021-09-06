@@ -12,15 +12,6 @@ class EnvironmentInformationSpec: QuickSpec {
         }
         context("when bundle has valid key-values") {
 
-            it("has the expected app id") {
-                let mockBundle = BundleMock()
-                mockBundle.mockRASAppId = "fooAppId"
-
-                let environment = EnvironmentInformation(bundle: mockBundle)
-
-                expect(environment.appId).to(equal("fooAppId"))
-            }
-
             it("has the expected app name") {
                 let mockBundle = BundleMock()
                 mockBundle.mockBundleId = "fooAppName"
@@ -61,10 +52,6 @@ class EnvironmentInformationSpec: QuickSpec {
             let mockBundleInvalid = BundleMock()
             mockBundleInvalid.mockNotFound = "not-found"
             let environment = EnvironmentInformation(bundle: mockBundleInvalid)
-
-            it("will return the 'not found' value when app id can't be read") {
-                expect(environment.appId).to(equal(mockBundleInvalid.valueNotFound))
-            }
 
             it("will return the 'not found' value when app name can't be read") {
                 expect(environment.bundleName).to(equal(mockBundleInvalid.valueNotFound))

@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		1E93FC4B5B8B4C60430398BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A04641D3B60ED0F410B68EB /* Foundation.framework */; };
 		2F17427BF74A50B45FA22CC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8783C5860B44767F3B2D0547 /* UIKit.framework */; };
+		4597CFAD26E6951200781E4F /* AtomicWrapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFAC26E6951200781E4F /* AtomicWrapperSpec.swift */; };
+		4597CFAF26E6952400781E4F /* LockableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFAE26E6952400781E4F /* LockableSpec.swift */; };
+		4597CFB126E69D4400781E4F /* TypedDependencyManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFB026E69D4400781E4F /* TypedDependencyManagerSpec.swift */; };
+		4597CFB326E69D7400781E4F /* AnyDependenciesContainerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFB226E69D7400781E4F /* AnyDependenciesContainerSpec.swift */; };
+		4597CFB526E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFB426E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift */; };
 		6DACF499237CF05E00EEFE12 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACF498237CF05E00EEFE12 /* TestHelpers.swift */; };
-		6DACF49B237CF1FA00EEFE12 /* StandardHeadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACF49A237CF1FA00EEFE12 /* StandardHeadersTests.swift */; };
 		D06A23E924D3FF2800E84EE2 /* KeyStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A23E824D3FF2800E84EE2 /* KeyStoreTests.swift */; };
 		D06A23F124D4007300E84EE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A23F024D4007300E84EE2 /* AppDelegate.swift */; };
 		EA14FDB556C9812880440D96 /* EnvironmentInformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */; };
@@ -28,10 +32,14 @@
 
 /* Begin PBXFileReference section */
 		3A04641D3B60ED0F410B68EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4597CFAC26E6951200781E4F /* AtomicWrapperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicWrapperSpec.swift; sourceTree = "<group>"; };
+		4597CFAE26E6952400781E4F /* LockableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockableSpec.swift; sourceTree = "<group>"; };
+		4597CFB026E69D4400781E4F /* TypedDependencyManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedDependencyManagerSpec.swift; sourceTree = "<group>"; };
+		4597CFB226E69D7400781E4F /* AnyDependenciesContainerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDependenciesContainerSpec.swift; sourceTree = "<group>"; };
+		4597CFB426E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyDependenciesContainerSpec.swift; sourceTree = "<group>"; };
 		45EA75A825C76660001B2049 /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = "<group>"; };
 		529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnvironmentInformationTests.swift; sourceTree = "<group>"; };
 		6DACF498237CF05E00EEFE12 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
-		6DACF49A237CF1FA00EEFE12 /* StandardHeadersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHeadersTests.swift; sourceTree = "<group>"; };
 		83F9CA8C997CE27EA8BD1BD4 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8783C5860B44767F3B2D0547 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D06A23E824D3FF2800E84EE2 /* KeyStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStoreTests.swift; sourceTree = "<group>"; };
@@ -72,8 +80,12 @@
 			children = (
 				529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */,
 				6DACF498237CF05E00EEFE12 /* TestHelpers.swift */,
-				6DACF49A237CF1FA00EEFE12 /* StandardHeadersTests.swift */,
 				D06A23E824D3FF2800E84EE2 /* KeyStoreTests.swift */,
+				4597CFB226E69D7400781E4F /* AnyDependenciesContainerSpec.swift */,
+				4597CFAE26E6952400781E4F /* LockableSpec.swift */,
+				4597CFAC26E6951200781E4F /* AtomicWrapperSpec.swift */,
+				4597CFB026E69D4400781E4F /* TypedDependencyManagerSpec.swift */,
+				4597CFB426E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -225,8 +237,12 @@
 			files = (
 				D06A23E924D3FF2800E84EE2 /* KeyStoreTests.swift in Sources */,
 				EA14FDB556C9812880440D96 /* EnvironmentInformationTests.swift in Sources */,
-				6DACF49B237CF1FA00EEFE12 /* StandardHeadersTests.swift in Sources */,
+				4597CFB326E69D7400781E4F /* AnyDependenciesContainerSpec.swift in Sources */,
+				4597CFAF26E6952400781E4F /* LockableSpec.swift in Sources */,
+				4597CFB126E69D4400781E4F /* TypedDependencyManagerSpec.swift in Sources */,
+				4597CFAD26E6951200781E4F /* AtomicWrapperSpec.swift in Sources */,
 				6DACF499237CF05E00EEFE12 /* TestHelpers.swift in Sources */,
+				4597CFB526E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
