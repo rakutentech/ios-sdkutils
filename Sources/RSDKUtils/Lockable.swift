@@ -15,51 +15,79 @@ public protocol LockableResource {
 }
 
 /// Object-wrapper that conforms to LockableResource protocol.
-/// Used to control getter and setter of given resource.
+/// Used to control getter and setter of given resource. Can be used to create atomic transaction.
+///
 /// When lock() has been called on some thread, only that thread will be able to access the resource.
 /// Other threads will synchronously wait for unlock() call to continue.
+/// - Note: get() and set() are not thread-safe by itself
 public class LockableObject<T>: LockableResource {
     private var resource: T
     private let dispatchGroup = DispatchGroup()
-    @AtomicGetSet private var lockingThread: Thread?
-    @AtomicGetSet private var lockCount: UInt = 0
+    private let transactionQueue = DispatchQueue(label: "LockableObject.Transaction", qos: .default)
+    private var lockingThread: Thread?
+    private(set) var lockCount: UInt = 0
     private var shouldWait: Bool {
-        assert(!(isLocked && lockingThread == nil), "Thread was deallocated before calling unlock()")
-        return isLocked && lockingThread != nil && lockingThread != Thread.current
+        assert(!(_isLocked && lockingThread == nil), "Thread was deallocated before calling unlock()")
+        return _isLocked && lockingThread != nil && lockingThread != Thread.current
+    }
+    private var shouldWaitThreadSafe: Bool {
+        let currentThread = Thread.current
+        return transactionQueue.sync {
+            assert(!(_isLocked && lockingThread == nil), "Thread was deallocated before calling unlock()")
+            return _isLocked && lockingThread != nil && lockingThread != currentThread
+        }
     }
 
-    public var isLocked: Bool { lockCount > 0 }
+    var isLocked: Bool { transactionQueue.sync { _isLocked } }
+    private var _isLocked: Bool { lockCount > 0 }
 
     public init(_ resource: T) {
         self.resource = resource
     }
 
     deinit {
-        for _ in [0..<lockCount] {
-            unlock()
+        for _ in 0..<lockCount {
+            dispatchGroup.leave()
         }
     }
 
     public func lock() {
-        if shouldWait {
-            dispatchGroup.wait()
+        let currentThread = Thread.current
+        var waitAndRetry = false
+        transactionQueue.sync {
+            guard !self.shouldWait else {
+                waitAndRetry = true
+                return
+            }
+            dispatchGroup.enter()
+            lockCount += 1
+            assert(lockingThread == nil || lockingThread == currentThread)
+            lockingThread = currentThread
         }
-        _lockCount.mutate { $0 += 1 }
-        lockingThread = Thread.current
-        dispatchGroup.enter()
+        if waitAndRetry {
+            dispatchGroup.wait()
+            lock()
+        }
     }
 
     public func unlock() {
-        if lockCount > 0 {
-            _lockCount.mutate { $0 -= 1 }
-            dispatchGroup.leave()
-        } else {
-            lockingThread = nil
+        transactionQueue.sync {
+            guard !self.shouldWait else {
+                !EnvironmentInformation.isRunningTests ? assertionFailure("unlock() should be called only by locking thread") : ()
+                return
+            }
+            if lockCount > 0 {
+                lockCount -= 1
+                if lockCount == 0 {
+                    lockingThread = nil
+                }
+                dispatchGroup.leave()
+            }
         }
     }
 
     public func get() -> T {
-        if shouldWait {
+        if shouldWaitThreadSafe {
             dispatchGroup.wait()
             return resource
         } else {
@@ -68,7 +96,7 @@ public class LockableObject<T>: LockableResource {
     }
 
     public func set(value: T) {
-        if shouldWait {
+        if shouldWaitThreadSafe {
             dispatchGroup.wait()
             resource = value
         } else {

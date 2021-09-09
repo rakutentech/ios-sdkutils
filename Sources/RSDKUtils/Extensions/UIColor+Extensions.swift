@@ -1,6 +1,5 @@
 import UIKit
 
-/// Extension to `UIColor` class to provide addtional initializers required by InAppMessaging.
 public extension UIColor {
 
     /// Convert hexadecimal string to `UIColor` object.

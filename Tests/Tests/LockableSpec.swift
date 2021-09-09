@@ -21,6 +21,7 @@ final class LockableSpec: QuickSpec {
 
         describe("Lockable object") {
             var lockableObject: LockableTestObject!
+            let backgroundThread = DispatchQueue(label: "LockableSpec.BackgroundThread")
 
             beforeEach {
                 lockableObject = LockableTestObject()
@@ -77,6 +78,51 @@ final class LockableSpec: QuickSpec {
                 resource.lock()
                 expect(resource.isLocked).to(beTrue())
                 resource.unlock()
+                resource.unlock()
+                expect(resource.isLocked).to(beFalse())
+            }
+
+            it("will not crash when lock() and unlock() are called in multiple threads") {
+                let resource = lockableObject.resource
+                let iterations = 100_000
+                let dispatchGroup = DispatchGroup()
+                dispatchGroup.enter()
+
+                backgroundThread.async {
+                    for _ in 1...iterations {
+                        resource.lock()
+                        resource.unlock()
+                    }
+                    dispatchGroup.leave()
+                }
+                for _ in 1...iterations {
+                    resource.lock()
+                    resource.unlock()
+                }
+                dispatchGroup.wait()
+                expect(resource.isLocked).to(beFalse())
+            }
+
+            it("will not crash or unlock the resource when unlock() was called from some other thread") {
+                let resource = lockableObject.resource
+                let iterations = 100_000
+                let dispatchGroup = DispatchGroup()
+                dispatchGroup.enter()
+
+                for _ in 1...iterations {
+                    resource.lock()
+                }
+                backgroundThread.async {
+                    for _ in 1...iterations {
+                        resource.unlock() // this unlock has no effect as it's not called from locking thread
+                    }
+                    dispatchGroup.leave()
+                }
+                for _ in 1...iterations-1 {
+                    resource.unlock()
+                }
+                expect(resource.lockCount).to(equal(1)) // ensure that lockCount doesn't change because of backgroundThread calls
+                dispatchGroup.wait()
                 resource.unlock()
                 expect(resource.isLocked).to(beFalse())
             }

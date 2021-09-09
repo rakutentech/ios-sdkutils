@@ -1,6 +1,9 @@
 import Foundation
 
 @objc public class EnvironmentInformation: NSObject {
+
+    static let isRunningTests = ProcessInfo.processInfo.environment["XCTestBundlePath"] != nil
+
     let bundle: BundleProtocol
 
     var bundleName: String {

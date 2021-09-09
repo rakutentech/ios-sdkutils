@@ -13,15 +13,18 @@ extension Dependency: Equatable {
         lhs.name == rhs.name
     }
 }
+private protocol Identifiable {
+    var identifier: String { get }
+}
 
 private class AnalyticsHandler: Dependency {
-    var advertisingIdentifierUUIDString: String {
+    var identifier: String {
         "mock"
     }
 }
 
-private class AdvertisingHandler: Dependency, AdvertisementIdentifiable {
-    var advertisingIdentifierUUIDString: String {
+private class AdvertisingHandler: Dependency, Identifiable {
+    var identifier: String {
         "mock"
     }
 }
@@ -62,7 +65,7 @@ final class SwiftyDependenciesContainerSpec: QuickSpec {
                     var swiftyContainer = SwiftyDependenciesContainer<Dependency>()
                     swiftyContainer.register(handler)
                     expect(swiftyContainer.resolve(AdvertisingHandler.self)).to(equal(handler))
-                    expect(swiftyContainer.resolve(AdvertisementIdentifiable.self) as? AdvertisingHandler).to(equal(handler))
+                    expect(swiftyContainer.resolve(Identifiable.self) as? AdvertisingHandler).to(equal(handler))
                 }
             }
         }
