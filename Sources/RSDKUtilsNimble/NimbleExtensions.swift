@@ -1,5 +1,4 @@
 import Foundation
-#if canImport(Nimble)
 import Nimble
 
 public extension Expectation {
@@ -53,4 +52,3 @@ public func elementsEqualOrderAgnostic<Col1: Collection, Col2: Collection>(
         }
     }
 }
-#endif

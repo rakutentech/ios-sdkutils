@@ -26,22 +26,11 @@ public class LockableObject<T>: LockableResource {
     private let transactionQueue = DispatchQueue(label: "LockableObject.Transaction", qos: .default)
     private var lockingThread: Thread?
     private(set) var lockCount: UInt = 0
-    private var shouldWait: Bool {
-        assert(!(_isLocked && lockingThread == nil), "Thread was deallocated before calling unlock()")
-        return _isLocked && lockingThread != nil && lockingThread != Thread.current
-    }
-    private var shouldWaitThreadSafe: Bool {
-        let currentThread = Thread.current
-        return transactionQueue.sync {
-            assert(!(_isLocked && lockingThread == nil), "Thread was deallocated before calling unlock()")
-            return _isLocked && lockingThread != nil && lockingThread != currentThread
-        }
-    }
 
     var isLocked: Bool { transactionQueue.sync { _isLocked } }
     private var _isLocked: Bool { lockCount > 0 }
 
-    public init(_ resource: T) {
+    init(_ resource: T) {
         self.resource = resource
     }
 
@@ -55,7 +44,7 @@ public class LockableObject<T>: LockableResource {
         let currentThread = Thread.current
         var waitAndRetry = false
         transactionQueue.sync {
-            guard !self.shouldWait else {
+            guard !self.checkIfThreadShouldWait(threadSafe: false) else {
                 waitAndRetry = true
                 return
             }
@@ -72,7 +61,7 @@ public class LockableObject<T>: LockableResource {
 
     public func unlock() {
         transactionQueue.sync {
-            guard !self.shouldWait else {
+            guard !self.checkIfThreadShouldWait(threadSafe: false) else {
                 !EnvironmentInformation.isRunningTests ? assertionFailure("unlock() should be called only by locking thread") : ()
                 return
             }
@@ -87,7 +76,7 @@ public class LockableObject<T>: LockableResource {
     }
 
     public func get() -> T {
-        if shouldWaitThreadSafe {
+        if checkIfThreadShouldWait(threadSafe: true) {
             dispatchGroup.wait()
             return resource
         } else {
@@ -96,11 +85,20 @@ public class LockableObject<T>: LockableResource {
     }
 
     public func set(value: T) {
-        if shouldWaitThreadSafe {
+        if checkIfThreadShouldWait(threadSafe: true) {
             dispatchGroup.wait()
             resource = value
         } else {
             resource = value
         }
+    }
+
+    private func checkIfThreadShouldWait(threadSafe: Bool) -> Bool {
+        let currentThread = Thread.current
+        let shouldWait: () -> Bool = { [self] in
+            assert(!(_isLocked && lockingThread == nil), "Thread was deallocated before calling unlock()")
+            return _isLocked && lockingThread != nil && lockingThread != currentThread
+        }
+        return threadSafe ? transactionQueue.sync(execute: shouldWait) : shouldWait()
     }
 }

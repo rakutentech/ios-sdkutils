@@ -1,8 +1,5 @@
 import SystemConfiguration
 import Foundation
-#if canImport(Logger)
-import Logger
-#endif
 
 public protocol ReachabilityType {
     var connection: Reachability.Connection { get }
@@ -186,9 +183,7 @@ public class Reachability: ReachabilityType {
     }
 
     private static func logDebug(_ message: String) {
-        #if canImport(Logger)
-        Logger.debug(message)
-        #endif
+        RLogger.debug(message)
     }
 }
 

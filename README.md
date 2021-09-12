@@ -1,7 +1,11 @@
 ## Rakuten's SDK Team internal utilities module
 
-#### Build SPM
-`swift build -Xswiftc "-sdk" -Xswiftc `xcrun --sdk iphonesimulator --show-sdk-path` -Xswiftc "-target" -Xswiftc "x86_64-apple-ios14.5-simulator"`
+#### Test SPM
+**WARNING:** Use RSDKUtils.xcworkspace to test this package. The following method is not available because of bug https://bugs.swift.org/browse/SR-13773
+```
+swift package clean
+swift test -Xswiftc "-sdk" -Xswiftc `xcrun --sdk iphonesimulator --show-sdk-path` -Xswiftc "-target" -Xswiftc "x86_64-apple-ios14.5-simulator"
+```
 
 ### Changelog
 

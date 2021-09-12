@@ -1,4 +1,4 @@
-#if canImport(XCTest)
+import Foundation
 import XCTest
 
 extension XCTestCase {
@@ -21,4 +21,3 @@ extension XCTestCase {
         XCTAssertEqual(value(), otherValue())
     }
 }
-#endif
