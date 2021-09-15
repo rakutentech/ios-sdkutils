@@ -9,7 +9,7 @@ target 'Tests' do
   pod 'Quick'
   pod 'Nimble'
   pod 'RSDKUtils', :path => './RSDKUtils.podspec'
-  pod 'RSDKUtils/Tests', :path => './RSDKUtils.podspec'
+  pod 'RSDKUtils/TestHelpers', :path => './RSDKUtils.podspec'
   pod 'RSDKUtils/Nimble', :path => './RSDKUtils.podspec'
   pod 'RSDKUtils/RLogger', :path => './RSDKUtils.podspec'
 end

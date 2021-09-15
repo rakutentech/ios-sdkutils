@@ -33,8 +33,8 @@ Pod::Spec.new do |s|
     ss.dependency 'RSDKUtils/RLogger'
   end
 
-  s.subspec 'Tests' do |ss|
-    ss.source_files = "Sources/RSDKUtilsTests/**/*.swift"
+  s.subspec 'TestHelpers' do |ss|
+    ss.source_files = "Sources/RSDKUtilsTestHelpers/**/*.swift"
     ss.weak_frameworks = [
       'XCTest'
     ]

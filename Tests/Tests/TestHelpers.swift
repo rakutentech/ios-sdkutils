@@ -1,4 +1,9 @@
-@testable import RSDKUtils
+import Foundation
+#if canImport(RSDKUtils)
+@testable import RSDKUtils // Cocoapods version
+#else
+@testable import RSDKUtilsMain
+#endif
 
 class BundleMock: BundleProtocol {
     var mockRASAppId: String?

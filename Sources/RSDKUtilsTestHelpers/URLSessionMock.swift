@@ -1,4 +1,7 @@
 import Foundation
+#if canImport(RSDKUtilsMain)
+import RSDKUtilsMain
+#endif
 
 public final class URLSessionMock: URLSession {
 

@@ -11,7 +11,7 @@ public struct RLogger {
     public static var loggingLevel = RLoggingLevel.error
 
     @discardableResult
-    public static func log(_ loggingLevelParam: RLoggingLevel, message: String) -> String? {
+    private static func log(_ loggingLevelParam: RLoggingLevel, message: String) -> String? {
         guard loggingLevel != .none && loggingLevel.rawValue <= loggingLevelParam.rawValue else {
              return nil
          }

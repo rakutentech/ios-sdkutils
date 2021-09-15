@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.2
 import PackageDescription
 
 let package = Package(
@@ -11,8 +11,8 @@ let package = Package(
             name: "RSDKUtilsMain",
             targets: ["RSDKUtilsMain"]),
         .library(
-            name: "RSDKUtilsTests",
-            targets: ["RSDKUtilsTests"]),
+            name: "RSDKUtilsTestHelpers",
+            targets: ["RSDKUtilsTestHelpers"]),
         .library(
             name: "RSDKUtilsNimble",
             targets: ["RSDKUtilsNimble"]),
@@ -30,14 +30,14 @@ let package = Package(
             name: "RSDKUtilsMain",
             dependencies: ["RLogger"]),
         .target(
-            name: "RSDKUtilsTests", 
+            name: "RSDKUtilsTestHelpers", 
             dependencies: ["RSDKUtilsMain"]),
         .target(
             name: "RSDKUtilsNimble", 
             dependencies: ["RSDKUtilsMain", "Nimble"]),
         .testTarget(
             name: "Tests",
-            dependencies: ["RSDKUtilsMain", "RSDKUtilsNimble", "RSDKUtilsTests", "RLogger", "Quick", "Nimble"])
+            dependencies: ["RSDKUtilsMain", "RSDKUtilsNimble", "RSDKUtilsTestHelpers", "RLogger", "Quick", "Nimble"])
     ],
     swiftLanguageVersions: [
         .v5

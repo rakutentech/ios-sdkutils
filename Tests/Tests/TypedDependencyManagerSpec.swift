@@ -1,6 +1,10 @@
 import Quick
 import Nimble
-@testable import RSDKUtils
+#if canImport(RSDKUtils)
+@testable import RSDKUtils // Cocoapods version
+#else
+@testable import RSDKUtilsMain
+#endif
 
 private protocol SingletonElementType {}
 private protocol TransientElementType {}

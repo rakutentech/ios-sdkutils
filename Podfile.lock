@@ -1,5 +1,5 @@
 PODS:
-  - Nimble (9.2.0)
+  - Nimble (9.2.1)
   - Quick (4.0.0)
   - RSDKUtils (1.1.0):
     - RSDKUtils/Main (= 1.1.0)
@@ -9,7 +9,7 @@ PODS:
     - Nimble
     - RSDKUtils/Main
   - RSDKUtils/RLogger (1.1.0)
-  - RSDKUtils/Tests (1.1.0):
+  - RSDKUtils/TestHelpers (1.1.0):
     - RSDKUtils/Main
 
 DEPENDENCIES:
@@ -18,7 +18,7 @@ DEPENDENCIES:
   - RSDKUtils (from `./RSDKUtils.podspec`)
   - RSDKUtils/Nimble (from `./RSDKUtils.podspec`)
   - RSDKUtils/RLogger (from `./RSDKUtils.podspec`)
-  - RSDKUtils/Tests (from `./RSDKUtils.podspec`)
+  - RSDKUtils/TestHelpers (from `./RSDKUtils.podspec`)
 
 SPEC REPOS:
   trunk:
@@ -30,10 +30,10 @@ EXTERNAL SOURCES:
     :path: "./RSDKUtils.podspec"
 
 SPEC CHECKSUMS:
-  Nimble: 4f4a345c80b503b3ea13606a4f98405974ee4d0b
+  Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
-  RSDKUtils: 19f6b703bac0e7d5c37977224fa4995a170c182e
+  RSDKUtils: 12929d76961f9c32b4d804e1c48b1ad043dc29fc
 
-PODFILE CHECKSUM: 226dd60a6f1002b43a412ed1524eac7ae35db527
+PODFILE CHECKSUM: 3c322fcedad25411e0795e09b339e970a4256d9a
 
 COCOAPODS: 1.11.0

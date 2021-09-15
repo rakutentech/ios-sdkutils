@@ -1,6 +1,12 @@
+import Foundation
 import Quick
 import Nimble
-@testable import RSDKUtils
+#if canImport(RSDKUtils)
+@testable import RSDKUtils // Cocoapods version
+#else
+@testable import RSDKUtilsMain
+import RSDKUtilsNimble
+#endif
 
 private class LockableTestObject: Lockable {
     var resourcesToLock: [LockableResource] {

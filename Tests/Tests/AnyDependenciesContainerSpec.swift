@@ -1,6 +1,11 @@
+import Foundation
 import Quick
 import Nimble
-@testable import RSDKUtils
+#if canImport(RSDKUtils)
+@testable import RSDKUtils // Cocoapods version
+#else
+@testable import RSDKUtilsMain
+#endif
 
 private final class ContainerHandler1: NSObject {}
 private final class ContainerHandler2: NSObject {}

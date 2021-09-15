@@ -1,5 +1,8 @@
 import SystemConfiguration
 import Foundation
+#if canImport(RLogger)
+import RLogger // Required in SPM version
+#endif
 
 public protocol ReachabilityType {
     var connection: Reachability.Connection { get }

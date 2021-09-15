@@ -1,6 +1,10 @@
 import Quick
 import Nimble
-@testable import struct RSDKUtils.RLogger
+#if canImport(RSDKUtils)
+@testable import struct RSDKUtils.RLogger // Cocoapods version
+#else
+@testable import RLogger
+#endif
 
 class RLoggerSpec: QuickSpec {
     override func spec() {
@@ -14,8 +18,8 @@ class RLoggerSpec: QuickSpec {
             }
 
             context("callerModuleName") {
-                it("should return RSDKUtils or RSDKUtilsPackageTests (spm)") {
-                    expect(["RSDKUtils", "RSDKUtilsPackageTests"]).to(contain(RLogger.callerModuleName))
+                it("should return RSDKUtils or Tests (spm)") {
+                    expect(["RSDKUtils", "Tests"]).to(contain(RLogger.callerModuleName))
                 }
             }
 
