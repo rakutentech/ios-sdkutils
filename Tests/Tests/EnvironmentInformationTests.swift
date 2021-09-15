@@ -1,6 +1,11 @@
+import Foundation
 import Quick
 import Nimble
-@testable import RSDKUtils
+#if canImport(RSDKUtils)
+@testable import RSDKUtils // Cocoapods version
+#else
+@testable import RSDKUtilsMain
+#endif
 
 class EnvironmentInformationSpec: QuickSpec {
     override func spec() {
@@ -11,15 +16,6 @@ class EnvironmentInformationSpec: QuickSpec {
             expect(bundle).to(equal(Bundle.main))
         }
         context("when bundle has valid key-values") {
-
-            it("has the expected app id") {
-                let mockBundle = BundleMock()
-                mockBundle.mockRASAppId = "fooAppId"
-
-                let environment = EnvironmentInformation(bundle: mockBundle)
-
-                expect(environment.appId).to(equal("fooAppId"))
-            }
 
             it("has the expected app name") {
                 let mockBundle = BundleMock()
@@ -61,10 +57,6 @@ class EnvironmentInformationSpec: QuickSpec {
             let mockBundleInvalid = BundleMock()
             mockBundleInvalid.mockNotFound = "not-found"
             let environment = EnvironmentInformation(bundle: mockBundleInvalid)
-
-            it("will return the 'not found' value when app id can't be read") {
-                expect(environment.appId).to(equal(mockBundleInvalid.valueNotFound))
-            }
 
             it("will return the 'not found' value when app name can't be read") {
                 expect(environment.bundleName).to(equal(mockBundleInvalid.valueNotFound))
