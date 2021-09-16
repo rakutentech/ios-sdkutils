@@ -22,7 +22,7 @@ public protocol SwiftySessionable {
 
 extension URLSession: SwiftySessionable {
     public func dataTask(with request: URLRequest,
-                  completionHandler: @escaping (Result<(data: Data?, response: URLResponse), Error>) -> Void) -> URLSessionTaskable {
+                         completionHandler: @escaping (Result<(data: Data?, response: URLResponse), Error>) -> Void) -> URLSessionTaskable {
 
         return dataTask(with: request) { (data, response, error) in
             if let error = error {
@@ -40,7 +40,6 @@ extension URLSession: SwiftySessionable {
         }
     }
 }
-
 
 // MARK: - URLSessionTaskable
 

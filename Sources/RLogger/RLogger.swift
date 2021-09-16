@@ -48,19 +48,19 @@ extension RLogger: Variadicable {
     @discardableResult public static func verbose(_ format: String, arguments: CVarArg...) -> String? {
         log(.verbose, message: String(format: format, arguments: arguments))
     }
-    
+
     @discardableResult public static func debug(_ format: String, arguments: CVarArg...) -> String? {
         log(.debug, message: String(format: format, arguments: arguments))
     }
-    
+
     @discardableResult public static func info(_ format: String, arguments: CVarArg...) -> String? {
         log(.info, message: String(format: format, arguments: arguments))
     }
-    
+
     @discardableResult public static func warning(_ format: String, arguments: CVarArg...) -> String? {
         log(.warning, message: String(format: format, arguments: arguments))
     }
-    
+
     @discardableResult public static func error(_ format: String, arguments: CVarArg...) -> String? {
         log(.error, message: String(format: format, arguments: arguments))
     }

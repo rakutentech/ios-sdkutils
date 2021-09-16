@@ -8,6 +8,7 @@ use_frameworks!
 target 'Tests' do
   pod 'Quick'
   pod 'Nimble'
+  pod 'SwiftLint'
   pod 'RSDKUtils', :path => './RSDKUtils.podspec'
   pod 'RSDKUtils/TestHelpers', :path => './RSDKUtils.podspec'
   pod 'RSDKUtils/Nimble', :path => './RSDKUtils.podspec'
