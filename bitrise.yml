@@ -1,0 +1,96 @@
+---
+format_version: '11'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: ios
+trigger_map:
+- push_branch: "*"
+  workflow: primary
+- pull_request_source_branch: "*"
+  workflow: primary
+workflows:
+  primary:
+    before_run:
+    - _setup
+    after_run:
+    - _report
+    steps:
+    - fastlane@3:
+        inputs:
+        - update_fastlane: 'false'
+        - lane: ci
+        title: Build & Test
+  deploy:
+    before_run:
+    - _setup
+    steps:
+    - script@1:
+        title: Lint and push Cocoapods trunk
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            set -ex
+
+            bundle exec pod spec lint --allow-warnings
+            bundle exec pod trunk push --allow-warnings --verbose
+  _setup:
+    steps:
+    - git-clone@6:
+        inputs:
+        - update_submodules: 'no'
+    - cache-pull@2: {}
+    - script@1:
+        title: Bundle install
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            set -ex
+            if [ ! -f "Gemfile" ]; then
+                echo "No Gemfile detected. Skipping..."
+                exit 0
+            fi
+            bundle install
+            RBENV_DIR="`cd $(rbenv which ruby)/../..;pwd`"
+            echo "Gem cache directory: $RBENV_DIR"
+            envman add --key GEM_CACHE_PATH --value $RBENV_DIR
+    - brew-install@0:
+        title: Install swiftlint
+        inputs:
+        - cache_enabled: 'yes'
+        - upgrade: 'no'
+        - packages: swiftlint
+  _report:
+    steps:
+    - danger@2:
+        inputs:
+        - github_api_token: "$DANGER_GITHUB_API_TOKEN"
+    - cache-push@2:
+        inputs:
+        - cache_paths: |-
+            $BITRISE_CACHE_DIR
+            $GEM_CACHE_PATH
+    - script@1:
+        title: Send XCov report
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            set -ex
+
+            curl -sS https://codecov.io/bash > codecov
+
+            # verify checksum
+            VERSION=$(grep -o 'VERSION=\"[0-9\.]*\"' codecov | cut -d'"' -f2)
+            for i in 1 256 512
+            do
+                printf "SHA$i: "
+                curl -sS "https://raw.githubusercontent.com/codecov/codecov-bash/${VERSION}/SHA${i}SUM" | grep codecov | shasum -a $i -c
+            done
+
+            bash codecov -J '^RSDKUtils$' -X gcov
+app:
+  envs:
+  - opts:
+      is_expand: false
+    BITRISE_PROJECT_PATH: RSDKUtils.xcworkspace
+  - opts:
+      is_expand: false
+    BITRISE_SCHEME: Tests

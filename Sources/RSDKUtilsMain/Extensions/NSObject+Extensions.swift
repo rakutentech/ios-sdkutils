@@ -32,7 +32,7 @@ public extension NSObject {
 }
 
 public extension NSObject {
-    
+
     static func isAppleClass(_ cls: AnyClass?) -> Bool {
         guard let appleClass = cls,
               let bundleIdentifier = Bundle(for: appleClass.self).bundleIdentifier else {
