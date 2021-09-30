@@ -31,7 +31,27 @@ public struct RLogger {
          default: ()
          }
          return message
-     }
+    }
+
+    public static func verbose(message: String) -> String? {
+        log(.verbose, message: message)
+    }
+
+    public static func debug(message: String) -> String? {
+        log(.debug, message: message)
+    }
+
+    public static func info(message: String) -> String? {
+        log(.info, message: message)
+    }
+
+    public static func warning(message: String) -> String? {
+        log(.warning, message: message)
+    }
+
+    public static func error(message: String) -> String? {
+        log(.error, message: message)
+    }
 }
 
 // MARK: - Variadicable
