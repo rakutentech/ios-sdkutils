@@ -30,7 +30,7 @@ public class LockableObject<T>: LockableResource {
     var isLocked: Bool { transactionQueue.sync { _isLocked } }
     private var _isLocked: Bool { lockCount > 0 }
 
-    init(_ resource: T) {
+    public init(_ resource: T) {
         self.resource = resource
     }
 

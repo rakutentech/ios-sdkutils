@@ -33,11 +33,15 @@ public extension UIView {
     /// - Parameter from: the view that defines coordinate space of `touchPoint`.
     /// - Parameter touchAreaSize: size of square area around current view's center.
     /// - Returns: `true` if the point is inside specified area around view's center.
-    func isTouchInside(touchPoint point: CGPoint, from: UIView, touchAreaSize: CGFloat) -> Bool {
-        let targetViewCenter = convert(center, from: from)
+    func isTouchInside(touchPoint: CGPoint, from: UIView, touchAreaSize: CGFloat) -> Bool {
+        guard let targetViewSuperview = superview else {
+            return false
+        }
+        let targetViewCenter = convert(center, from: targetViewSuperview)
+        let touchPointInTargetView = convert(touchPoint, from: from)
         let targetViewTouchArea = CGRect(origin: targetViewCenter, size: .zero)
             .insetBy(dx: -touchAreaSize / 2.0, dy: -touchAreaSize / 2.0)
 
-        return targetViewTouchArea.contains(point)
+        return targetViewTouchArea.contains(touchPointInTargetView)
     }
 }
