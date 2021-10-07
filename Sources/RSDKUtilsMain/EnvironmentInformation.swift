@@ -6,6 +6,9 @@ import Foundation
 
     let bundle: BundleProtocol
 
+    var rasAppId: String {
+        return bundle.value(for: "RASApplicationIdentifier" as String) ?? bundle.valueNotFound
+    }
     var bundleName: String {
         return bundle.value(for: "CFBundleIdentifier") ?? bundle.valueNotFound
     }

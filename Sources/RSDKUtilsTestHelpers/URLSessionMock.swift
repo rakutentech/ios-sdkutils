@@ -16,6 +16,7 @@ public final class URLSessionMock: URLSession {
     public var httpResponse: HTTPURLResponse?
     public var responseData: Data?
     public var responseError: Error?
+    public var onCompletedTask: (() -> Void)?
 
     public static func mock(originalInstance: URLSession) -> URLSessionMock {
         if let existingMock = URLSessionMock.mockSessionLinks[originalInstance]?.value {
@@ -60,14 +61,14 @@ public final class URLSessionMock: URLSession {
         self.swizzledMethods = nil
     }
 
-    func decodeSentData<T: Decodable>(modelType: T.Type) -> T? {
+    public func decodeSentData<T: Decodable>(modelType: T.Type) -> T? {
         guard let httpBody = sentRequest?.httpBody else {
             return nil
         }
         return try? JSONDecoder().decode(modelType.self, from: httpBody)
     }
 
-    func decodeQueryItems<T: Decodable>(modelType: T.Type) -> T? {
+    public func decodeQueryItems<T: Decodable>(modelType: T.Type) -> T? {
         guard let url = sentRequest?.url,
               let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true),
               let queryItems = urlComponents.queryItems else {
@@ -108,6 +109,7 @@ public final class URLSessionMock: URLSession {
         completionHandler(mockContainer.responseData,
                           mockContainer.httpResponse,
                           mockContainer.responseError)
+        mockContainer.onCompletedTask?()
 
         let dummyRequest = URLRequest(url: URL(string: "about:blank")!)
         // URLSessionDataTask object must be created by an URLSession object

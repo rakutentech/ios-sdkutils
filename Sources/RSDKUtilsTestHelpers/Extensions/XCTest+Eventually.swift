@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 
-extension XCTestCase {
+public extension XCTestCase {
 
     func eventually<T: Equatable>(after time: TimeInterval = 5, this value: @escaping () -> T?, shouldEqual otherValue: @escaping () -> T) {
 

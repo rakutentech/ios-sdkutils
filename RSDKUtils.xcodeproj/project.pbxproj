@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		1E93FC4B5B8B4C60430398BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A04641D3B60ED0F410B68EB /* Foundation.framework */; };
 		2F17427BF74A50B45FA22CC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8783C5860B44767F3B2D0547 /* UIKit.framework */; };
+		4518EEDC270F6D9900E8CBBC /* UIColorExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518EEDB270F6D9900E8CBBC /* UIColorExtensionsSpec.swift */; };
 		452FA0F326EE974400936528 /* RLoggerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452FA0F226EE974400936528 /* RLoggerSpec.swift */; };
+		4535CBC52714E58200D6E5AF /* StandardHeaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535CBC42714E58200D6E5AF /* StandardHeaderSpec.swift */; };
 		4597CFAD26E6951200781E4F /* AtomicWrapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFAC26E6951200781E4F /* AtomicWrapperSpec.swift */; };
 		4597CFAF26E6952400781E4F /* LockableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFAE26E6952400781E4F /* LockableSpec.swift */; };
 		4597CFB126E69D4400781E4F /* TypedDependencyManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFB026E69D4400781E4F /* TypedDependencyManagerSpec.swift */; };
@@ -33,7 +35,9 @@
 
 /* Begin PBXFileReference section */
 		3A04641D3B60ED0F410B68EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4518EEDB270F6D9900E8CBBC /* UIColorExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensionsSpec.swift; sourceTree = "<group>"; };
 		452FA0F226EE974400936528 /* RLoggerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLoggerSpec.swift; sourceTree = "<group>"; };
+		4535CBC42714E58200D6E5AF /* StandardHeaderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHeaderSpec.swift; sourceTree = "<group>"; };
 		4597CFAC26E6951200781E4F /* AtomicWrapperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicWrapperSpec.swift; sourceTree = "<group>"; };
 		4597CFAE26E6952400781E4F /* LockableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockableSpec.swift; sourceTree = "<group>"; };
 		4597CFB026E69D4400781E4F /* TypedDependencyManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedDependencyManagerSpec.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				4597CFB026E69D4400781E4F /* TypedDependencyManagerSpec.swift */,
 				4597CFB426E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift */,
 				452FA0F226EE974400936528 /* RLoggerSpec.swift */,
+				4518EEDB270F6D9900E8CBBC /* UIColorExtensionsSpec.swift */,
+				4535CBC42714E58200D6E5AF /* StandardHeaderSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -261,8 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D06A23E924D3FF2800E84EE2 /* KeyStoreTests.swift in Sources */,
+				4535CBC52714E58200D6E5AF /* StandardHeaderSpec.swift in Sources */,
 				452FA0F326EE974400936528 /* RLoggerSpec.swift in Sources */,
 				EA14FDB556C9812880440D96 /* EnvironmentInformationTests.swift in Sources */,
+				4518EEDC270F6D9900E8CBBC /* UIColorExtensionsSpec.swift in Sources */,
 				4597CFB326E69D7400781E4F /* AnyDependenciesContainerSpec.swift in Sources */,
 				4597CFAF26E6952400781E4F /* LockableSpec.swift in Sources */,
 				4597CFB126E69D4400781E4F /* TypedDependencyManagerSpec.swift in Sources */,

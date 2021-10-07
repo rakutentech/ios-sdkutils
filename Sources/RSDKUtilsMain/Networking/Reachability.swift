@@ -26,7 +26,7 @@ public class Reachability: ReachabilityType {
         case wifi
         case cellular
 
-        var isAvailable: Bool {
+        public var isAvailable: Bool {
             return [.wifi, .cellular].contains(self)
         }
     }
