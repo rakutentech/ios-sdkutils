@@ -9,9 +9,7 @@ xcov.report(
   json_report: true,
   include_targets: 'RSDKUtils.framework',
   include_test_targets: false,
-
-# Disabled until next unit tests PR
-# minimum_coverage_percentage: 70.0, 
-
+  ignore_file_path: '.xcovignore',
+  minimum_coverage_percentage: 70.0,
   skip_slack: true
 )

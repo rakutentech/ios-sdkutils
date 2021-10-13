@@ -190,7 +190,7 @@ public class Reachability: ReachabilityType {
     }
 }
 
-extension SCNetworkReachabilityFlags {
+public extension SCNetworkReachabilityFlags {
 
     var connection: Reachability.Connection {
         guard isReachableFlagSet else { return .unavailable }
