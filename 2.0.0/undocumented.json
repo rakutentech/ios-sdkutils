@@ -1,0 +1,3141 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 3,
+      "symbol": "RLoggingLevel",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 3,
+      "symbol": "RLoggingLevel",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 3,
+      "symbol": "RLoggingLevel",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 3,
+      "symbol": "RLoggingLevel",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 3,
+      "symbol": "RLoggingLevel",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.debug",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.debug",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.debug",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.debug",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.debug",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.info",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.info",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.info",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.info",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.info",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.verbose",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.verbose",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.verbose",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.verbose",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.verbose",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.warning",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.warning",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.warning",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.warning",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 4,
+      "symbol": "RLoggingLevel.warning",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 11,
+      "symbol": "RLogger.loggingLevel",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 11,
+      "symbol": "RLogger.loggingLevel",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 11,
+      "symbol": "RLogger.loggingLevel",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 11,
+      "symbol": "RLogger.loggingLevel",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 11,
+      "symbol": "RLogger.loggingLevel",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 37,
+      "symbol": "RLogger.verbose(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 37,
+      "symbol": "RLogger.verbose(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 37,
+      "symbol": "RLogger.verbose(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 37,
+      "symbol": "RLogger.verbose(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 37,
+      "symbol": "RLogger.verbose(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 42,
+      "symbol": "RLogger.debug(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 42,
+      "symbol": "RLogger.debug(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 42,
+      "symbol": "RLogger.debug(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 42,
+      "symbol": "RLogger.debug(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 42,
+      "symbol": "RLogger.debug(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 47,
+      "symbol": "RLogger.info(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 47,
+      "symbol": "RLogger.info(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 47,
+      "symbol": "RLogger.info(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 47,
+      "symbol": "RLogger.info(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 47,
+      "symbol": "RLogger.info(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 52,
+      "symbol": "RLogger.warning(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 52,
+      "symbol": "RLogger.warning(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 52,
+      "symbol": "RLogger.warning(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 52,
+      "symbol": "RLogger.warning(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 52,
+      "symbol": "RLogger.warning(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 57,
+      "symbol": "RLogger.error(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 57,
+      "symbol": "RLogger.error(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 57,
+      "symbol": "RLogger.error(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 57,
+      "symbol": "RLogger.error(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 57,
+      "symbol": "RLogger.error(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 64,
+      "symbol": "Variadicable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 64,
+      "symbol": "Variadicable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 64,
+      "symbol": "Variadicable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 64,
+      "symbol": "Variadicable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 64,
+      "symbol": "Variadicable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 65,
+      "symbol": "Variadicable.verbose(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 65,
+      "symbol": "Variadicable.verbose(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 65,
+      "symbol": "Variadicable.verbose(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 65,
+      "symbol": "Variadicable.verbose(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 65,
+      "symbol": "Variadicable.verbose(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 66,
+      "symbol": "Variadicable.debug(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 66,
+      "symbol": "Variadicable.debug(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 66,
+      "symbol": "Variadicable.debug(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 66,
+      "symbol": "Variadicable.debug(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 66,
+      "symbol": "Variadicable.debug(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 67,
+      "symbol": "Variadicable.info(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 67,
+      "symbol": "Variadicable.info(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 67,
+      "symbol": "Variadicable.info(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 67,
+      "symbol": "Variadicable.info(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 67,
+      "symbol": "Variadicable.info(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 68,
+      "symbol": "Variadicable.warning(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 68,
+      "symbol": "Variadicable.warning(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 68,
+      "symbol": "Variadicable.warning(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 68,
+      "symbol": "Variadicable.warning(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 68,
+      "symbol": "Variadicable.warning(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 69,
+      "symbol": "Variadicable.error(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 69,
+      "symbol": "Variadicable.error(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 69,
+      "symbol": "Variadicable.error(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 69,
+      "symbol": "Variadicable.error(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 69,
+      "symbol": "Variadicable.error(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 73,
+      "symbol": "RLogger.verbose(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 73,
+      "symbol": "RLogger.verbose(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 73,
+      "symbol": "RLogger.verbose(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 73,
+      "symbol": "RLogger.verbose(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 73,
+      "symbol": "RLogger.verbose(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 77,
+      "symbol": "RLogger.debug(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 77,
+      "symbol": "RLogger.debug(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 77,
+      "symbol": "RLogger.debug(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 77,
+      "symbol": "RLogger.debug(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 77,
+      "symbol": "RLogger.debug(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 81,
+      "symbol": "RLogger.info(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 81,
+      "symbol": "RLogger.info(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 81,
+      "symbol": "RLogger.info(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 81,
+      "symbol": "RLogger.info(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 81,
+      "symbol": "RLogger.info(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 85,
+      "symbol": "RLogger.warning(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 85,
+      "symbol": "RLogger.warning(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 85,
+      "symbol": "RLogger.warning(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 85,
+      "symbol": "RLogger.warning(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 85,
+      "symbol": "RLogger.warning(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 89,
+      "symbol": "RLogger.error(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 89,
+      "symbol": "RLogger.error(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 89,
+      "symbol": "RLogger.error(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 89,
+      "symbol": "RLogger.error(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RLogger/RLogger.swift",
+      "line": 89,
+      "symbol": "RLogger.error(_:arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/AtomicWrapper.swift",
+      "line": 11,
+      "symbol": "AtomicGetSet.init(wrappedValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/AtomicWrapper.swift",
+      "line": 11,
+      "symbol": "AtomicGetSet.init(wrappedValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/AtomicWrapper.swift",
+      "line": 11,
+      "symbol": "AtomicGetSet.init(wrappedValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/AtomicWrapper.swift",
+      "line": 11,
+      "symbol": "AtomicGetSet.init(wrappedValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/AtomicWrapper.swift",
+      "line": 15,
+      "symbol": "AtomicGetSet.wrappedValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/AtomicWrapper.swift",
+      "line": 15,
+      "symbol": "AtomicGetSet.wrappedValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/AtomicWrapper.swift",
+      "line": 15,
+      "symbol": "AtomicGetSet.wrappedValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/AtomicWrapper.swift",
+      "line": 15,
+      "symbol": "AtomicGetSet.wrappedValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/AtomicWrapper.swift",
+      "line": 24,
+      "symbol": "AtomicGetSet.mutate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/AtomicWrapper.swift",
+      "line": 24,
+      "symbol": "AtomicGetSet.mutate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/AtomicWrapper.swift",
+      "line": 24,
+      "symbol": "AtomicGetSet.mutate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/AtomicWrapper.swift",
+      "line": 24,
+      "symbol": "AtomicGetSet.mutate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/AnyDependenciesContainer.swift",
+      "line": 22,
+      "symbol": "AnyDependenciesContainer.copy(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/AnyDependenciesContainer.swift",
+      "line": 22,
+      "symbol": "AnyDependenciesContainer.copy(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/AnyDependenciesContainer.swift",
+      "line": 22,
+      "symbol": "AnyDependenciesContainer.copy(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/AnyDependenciesContainer.swift",
+      "line": 22,
+      "symbol": "AnyDependenciesContainer.copy(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 6,
+      "symbol": "TypedDependencyManager.Container",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 6,
+      "symbol": "TypedDependencyManager.Container",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 6,
+      "symbol": "TypedDependencyManager.Container",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 6,
+      "symbol": "TypedDependencyManager.Container",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 7,
+      "symbol": "TypedDependencyManager.Resolver",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 7,
+      "symbol": "TypedDependencyManager.Resolver",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 7,
+      "symbol": "TypedDependencyManager.Resolver",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 7,
+      "symbol": "TypedDependencyManager.Resolver",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 9,
+      "symbol": "TypedDependencyManager.ContainerElement",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 9,
+      "symbol": "TypedDependencyManager.ContainerElement",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 9,
+      "symbol": "TypedDependencyManager.ContainerElement",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 9,
+      "symbol": "TypedDependencyManager.ContainerElement",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 14,
+      "symbol": "TypedDependencyManager.ContainerElement.init(type:factory:transient:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 14,
+      "symbol": "TypedDependencyManager.ContainerElement.init(type:factory:transient:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 14,
+      "symbol": "TypedDependencyManager.ContainerElement.init(type:factory:transient:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 14,
+      "symbol": "TypedDependencyManager.ContainerElement.init(type:factory:transient:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 24,
+      "symbol": "TypedDependencyManager.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 24,
+      "symbol": "TypedDependencyManager.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 24,
+      "symbol": "TypedDependencyManager.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/DependencyInjection/TypedDependecyManager.swift",
+      "line": 24,
+      "symbol": "TypedDependencyManager.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/EnvironmentInformation.swift",
+      "line": 3,
+      "symbol": "EnvironmentInformation",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/EnvironmentInformation.swift",
+      "line": 3,
+      "symbol": "EnvironmentInformation",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/EnvironmentInformation.swift",
+      "line": 3,
+      "symbol": "EnvironmentInformation",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/EnvironmentInformation.swift",
+      "line": 3,
+      "symbol": "EnvironmentInformation",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/EnvironmentInformation.swift",
+      "line": 25,
+      "symbol": "EnvironmentInformation.init(bundle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/EnvironmentInformation.swift",
+      "line": 25,
+      "symbol": "EnvironmentInformation.init(bundle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/EnvironmentInformation.swift",
+      "line": 25,
+      "symbol": "EnvironmentInformation.init(bundle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/EnvironmentInformation.swift",
+      "line": 25,
+      "symbol": "EnvironmentInformation.init(bundle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 4,
+      "symbol": "BundleProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 4,
+      "symbol": "BundleProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 4,
+      "symbol": "BundleProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 4,
+      "symbol": "BundleProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 5,
+      "symbol": "BundleProtocol.valueNotFound",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 5,
+      "symbol": "BundleProtocol.valueNotFound",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 5,
+      "symbol": "BundleProtocol.valueNotFound",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 5,
+      "symbol": "BundleProtocol.valueNotFound",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 6,
+      "symbol": "BundleProtocol.value(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 6,
+      "symbol": "BundleProtocol.value(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 6,
+      "symbol": "BundleProtocol.value(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 6,
+      "symbol": "BundleProtocol.value(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 7,
+      "symbol": "BundleProtocol.deviceModel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 7,
+      "symbol": "BundleProtocol.deviceModel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 7,
+      "symbol": "BundleProtocol.deviceModel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 7,
+      "symbol": "BundleProtocol.deviceModel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 8,
+      "symbol": "BundleProtocol.osVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 8,
+      "symbol": "BundleProtocol.osVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 8,
+      "symbol": "BundleProtocol.osVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 8,
+      "symbol": "BundleProtocol.osVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 9,
+      "symbol": "BundleProtocol.sdkVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 9,
+      "symbol": "BundleProtocol.sdkVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 9,
+      "symbol": "BundleProtocol.sdkVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 9,
+      "symbol": "BundleProtocol.sdkVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 13,
+      "symbol": "Bundle.valueNotFound",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 13,
+      "symbol": "Bundle.valueNotFound",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 13,
+      "symbol": "Bundle.valueNotFound",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 13,
+      "symbol": "Bundle.valueNotFound",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 17,
+      "symbol": "Bundle.osVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 17,
+      "symbol": "Bundle.osVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 17,
+      "symbol": "Bundle.osVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 17,
+      "symbol": "Bundle.osVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 21,
+      "symbol": "Bundle.deviceModel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 21,
+      "symbol": "Bundle.deviceModel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 21,
+      "symbol": "Bundle.deviceModel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 21,
+      "symbol": "Bundle.deviceModel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 27,
+      "symbol": "Bundle.sdkVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 27,
+      "symbol": "Bundle.sdkVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 27,
+      "symbol": "Bundle.sdkVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 27,
+      "symbol": "Bundle.sdkVersion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 31,
+      "symbol": "Bundle.value(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 31,
+      "symbol": "Bundle.value(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 31,
+      "symbol": "Bundle.value(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 31,
+      "symbol": "Bundle.value(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 38,
+      "symbol": "Bundle.sdkBundle(name:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 38,
+      "symbol": "Bundle.sdkBundle(name:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 38,
+      "symbol": "Bundle.sdkBundle(name:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 38,
+      "symbol": "Bundle.sdkBundle(name:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 44,
+      "symbol": "Bundle.bundle(bundleIdSubstring:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 44,
+      "symbol": "Bundle.bundle(bundleIdSubstring:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 44,
+      "symbol": "Bundle.bundle(bundleIdSubstring:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Bundle+EnvironmentInformation.swift",
+      "line": 44,
+      "symbol": "Bundle.bundle(bundleIdSubstring:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Data+Extensions.swift",
+      "line": 4,
+      "symbol": "Data.hexString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Data+Extensions.swift",
+      "line": 4,
+      "symbol": "Data.hexString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Data+Extensions.swift",
+      "line": 4,
+      "symbol": "Data.hexString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/Data+Extensions.swift",
+      "line": 4,
+      "symbol": "Data.hexString",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/NSObject+Extensions.swift",
+      "line": 36,
+      "symbol": "NSObject.isAppleClass(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/NSObject+Extensions.swift",
+      "line": 36,
+      "symbol": "NSObject.isAppleClass(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/NSObject+Extensions.swift",
+      "line": 36,
+      "symbol": "NSObject.isAppleClass(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/NSObject+Extensions.swift",
+      "line": 36,
+      "symbol": "NSObject.isAppleClass(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/NSObject+Extensions.swift",
+      "line": 44,
+      "symbol": "NSObject.isApplePrivateClass(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/NSObject+Extensions.swift",
+      "line": 44,
+      "symbol": "NSObject.isApplePrivateClass(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/NSObject+Extensions.swift",
+      "line": 44,
+      "symbol": "NSObject.isApplePrivateClass(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/NSObject+Extensions.swift",
+      "line": 44,
+      "symbol": "NSObject.isApplePrivateClass(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/NSObject+Extensions.swift",
+      "line": 51,
+      "symbol": "NSObject.isNullableObjectEqual(_:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/NSObject+Extensions.swift",
+      "line": 51,
+      "symbol": "NSObject.isNullableObjectEqual(_:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/NSObject+Extensions.swift",
+      "line": 51,
+      "symbol": "NSObject.isNullableObjectEqual(_:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Extensions/NSObject+Extensions.swift",
+      "line": 51,
+      "symbol": "NSObject.isNullableObjectEqual(_:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 3,
+      "symbol": "KeyStore",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 3,
+      "symbol": "KeyStore",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 3,
+      "symbol": "KeyStore",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 3,
+      "symbol": "KeyStore",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 9,
+      "symbol": "KeyStore.init(service:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 9,
+      "symbol": "KeyStore.init(service:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 9,
+      "symbol": "KeyStore.init(service:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 9,
+      "symbol": "KeyStore.init(service:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 14,
+      "symbol": "KeyStore.key(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 14,
+      "symbol": "KeyStore.key(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 14,
+      "symbol": "KeyStore.key(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 14,
+      "symbol": "KeyStore.key(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 18,
+      "symbol": "KeyStore.addKey(key:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 18,
+      "symbol": "KeyStore.addKey(key:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 18,
+      "symbol": "KeyStore.addKey(key:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 18,
+      "symbol": "KeyStore.addKey(key:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 35,
+      "symbol": "KeyStore.removeKey(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 35,
+      "symbol": "KeyStore.removeKey(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 35,
+      "symbol": "KeyStore.removeKey(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 35,
+      "symbol": "KeyStore.removeKey(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 45,
+      "symbol": "KeyStore.empty()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 45,
+      "symbol": "KeyStore.empty()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 45,
+      "symbol": "KeyStore.empty()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/KeyStore.swift",
+      "line": 45,
+      "symbol": "KeyStore.empty()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 5,
+      "symbol": "Lockable.resourcesToLock",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 5,
+      "symbol": "Lockable.resourcesToLock",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 5,
+      "symbol": "Lockable.resourcesToLock",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 5,
+      "symbol": "Lockable.resourcesToLock",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 8,
+      "symbol": "LockableResource",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 8,
+      "symbol": "LockableResource",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 8,
+      "symbol": "LockableResource",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 8,
+      "symbol": "LockableResource",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 33,
+      "symbol": "LockableObject.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 33,
+      "symbol": "LockableObject.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 33,
+      "symbol": "LockableObject.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 33,
+      "symbol": "LockableObject.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 78,
+      "symbol": "LockableObject.get()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 78,
+      "symbol": "LockableObject.get()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 78,
+      "symbol": "LockableObject.get()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 78,
+      "symbol": "LockableObject.get()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 87,
+      "symbol": "LockableObject.set(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 87,
+      "symbol": "LockableObject.set(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 87,
+      "symbol": "LockableObject.set(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Lockable.swift",
+      "line": 87,
+      "symbol": "LockableObject.set(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 7,
+      "symbol": "ReachabilityType",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 7,
+      "symbol": "ReachabilityType",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 7,
+      "symbol": "ReachabilityType",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 7,
+      "symbol": "ReachabilityType",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 8,
+      "symbol": "ReachabilityType.connection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 8,
+      "symbol": "ReachabilityType.connection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 8,
+      "symbol": "ReachabilityType.connection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 8,
+      "symbol": "ReachabilityType.connection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 10,
+      "symbol": "ReachabilityType.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 10,
+      "symbol": "ReachabilityType.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 10,
+      "symbol": "ReachabilityType.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 10,
+      "symbol": "ReachabilityType.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 11,
+      "symbol": "ReachabilityType.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 11,
+      "symbol": "ReachabilityType.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 11,
+      "symbol": "ReachabilityType.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 11,
+      "symbol": "ReachabilityType.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 14,
+      "symbol": "ReachabilityObserver",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 14,
+      "symbol": "ReachabilityObserver",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 14,
+      "symbol": "ReachabilityObserver",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 14,
+      "symbol": "ReachabilityObserver",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 15,
+      "symbol": "ReachabilityObserver.reachabilityChanged(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 15,
+      "symbol": "ReachabilityObserver.reachabilityChanged(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 15,
+      "symbol": "ReachabilityObserver.reachabilityChanged(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 15,
+      "symbol": "ReachabilityObserver.reachabilityChanged(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 24,
+      "symbol": "Reachability.Connection",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 24,
+      "symbol": "Reachability.Connection",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 24,
+      "symbol": "Reachability.Connection",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 24,
+      "symbol": "Reachability.Connection",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 25,
+      "symbol": "Reachability.Connection.unavailable",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 25,
+      "symbol": "Reachability.Connection.unavailable",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 25,
+      "symbol": "Reachability.Connection.unavailable",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 25,
+      "symbol": "Reachability.Connection.unavailable",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 26,
+      "symbol": "Reachability.Connection.wifi",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 26,
+      "symbol": "Reachability.Connection.wifi",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 26,
+      "symbol": "Reachability.Connection.wifi",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 26,
+      "symbol": "Reachability.Connection.wifi",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 27,
+      "symbol": "Reachability.Connection.cellular",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 27,
+      "symbol": "Reachability.Connection.cellular",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 27,
+      "symbol": "Reachability.Connection.cellular",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 27,
+      "symbol": "Reachability.Connection.cellular",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 29,
+      "symbol": "Reachability.Connection.isAvailable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 29,
+      "symbol": "Reachability.Connection.isAvailable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 29,
+      "symbol": "Reachability.Connection.isAvailable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 29,
+      "symbol": "Reachability.Connection.isAvailable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 48,
+      "symbol": "Reachability.connection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 48,
+      "symbol": "Reachability.connection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 48,
+      "symbol": "Reachability.connection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 48,
+      "symbol": "Reachability.connection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 62,
+      "symbol": "Reachability.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 62,
+      "symbol": "Reachability.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 62,
+      "symbol": "Reachability.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 62,
+      "symbol": "Reachability.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 97,
+      "symbol": "Reachability.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 97,
+      "symbol": "Reachability.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 97,
+      "symbol": "Reachability.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 97,
+      "symbol": "Reachability.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 101,
+      "symbol": "Reachability.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 101,
+      "symbol": "Reachability.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 101,
+      "symbol": "Reachability.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 101,
+      "symbol": "Reachability.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 195,
+      "symbol": "SCNetworkReachabilityFlags.connection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 195,
+      "symbol": "SCNetworkReachabilityFlags.connection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 195,
+      "symbol": "SCNetworkReachabilityFlags.connection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 195,
+      "symbol": "SCNetworkReachabilityFlags.connection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 222,
+      "symbol": "SCNetworkReachabilityFlags.isOnWWANFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 222,
+      "symbol": "SCNetworkReachabilityFlags.isOnWWANFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 222,
+      "symbol": "SCNetworkReachabilityFlags.isOnWWANFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 222,
+      "symbol": "SCNetworkReachabilityFlags.isOnWWANFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 229,
+      "symbol": "SCNetworkReachabilityFlags.isReachableFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 229,
+      "symbol": "SCNetworkReachabilityFlags.isReachableFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 229,
+      "symbol": "SCNetworkReachabilityFlags.isReachableFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 229,
+      "symbol": "SCNetworkReachabilityFlags.isReachableFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 232,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionRequiredFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 232,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionRequiredFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 232,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionRequiredFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 232,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionRequiredFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 235,
+      "symbol": "SCNetworkReachabilityFlags.isInterventionRequiredFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 235,
+      "symbol": "SCNetworkReachabilityFlags.isInterventionRequiredFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 235,
+      "symbol": "SCNetworkReachabilityFlags.isInterventionRequiredFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 235,
+      "symbol": "SCNetworkReachabilityFlags.isInterventionRequiredFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 238,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionOnTrafficFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 238,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionOnTrafficFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 238,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionOnTrafficFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 238,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionOnTrafficFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 241,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionOnDemandFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 241,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionOnDemandFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 241,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionOnDemandFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 241,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionOnDemandFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 244,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionOnTrafficOrDemandFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 244,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionOnTrafficOrDemandFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 244,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionOnTrafficOrDemandFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 244,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionOnTrafficOrDemandFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 247,
+      "symbol": "SCNetworkReachabilityFlags.isTransientConnectionFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 247,
+      "symbol": "SCNetworkReachabilityFlags.isTransientConnectionFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 247,
+      "symbol": "SCNetworkReachabilityFlags.isTransientConnectionFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 247,
+      "symbol": "SCNetworkReachabilityFlags.isTransientConnectionFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 250,
+      "symbol": "SCNetworkReachabilityFlags.isLocalAddressFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 250,
+      "symbol": "SCNetworkReachabilityFlags.isLocalAddressFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 250,
+      "symbol": "SCNetworkReachabilityFlags.isLocalAddressFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 250,
+      "symbol": "SCNetworkReachabilityFlags.isLocalAddressFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 253,
+      "symbol": "SCNetworkReachabilityFlags.isDirectFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 253,
+      "symbol": "SCNetworkReachabilityFlags.isDirectFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 253,
+      "symbol": "SCNetworkReachabilityFlags.isDirectFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 253,
+      "symbol": "SCNetworkReachabilityFlags.isDirectFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 256,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionRequiredAndTransientFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 256,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionRequiredAndTransientFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 256,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionRequiredAndTransientFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 256,
+      "symbol": "SCNetworkReachabilityFlags.isConnectionRequiredAndTransientFlagSet",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 260,
+      "symbol": "SCNetworkReachabilityFlags.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 260,
+      "symbol": "SCNetworkReachabilityFlags.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 260,
+      "symbol": "SCNetworkReachabilityFlags.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/Reachability.swift",
+      "line": 260,
+      "symbol": "SCNetworkReachabilityFlags.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLRequest+Extensions.swift",
+      "line": 4,
+      "symbol": "NSMutableURLRequest.setRASHeaders(for:appBundle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLRequest+Extensions.swift",
+      "line": 4,
+      "symbol": "NSMutableURLRequest.setRASHeaders(for:appBundle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLRequest+Extensions.swift",
+      "line": 4,
+      "symbol": "NSMutableURLRequest.setRASHeaders(for:appBundle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLRequest+Extensions.swift",
+      "line": 4,
+      "symbol": "NSMutableURLRequest.setRASHeaders(for:appBundle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 5,
+      "symbol": "Sessionable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 5,
+      "symbol": "Sessionable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 5,
+      "symbol": "Sessionable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 5,
+      "symbol": "Sessionable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 7,
+      "symbol": "Sessionable.createDataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 7,
+      "symbol": "Sessionable.createDataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 7,
+      "symbol": "Sessionable.createDataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 7,
+      "symbol": "Sessionable.createDataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 11,
+      "symbol": "URLSession.createDataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 11,
+      "symbol": "URLSession.createDataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 11,
+      "symbol": "URLSession.createDataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 11,
+      "symbol": "URLSession.createDataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 18,
+      "symbol": "SwiftySessionable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 18,
+      "symbol": "SwiftySessionable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 18,
+      "symbol": "SwiftySessionable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 18,
+      "symbol": "SwiftySessionable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 19,
+      "symbol": "SwiftySessionable.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 19,
+      "symbol": "SwiftySessionable.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 19,
+      "symbol": "SwiftySessionable.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 19,
+      "symbol": "SwiftySessionable.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 24,
+      "symbol": "URLSession.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 24,
+      "symbol": "URLSession.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 24,
+      "symbol": "URLSession.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 24,
+      "symbol": "URLSession.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 46,
+      "symbol": "URLSessionTaskable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 46,
+      "symbol": "URLSessionTaskable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 46,
+      "symbol": "URLSessionTaskable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 46,
+      "symbol": "URLSessionTaskable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 47,
+      "symbol": "URLSessionTaskable.resume()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 47,
+      "symbol": "URLSessionTaskable.resume()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 47,
+      "symbol": "URLSessionTaskable.resume()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/Networking/URLSession+Extensions.swift",
+      "line": 47,
+      "symbol": "URLSessionTaskable.resume()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/WeakWrapper.swift",
+      "line": 6,
+      "symbol": "WeakWrapper.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/WeakWrapper.swift",
+      "line": 6,
+      "symbol": "WeakWrapper.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/WeakWrapper.swift",
+      "line": 6,
+      "symbol": "WeakWrapper.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/WeakWrapper.swift",
+      "line": 6,
+      "symbol": "WeakWrapper.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/WeakWrapper.swift",
+      "line": 10,
+      "symbol": "WeakWrapper.init(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/WeakWrapper.swift",
+      "line": 10,
+      "symbol": "WeakWrapper.init(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/WeakWrapper.swift",
+      "line": 10,
+      "symbol": "WeakWrapper.init(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsMain/WeakWrapper.swift",
+      "line": 10,
+      "symbol": "WeakWrapper.init(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsNimble/NimbleExtensions.swift",
+      "line": 6,
+      "symbol": "Expectation.toAfterTimeout(file:line:_:timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsNimble/NimbleExtensions.swift",
+      "line": 21,
+      "symbol": "Expectation.toAfterTimeoutNot(file:line:_:timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsTestHelpers/Extensions/XCTest+Eventually.swift",
+      "line": 6,
+      "symbol": "XCTestCase.eventually(after:this:shouldEqual:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsTestHelpers/URLSessionMock.swift",
+      "line": 6,
+      "symbol": "URLSessionMock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsTestHelpers/URLSessionMock.swift",
+      "line": 8,
+      "symbol": "URLSessionMock.SessionTaskCompletion",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsTestHelpers/URLSessionMock.swift",
+      "line": 15,
+      "symbol": "URLSessionMock.sentRequest",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsTestHelpers/URLSessionMock.swift",
+      "line": 16,
+      "symbol": "URLSessionMock.httpResponse",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsTestHelpers/URLSessionMock.swift",
+      "line": 17,
+      "symbol": "URLSessionMock.responseData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsTestHelpers/URLSessionMock.swift",
+      "line": 18,
+      "symbol": "URLSessionMock.responseError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsTestHelpers/URLSessionMock.swift",
+      "line": 19,
+      "symbol": "URLSessionMock.onCompletedTask",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsTestHelpers/URLSessionMock.swift",
+      "line": 21,
+      "symbol": "URLSessionMock.mock(originalInstance:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsTestHelpers/URLSessionMock.swift",
+      "line": 36,
+      "symbol": "URLSessionMock.startMockingURLSession()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsTestHelpers/URLSessionMock.swift",
+      "line": 56,
+      "symbol": "URLSessionMock.stopMockingURLSession()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsTestHelpers/URLSessionMock.swift",
+      "line": 64,
+      "symbol": "URLSessionMock.decodeSentData(modelType:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsTestHelpers/URLSessionMock.swift",
+      "line": 71,
+      "symbol": "URLSessionMock.decodeQueryItems(modelType:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/RSDKUtilsTestHelpers/URLSessionMock.swift",
+      "line": 92,
+      "symbol": "URLSessionMock.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/vagrant/git"
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>README  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="README  Reference"></a>
+    <header>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="css/version-select.css" />
+      <script src="js/version-select.js" defer></script>
+      <script src="../versions.js"></script>
+      <div class="content-wrapper">
+        <p><a href="index.html">RSDKUtils Docs</a></p>
+        <div class="version-dropdown">
+          <button onclick="toggleVersionSelect()" class="versionbtn">2.0.0 <i class="fa fa-caret-down"></i></button>
+          <div id="versions" class="version-dropdown-content"></div>
+        </div> 
+        <p class="header-right"><a href="https://github.com/rakutentech/ios-sdkutils"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">RSDKUtils Reference</a>
+        <img id="carat" src="img/carat.png" />
+        README  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="changelog.html">CHANGELOG</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AnyDependenciesContainer.html">AnyDependenciesContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AtomicGetSet.html">AtomicGetSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/EnvironmentInformation.html">EnvironmentInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KeyStore.html">KeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/LockableObject.html">LockableObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Reachability.html">Reachability</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Reachability/Connection.html">– Connection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TypedDependencyManager.html">TypedDependencyManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TypedDependencyManager/ContainerElement.html">– ContainerElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/URLSessionMock.html">URLSessionMock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/WeakWrapper.html">WeakWrapper</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/RLoggingLevel.html">RLoggingLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Bundle.html">Bundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Expectation.html">Expectation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSMutableURLRequest.html">NSMutableURLRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSObject.html">NSObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SCNetworkReachabilityFlags.html">SCNetworkReachabilityFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/URLSession.html">URLSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions.html#/c:objc(cs)NSURLSessionTask">URLSessionTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/XCTestCase.html">XCTestCase</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:9RSDKUtils26elementsEqualOrderAgnosticy6Nimble9PredicateVyxGq_SgSlRzSlR_SQ7ElementRpzAHQy_AIRSr0_lF">elementsEqualOrderAgnostic(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/BundleProtocol.html">BundleProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Lockable.html">Lockable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/LockableResource.html">LockableResource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ReachabilityObserver.html">ReachabilityObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ReachabilityType.html">ReachabilityType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Sessionable.html">Sessionable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SwiftySessionable.html">SwiftySessionable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/URLSessionTaskable.html">URLSessionTaskable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Variadicable.html">Variadicable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/RLogger.html">RLogger</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p><img src="https://app.bitrise.io/app/7bb2e98294cf2d27/status.svg?token=ISfEDlJWKck83OBeX4XaEQ&branch=master" alt="Build Status"></p>
+<h1 id='rsdkutils' class='heading'>RSDKUtils</h1>
+<h2 id='rakuten-39-s-sdk-team-internal-utilities-module' class='heading'>Rakuten&rsquo;s SDK Team internal utilities module</h2>
+
+<p>RSDKUtils module contains useful utilities, extensions, and common classes used in SDK development.</p>
+
+<p>RSDKUtils consists of 4 sub-modules:</p>
+
+<ul>
+<li><em>Main</em> - Contains the most common utilities for various purposes like networking, data storage, and standard class extensions.</li>
+<li><em>TestHelpers</em> - Contains useful mocks and XCTest extensions.</li>
+<li><em>Nimble</em> - Adds additional Nimble expectations like <code>toAfterTimeout</code>.</li>
+<li><em>RLogger</em> - A tool for managing your log messages.</li>
+</ul>
+
+<p>This module supports iOS 11.0 and above. It has been tested with iOS 11.1 and above.</p>
+<h1 id='strong-how-to-install-strong' class='heading'><strong>How to install</strong></h1>
+<h2 id='installing-with-cocoapods' class='heading'>Installing with CocoaPods</h2>
+
+<p>To use the module in its basic configuration your <code>Podfile</code> should contain:</p>
+<pre class="highlight ruby"><code><span class="c1"># Defined also as 'RSDKUtils/Main'</span>
+<span class="n">pod</span> <span class="s1">'RSDKUtils'</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">'~&gt; 2.0'</span>
+</code></pre>
+
+<p>To use other functionalities, add their respective subspec to your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'RSDKUtils/TestHelpers'</span><span class="p">,</span> <span class="s1">'~&gt; 2.0'</span>
+<span class="n">pod</span> <span class="s1">'RSDKUtils/Nimble'</span><span class="p">,</span> <span class="s1">'~&gt; 2.0'</span>
+<span class="n">pod</span> <span class="s1">'RSDKUtils/RLogger'</span><span class="p">,</span> <span class="s1">'~&gt; 2.0'</span>
+</code></pre>
+
+<p>Run <code>pod install</code> to install the module.<br>
+More information on installing pods: <a href="https://guides.cocoapods.org/using/getting-started.html">https://guides.cocoapods.org/using/getting-started.html</a></p>
+<h2 id='installing-with-swift-package-manager' class='heading'>Installing with Swift Package Manager</h2>
+
+<p>Open your project settings in Xcode and add a new package in &lsquo;Swift Packages&rsquo; tab:</p>
+
+<ul>
+<li>Repository URL: <code>https://github.com/rakutentech/ios-sdkutils.git</code></li>
+</ul><div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    Version settings: branch <code>master</code> or 2.0.0 &ldquo;Up to Next Major&rdquo; 
+
+</div>
+
+<p>Choose one of the following products for your target:</p>
+
+<ul>
+<li>RSDKUtilsMain</li>
+<li>RSDKUtilsTestHelpers</li>
+<li>RSDKUtilsNimble</li>
+<li>RLogger</li>
+</ul>
+<h1 id='strong-using-the-sdk-strong' class='heading'><strong>Using the SDK</strong></h1>
+
+<p>In order to use available utilities you need to add <code>import</code> statement in your source file:</p>
+<h3 id='installed-with-cocoapods' class='heading'>Installed with Cocoapods</h3>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">RSDKUtils</span>
+</code></pre>
+<h3 id='installed-with-spm' class='heading'>Installed with SPM</h3>
+
+<p>Depending on which product(s) you want to use, add one or more <code>import</code>:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">RSDKUtilsMain</span>
+<span class="kd">import</span> <span class="kt">RSDKUtilsNimble</span>
+<span class="kd">import</span> <span class="kt">RSDKUtilsTestHelpers</span>
+<span class="kd">import</span> <span class="kt">RLogger</span>
+</code></pre>
+<h1 id='strong-testing-the-module-strong' class='heading'><strong>Testing the module</strong></h1>
+
+<p>You can test the module as a Swift Package and as a Cocoapod.</p>
+<h3 id='test-cococapod' class='heading'>Test Cococapod</h3>
+
+<p>Run <code>pod install</code> then open RSDKUtils.xcworkspace and run <code>Tests</code> target.</p>
+<h3 id='test-swift-package' class='heading'>Test Swift Package</h3>
+
+<p>Open <code>Package.swift</code> in Xcode, choose iOS Simulator and run <code>Tests</code> target. </p>
+
+<p>⚠️ <strong>WARNING:</strong> Command-line testing is not available at the moment because of bug <a href="https://bugs.swift.org/browse/SR-13773">https://bugs.swift.org/browse/SR-13773</a></p>
+<pre class="highlight plaintext"><code>swift package clean
+swift test -Xswiftc "-sdk" -Xswiftc `xcrun --sdk iphonesimulator --show-sdk-path` -Xswiftc "-target" -Xswiftc "x86_64-apple-ios14.5-simulator"
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://github.com/rakutentech/ios-sdkutils" target="_blank" rel="external noopener">Rakuten Group, Inc.</a>. All rights reserved. (Last updated: 2021-10-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
