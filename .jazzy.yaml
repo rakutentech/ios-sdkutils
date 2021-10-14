@@ -1,0 +1,14 @@
+clean: true
+author: Rakuten Group, Inc.
+github_url: https://github.com/rakutentech/ios-sdkutils
+module_version: 2.0.0
+module: RSDKUtils
+xcodebuild_arguments:
+  - -workspace
+  - RSDKUtils.xcworkspace
+  - -scheme
+  - Tests
+podspec: RSDKUtils.podspec
+readme: README.md
+documentation: "*.md"
+hide_documentation_coverage: true

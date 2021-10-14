@@ -8,6 +8,7 @@ trigger_map:
 - pull_request_source_branch: "*"
   workflow: primary
 workflows:
+
   primary:
     before_run:
     - _setup
@@ -19,9 +20,12 @@ workflows:
         - update_fastlane: 'false'
         - lane: ci
         title: Build & Test
+
   deploy:
     before_run:
     - _setup
+    after_run:
+    - _deploy_docs_worker 
     steps:
     - script@1:
         title: Lint and push Cocoapods trunk
@@ -32,6 +36,12 @@ workflows:
 
             bundle exec pod spec lint --allow-warnings
             bundle exec pod trunk push --allow-warnings --verbose
+
+  deploy_docs:
+    before_run:
+    - _setup
+    - _deploy_docs_worker
+
   _setup:
     steps:
     - git-clone@6:
@@ -58,6 +68,7 @@ workflows:
         - cache_enabled: 'yes'
         - upgrade: 'no'
         - packages: swiftlint
+        
   _report:
     steps:
     - danger@2:
@@ -86,6 +97,20 @@ workflows:
             done
 
             bash codecov -J '^RSDKUtils$' -X gcov
+
+  _deploy_docs_worker:
+    steps:
+    - brew-install@0:
+        title: Install svn
+        inputs:
+        - cache_enabled: 'yes'
+        - upgrade: 'no'
+        - packages: svn
+    - fastlane@2:
+        title: Generate and deploy Docs to Github Pages
+        inputs:
+        - update_fastlane: 'false'
+        - lane: deploy_ghpages ghpages_url:$GIT_REPOSITORY_URL github_token:$PUBLISHER_GITHUB_API_TOKEN
 app:
   envs:
   - opts:

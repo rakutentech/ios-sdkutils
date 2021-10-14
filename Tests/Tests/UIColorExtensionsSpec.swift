@@ -1,5 +1,6 @@
 import Quick
 import Nimble
+import UIKit
 #if canImport(RSDKUtils)
 @testable import RSDKUtils // Cocoapods version
 #else
