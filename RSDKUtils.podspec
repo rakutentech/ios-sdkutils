@@ -28,13 +28,13 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Main'
 
   s.subspec 'Main' do |ss|
-    ss.source_files = "Sources/RSDKUtilsMain/**/*.{swift,m,h}"
-    ss.public_header_files = "Sources/RSDKUtilsMain/*.h"
+    ss.public_header_files = 'Sources/*.h'
+    ss.source_files = 'Sources/RSDKUtilsMain/**/*.swift', 'Sources/*.h'
     ss.dependency 'RSDKUtils/RLogger'
   end
 
   s.subspec 'TestHelpers' do |ss|
-    ss.source_files = "Sources/RSDKUtilsTestHelpers/**/*.swift"
+    ss.source_files = 'Sources/RSDKUtilsTestHelpers/**/*.swift'
     ss.weak_frameworks = [
       'XCTest'
     ]
@@ -42,13 +42,14 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Nimble' do |ss|
-    ss.source_files = "Sources/RSDKUtilsNimble/**/*.swift"
+    ss.source_files = 'Sources/RSDKUtilsNimble/**/*.swift'
     ss.dependency 'Nimble'
     ss.dependency 'RSDKUtils/Main'
   end
 
   s.subspec 'RLogger' do |ss|
-    ss.source_files = "Sources/RLogger/**/*.swift"
+    ss.source_files = 'Sources/RLogger/**/*.swift', 'Sources/*.h'
+    ss.public_header_files = 'Sources/*.h'
   end
 end
 # vim:syntax=ruby:et:sts=2:sw=2:ts=2:ff=unix:
