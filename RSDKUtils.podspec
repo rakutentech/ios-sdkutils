@@ -26,9 +26,10 @@ Pod::Spec.new do |s|
   ]
   s.module_map = './RSDKUtils.modulemap'
   s.default_subspec = 'Main'
+  s.source_files = 'Sources/*.h'
+  s.public_header_files = 'Sources/*.h'
 
   s.subspec 'Main' do |ss|
-    ss.public_header_files = 'Sources/*.h'
     ss.source_files = 'Sources/RSDKUtilsMain/**/*.swift', 'Sources/*.h'
     ss.dependency 'RSDKUtils/RLogger'
   end
@@ -38,6 +39,10 @@ Pod::Spec.new do |s|
     ss.weak_frameworks = [
       'XCTest'
     ]
+    ss.pod_target_xcconfig = {
+      'ENABLE_TESTING_SEARCH_PATHS' => 'YES',
+      'OTHER_LDFLAGS'               => '$(inherited) -weak-lXCTestSwiftSupport'
+    }
     ss.dependency 'RSDKUtils/Main'
   end
 
@@ -49,7 +54,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'RLogger' do |ss|
     ss.source_files = 'Sources/RLogger/**/*.swift', 'Sources/*.h'
-    ss.public_header_files = 'Sources/*.h'
   end
 end
 # vim:syntax=ruby:et:sts=2:sw=2:ts=2:ff=unix:
