@@ -95,9 +95,9 @@ public class LockableObject<T>: LockableResource {
 
     private func checkIfThreadShouldWait(threadSafe: Bool) -> Bool {
         let currentThread = Thread.current
-        let shouldWait: () -> Bool = { [self] in
-            assert(!(_isLocked && lockingThread == nil), "Thread was deallocated before calling unlock()")
-            return _isLocked && lockingThread != nil && lockingThread != currentThread
+        let shouldWait: () -> Bool = {
+            assert(!(self._isLocked && self.lockingThread == nil), "Thread was deallocated before calling unlock()")
+            return self._isLocked && self.lockingThread != nil && self.lockingThread != currentThread
         }
         return threadSafe ? transactionQueue.sync(execute: shouldWait) : shouldWait()
     }
