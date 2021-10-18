@@ -22,6 +22,7 @@
 		4597CFB326E69D7400781E4F /* AnyDependenciesContainerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFB226E69D7400781E4F /* AnyDependenciesContainerSpec.swift */; };
 		4597CFB526E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFB426E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift */; };
 		6DACF499237CF05E00EEFE12 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACF498237CF05E00EEFE12 /* TestHelpers.swift */; };
+		73CFF4FC271E56A700D2E36B /* AnalyticsBroadcasterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CFF4FB271E56A700D2E36B /* AnalyticsBroadcasterSpec.swift */; };
 		D06A23E924D3FF2800E84EE2 /* KeyStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A23E824D3FF2800E84EE2 /* KeyStoreTests.swift */; };
 		D06A23F124D4007300E84EE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A23F024D4007300E84EE2 /* AppDelegate.swift */; };
 		EA14FDB556C9812880440D96 /* EnvironmentInformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */; };
@@ -54,6 +55,7 @@
 		45EA75A825C76660001B2049 /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = "<group>"; };
 		529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnvironmentInformationTests.swift; sourceTree = "<group>"; };
 		6DACF498237CF05E00EEFE12 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		73CFF4FB271E56A700D2E36B /* AnalyticsBroadcasterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsBroadcasterSpec.swift; sourceTree = "<group>"; };
 		83F9CA8C997CE27EA8BD1BD4 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8783C5860B44767F3B2D0547 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D06A23E824D3FF2800E84EE2 /* KeyStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStoreTests.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				45000A9027177394001962BF /* DataExtensionsSpec.swift */,
 				45000A92271775C5001962BF /* URLSessionExtensionsSpec.swift */,
 				45741526271781A60059286F /* NSObjectExtensionsSpec.swift */,
+				73CFF4FB271E56A700D2E36B /* AnalyticsBroadcasterSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				452FA0F326EE974400936528 /* RLoggerSpec.swift in Sources */,
 				45741527271781A60059286F /* NSObjectExtensionsSpec.swift in Sources */,
 				EA14FDB556C9812880440D96 /* EnvironmentInformationTests.swift in Sources */,
+				73CFF4FC271E56A700D2E36B /* AnalyticsBroadcasterSpec.swift in Sources */,
 				45000A93271775C5001962BF /* URLSessionExtensionsSpec.swift in Sources */,
 				4518EEDC270F6D9900E8CBBC /* UIColorExtensionsSpec.swift in Sources */,
 				4597CFB326E69D7400781E4F /* AnyDependenciesContainerSpec.swift in Sources */,
