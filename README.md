@@ -71,8 +71,20 @@ Run `pod install` then open RSDKUtils.xcworkspace and run `Tests` target.
 ### Test Swift Package
 Open `Package.swift` in Xcode, choose iOS Simulator and run `Tests` target. 
 
-⚠️ **WARNING:** Command-line testing is not available at the moment because of bug https://bugs.swift.org/browse/SR-13773
+⚠️ **WARNING:** Command-line testing is not available at the moment because of bug [https://bugs.swift.org/browse/SR-13773](https://bugs.swift.org/browse/SR-13773)
 ```
 swift package clean
 swift test -Xswiftc "-sdk" -Xswiftc `xcrun --sdk iphonesimulator --show-sdk-path` -Xswiftc "-target" -Xswiftc "x86_64-apple-ios14.5-simulator"
+```
+
+# Troubleshooting
+
+* `dyld: Symbol not found:` error when running tests (Cocoapods version)
+
+This usually happens when `TestHelpers` or `Nimble` subspec is linked only to tests target where Host app target is linked to other RSDKUtils subspec at the same time. More info can be found here: [https://github.com/CocoaPods/CocoaPods/issues/7195](https://github.com/CocoaPods/CocoaPods/issues/7195)<br>
+The solution for that is to link `TestHelpers` and `Nimble` spec to the Host app target either explicitly or as a `testspecs`.
+```ruby
+target 'HostAppTarget'
+  pod 'RSDKUtils', '~> 2.0', :testspecs => ['Nimble', 'TestHelpers']
+end    
 ```
