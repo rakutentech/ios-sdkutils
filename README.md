@@ -1,4 +1,5 @@
 ![Build Status](https://app.bitrise.io/app/7bb2e98294cf2d27/status.svg?token=ISfEDlJWKck83OBeX4XaEQ&branch=master)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rakutentech_ios-sdkutils&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=rakutentech_ios-sdkutils)
 
 # RSDKUtils
 ## Rakuten's SDK Team internal utilities module
