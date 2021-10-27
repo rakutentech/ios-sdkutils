@@ -1,5 +1,14 @@
 # **Changelog**
 
+#### 2.1.0 (2021-10-27)
+- Features:
+    - Added AnalyticsBroadcaster (SDKCF-4383)
+    - Added Dictionary and String extensions (SDKCF-4423)
+- Improvements:
+    - Added missing messages to deprecated RLogger functions
+- Fixes:
+    - Fixed XCTest linking issue for UI Tests targets
+
 #### 2.0.0 (2021-10-14)
 **Breaking change:** Removed obsolete utilities, separated source files into subspecs. Minimum supported iOS version is now 11.0
 - Features:
