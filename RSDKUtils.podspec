@@ -55,5 +55,10 @@ Pod::Spec.new do |s|
   s.subspec 'RLogger' do |ss|
     ss.source_files = 'Sources/RLogger/**/*.swift', 'Sources/*.h'
   end
+
+  s.subspec 'RDeviceIdentifier' do |ss|
+    ss.source_files = 'Sources/RDeviceIdentifier/**/*.swift'
+    ss.dependency 'RSDKUtils/Main'
+  end
 end
 # vim:syntax=ruby:et:sts=2:sw=2:ts=2:ff=unix:
