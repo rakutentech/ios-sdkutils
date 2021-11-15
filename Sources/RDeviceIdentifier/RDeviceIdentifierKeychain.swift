@@ -61,22 +61,6 @@ struct RDeviceIdentifierKeychain {
          String(kSecClass): kSecClassGenericPassword]
     }
 
-    private func addIfNonExistent() throws -> [String: Any]? {
-        var strongQuery = query
-        strongQuery[String(kSecAttrAccessible)] = kSecAttrAccessibleWhenUnlocked
-        strongQuery[String(kSecReturnAttributes)] = true
-        var result: CFTypeRef?
-        var status = SecItemCopyMatching(strongQuery as CFDictionary, &result)
-        if status == errSecItemNotFound {
-            status = SecItemAdd(strongQuery as CFDictionary, &result)
-        }
-        if status != errSecSuccess {
-            throw RDeviceIdentifierError.keychainLocked
-        }
-
-        return result as? [String: Any]
-    }
-
     private func checkMissingAccessControl(_ status: OSStatus, for accessGroup: String) throws {
         if status == errSecNoAccessForItem {
             throw RDeviceIdentifierError.accessControl
