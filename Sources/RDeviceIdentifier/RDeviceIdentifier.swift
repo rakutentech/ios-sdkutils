@@ -1,17 +1,17 @@
 import UIKit.UIDevice
 import CommonCrypto
 #if !canImport(RSDKUtils)
-import RLogger // Required in SPM version
+import RSDKUtilsMain // Required in SPM version
 #endif
 
-@objc public final class RDeviceIdentifier: NSObject {
-    private static let keychain = RDeviceIdentifierKeychain()
-    private static var _uniqueDeviceIdentifier: String?
+// MARK: - Public API
 
-    // MARK: - Public API
-
+public enum RDeviceIdentifier {
     /// Return a string uniquely identifying the device the application is currently running on.
     ///
+    /// - Parameters:
+    ///   - service: bundle id of the original app that writes to the keychain (not your host app's bundle id)
+    ///   - accessGroup: shared keychain group identifier with App Group entitlements
     /// - Warning: For this method to work, keychain access **MUST** be properly configured first.
     ///            Please refer to internal Analytics SDK README’s Getting Started guide for important
     ///            additional requirements for using this feature correctly.
@@ -40,47 +40,26 @@ import RLogger // Required in SPM version
     ///         If the keychain is not available (i.e. the device is locked) and no value has been
     ///         retrieved yet, `nil` is returned and the developer should try again when the device
     ///         is unlocked.
-    @objc public static var uniqueDeviceIdentifier: String? {
-        // If we already have a value, return it.
-        if let _uniqueDeviceIdentifier = _uniqueDeviceIdentifier {
-            return _uniqueDeviceIdentifier
-        }
-
-        var accessGroup: String?
-        do {
-            if let (internalAccessGroup, defaultAccessGroup) = try keychain.getAccessGroups() {
-                accessGroup = internalAccessGroup
-                checkKeychainAccessGroupOrder(defaultAccessGroup)
-            }
-        } catch {
-            // Keychain is not available
-            RLogger.debug(message: "Keychain access failed")
-            return nil
-        }
-
-        // Try to clean things up
-        reset()
+    public static func getUniqueDeviceIdentifier(service: String, accessGroup: String) throws -> String {
+        let keychain = RDeviceIdentifierKeychain(service: service, accessGroup: accessGroup)
+        let prefixedAccessGroup = accessGroup
 
         // Try to find the device identifier in the keychain.
         // Here we always have a bundle seed id.
         do {
-            if let accessGroup = accessGroup, let uniqueDeviceIdData = try keychain.search(for: accessGroup) {
+            if let uniqueDeviceIdData = try keychain.search(for: prefixedAccessGroup) {
                 // Device id found!
-                _uniqueDeviceIdentifier = uniqueDeviceIdData.hexString
-                return _uniqueDeviceIdentifier
+                return uniqueDeviceIdData.hexString
             }
         } catch {
-            // Keychain problem
-            RLogger.debug(message: "Keychain access failed")
-            return nil
+            throw RDeviceIdentifierError.keychainLocked
         }
 
         // Get identifierForVendor and write it to the keychain.
         // If it succeeds, then assign the result to '_deviceIdData'.
         var deviceIdData: Data?
         guard var idForVendor = UIDevice.current.identifierForVendor?.uuidString else {
-            RLogger.debug(message: "Device must be unlocked first time after restart")
-            return nil
+            throw RDeviceIdentifierError.accessControl
         }
         // Filter out nil, empty, or zeroed strings (e.g. "00000000-0000-0000-0000-000000000000")
         // We don't have many options here, beside generating an id.
@@ -97,43 +76,22 @@ import RLogger // Required in SPM version
         }
 
         guard let deviceIdData = deviceIdData,
-              let accessGroup = accessGroup,
-              (try? keychain.save(data: deviceIdData, for: accessGroup)) != nil else {
-            RLogger.debug(message: "Keychain access failed")
-            return nil
+              (try? keychain.save(data: deviceIdData, for: prefixedAccessGroup)) != nil else {
+              throw RDeviceIdentifierError.keychainLocked
         }
 
-        _uniqueDeviceIdentifier = deviceIdData.hexString
-        return _uniqueDeviceIdentifier
-}
+        return deviceIdData.hexString
+    }
 
     /// Return the model identifier of the device the application is currently running on.
     ///
     /// - Returns: The internal model identifier. See [here](https://www.theiphonewiki.com/wiki/Models) for a list of model identifiers.
-    @objc public static var modelIdentifier: String {
+    public static var modelIdentifier: String {
         // https://opensource.apple.com/source/xnu/xnu-201/bsd/sys/utsname.h.auto.html
         var systemInfo = utsname()
         uname(&systemInfo)
         // utsname.machine is a null terminated C-string
         // make String from a ptr to the first bit (0)
         return String(cString: &systemInfo.machine.0)
-    }
-
-    // MARK: - Helpers
-
-    private static func checkKeychainAccessGroupOrder(_ defaultAccessGroup: String) {
-        if let firstStopIndex = defaultAccessGroup.firstIndex(of: ".") {
-            let indexAfterStop = defaultAccessGroup.index(after: firstStopIndex)
-            let bundleId = String(defaultAccessGroup[indexAfterStop...])
-            if RDeviceIdentifierConstants.keychainAccessGroup == bundleId {
-                assertionFailure("\(RDeviceIdentifierConstants.keychainAccessGroup) is your default access group." +
-                        "Make sure your application's bundle identifier is the first entry of `keychain-access-groups` in your entitlements!")
-            }
-        }
-    }
-
-    static func reset() {
-        _uniqueDeviceIdentifier = nil
-        keychain.clear()
     }
 }
