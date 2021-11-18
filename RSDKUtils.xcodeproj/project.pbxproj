@@ -21,7 +21,6 @@
 		4597CFB126E69D4400781E4F /* TypedDependencyManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFB026E69D4400781E4F /* TypedDependencyManagerSpec.swift */; };
 		4597CFB326E69D7400781E4F /* AnyDependenciesContainerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFB226E69D7400781E4F /* AnyDependenciesContainerSpec.swift */; };
 		4597CFB526E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFB426E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift */; };
-		4B32DFCB272BFB09006531C4 /* RDeviceIdentifierSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B32DFCA272BFB09006531C4 /* RDeviceIdentifierSpec.swift */; };
 		6DACF499237CF05E00EEFE12 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACF498237CF05E00EEFE12 /* TestHelpers.swift */; };
 		73CFF4FC271E56A700D2E36B /* AnalyticsBroadcasterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CFF4FB271E56A700D2E36B /* AnalyticsBroadcasterSpec.swift */; };
 		C97AB9742727234400F3BAB8 /* StringExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AB9722727234400F3BAB8 /* StringExtensionsSpec.swift */; };
@@ -56,8 +55,6 @@
 		4597CFB226E69D7400781E4F /* AnyDependenciesContainerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDependenciesContainerSpec.swift; sourceTree = "<group>"; };
 		4597CFB426E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyDependenciesContainerSpec.swift; sourceTree = "<group>"; };
 		45EA75A825C76660001B2049 /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = "<group>"; };
-		4B32DFCA272BFB09006531C4 /* RDeviceIdentifierSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDeviceIdentifierSpec.swift; sourceTree = "<group>"; };
-		4B6B35D1272F822A009C7F6D /* TestHost.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestHost.entitlements; sourceTree = "<group>"; };
 		529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnvironmentInformationTests.swift; sourceTree = "<group>"; };
 		6DACF498237CF05E00EEFE12 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		73CFF4FB271E56A700D2E36B /* AnalyticsBroadcasterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsBroadcasterSpec.swift; sourceTree = "<group>"; };
@@ -101,7 +98,6 @@
 		45EA75A725C7624F001B2049 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				4B32DFCA272BFB09006531C4 /* RDeviceIdentifierSpec.swift */,
 				C97AB9732727234400F3BAB8 /* DictionaryExtensionsSpec.swift */,
 				C97AB9722727234400F3BAB8 /* StringExtensionsSpec.swift */,
 				529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */,
@@ -145,7 +141,6 @@
 		A9DCA0F399BA173C3556B928 = {
 			isa = PBXGroup;
 			children = (
-				4B6B35D1272F822A009C7F6D /* TestHost.entitlements */,
 				45EA75A825C76660001B2049 /*  */,
 				725C32805DD3F9A3B31E3A5E /* Products */,
 				C07BF9ACDD1012D4C6AA1A6B /* Tests */,
@@ -307,7 +302,6 @@
 				4597CFAF26E6952400781E4F /* LockableSpec.swift in Sources */,
 				4597CFB126E69D4400781E4F /* TypedDependencyManagerSpec.swift in Sources */,
 				4597CFAD26E6951200781E4F /* AtomicWrapperSpec.swift in Sources */,
-				4B32DFCB272BFB09006531C4 /* RDeviceIdentifierSpec.swift in Sources */,
 				45000A8F27173D31001962BF /* ReachabilitySpec.swift in Sources */,
 				6DACF499237CF05E00EEFE12 /* TestHelpers.swift in Sources */,
 				4597CFB526E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift in Sources */,
@@ -487,7 +481,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TestHost.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/TestHost/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -502,7 +495,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TestHost.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/TestHost/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
