@@ -17,9 +17,6 @@ let package = Package(
             name: "RSDKUtilsNimble",
             targets: ["RSDKUtilsNimble"]),
         .library(
-            name: "RDeviceIdentifier",
-            targets: ["RDeviceIdentifier"]),
-        .library(
             name: "RLogger",
             targets: ["RLogger"])
     ],
@@ -28,9 +25,6 @@ let package = Package(
         .package(url: "https://github.com/Quick/Nimble.git", .upToNextMajor(from: "9.1.0"))
     ],
     targets: [
-        .target(
-            name: "RDeviceIdentifier",
-            dependencies: ["RSDKUtilsMain"]),
         .target(name: "RLogger"),
         .target(
             name: "RSDKUtilsMain",
@@ -43,7 +37,7 @@ let package = Package(
             dependencies: ["RSDKUtilsMain", "Nimble"]),
         .testTarget(
             name: "Tests",
-            dependencies: ["RSDKUtilsMain", "RSDKUtilsNimble", "RSDKUtilsTestHelpers", "RDeviceIdentifier", "RLogger", "Quick", "Nimble"])
+            dependencies: ["RSDKUtilsMain", "RSDKUtilsNimble", "RSDKUtilsTestHelpers", "RLogger", "Quick", "Nimble"])
     ],
     swiftLanguageVersions: [
         .v5
