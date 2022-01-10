@@ -36,12 +36,16 @@ extension Bundle: BundleProtocol {
 public extension Bundle {
 
     static func sdkBundle(name: String) -> Bundle? {
-        let defaultBundle = self.init(identifier: "org.cocoapods.\(name)") ?? .bundle(bundleIdSubstring: name)
+        let defaultBundle = self.init(identifier: "org.cocoapods.\(name)") ?? .frameworkBundle(bundleIdPhrase: name)
         assert(defaultBundle != nil, "\(name) SDK is not integrated properly - framework bundle not found")
         return defaultBundle
     }
 
-    static func bundle(bundleIdSubstring: String) -> Bundle? {
-        return (allBundles + allFrameworks).first(where: { $0.bundleIdentifier?.contains(bundleIdSubstring) == true })
+    static func assetsBundle(bundleIdPhrase: String) -> Bundle? {
+        allBundles.first(where: { $0.bundleIdentifier?.contains(bundleIdPhrase) == true })
+    }
+
+    static func frameworkBundle(bundleIdPhrase: String) -> Bundle? {
+        allFrameworks.first(where: { $0.bundleIdentifier?.contains(bundleIdPhrase) == true })
     }
 }

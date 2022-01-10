@@ -186,7 +186,7 @@ public class Reachability: ReachabilityType {
     }
 
     private static func logDebug(_ message: String) {
-        RLogger.debug(message)
+        RLogger.debug(message: message)
     }
 }
 
