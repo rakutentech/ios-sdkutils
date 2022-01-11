@@ -1,3 +1,4 @@
+import Foundation
 import Quick
 import Nimble
 #if canImport(RSDKUtils)
@@ -28,8 +29,8 @@ final class AnalyticsBroadcasterSpec: QuickSpec {
             beforeEach {
                 tracker = AnalyticsTrackerMock()
                 observer = NotificationCenter.default.addObserver(forName: .sdkCustomEvent,
-                                                                      object: nil,
-                                                                      queue: OperationQueue()) { notification in
+                                                                  object: nil,
+                                                                  queue: OperationQueue()) { notification in
                     tracker?.trackEvent(name: NSNotification.Name.sdkCustomEvent.rawValue, parameters: notification.object as? [String: Any])
                     if let observer = observer {
                         NotificationCenter.default.removeObserver(observer)
