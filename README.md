@@ -14,6 +14,14 @@ RSDKUtils consists of 4 sub-modules:
 
 This module supports iOS 11.0 and above. It has been tested with iOS 11.1 and above.
 
+# **Requirements**
+
+Xcode 12.5.x or Xcode 13+
+
+Swift >= 5.4 is supported.
+
+Note: The SDK may build on earlier Xcode versions but it is not officially supported or tested.
+
 # **How to install**
 
 ## Installing with CocoaPods
