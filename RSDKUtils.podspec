@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.source       = { :git => "https://github.com/rakutentech/ios-sdkutils.git", :tag => s.version.to_s }
   s.platform     = :ios, '11.0'
-  s.swift_version = '5.0'
+  s.swift_versions = ['5.4', '5.5']
   s.requires_arc = true
   s.pod_target_xcconfig = {
     'CLANG_ENABLE_MODULES'                                  => 'YES',
