@@ -130,8 +130,8 @@ public class Reachability: ReachabilityType {
             copyDescription: { (info: UnsafeRawPointer) -> Unmanaged<CFString> in
                 let unmanagedWeakSelf = UnmanagedWeakSelf.fromOpaque(info)
                 let weakSelf = unmanagedWeakSelf.takeUnretainedValue()
-                let description = weakSelf.value?.description ?? "nil"
-                return Unmanaged.passRetained(description as CFString)
+                let descriptionCopy = weakSelf.value?.description ?? "nil"
+                return Unmanaged.passRetained(descriptionCopy as CFString)
             }
         )
 
@@ -165,12 +165,12 @@ public class Reachability: ReachabilityType {
     @discardableResult
     private func updateReachabilityFlags() -> Bool {
         return reachabilitySerialQueue.sync { [unowned self] in
-            var flags = SCNetworkReachabilityFlags()
-            guard SCNetworkReachabilityGetFlags(self.reachabilityRef, &flags) else {
+            var reachabilityFlags = SCNetworkReachabilityFlags()
+            guard SCNetworkReachabilityGetFlags(self.reachabilityRef, &reachabilityFlags) else {
                 return false
             }
 
-            self.flags = flags
+            self.flags = reachabilityFlags
             return true
         }
     }
@@ -199,23 +199,21 @@ public extension SCNetworkReachabilityFlags {
         #if targetEnvironment(simulator)
         return .wifi
         #else
-        var connection = Reachability.Connection.unavailable
+        var currentConnection = Reachability.Connection.unavailable
 
         if !isConnectionRequiredFlagSet {
-            connection = .wifi
+            currentConnection = .wifi
         }
 
-        if isConnectionOnTrafficOrDemandFlagSet {
-            if !isInterventionRequiredFlagSet {
-                connection = .wifi
-            }
+        if isConnectionOnTrafficOrDemandFlagSet && !isInterventionRequiredFlagSet {
+            currentConnection = .wifi
         }
 
         if isOnWWANFlagSet {
-            connection = .cellular
+            currentConnection = .cellular
         }
 
-        return connection
+        return currentConnection
         #endif
     }
 

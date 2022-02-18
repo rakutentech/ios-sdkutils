@@ -13,6 +13,7 @@ workflows:
     before_run:
     - _setup
     after_run:
+    - _sonarqube
     - _report
     steps:
     - fastlane@3:
@@ -69,6 +70,34 @@ workflows:
         - upgrade: 'no'
         - packages: swiftlint
         
+  _sonarqube:
+    steps:
+    - script@1:
+        title: Setup env vars
+        inputs:
+        - content: |
+            #!/usr/bin/env bash
+
+            if [[ $BITRISE_GIT_BRANCH == release* ]]; then
+                envman add --key IS_RELEASE_BRANCH --value "true"
+            else
+                envman add --key IS_RELEASE_BRANCH --value "false"
+            fi
+    - sonarqube-scanner@1:
+        run_if: '{{getenv "SONAR_API_TOKEN" | ne "" | and (enveq "BITRISE_GIT_BRANCH" "master" | or (enveq "IS_RELEASE_BRANCH" "true") )}}'
+        inputs:
+        - scanner_properties: |-
+            sonar.sources=./Sources
+            sonar.exclusions=./Tests
+            sonar.projectKey=ios-sdkutils
+            sonar.projectName=iOS SDK Utils
+            sonar.host.url=$SONAR_HOST_URL
+            sonar.login=$SONAR_API_TOKEN
+            sonar.c.file.suffixes=-
+            sonar.cpp.file.suffixes=-
+            sonar.objc.file.suffixes=-
+            sonar.coverageReportPaths=./artifacts/coverage/sonarqube-generic-coverage.xml
+
   _report:
     steps:
     - danger@2:
