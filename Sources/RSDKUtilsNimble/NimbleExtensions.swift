@@ -12,7 +12,7 @@ public extension Expectation {
         let totalTimeoutMS = Int((timeout + timeForExecution) * TimeInterval(USEC_PER_SEC))
         waitUntil(timeout: .microseconds(totalTimeoutMS)) { done in
             DispatchQueue.main.asyncAfter(deadline: .now() + timeout) {
-                expect(file: file, line: line, { try predicate.satisfies(self.expression).status }).to(equal(.matches))
+                expect(file: file, line: line, evaluateExpression).to(predicate)
                 done()
             }
         }
@@ -27,10 +27,14 @@ public extension Expectation {
         let totalTimeoutMS = Int((timeout + timeForExecution) * TimeInterval(USEC_PER_SEC))
         waitUntil(timeout: .microseconds(totalTimeoutMS)) { done in
             DispatchQueue.main.asyncAfter(deadline: .now() + timeout) {
-                expect(file: file, line: line, { try predicate.satisfies(self.expression).status }).to(equal(.doesNotMatch))
+                expect(file: file, line: line, evaluateExpression).toNot(predicate)
                 done()
             }
         }
+    }
+
+    private func evaluateExpression() throws -> T? {
+        try self.expression.evaluate()
     }
 }
 

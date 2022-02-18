@@ -21,7 +21,9 @@ public class TypedDependencyManager {
     @AtomicGetSet private var resolver = Resolver()
     private var container = Container()
 
-    public init() { }
+    public init() {
+        // exposing public init
+    }
 
     /// Adds new container to be used when resolving for the type enclosed in this container
     /// - Parameter container: A container to add
@@ -33,8 +35,8 @@ public class TypedDependencyManager {
     /// - Parameter type: Type of the instance
     /// - Returns: An existing instance, or new instance in case of transient type, of given type
     public func resolve<T>(type: T.Type) -> T? {
-        guard let existingInstance = resolver.last(where: { (type, _) -> Bool in
-            return type == T.self
+        guard let existingInstance = resolver.last(where: { (registeredType, _) -> Bool in
+            return registeredType == type
         })?.sharedInstance as? T else {
             guard let registeredElement = container.last(
                 where: { element -> Bool in
@@ -47,7 +49,7 @@ public class TypedDependencyManager {
                 return nil
             }
 
-            if registeredElement.transient == false {
+            if !registeredElement.transient {
                 resolver.append((T.self, unwrappedInstance))
             }
             return unwrappedInstance

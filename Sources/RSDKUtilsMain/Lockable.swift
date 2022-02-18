@@ -27,8 +27,8 @@ public class LockableObject<T>: LockableResource {
     private var lockingThread: Thread?
     private(set) var lockCount: UInt = 0
 
-    var isLocked: Bool { transactionQueue.sync { _isLocked } }
-    private var _isLocked: Bool { lockCount > 0 }
+    var isLocked: Bool { transactionQueue.sync { unsafeIsLocked } }
+    private var unsafeIsLocked: Bool { lockCount > 0 }
 
     public init(_ resource: T) {
         self.resource = resource
@@ -96,8 +96,8 @@ public class LockableObject<T>: LockableResource {
     private func checkIfThreadShouldWait(threadSafe: Bool) -> Bool {
         let currentThread = Thread.current
         let shouldWait: () -> Bool = {
-            assert(!(self._isLocked && self.lockingThread == nil), "Thread was deallocated before calling unlock()")
-            return self._isLocked && self.lockingThread != nil && self.lockingThread != currentThread
+            assert(!(self.unsafeIsLocked && self.lockingThread == nil), "Thread was deallocated before calling unlock()")
+            return self.unsafeIsLocked && self.lockingThread != nil && self.lockingThread != currentThread
         }
         return threadSafe ? transactionQueue.sync(execute: shouldWait) : shouldWait()
     }

@@ -41,8 +41,6 @@ public extension AnyDependenciesContainer {
 struct SwiftyDependenciesContainer<T: Equatable> {
     private var elements = [T]()
 
-    init() {}
-
     /// Register an instance conforming to Equatable protocol if it's not already contained
     /// Register only one element per type.
     @discardableResult
