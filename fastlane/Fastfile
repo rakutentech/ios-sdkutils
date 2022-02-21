@@ -35,9 +35,15 @@ platform :ios do
 
   desc "Generate code coverage"
   lane :coverage do |options|
-    Dir.chdir("..") do
-      sh("bundle exec danger dry_run")
-    end
+    slather(
+      output_directory: './artifacts/coverage',
+      scheme: ENV['REM_FL_TESTS_SCHEME'] || 'Tests',
+      sonarqube_xml: true,
+      use_bundle_exec: true,
+      proj: ENV['REM_FL_TESTS_PROJECT'],
+      workspace: ENV['REM_FL_TESTS_WORKSPACE'],
+      binary_basename: ENV['REM_FL_TESTS_SLATHER_BASENAME'],
+      ignore: '*.{h,m}')
   end
 end
 # vim:syntax=ruby:et:sts=2:sw=2:ts=2:ff=unix:
