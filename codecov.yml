@@ -1,5 +1,0 @@
-ignore:
-  - "Pods"
-  - "Tests"
-  - "Sources/RSDKUtilsNimble"
-  - "Sources/RSDKUtilsTestHelpers"
