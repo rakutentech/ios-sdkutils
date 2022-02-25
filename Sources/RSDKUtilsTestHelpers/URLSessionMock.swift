@@ -78,6 +78,9 @@ public final class URLSessionMock: URLSession {
             guard let value = item.value else {
                 return nil
             }
+            if let boolValue = Bool(value) {
+                return "\"\(item.name)\": \(boolValue)"
+            }
             if let intValue = Int(value) {
                 return "\"\(item.name)\": \(intValue)"
             }
