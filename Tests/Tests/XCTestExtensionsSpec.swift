@@ -16,12 +16,12 @@ final class XCTestExtensionsSpec: QuickSpec {
 
             context("eventually(after:this:shouldEqual)") {
 
-                it("should succeed immediately if values were equal from the beginning") {
+                it("should succeed without adding any delay if values were equal from the beginning") {
                     let startTime = Date()
                     self.eventually(this: { "test" }, shouldEqual: { "test" })
 
-                    let secondsPaseed = Date().timeIntervalSince(startTime)
-                    expect(secondsPaseed).to(beLessThan(0.2))
+                    let secondsPassed = Date().timeIntervalSince(startTime)
+                    expect(secondsPassed).to(beLessThanOrEqualTo(0.1))
                 }
 
                 it("should succeed if values become equal") {
@@ -34,12 +34,13 @@ final class XCTestExtensionsSpec: QuickSpec {
 
                 it("should fail after expected timeout if values did not become equal") {
                     let startTime = Date()
-                    XCTExpectFailure()
-                    self.eventually(after: 2, this: { "test" }, shouldEqual: { "test2" })
+                    XCTExpectFailure {
+                        self.eventually(after: 2, this: { "test" }, shouldEqual: { "test2" })
+                    }
 
-                    let secondsPaseed = Date().timeIntervalSince(startTime)
-                    expect(secondsPaseed).to(beGreaterThan(1.8))
-                    expect(secondsPaseed).to(beLessThan(2.2))
+                    let secondsPassed = Date().timeIntervalSince(startTime)
+                    expect(secondsPassed).to(beGreaterThanOrEqualTo(2.0))
+                    expect(secondsPassed).to(beLessThanOrEqualTo(2.2))
                 }
 
                 it("should evaluate (poll) expectation multiple times") {
