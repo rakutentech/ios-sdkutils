@@ -21,7 +21,7 @@ final class XCTestExtensionsSpec: QuickSpec {
                     self.eventually(this: { "test" }, shouldEqual: { "test" })
 
                     let secondsPassed = Date().timeIntervalSince(startTime)
-                    expect(secondsPassed).to(beLessThanOrEqualTo(0.1))
+                    expect(secondsPassed.rounded()).to(beLessThanOrEqualTo(0.1))
                 }
 
                 it("should succeed if values become equal") {
@@ -39,8 +39,8 @@ final class XCTestExtensionsSpec: QuickSpec {
                     }
 
                     let secondsPassed = Date().timeIntervalSince(startTime)
-                    expect(secondsPassed).to(beGreaterThanOrEqualTo(2.0))
-                    expect(secondsPassed).to(beLessThanOrEqualTo(2.2))
+                    expect(secondsPassed.rounded()).to(beGreaterThanOrEqualTo(2.0))
+                    expect(secondsPassed.rounded()).to(beLessThanOrEqualTo(2.2))
                 }
 
                 it("should evaluate (poll) expectation multiple times") {
