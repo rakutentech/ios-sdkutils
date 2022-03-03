@@ -3,21 +3,27 @@ import XCTest
 
 public extension XCTestCase {
 
-    func eventually<T: Equatable>(after time: TimeInterval = 5, this value: @escaping () -> T?, shouldEqual otherValue: @escaping () -> T) {
+    private static let eventuallyDispatchQueue = DispatchQueue(label: "XCTestHelper.eventually")
+
+    func eventually<T: Equatable>(after time: TimeInterval = 5,
+                                  this value: @escaping () -> T?,
+                                  shouldEqual otherValue: @escaping () -> T) {
 
         let expectation = self.expectation(description: "eventually \(String(describing: value())) should equal \(String(describing: otherValue()))")
 
-        Timer.scheduledTimer(withTimeInterval: 0.5,
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.5,
                              repeats: true) { (timer) in
-            DispatchQueue.main.async {
+            XCTestCase.eventuallyDispatchQueue.async {
                 if value() == otherValue() {
                     expectation.fulfill()
                     timer.invalidate()
                 }
             }
-        }.fire()
+        }
+        timer.fire()
 
         wait(for: [expectation], timeout: time)
+        timer.invalidate()
         XCTAssertEqual(value(), otherValue())
     }
 }
