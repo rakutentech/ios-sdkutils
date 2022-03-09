@@ -1,3 +1,5 @@
+#if os(iOS)
+
 import UIKit
 
 public extension UIView {
@@ -45,3 +47,5 @@ public extension UIView {
         return targetViewTouchArea.contains(touchPointInTargetView)
     }
 }
+
+#endif

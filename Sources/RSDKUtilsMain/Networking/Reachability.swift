@@ -1,3 +1,5 @@
+#if os(iOS)
+
 import SystemConfiguration
 import Foundation
 #if canImport(RLogger)
@@ -269,3 +271,4 @@ public extension SCNetworkReachabilityFlags {
         return "\(W)\(R) \(c)\(t)\(i)\(C)\(D)\(l)\(d)"
     }
 }
+#endif

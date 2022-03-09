@@ -1,5 +1,8 @@
 import Foundation
 import UIKit
+#if os(watchOS)
+import WatchKit
+#endif
 
 @objc public protocol BundleProtocol {
     var valueNotFound: String { get }
@@ -11,11 +14,15 @@ import UIKit
 
 extension Bundle: BundleProtocol {
     public var valueNotFound: String {
-        return ""
+        ""
     }
 
     public func osVersion() -> String {
-        return UIDevice.current.systemVersion
+        #if os(watchOS)
+        WKInterfaceDevice.current().systemVersion
+        #else
+        UIDevice.current.systemVersion
+        #endif
     }
 
     public func deviceModel() -> String {
@@ -25,11 +32,11 @@ extension Bundle: BundleProtocol {
     }
 
     public func sdkVersion() -> String {
-        return Bundle(for: EnvironmentInformation.self).value(for: "CFBundleShortVersionString") ?? valueNotFound
+        Bundle(for: EnvironmentInformation.self).value(for: "CFBundleShortVersionString") ?? valueNotFound
     }
 
     public func value(for key: String) -> String? {
-        return self.object(forInfoDictionaryKey: key) as? String
+        self.object(forInfoDictionaryKey: key) as? String
     }
 }
 

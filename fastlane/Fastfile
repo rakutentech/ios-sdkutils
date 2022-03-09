@@ -12,6 +12,7 @@ platform :ios do
 
   desc "Run tests"
   lane :tests do
+    build_swift_package # running before .xcworkspace is created
     cocoapods(repo_update: ENV['REM_FL_CP_REPO_UPDATE'] || false)
 
     scan(
@@ -38,6 +39,34 @@ platform :ios do
       workspace: ENV['REM_FL_TESTS_WORKSPACE'],
       binary_basename: ENV['REM_FL_TESTS_SLATHER_BASENAME'],
       ignore: '*.{h,m}')
+  end
+
+  lane :build_swift_package do
+    xcodebuild(
+      clean: true,
+      build: true,
+      scheme: 'RSDKUtilsMain',
+      destination: 'platform=iOS Simulator,name=' + ENV['REM_FL_TESTS_DEVICE'] || 'iPhone 11',
+      xcargs: '"APPLICATION_EXTENSION_API_ONLY=YES"'
+    )
+    xcodebuild(
+      clean: true,
+      build: true,
+      scheme: 'RSDKUtilsMain',
+      destination: 'platform=watchOS Simulator,name=Apple Watch Series 6 - 40mm'
+    )
+    xcodebuild(
+      clean: true,
+      build: true,
+      scheme: 'RSDKUtilsNimble',
+      destination: 'platform=iOS Simulator,name=' + ENV['REM_FL_TESTS_DEVICE'] || 'iPhone 11'
+    )
+    xcodebuild(
+      clean: true,
+      build: true,
+      scheme: 'RSDKUtilsTestHelpers',
+      destination: 'platform=iOS Simulator,name=' + ENV['REM_FL_TESTS_DEVICE'] || 'iPhone 11'
+    )
   end
 end
 # vim:syntax=ruby:et:sts=2:sw=2:ts=2:ff=unix:
