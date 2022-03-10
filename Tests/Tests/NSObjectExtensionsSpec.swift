@@ -22,7 +22,11 @@ class NSObjectExtensionsSpec: QuickSpec {
                 }
 
                 it("will return false if class name does not match") {
-                    expect(object.isKind(of: "Array")).to(beFalse())
+                    expect(object.isKind(of: "NSSet")).to(beFalse())
+                }
+
+                it("will return false for subclass type") {
+                    expect(object.isKind(of: "NSMutableArray")).to(beFalse())
                 }
 
                 it("will return true if class name matches base type") {
