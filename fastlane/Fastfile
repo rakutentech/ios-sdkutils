@@ -42,31 +42,24 @@ platform :ios do
   end
 
   lane :build_swift_package do
-    xcodebuild(
-      clean: true,
-      build: true,
-      scheme: 'RSDKUtilsMain',
-      destination: 'platform=iOS Simulator,name=' + ENV['REM_FL_TESTS_DEVICE'] || 'iPhone 11',
-      xcargs: '"APPLICATION_EXTENSION_API_ONLY=YES"'
-    )
-    xcodebuild(
-      clean: true,
-      build: true,
-      scheme: 'RSDKUtilsMain',
-      destination: 'platform=watchOS Simulator,name=Apple Watch Series 6 - 40mm'
-    )
-    xcodebuild(
-      clean: true,
-      build: true,
-      scheme: 'RSDKUtilsNimble',
-      destination: 'platform=iOS Simulator,name=' + ENV['REM_FL_TESTS_DEVICE'] || 'iPhone 11'
-    )
-    xcodebuild(
-      clean: true,
-      build: true,
-      scheme: 'RSDKUtilsTestHelpers',
-      destination: 'platform=iOS Simulator,name=' + ENV['REM_FL_TESTS_DEVICE'] || 'iPhone 11'
-    )
+    ios_destination = 'platform=iOS Simulator,name=' + ENV['REM_FL_TESTS_DEVICE'] || 'iPhone 11'
+    watchos_destination = 'platform=watchOS Simulator,name=Apple Watch Series 6 - 40mm'
+
+    Build = Struct.new(:scheme, :destination, :xcargs)
+    main_build_ios = Build.new('RSDKUtilsMain', ios_destination, '"APPLICATION_EXTENSION_API_ONLY=YES"')
+    main_build_watchos = Build.new('RSDKUtilsMain', watchos_destination)
+    nimble_build_ios = Build.new('RSDKUtilsNimble', ios_destination)
+    helpers_build_ios = Build.new('RSDKUtilsTestHelpers', ios_destination)
+
+    [main_build_ios, main_build_watchos, nimble_build_ios, helpers_build_ios].each do |build|
+      xcodebuild(
+        clean: true,
+        build: true,
+        scheme: build.scheme,
+        destination: build.destination,
+        xcargs: build.xcargs
+      )
+    end
   end
 end
 # vim:syntax=ruby:et:sts=2:sw=2:ts=2:ff=unix:
