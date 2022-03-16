@@ -9,29 +9,30 @@
 /* Begin PBXBuildFile section */
 		1E93FC4B5B8B4C60430398BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A04641D3B60ED0F410B68EB /* Foundation.framework */; };
 		2F17427BF74A50B45FA22CC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8783C5860B44767F3B2D0547 /* UIKit.framework */; };
-		45000A8F27173D31001962BF /* ReachabilitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45000A8E27173D31001962BF /* ReachabilitySpec.swift */; };
-		45000A9127177394001962BF /* DataExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45000A9027177394001962BF /* DataExtensionsSpec.swift */; };
-		45000A93271775C5001962BF /* URLSessionExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45000A92271775C5001962BF /* URLSessionExtensionsSpec.swift */; };
-		4518EEDC270F6D9900E8CBBC /* UIColorExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518EEDB270F6D9900E8CBBC /* UIColorExtensionsSpec.swift */; };
-		452FA0F326EE974400936528 /* RLoggerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452FA0F226EE974400936528 /* RLoggerSpec.swift */; };
-		4535CBC52714E58200D6E5AF /* StandardHeaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535CBC42714E58200D6E5AF /* StandardHeaderSpec.swift */; };
-		45741527271781A60059286F /* NSObjectExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45741526271781A60059286F /* NSObjectExtensionsSpec.swift */; };
-		4584C13727C80E1C00A1C6BC /* NimbleExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4584C13627C80E1C00A1C6BC /* NimbleExtensionsSpec.swift */; };
-		4584C13B27C81CAF00A1C6BC /* XCTestExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4584C13A27C81CAF00A1C6BC /* XCTestExtensionsSpec.swift */; };
-		4584C13D27C8242500A1C6BC /* URLSessionMockSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4584C13C27C8242500A1C6BC /* URLSessionMockSpec.swift */; };
-		4597CFAD26E6951200781E4F /* AtomicWrapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFAC26E6951200781E4F /* AtomicWrapperSpec.swift */; };
-		4597CFAF26E6952400781E4F /* LockableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFAE26E6952400781E4F /* LockableSpec.swift */; };
-		4597CFB126E69D4400781E4F /* TypedDependencyManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFB026E69D4400781E4F /* TypedDependencyManagerSpec.swift */; };
-		4597CFB326E69D7400781E4F /* AnyDependenciesContainerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFB226E69D7400781E4F /* AnyDependenciesContainerSpec.swift */; };
-		4597CFB526E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CFB426E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift */; };
-		45E68D2B27DAB3C200652F97 /* OptionalExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E68D2A27DAB3C200652F97 /* OptionalExtensionsSpec.swift */; };
-		6DACF499237CF05E00EEFE12 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACF498237CF05E00EEFE12 /* TestHelpers.swift */; };
-		73CFF4FC271E56A700D2E36B /* AnalyticsBroadcasterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CFF4FB271E56A700D2E36B /* AnalyticsBroadcasterSpec.swift */; };
-		C97AB9742727234400F3BAB8 /* StringExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AB9722727234400F3BAB8 /* StringExtensionsSpec.swift */; };
-		C97AB9752727234400F3BAB8 /* DictionaryExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AB9732727234400F3BAB8 /* DictionaryExtensionsSpec.swift */; };
-		D06A23E924D3FF2800E84EE2 /* KeyStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A23E824D3FF2800E84EE2 /* KeyStoreTests.swift */; };
+		45DAA16627E293A300BC25A5 /* LockableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA14F27E293A300BC25A5 /* LockableSpec.swift */; };
+		45DAA16727E293A300BC25A5 /* EnvironmentInformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15027E293A300BC25A5 /* EnvironmentInformationTests.swift */; };
+		45DAA16827E293A300BC25A5 /* DataExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15127E293A300BC25A5 /* DataExtensionsSpec.swift */; };
+		45DAA16927E293A300BC25A5 /* UIViewExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15227E293A300BC25A5 /* UIViewExtensionSpec.swift */; };
+		45DAA16A27E293A300BC25A5 /* RLoggerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15327E293A300BC25A5 /* RLoggerSpec.swift */; };
+		45DAA16B27E293A300BC25A5 /* AnyDependenciesContainerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15427E293A300BC25A5 /* AnyDependenciesContainerSpec.swift */; };
+		45DAA16C27E293A300BC25A5 /* XCTestExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15527E293A300BC25A5 /* XCTestExtensionsSpec.swift */; };
+		45DAA16D27E293A300BC25A5 /* NSObjectExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15627E293A300BC25A5 /* NSObjectExtensionsSpec.swift */; };
+		45DAA16E27E293A300BC25A5 /* AnalyticsBroadcasterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15727E293A300BC25A5 /* AnalyticsBroadcasterSpec.swift */; };
+		45DAA16F27E293A300BC25A5 /* OptionalExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15827E293A300BC25A5 /* OptionalExtensionsSpec.swift */; };
+		45DAA17027E293A300BC25A5 /* DictionaryExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15927E293A300BC25A5 /* DictionaryExtensionsSpec.swift */; };
+		45DAA17127E293A300BC25A5 /* StandardHeaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15A27E293A300BC25A5 /* StandardHeaderSpec.swift */; };
+		45DAA17227E293A300BC25A5 /* TypedDependencyManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15B27E293A300BC25A5 /* TypedDependencyManagerSpec.swift */; };
+		45DAA17327E293A300BC25A5 /* NimbleExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15C27E293A300BC25A5 /* NimbleExtensionsSpec.swift */; };
+		45DAA17427E293A300BC25A5 /* SwiftyDependenciesContainerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15D27E293A300BC25A5 /* SwiftyDependenciesContainerSpec.swift */; };
+		45DAA17527E293A300BC25A5 /* URLSessionExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15E27E293A300BC25A5 /* URLSessionExtensionsSpec.swift */; };
+		45DAA17627E293A300BC25A5 /* AtomicWrapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15F27E293A300BC25A5 /* AtomicWrapperSpec.swift */; };
+		45DAA17727E293A300BC25A5 /* StringExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA16027E293A300BC25A5 /* StringExtensionsSpec.swift */; };
+		45DAA17827E293A300BC25A5 /* URLSessionMockSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA16127E293A300BC25A5 /* URLSessionMockSpec.swift */; };
+		45DAA17927E293A300BC25A5 /* UIColorExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA16227E293A300BC25A5 /* UIColorExtensionsSpec.swift */; };
+		45DAA17A27E293A300BC25A5 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA16327E293A300BC25A5 /* TestHelpers.swift */; };
+		45DAA17B27E293A300BC25A5 /* ReachabilitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA16427E293A300BC25A5 /* ReachabilitySpec.swift */; };
+		45DAA17C27E293A300BC25A5 /* KeyStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA16527E293A300BC25A5 /* KeyStoreTests.swift */; };
 		D06A23F124D4007300E84EE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A23F024D4007300E84EE2 /* AppDelegate.swift */; };
-		EA14FDB556C9812880440D96 /* EnvironmentInformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,31 +47,32 @@
 
 /* Begin PBXFileReference section */
 		3A04641D3B60ED0F410B68EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		45000A8E27173D31001962BF /* ReachabilitySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilitySpec.swift; sourceTree = "<group>"; };
-		45000A9027177394001962BF /* DataExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensionsSpec.swift; sourceTree = "<group>"; };
-		45000A92271775C5001962BF /* URLSessionExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensionsSpec.swift; sourceTree = "<group>"; };
-		4518EEDB270F6D9900E8CBBC /* UIColorExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensionsSpec.swift; sourceTree = "<group>"; };
-		452FA0F226EE974400936528 /* RLoggerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLoggerSpec.swift; sourceTree = "<group>"; };
-		4535CBC42714E58200D6E5AF /* StandardHeaderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHeaderSpec.swift; sourceTree = "<group>"; };
-		45741526271781A60059286F /* NSObjectExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtensionsSpec.swift; sourceTree = "<group>"; };
-		4584C13627C80E1C00A1C6BC /* NimbleExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleExtensionsSpec.swift; sourceTree = "<group>"; };
-		4584C13A27C81CAF00A1C6BC /* XCTestExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestExtensionsSpec.swift; sourceTree = "<group>"; };
-		4584C13C27C8242500A1C6BC /* URLSessionMockSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMockSpec.swift; sourceTree = "<group>"; };
-		4597CFAC26E6951200781E4F /* AtomicWrapperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicWrapperSpec.swift; sourceTree = "<group>"; };
-		4597CFAE26E6952400781E4F /* LockableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockableSpec.swift; sourceTree = "<group>"; };
-		4597CFB026E69D4400781E4F /* TypedDependencyManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedDependencyManagerSpec.swift; sourceTree = "<group>"; };
-		4597CFB226E69D7400781E4F /* AnyDependenciesContainerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDependenciesContainerSpec.swift; sourceTree = "<group>"; };
-		4597CFB426E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyDependenciesContainerSpec.swift; sourceTree = "<group>"; };
-		45E68D2A27DAB3C200652F97 /* OptionalExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtensionsSpec.swift; sourceTree = "<group>"; };
+		45DAA14F27E293A300BC25A5 /* LockableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockableSpec.swift; sourceTree = "<group>"; };
+		45DAA15027E293A300BC25A5 /* EnvironmentInformationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentInformationTests.swift; sourceTree = "<group>"; };
+		45DAA15127E293A300BC25A5 /* DataExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtensionsSpec.swift; sourceTree = "<group>"; };
+		45DAA15227E293A300BC25A5 /* UIViewExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionSpec.swift; sourceTree = "<group>"; };
+		45DAA15327E293A300BC25A5 /* RLoggerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLoggerSpec.swift; sourceTree = "<group>"; };
+		45DAA15427E293A300BC25A5 /* AnyDependenciesContainerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDependenciesContainerSpec.swift; sourceTree = "<group>"; };
+		45DAA15527E293A300BC25A5 /* XCTestExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestExtensionsSpec.swift; sourceTree = "<group>"; };
+		45DAA15627E293A300BC25A5 /* NSObjectExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensionsSpec.swift; sourceTree = "<group>"; };
+		45DAA15727E293A300BC25A5 /* AnalyticsBroadcasterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsBroadcasterSpec.swift; sourceTree = "<group>"; };
+		45DAA15827E293A300BC25A5 /* OptionalExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensionsSpec.swift; sourceTree = "<group>"; };
+		45DAA15927E293A300BC25A5 /* DictionaryExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsSpec.swift; sourceTree = "<group>"; };
+		45DAA15A27E293A300BC25A5 /* StandardHeaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardHeaderSpec.swift; sourceTree = "<group>"; };
+		45DAA15B27E293A300BC25A5 /* TypedDependencyManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedDependencyManagerSpec.swift; sourceTree = "<group>"; };
+		45DAA15C27E293A300BC25A5 /* NimbleExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NimbleExtensionsSpec.swift; sourceTree = "<group>"; };
+		45DAA15D27E293A300BC25A5 /* SwiftyDependenciesContainerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyDependenciesContainerSpec.swift; sourceTree = "<group>"; };
+		45DAA15E27E293A300BC25A5 /* URLSessionExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionExtensionsSpec.swift; sourceTree = "<group>"; };
+		45DAA15F27E293A300BC25A5 /* AtomicWrapperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicWrapperSpec.swift; sourceTree = "<group>"; };
+		45DAA16027E293A300BC25A5 /* StringExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionsSpec.swift; sourceTree = "<group>"; };
+		45DAA16127E293A300BC25A5 /* URLSessionMockSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMockSpec.swift; sourceTree = "<group>"; };
+		45DAA16227E293A300BC25A5 /* UIColorExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionsSpec.swift; sourceTree = "<group>"; };
+		45DAA16327E293A300BC25A5 /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		45DAA16427E293A300BC25A5 /* ReachabilitySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilitySpec.swift; sourceTree = "<group>"; };
+		45DAA16527E293A300BC25A5 /* KeyStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyStoreTests.swift; sourceTree = "<group>"; };
 		45EA75A825C76660001B2049 /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = "<group>"; };
-		529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnvironmentInformationTests.swift; sourceTree = "<group>"; };
-		6DACF498237CF05E00EEFE12 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
-		73CFF4FB271E56A700D2E36B /* AnalyticsBroadcasterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsBroadcasterSpec.swift; sourceTree = "<group>"; };
 		83F9CA8C997CE27EA8BD1BD4 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8783C5860B44767F3B2D0547 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C97AB9722727234400F3BAB8 /* StringExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionsSpec.swift; sourceTree = "<group>"; };
-		C97AB9732727234400F3BAB8 /* DictionaryExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsSpec.swift; sourceTree = "<group>"; };
-		D06A23E824D3FF2800E84EE2 /* KeyStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStoreTests.swift; sourceTree = "<group>"; };
 		D06A23EE24D4007300E84EE2 /* TestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06A23F024D4007300E84EE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D06A23FE24D4007400E84EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,31 +105,32 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		45EA75A725C7624F001B2049 /* Tests */ = {
+		45DAA14E27E293A300BC25A5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				C97AB9732727234400F3BAB8 /* DictionaryExtensionsSpec.swift */,
-				C97AB9722727234400F3BAB8 /* StringExtensionsSpec.swift */,
-				529DB22D78CBF2B97EF675FE /* EnvironmentInformationTests.swift */,
-				6DACF498237CF05E00EEFE12 /* TestHelpers.swift */,
-				D06A23E824D3FF2800E84EE2 /* KeyStoreTests.swift */,
-				4597CFB226E69D7400781E4F /* AnyDependenciesContainerSpec.swift */,
-				4597CFAE26E6952400781E4F /* LockableSpec.swift */,
-				4597CFAC26E6951200781E4F /* AtomicWrapperSpec.swift */,
-				4597CFB026E69D4400781E4F /* TypedDependencyManagerSpec.swift */,
-				4597CFB426E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift */,
-				452FA0F226EE974400936528 /* RLoggerSpec.swift */,
-				4518EEDB270F6D9900E8CBBC /* UIColorExtensionsSpec.swift */,
-				4535CBC42714E58200D6E5AF /* StandardHeaderSpec.swift */,
-				45000A8E27173D31001962BF /* ReachabilitySpec.swift */,
-				45000A9027177394001962BF /* DataExtensionsSpec.swift */,
-				45000A92271775C5001962BF /* URLSessionExtensionsSpec.swift */,
-				45741526271781A60059286F /* NSObjectExtensionsSpec.swift */,
-				45E68D2A27DAB3C200652F97 /* OptionalExtensionsSpec.swift */,
-				73CFF4FB271E56A700D2E36B /* AnalyticsBroadcasterSpec.swift */,
-				4584C13627C80E1C00A1C6BC /* NimbleExtensionsSpec.swift */,
-				4584C13A27C81CAF00A1C6BC /* XCTestExtensionsSpec.swift */,
-				4584C13C27C8242500A1C6BC /* URLSessionMockSpec.swift */,
+				45DAA14F27E293A300BC25A5 /* LockableSpec.swift */,
+				45DAA15027E293A300BC25A5 /* EnvironmentInformationTests.swift */,
+				45DAA15127E293A300BC25A5 /* DataExtensionsSpec.swift */,
+				45DAA15227E293A300BC25A5 /* UIViewExtensionSpec.swift */,
+				45DAA15327E293A300BC25A5 /* RLoggerSpec.swift */,
+				45DAA15427E293A300BC25A5 /* AnyDependenciesContainerSpec.swift */,
+				45DAA15527E293A300BC25A5 /* XCTestExtensionsSpec.swift */,
+				45DAA15627E293A300BC25A5 /* NSObjectExtensionsSpec.swift */,
+				45DAA15727E293A300BC25A5 /* AnalyticsBroadcasterSpec.swift */,
+				45DAA15827E293A300BC25A5 /* OptionalExtensionsSpec.swift */,
+				45DAA15927E293A300BC25A5 /* DictionaryExtensionsSpec.swift */,
+				45DAA15A27E293A300BC25A5 /* StandardHeaderSpec.swift */,
+				45DAA15B27E293A300BC25A5 /* TypedDependencyManagerSpec.swift */,
+				45DAA15C27E293A300BC25A5 /* NimbleExtensionsSpec.swift */,
+				45DAA15D27E293A300BC25A5 /* SwiftyDependenciesContainerSpec.swift */,
+				45DAA15E27E293A300BC25A5 /* URLSessionExtensionsSpec.swift */,
+				45DAA15F27E293A300BC25A5 /* AtomicWrapperSpec.swift */,
+				45DAA16027E293A300BC25A5 /* StringExtensionsSpec.swift */,
+				45DAA16127E293A300BC25A5 /* URLSessionMockSpec.swift */,
+				45DAA16227E293A300BC25A5 /* UIColorExtensionsSpec.swift */,
+				45DAA16327E293A300BC25A5 /* TestHelpers.swift */,
+				45DAA16427E293A300BC25A5 /* ReachabilitySpec.swift */,
+				45DAA16527E293A300BC25A5 /* KeyStoreTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -164,7 +167,7 @@
 		C07BF9ACDD1012D4C6AA1A6B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				45EA75A725C7624F001B2049 /* Tests */,
+				45DAA14E27E293A300BC25A5 /* Tests */,
 				D06A23EF24D4007300E84EE2 /* TestHost */,
 			);
 			path = Tests;
@@ -299,28 +302,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45000A9127177394001962BF /* DataExtensionsSpec.swift in Sources */,
-				D06A23E924D3FF2800E84EE2 /* KeyStoreTests.swift in Sources */,
-				C97AB9752727234400F3BAB8 /* DictionaryExtensionsSpec.swift in Sources */,
-				4584C13B27C81CAF00A1C6BC /* XCTestExtensionsSpec.swift in Sources */,
-				4535CBC52714E58200D6E5AF /* StandardHeaderSpec.swift in Sources */,
-				C97AB9742727234400F3BAB8 /* StringExtensionsSpec.swift in Sources */,
-				452FA0F326EE974400936528 /* RLoggerSpec.swift in Sources */,
-				45741527271781A60059286F /* NSObjectExtensionsSpec.swift in Sources */,
-				EA14FDB556C9812880440D96 /* EnvironmentInformationTests.swift in Sources */,
-				73CFF4FC271E56A700D2E36B /* AnalyticsBroadcasterSpec.swift in Sources */,
-				45000A93271775C5001962BF /* URLSessionExtensionsSpec.swift in Sources */,
-				4518EEDC270F6D9900E8CBBC /* UIColorExtensionsSpec.swift in Sources */,
-				4597CFB326E69D7400781E4F /* AnyDependenciesContainerSpec.swift in Sources */,
-				4584C13D27C8242500A1C6BC /* URLSessionMockSpec.swift in Sources */,
-				4597CFAF26E6952400781E4F /* LockableSpec.swift in Sources */,
-				4597CFB126E69D4400781E4F /* TypedDependencyManagerSpec.swift in Sources */,
-				4597CFAD26E6951200781E4F /* AtomicWrapperSpec.swift in Sources */,
-				45000A8F27173D31001962BF /* ReachabilitySpec.swift in Sources */,
-				45E68D2B27DAB3C200652F97 /* OptionalExtensionsSpec.swift in Sources */,
-				4584C13727C80E1C00A1C6BC /* NimbleExtensionsSpec.swift in Sources */,
-				6DACF499237CF05E00EEFE12 /* TestHelpers.swift in Sources */,
-				4597CFB526E6A6E300781E4F /* SwiftyDependenciesContainerSpec.swift in Sources */,
+				45DAA17027E293A300BC25A5 /* DictionaryExtensionsSpec.swift in Sources */,
+				45DAA16B27E293A300BC25A5 /* AnyDependenciesContainerSpec.swift in Sources */,
+				45DAA17A27E293A300BC25A5 /* TestHelpers.swift in Sources */,
+				45DAA16A27E293A300BC25A5 /* RLoggerSpec.swift in Sources */,
+				45DAA17327E293A300BC25A5 /* NimbleExtensionsSpec.swift in Sources */,
+				45DAA16E27E293A300BC25A5 /* AnalyticsBroadcasterSpec.swift in Sources */,
+				45DAA16D27E293A300BC25A5 /* NSObjectExtensionsSpec.swift in Sources */,
+				45DAA17827E293A300BC25A5 /* URLSessionMockSpec.swift in Sources */,
+				45DAA16F27E293A300BC25A5 /* OptionalExtensionsSpec.swift in Sources */,
+				45DAA17627E293A300BC25A5 /* AtomicWrapperSpec.swift in Sources */,
+				45DAA16C27E293A300BC25A5 /* XCTestExtensionsSpec.swift in Sources */,
+				45DAA16827E293A300BC25A5 /* DataExtensionsSpec.swift in Sources */,
+				45DAA17227E293A300BC25A5 /* TypedDependencyManagerSpec.swift in Sources */,
+				45DAA17127E293A300BC25A5 /* StandardHeaderSpec.swift in Sources */,
+				45DAA17527E293A300BC25A5 /* URLSessionExtensionsSpec.swift in Sources */,
+				45DAA17427E293A300BC25A5 /* SwiftyDependenciesContainerSpec.swift in Sources */,
+				45DAA16927E293A300BC25A5 /* UIViewExtensionSpec.swift in Sources */,
+				45DAA17727E293A300BC25A5 /* StringExtensionsSpec.swift in Sources */,
+				45DAA16727E293A300BC25A5 /* EnvironmentInformationTests.swift in Sources */,
+				45DAA17B27E293A300BC25A5 /* ReachabilitySpec.swift in Sources */,
+				45DAA17927E293A300BC25A5 /* UIColorExtensionsSpec.swift in Sources */,
+				45DAA17C27E293A300BC25A5 /* KeyStoreTests.swift in Sources */,
+				45DAA16627E293A300BC25A5 /* LockableSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
