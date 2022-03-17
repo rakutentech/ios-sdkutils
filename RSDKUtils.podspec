@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/rakutentech/ios-sdkutils"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.source       = { :git => "https://github.com/rakutentech/ios-sdkutils.git", :tag => s.version.to_s }
-  s.platforms    = { :ios => '11.0', :watchos => '6.0' }
+  s.platforms    = { :ios => '12.0', :watchos => '6.0' }
   s.swift_versions = ['5.4', '5.5']
   s.requires_arc = true
   s.pod_target_xcconfig = {
