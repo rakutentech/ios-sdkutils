@@ -12,7 +12,7 @@ class OptionalExtensionsSpec: QuickSpec {
 
     override func spec() {
 
-        describe("Optional+Extensions") {
+        describe("Optional+NSObject Extensions") {
 
             context("isKind(of:) instance method") {
                 let object: NSArray? = NSArray()
@@ -121,6 +121,44 @@ class OptionalExtensionsSpec: QuickSpec {
 
                 it("will return 0 if object is nil") {
                     let object: CustomClass? = nil
+                    expect(object.safeHashValue).to(equal(0))
+                }
+            }
+        }
+
+        describe("Optional+String Extensions") {
+            context("safeHashValue instance variable") {
+                it("will return expected hashValue") {
+                    let object: String? = "hello"
+                    expect(object.safeHashValue).to(equal("hello".hashValue))
+                }
+
+                it("will return 0 if object is nil") {
+                    let object: String? = nil
+                    expect(object.safeHashValue).to(equal(0))
+                }
+            }
+            context("isEmpty instance variable") {
+                it("will return false if Wrapped is String") {
+                    let object: String? = "hello"
+                    expect(object.isEmpty).to(beFalse())
+                }
+                it("will return true if object is nil") {
+                    let object: String? = nil
+                    expect(object.isEmpty).to(beTrue())
+                }
+            }
+        }
+
+        describe("Optional+Date Extensions") {
+            context("safeHashValue instance variable") {
+                it("will return expected hashValue") {
+                    let object: Date? = Date(timeIntervalSince1970: 0)
+                    expect(object.safeHashValue).to(equal(Date(timeIntervalSince1970: 0).hashValue))
+                }
+
+                it("will return 0 if object is nil") {
+                    let object: Date? = nil
                     expect(object.safeHashValue).to(equal(0))
                 }
             }
