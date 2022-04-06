@@ -2,6 +2,7 @@ import Foundation
 import Quick
 import Nimble
 import UIKit
+import CoreLocation.CLLocation
 #if canImport(RSDKUtils)
 @testable import RSDKUtils // Cocoapods version
 #else
@@ -159,6 +160,20 @@ class OptionalExtensionsSpec: QuickSpec {
 
                 it("will return 0 if object is nil") {
                     let object: Date? = nil
+                    expect(object.safeHashValue).to(equal(0))
+                }
+            }
+        }
+
+        describe("Optional+CLLocation Extensions") {
+            context("safeHashValue instance variable") {
+                it("will return expected hashValue") {
+                    let object: CLLocation? = CLLocation(latitude: 35.6144, longitude: 139.6264)
+                    expect(object.safeHashValue).to(equal(CLLocation(latitude: 35.6144, longitude: 139.6264).description.hashValue))
+                }
+
+                it("will return 0 if object is nil") {
+                    let object: CLLocation? = nil
                     expect(object.safeHashValue).to(equal(0))
                 }
             }

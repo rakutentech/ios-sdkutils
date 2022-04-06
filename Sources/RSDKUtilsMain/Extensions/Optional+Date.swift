@@ -1,6 +1,6 @@
 import Foundation
 
-extension Optional where Wrapped == Date {
+public extension Optional where Wrapped == Date {
     /// Retrieve the hash value of a string.
     ///
     /// - Returns: The hash value or `0`.
