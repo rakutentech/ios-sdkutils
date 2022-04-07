@@ -70,8 +70,8 @@ class StringExtensionsSpec: QuickSpec {
             }
 
             describe("Subscript") {
-                context("The string to encode is empty") {
-                    it("should return empty string") {
+                context("Range in bounds") {
+                    it("should return a substring") {
                         expect("hello"[2..<4]).to(equal("ll"))
                     }
                 }
