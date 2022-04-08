@@ -1,5 +1,17 @@
 # **Changelog**
 
+#### 3.0.0 (2022-04-06)
+- Features:
+    - Align iOS version (SDKCF-5011)
+    - Align Swift version support (SDKCF-4824) 
+    - Added support for watchOS and extensions (SDKCF-4990) 
+    - Added Bundle appex, Optional Wrapped and SHA256 helpers (SDKCF-4901)
+- Improve:
+    - SDK bundle search extension methods
+    - Integrated SonarCloud/SonarQube and completed test coverage (SDKCF-4826)
+- Fixes:
+    - Fixed missing test file references in the project file
+
 #### 2.1.0 (2021-10-27)
 - Features:
     - Added AnalyticsBroadcaster (SDKCF-4383)
