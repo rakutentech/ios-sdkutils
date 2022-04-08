@@ -21,6 +21,16 @@ public extension String {
     }
 }
 
+// MARK: - Subscript
+
+public extension String {
+    subscript (range: Range<Int>) -> String {
+        let start = index(startIndex, offsetBy: range.lowerBound)
+        let end = index(startIndex, offsetBy: range.upperBound)
+        return String(self[start ..< end])
+    }
+}
+
 // MARK: - Base64
 
 public extension String {
@@ -28,4 +38,9 @@ public extension String {
     ///
     /// - Returns: the  Base64 encoded string.
     var toBase64: String { Data(utf8).base64EncodedString() }
+
+    /// Encode a UTF-8 String to Base64 SHA256.
+    ///
+    /// - Returns: Base64 encoded string.
+    var sha256Hex: String? { data(using: .utf8)?.sha256Hex }
 }

@@ -55,6 +55,27 @@ class StringExtensionsSpec: QuickSpec {
                     }
                 }
             }
+
+            describe("SHA256") {
+                context("The string to encode is empty") {
+                    it("should return empty string") {
+                        expect("".sha256Hex).to(beNil())
+                    }
+                }
+                context("The string to encode is not empty") {
+                    it("should return Base64 encoded string") {
+                        expect("abcde".sha256Hex).to(equal("36bbe50ed96841d10443bcb670d6554f0a34b761be67ec9c4a8ad2c0c44ca42c"))
+                    }
+                }
+            }
+
+            describe("Subscript") {
+                context("Range in bounds") {
+                    it("should return a substring") {
+                        expect("hello"[2..<4]).to(equal("ll"))
+                    }
+                }
+            }
         }
     }
 }
