@@ -43,4 +43,18 @@ public extension UIColor {
             return nil
         }
     }
+
+    /// Checks if two colors are equal by comparing their RGBA components.
+    /// This method is color space agnostic (e.g. HSV color will be treated as RGB).
+    /// - Parameter anotherColor: A color to compare with.
+    /// - Returns: `true` if both colors have the same RGBA values.
+    func isRGBAEqual(to anotherColor: UIColor) -> Bool {
+        var rgba1: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) = (0, 0, 0, 0)
+        var rgba2: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) = (0, 0, 0, 0)
+
+        getRed(&rgba1.r, green: &rgba1.g, blue: &rgba1.b, alpha: &rgba1.a)
+        anotherColor.getRed(&rgba2.r, green: &rgba2.g, blue: &rgba2.b, alpha: &rgba2.a)
+
+        return rgba1 == rgba2
+    }
 }
