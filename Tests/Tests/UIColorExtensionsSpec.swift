@@ -97,6 +97,29 @@ class UIColorExtensionsSpec: QuickSpec {
                     expect(color).to(equal(UIColor.whiteRGB))
                 }
             }
+
+            context("when calling isRGBAEqual method") {
+                it("should return true for the same colors") {
+                    expect(UIColor.white.isRGBAEqual(to: .white)).to(beTrue())
+                }
+
+                it("should return true for the same colors but in different color spaces") {
+                    let grayscaleColor = UIColor(white: 0.2, alpha: 0.8)
+                    let rgbColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.8)
+                    let hsvColor = UIColor(hue: 0, saturation: 0, brightness: 0.2, alpha: 0.8)
+
+                    expect(grayscaleColor.isRGBAEqual(to: rgbColor)).to(beTrue())
+                    expect(rgbColor.isRGBAEqual(to: hsvColor)).to(beTrue())
+                }
+
+                it("should return false for different colors") {
+                    expect(UIColor.green.isRGBAEqual(to: .blue)).to(beFalse())
+                }
+
+                it("should return false for the same colors but with different alpha falue") {
+                    expect(UIColor.white.isRGBAEqual(to: .white.withAlphaComponent(0.3))).to(beFalse())
+                }
+            }
         }
     }
 }
