@@ -6,7 +6,7 @@ platform :ios, '12.0'
 use_frameworks!
 
 target 'Tests' do
-  pod 'Quick'
+  pod 'Quick', '~> 5.0'
   pod 'Nimble'
   pod 'SwiftLint'
   pod 'RSDKUtils', :path => './RSDKUtils.podspec'
