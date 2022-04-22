@@ -13,10 +13,15 @@ extension NSNotification.Name {
     /// This method will broadcast an event to the Analytics SDK for them to send to RAT.
     /// - Parameter name: Name of the event to be sent to Analytics SDK.
     /// - Parameter dataObject: Optional dictionary to pass in any other data to RAT.
-    @objc public class func sendEventName(_ name: String, dataObject: [String: Any]? = nil) {
+    /// - Parameter customAccountNumber: When set, the event will be sent to this RAT account number instead of the one set in the app (optional).
+    ///                                  The value should be a positive integer.
+    @objc public class func sendEventName(_ name: String, dataObject: [String: Any]? = nil, customAccountNumber: NSNumber? = nil) {
         var parameters: [String: Any] = ["eventName": name]
         if let dataObject = dataObject {
             parameters["eventData"] = dataObject
+        }
+        if let customAccountNumber = customAccountNumber {
+            parameters["customAccNumber"] = customAccountNumber
         }
 
         NotificationCenter.default.post(name: .sdkCustomEvent, object: parameters)
