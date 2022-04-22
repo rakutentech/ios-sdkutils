@@ -37,25 +37,35 @@ final class AnalyticsBroadcasterSpec: QuickSpec {
                     }
                 }
             }
-            it("should track sdkCustomEvent with eventName and eventData when an event is broadcasted with data") {
-                expect(tracker?.eventName).toEventually(beNil())
-                expect(tracker?.params).toEventually(beNil())
 
+            it("should track sdkCustomEvent with eventName and eventData when an event is broadcasted with data") {
                 AnalyticsBroadcaster.sendEventName("blah", dataObject: ["foo": "bar"])
 
                 expect(tracker?.eventName).toEventually(equal(NSNotification.Name.sdkCustomEvent.rawValue))
-                expect(tracker?.params?["eventName"] as? String).toEventually(equal("blah"))
-                expect(tracker?.params?["eventData"] as? [String: String]).toEventually(equal(["foo": "bar"]))
+                expect(tracker?.params?["eventName"] as? String).to(equal("blah"))
+                expect(tracker?.params?["eventData"] as? [String: String]).to(equal(["foo": "bar"]))
             }
-            it("should track sdkCustomEvent with eventName and no eventData when an event is broadcasted without data") {
-                expect(tracker?.eventName).toEventually(beNil())
-                expect(tracker?.params).toEventually(beNil())
 
+            it("should track sdkCustomEvent with eventName and no eventData when an event is broadcasted without data") {
                 AnalyticsBroadcaster.sendEventName("blah", dataObject: nil)
 
                 expect(tracker?.eventName).toEventually(equal(NSNotification.Name.sdkCustomEvent.rawValue))
-                expect(tracker?.params?["eventName"] as? String).toEventually(equal("blah"))
-                expect(tracker?.params?["eventData"]).toEventually(beNil())
+                expect(tracker?.params?["eventName"] as? String).to(equal("blah"))
+                expect(tracker?.params?["eventData"]).to(beNil())
+            }
+
+            it("should not send `customAccNumber` if customAccountNumber is nil") {
+                AnalyticsBroadcaster.sendEventName("blah", dataObject: nil, customAccountNumber: nil)
+
+                expect(tracker?.eventName).toEventually(equal(NSNotification.Name.sdkCustomEvent.rawValue))
+                expect(tracker?.params?["customAccValue"]).to(beNil())
+            }
+
+            it("should send customAccountNumber parameter value as `customAccNumber`") {
+                AnalyticsBroadcaster.sendEventName("blah", dataObject: nil, customAccountNumber: 5)
+
+                expect(tracker?.eventName).toEventually(equal(NSNotification.Name.sdkCustomEvent.rawValue))
+                expect(tracker?.params?["customAccNumber"] as? NSNumber).to(equal(5))
             }
         }
     }
