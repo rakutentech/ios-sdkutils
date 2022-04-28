@@ -2,8 +2,8 @@ import Foundation
 
 // MARK: - Constants
 
-extension NSNotification.Name {
-    static let sdkCustomEvent = Notification.Name(rawValue: "com.rakuten.esd.sdk.events.custom")
+public extension NSNotification.Name {
+    static let rAnalyticsCustomEvent = Notification.Name(rawValue: "com.rakuten.esd.sdk.events.custom")
 }
 
 // MARK: - Public API
@@ -20,10 +20,10 @@ extension NSNotification.Name {
         if let dataObject = dataObject {
             parameters["eventData"] = dataObject
         }
-        if let customAccountNumber = customAccountNumber {
+        if let customAccountNumber = customAccountNumber, customAccountNumber.intValue > 0 {
             parameters["customAccNumber"] = customAccountNumber
         }
 
-        NotificationCenter.default.post(name: .sdkCustomEvent, object: parameters)
+        NotificationCenter.default.post(name: .rAnalyticsCustomEvent, object: parameters)
     }
 }
