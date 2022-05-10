@@ -32,7 +32,7 @@ extension Bundle: BundleProtocol {
     }
 
     public func sdkVersion() -> String {
-        Bundle(for: EnvironmentInformation.self).value(for: "CFBundleShortVersionString") ?? valueNotFound
+        self.value(for: "CFBundleShortVersionString") ?? valueNotFound
     }
 
     public func value(for key: String) -> String? {
