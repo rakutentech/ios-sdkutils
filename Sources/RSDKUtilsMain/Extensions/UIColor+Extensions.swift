@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 
 public extension UIColor {
@@ -58,3 +59,4 @@ public extension UIColor {
         return rgba1 == rgba2
     }
 }
+#endif

@@ -1,3 +1,4 @@
+#if os(iOS)
 import Foundation
 import Quick
 import Nimble
@@ -59,3 +60,4 @@ class ViewExtensionsSpec: QuickSpec {
         }
     }
 }
+#endif

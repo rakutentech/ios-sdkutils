@@ -1,4 +1,4 @@
-#if os(iOS)
+#if os(macOS) || os(iOS)
 
 import SystemConfiguration
 import Foundation

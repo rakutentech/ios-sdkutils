@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "RSDKUtils",
     platforms: [
-        .iOS(.v12), .watchOS(.v6)
+        .iOS(.v12), .watchOS(.v6), .macOS(.v11)
     ],
     products: [
         .library(

@@ -1,5 +1,7 @@
 import Foundation
+#if os(iOS)
 import UIKit
+#endif
 #if os(watchOS)
 import WatchKit
 #endif
@@ -20,8 +22,12 @@ extension Bundle: BundleProtocol {
     public func osVersion() -> String {
         #if os(watchOS)
         WKInterfaceDevice.current().systemVersion
-        #else
+        #elseif os(iOS)
         UIDevice.current.systemVersion
+        #elseif os(macOS)
+        Host.current().name ?? ""
+        #else
+        ""
         #endif
     }
 

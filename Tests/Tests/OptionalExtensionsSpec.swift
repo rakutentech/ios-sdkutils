@@ -1,7 +1,9 @@
 import Foundation
 import Quick
 import Nimble
+#if os(iOS)
 import UIKit
+#endif
 import CoreLocation.CLLocation
 #if canImport(RSDKUtils)
 @testable import RSDKUtils // Cocoapods version
@@ -40,6 +42,7 @@ class OptionalExtensionsSpec: QuickSpec {
                 }
             }
 
+            #if os(iOS)
             context("isMember(of:) instance method") {
                 let object: UIView? = UIView()
 
@@ -64,6 +67,7 @@ class OptionalExtensionsSpec: QuickSpec {
                     expect(object.isMember(of: UIView.self)).to(beFalse())
                 }
             }
+            #endif
 
             context("isAppleClass() instance method") {
                 it("will return true for apple class instance") {
@@ -98,6 +102,7 @@ class OptionalExtensionsSpec: QuickSpec {
                     expect(object.isApplePrivateClass()).to(beFalse())
                 }
 
+                #if os(iOS)
                 it("will return true for private apple class instance") {
                     let window = UIWindow()
                     let object = window.value(forKey: "_systemGestureGateForGestures") as? NSObject // _UISystemGestureGateGestureRecognizer
@@ -111,6 +116,7 @@ class OptionalExtensionsSpec: QuickSpec {
                     object = nil
                     expect(object.isApplePrivateClass()).to(beFalse())
                 }
+                #endif
             }
 
             context("safeHashValue instance variable") {
