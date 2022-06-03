@@ -15,7 +15,7 @@ RSDKUtils consists of 4 sub-modules:
 This module supports the following operating systems:
 * iOS 12.0 and above (including extension contexts)
 * watchOS 6.0 and above
-* macOS 11.0 and above
+* macOS 10.13 and above
 
 This module has been tested with iOS 12.0 and above.
 
