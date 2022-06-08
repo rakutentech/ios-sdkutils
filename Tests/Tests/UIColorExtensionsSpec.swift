@@ -1,3 +1,4 @@
+#if os(iOS) || os(watchOS)
 import Quick
 import Nimble
 import UIKit
@@ -132,3 +133,4 @@ private extension UIColor {
         return UIColor(red: 1, green: 1, blue: 1, alpha: 1)
     }
 }
+#endif

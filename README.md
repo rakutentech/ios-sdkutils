@@ -12,8 +12,12 @@ RSDKUtils consists of 4 sub-modules:
 * *Nimble* - Adds additional Nimble expectations like `toAfterTimeout`.
 * *RLogger* - A tool for managing your log messages.
 
-This module supports iOS 12.0 and above. It has been tested with iOS 12.0 and above.
-This module also supports watchOS 6.0 and above, and it's compatible with extensions.
+This module supports the following operating systems:
+* iOS 12.0 and above (including extension contexts)
+* watchOS 6.0 and above
+* macOS 10.13 and above
+
+This module has been tested with iOS 12.0 and above.
 
 # **Requirements**
 

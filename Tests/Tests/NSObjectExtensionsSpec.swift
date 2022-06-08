@@ -1,7 +1,9 @@
 import Foundation
 import Quick
 import Nimble
+#if os(iOS)
 import class UIKit.UIWindow
+#endif
 #if canImport(RSDKUtils)
 @testable import RSDKUtils // Cocoapods version
 #else
@@ -62,12 +64,14 @@ class NSObjectExtensionsSpec: QuickSpec {
                     expect(object.isApplePrivateClass()).to(beFalse())
                 }
 
+                #if os(iOS)
                 it("will return true for private apple class instance") {
                     let window = UIWindow()
                     // swiftlint:disable:next force_cast
                     let object = window.value(forKey: "_systemGestureGateForGestures") as! NSObject // _UISystemGestureGateGestureRecognizer
                     expect(object.isApplePrivateClass()).to(beTrue())
                 }
+                #endif
             }
 
             context("isNullableObjectEqual() class method") {

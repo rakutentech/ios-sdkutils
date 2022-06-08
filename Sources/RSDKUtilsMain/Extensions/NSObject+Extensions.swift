@@ -1,5 +1,4 @@
 import Foundation
-import UIKit
 
 public extension NSObject {
     /// Check if an object is kind of a given class name.
