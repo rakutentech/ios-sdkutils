@@ -34,14 +34,14 @@ To use the module in its basic configuration your `Podfile` should contain:
 
 ```ruby
 # Defined also as 'RSDKUtils/Main'
-pod 'RSDKUtils', :git => '~> 3.0.0'
+pod 'RSDKUtils', :git => '~> 4.0.0'
 ```
 
 To use other functionalities, add their respective subspec to your `Podfile`:
 ```ruby
-pod 'RSDKUtils/TestHelpers', '~> 3.0.0'
-pod 'RSDKUtils/Nimble', '~> 3.0.0'
-pod 'RSDKUtils/RLogger', '~> 3.0.0'
+pod 'RSDKUtils/TestHelpers', '~> 4.0.0'
+pod 'RSDKUtils/Nimble', '~> 4.0.0'
+pod 'RSDKUtils/RLogger', '~> 4.0.0'
 ```
 
 Run `pod install` to install the module.<br>
@@ -50,7 +50,7 @@ More information on installing pods: [https://guides.cocoapods.org/using/getting
 ## Installing with Swift Package Manager
 Open your project settings in Xcode and add a new package in 'Swift Packages' tab:
 * Repository URL: `https://github.com/rakutentech/ios-sdkutils.git`
-* Version settings: branch `master` or 3.0.0 "Up to Next Major" 
+* Version settings: branch `master` or 4.0.0 "Up to Next Major" 
 
 Choose one of the following products for your target:
 * RSDKUtilsMain
@@ -99,6 +99,6 @@ This usually happens when `TestHelpers` or `Nimble` subspec is linked only to te
 The solution for that is to link `TestHelpers` and `Nimble` spec to the Host app target either explicitly or as a `testspecs`.
 ```ruby
 target 'HostAppTarget'
-  pod 'RSDKUtils', '~> 3.0.0', :testspecs => ['Nimble', 'TestHelpers']
+  pod 'RSDKUtils', '~> 4.0.0', :testspecs => ['Nimble', 'TestHelpers']
 end    
 ```

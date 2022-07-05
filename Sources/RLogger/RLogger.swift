@@ -69,33 +69,6 @@ public protocol Variadicable {
     @discardableResult static func error(_ format: String, arguments: CVarArg...) -> String?
 }
 
-extension RLogger: Variadicable {
-    @available(*, deprecated, message: "Use verbose(message:) instead")
-    @discardableResult public static func verbose(_ format: String, arguments: CVarArg...) -> String? {
-        log(.verbose, message: String(format: format, arguments: arguments))
-    }
-
-    @available(*, deprecated, message: "Use debug(message:) instead")
-    @discardableResult public static func debug(_ format: String, arguments: CVarArg...) -> String? {
-        log(.debug, message: String(format: format, arguments: arguments))
-    }
-
-    @available(*, deprecated, message: "Use info(message:) instead")
-    @discardableResult public static func info(_ format: String, arguments: CVarArg...) -> String? {
-        log(.info, message: String(format: format, arguments: arguments))
-    }
-
-    @available(*, deprecated, message: "Use warning(message:) instead")
-    @discardableResult public static func warning(_ format: String, arguments: CVarArg...) -> String? {
-        log(.warning, message: String(format: format, arguments: arguments))
-    }
-
-    @available(*, deprecated, message: "Use error(message:) instead")
-    @discardableResult public static func error(_ format: String, arguments: CVarArg...) -> String? {
-        log(.error, message: String(format: format, arguments: arguments))
-    }
-}
-
 internal extension RLogger {
     /// Returns the caller module name.
     ///
