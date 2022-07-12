@@ -1,5 +1,9 @@
 # **Changelog**
 
+#### 4.0.0 (TBC)
+- Deletion:
+    - RLogger deprecated functions were removed.
+
 #### 3.0.0 (2022-04-06)
 - Features:
     - Align iOS version (SDKCF-5011)
