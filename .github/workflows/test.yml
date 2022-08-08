@@ -1,0 +1,20 @@
+name: Build and Test
+
+ on:
+   push:
+   pull_request_target:
+
+ jobs:
+   build-test:
+     runs-on: macOS-12
+     steps:
+     - uses: actions/checkout@v3
+     - run: |
+         bundle install
+         bundle exec fastlane ios ci
+     - uses: kishikawakatsumi/xcresulttool@v1
+       with:
+         path: |
+           artifacts/unit-tests/RSDKUtils.xcresult
+         upload-bundles: false
+       if: success() || failure()
