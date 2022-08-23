@@ -1,9 +1,0 @@
-language: swift
-xcode_workspace: RSDKUtils.xcworkspace
-xcode_scheme: Tests
-osx_image: xcode10.2
-
-script:
-- fastlane ci
-# FIXME - enable Danger when github token issue is resolved
-#- bundle exec danger

@@ -3,7 +3,7 @@ warn("Big PR") if git.lines_of_code > 500
 
 xcov.report(
   workspace: 'RSDKUtils.xcworkspace',
-  scheme: 'Tests',
+  scheme: 'TestHost',
   output_directory: 'artifacts/unit-tests/coverage',
   source_directory: 'Sources',
   json_report: true,
