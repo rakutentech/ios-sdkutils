@@ -18,7 +18,7 @@ jobs:
           bundle exec pod install
           xcodebuild \
           -workspace RSDKUtils.xcworkspace \
-          -scheme Tests \
+          -scheme TestHost \
           -resultBundlePath artifacts/unit-tests/Tests \
           -destination "platform=iOS Simulator,name=iPhone 11" \
           test

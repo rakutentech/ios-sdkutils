@@ -8,6 +8,7 @@ import Nimble
 
 class KeyStoreSpec: QuickSpec {
     override func spec() {
+        #if !SWIFT_PACKAGE
         // Keychain can't be mocked so the best we can do
         // to isolate the tests is to use a separate
         // keychain service
@@ -66,5 +67,6 @@ class KeyStoreSpec: QuickSpec {
                 expect(keyStore.key(for: "key-id-4")).to(beNil())
             }
         }
+        #endif
     }
 }

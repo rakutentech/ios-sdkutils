@@ -20,7 +20,7 @@ platform :ios do
       skip_build: true,
       output_directory: './artifacts/unit-tests',
       scheme: ENV['REM_FL_TESTS_SCHEME'] || 'Tests',
-      device: ENV['REM_FL_TESTS_DEVICE'] || 'REM SDK Unit Tests',
+      device: ENV['REM_FL_TESTS_DEVICE'] || 'iPhone 11',
       code_coverage: true,
       output_types: 'json-compilation-database,html,junit',
       output_files: 'compile_commands.json,report.html,report.junit')

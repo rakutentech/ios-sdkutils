@@ -8,15 +8,29 @@
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "YES"
+            buildForRunning = "NO"
             buildForProfiling = "YES"
-            buildForArchiving = "YES"
+            buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F794E3B184EAA9B9BE729624"
                BuildableName = "Tests.xctest"
                BlueprintName = "Tests"
+               ReferencedContainer = "container:RSDKUtils.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D06A23ED24D4007300E84EE2"
+               BuildableName = "TestHost.app"
+               BlueprintName = "TestHost"
                ReferencedContainer = "container:RSDKUtils.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
