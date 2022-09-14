@@ -6,8 +6,8 @@ import Nimble
 @testable import RSDKUtilsMain
 #endif
 
-private protocol SingletonElementType {}
-private protocol TransientElementType {}
+private protocol SingletonElementType: AnyObject {}
+private protocol TransientElementType: AnyObject {}
 private class SingletonElement: SingletonElementType {}
 private class TransientElement: TransientElementType {}
 

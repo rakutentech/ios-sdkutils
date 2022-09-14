@@ -44,7 +44,16 @@ platform :ios do
 
   lane :build_swift_package do
     ios_destination = 'platform=iOS Simulator,name=' + ENV['REM_FL_TESTS_DEVICE'] || 'iPhone 11'
-    watchos_destination = 'platform=watchOS Simulator,name=Apple Watch Series 6 - 40mm'
+    # The simulator name can differ between Xcode versions
+    # Example data: `{ platform:watchOS Simulator, id:9F48180C-4348-45DC-9462-23B243FC596D, OS:9.0, name:Apple Watch Series 6 (40mm) }`
+    watchos_sim_id = sh("cd .. && \
+      xcodebuild -scheme RSDKUtilsMain -showdestinations 2>/dev/null \
+      | grep 'Apple Watch Series 6' \
+      | head -n 1 \
+      | awk -F 'id:' '{print $2}' \
+      | cut -d ',' -f1 \
+      | tr -d '\n'")
+    watchos_destination = 'platform=watchOS Simulator,id=' + watchos_sim_id
 
     Build = Struct.new(:scheme, :destination, :xcargs)
     main_build_ios = Build.new('RSDKUtilsMain', ios_destination, '"APPLICATION_EXTENSION_API_ONLY=YES"')
