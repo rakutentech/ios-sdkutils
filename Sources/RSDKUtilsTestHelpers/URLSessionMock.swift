@@ -108,6 +108,13 @@ public final class URLSessionMock: URLSession {
             return originalSession.dataTask(with: request)
         }
 
+        // Cookies handling
+        if let url = request.url,
+           let header = mockContainer.httpResponse?.allHeaderFields as? [String: String] {
+            let cookies = HTTPCookie.cookies(withResponseHeaderFields: header, for: url)
+            HTTPCookieStorage.shared.setCookies(cookies, for: url, mainDocumentURL: nil)
+        }
+
         mockContainer.sentRequest = request
         completionHandler(mockContainer.responseData,
                           mockContainer.httpResponse,

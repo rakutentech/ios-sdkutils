@@ -3,6 +3,8 @@
 #### 4.0.0 (TBC)
 - Deletion:
     - RLogger deprecated functions were removed.
+- Features:
+    - Handle the cookies storage in URLSessionMock (SDKCF-5966)
 
 #### 3.0.0 (2022-04-06)
 - Features:
