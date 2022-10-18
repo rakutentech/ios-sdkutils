@@ -74,7 +74,7 @@ final class URLSessionMockSpec: QuickSpec {
                 afterEach {
                     URLSessionMock.stopMockingURLSession()
 
-                    if let cookie {
+                    if let cookie = cookie {
                         HTTPCookieStorage.shared.deleteCookie(cookie)
                     }
                 }
