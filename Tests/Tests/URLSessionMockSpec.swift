@@ -57,6 +57,95 @@ final class URLSessionMockSpec: QuickSpec {
                 expect(sessionMock.sentRequest).to(beNil())
             }
 
+            describe("Cookie storage") {
+                var cookie: HTTPCookie?
+                let url: URL! = URL(string: "https://rakuten.com")
+                var urlRequest: URLRequest!
+                let cookieName = "TestCookieName"
+                let cookieValue = "TestCookieValue"
+                let expiryDate = "Fri, 16-Nov-50 16:59:07 GMT"
+                let cookieToSet = "\(cookieName)=\(cookieValue); path=/; expires=\(expiryDate); session-only=false; domain=.rakuten.com"
+
+                beforeEach {
+                    urlRequest = URLRequest(url: url)
+                    URLSessionMock.startMockingURLSession()
+                }
+
+                afterEach {
+                    URLSessionMock.stopMockingURLSession()
+
+                    if let cookie = cookie {
+                        HTTPCookieStorage.shared.deleteCookie(cookie)
+                    }
+                }
+
+                context("When a request is sent") {
+                    context("When a non-nil valid cookie is set to the request header") {
+                        beforeEach {
+                            sessionMock.httpResponse = HTTPURLResponse(url: url,
+                                                                       statusCode: 200,
+                                                                       httpVersion: nil,
+                                                                       headerFields: ["Set-Cookie": cookieToSet])
+
+                            waitUntil { done in
+                                originalSession.dataTask(with: urlRequest) { _, _, _ in
+                                    cookie = HTTPCookieStorage.shared.cookies(for: url)?.first
+                                    done()
+                                }.resume()
+                            }
+                        }
+
+                        it("should set a non-nil request cookie in the cookie storage") {
+                            expect(cookie).toEventuallyNot(beNil())
+                        }
+
+                        it("should set a non-nil cookie name") {
+                            expect(cookie?.name).toEventually(equal("TestCookieName"))
+                        }
+
+                        it("should set a non-nil cookie value") {
+                            expect(cookie?.value).toEventually(equal("TestCookieValue"))
+                        }
+                    }
+
+                    context("When an empty cookie is set to the request header") {
+                        it("should set the request cookie in the cookie storage") {
+                            sessionMock.httpResponse = HTTPURLResponse(url: url,
+                                                                       statusCode: 200,
+                                                                       httpVersion: nil,
+                                                                       headerFields: ["Set-Cookie": ""])
+
+                            waitUntil { done in
+                                originalSession.dataTask(with: urlRequest) { _, _, _ in
+                                    cookie = HTTPCookieStorage.shared.cookies(for: url)?.first
+                                    done()
+                                }.resume()
+                            }
+
+                            expect(cookie).toAfterTimeout(beNil(), timeout: 1.0)
+                        }
+                    }
+
+                    context("When allHTTPHeaderFields is set to nil") {
+                        it("should set the request cookie in the cookie storage") {
+                            sessionMock.httpResponse = HTTPURLResponse(url: url,
+                                                                       statusCode: 200,
+                                                                       httpVersion: nil,
+                                                                       headerFields: nil)
+
+                            waitUntil { done in
+                                originalSession.dataTask(with: urlRequest) { _, _, _ in
+                                    cookie = HTTPCookieStorage.shared.cookies(for: url)?.first
+                                    done()
+                                }.resume()
+                            }
+
+                            expect(cookie).toAfterTimeout(beNil(), timeout: 1.0)
+                        }
+                    }
+                }
+            }
+
             context("when startMockingURLSession() was called") {
                 beforeEach {
                     URLSessionMock.startMockingURLSession()
