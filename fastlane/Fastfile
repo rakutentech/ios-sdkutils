@@ -48,7 +48,7 @@ platform :ios do
     # Example data: `{ platform:watchOS Simulator, id:9F48180C-4348-45DC-9462-23B243FC596D, OS:9.0, name:Apple Watch Series 6 (40mm) }`
     watchos_sim_id = sh("cd .. && \
       xcodebuild -scheme RSDKUtilsMain -showdestinations 2>/dev/null \
-      | grep 'Apple Watch Series 6' \
+      | grep 'Apple Watch Series ' \
       | head -n 1 \
       | awk -F 'id:' '{print $2}' \
       | cut -d ',' -f1 \

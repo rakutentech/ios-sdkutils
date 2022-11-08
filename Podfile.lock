@@ -11,7 +11,7 @@ PODS:
   - RSDKUtils/RLogger (4.0.0)
   - RSDKUtils/TestHelpers (4.0.0):
     - RSDKUtils/Main
-  - SwiftLint (0.49.1)
+  - SwiftLint (0.48.0)
 
 DEPENDENCIES:
   - Nimble
@@ -20,7 +20,7 @@ DEPENDENCIES:
   - RSDKUtils/Nimble (from `./RSDKUtils.podspec`)
   - RSDKUtils/RLogger (from `./RSDKUtils.podspec`)
   - RSDKUtils/TestHelpers (from `./RSDKUtils.podspec`)
-  - SwiftLint
+  - SwiftLint (~> 0.48.0)
 
 SPEC REPOS:
   trunk:
@@ -36,8 +36,8 @@ SPEC CHECKSUMS:
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
   RSDKUtils: e2a63eb729298706abe02e735436a2586c65e164
-  SwiftLint: 32ee33ded0636d0905ef6911b2b67bbaeeedafa5
+  SwiftLint: 284cea64b6187c5d6bd83e9a548a64104d546447
 
-PODFILE CHECKSUM: 4ed9773263044cef845ee896ef054d609b9a1edc
+PODFILE CHECKSUM: 01c054113b493e5c0ad989d688e456e75430caaa
 
 COCOAPODS: 1.11.3
