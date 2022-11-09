@@ -1,10 +1,22 @@
 # **Changelog**
 
-#### 4.0.0 (TBC)
-- Deletion:
-    - RLogger deprecated functions were removed.
+#### 4.0.0 (2022-11-09)
 - Features:
+    - RSDKUtils macOS Support (SDKCF-5397)
     - Handle the cookies storage in URLSessionMock (SDKCF-5966)
+    - Add `isRGBAEqual` UIColor extension method
+- Improve:
+    - Add `customAccountNumber` parameter in AnalyticsBroadcaster (SDKCF-5251)
+- Deletion:
+    - RLogger deprecated functions were removed (SDKCF-5579)
+- Build:
+    - Bump Quick to v5.0 (fix for Xcode 13.3)
+    - Improvements (SDKCF-5616):
+        - xcresulttool GitHub Actions inline test report 
+        - Update tests scheme name to fix tests report format
+        - Use xcpretty to fix fastlane test report generation format
+- CI:
+    - xcresulttool GitHub Actions inline test report (SDKCF-5616)
 
 #### 3.0.0 (2022-04-06)
 - Features:
