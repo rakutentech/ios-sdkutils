@@ -59,16 +59,6 @@ public struct RLogger {
     }
 }
 
-// MARK: - Variadicable
-
-public protocol Variadicable {
-    @discardableResult static func verbose(_ format: String, arguments: CVarArg...) -> String?
-    @discardableResult static func debug(_ format: String, arguments: CVarArg...) -> String?
-    @discardableResult static func info(_ format: String, arguments: CVarArg...) -> String?
-    @discardableResult static func warning(_ format: String, arguments: CVarArg...) -> String?
-    @discardableResult static func error(_ format: String, arguments: CVarArg...) -> String?
-}
-
 internal extension RLogger {
     /// Returns the caller module name.
     ///
