@@ -43,4 +43,8 @@ cyclomatic_complexity:
     warning: 15
     error: 25
 
+large_tuple:
+    warning: 4
+    error: 4
+
 reporter: "xcode"
