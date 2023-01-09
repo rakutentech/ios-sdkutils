@@ -1,0 +1,26 @@
+format_version: "8"
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: ios
+workflows:
+  shared_prebuild:
+    steps:
+    - script@1:
+        inputs:
+        - content: |
+            #!/usr/bin/env bash
+            set -x
+
+            # Removing unpaired watchOS simulators fixes an issue with `pod lib lint` on Xcode 14
+
+            xcrun simctl list --json > simulators.json
+            watch_os_udids=$(jq '.devices[] | map(select(.name | contains("Watch"))) | .[].udid' simulators.json -r)
+            paired_watch_udids=$(jq '.pairs | map(.watch) | .[].udid' simulators.json -r)
+
+            while IFS= read -r udid; do
+                if [[ ! "${paired_watch_udids[*]}" =~ "${udid}" ]]; then
+                    xcrun simctl delete ${udid}
+                fi
+            done <<< "$watch_os_udids"
+
+            xcrun simctl delete unavailable
+        title: Remove unpaired watchOS simulators
