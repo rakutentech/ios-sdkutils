@@ -23,7 +23,6 @@ platform :ios do
       device: ENV['REM_FL_TESTS_DEVICE'] || 'iPhone 11',
       workspace: ENV['REM_FL_TESTS_WORKSPACE'],
       code_coverage: true,
-      xcodebuild_formatter: 'xcpretty',
       output_types: 'json-compilation-database,html,junit',
       output_files: 'compile_commands.json,report.html,report.junit')
 
