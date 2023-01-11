@@ -12,6 +12,7 @@ xcuserdata
 *.playground
 build
 .build
+!RSDKUtils-Package.xcworkspace
 
 # Cocoapods
 Pods

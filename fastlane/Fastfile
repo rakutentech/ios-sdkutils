@@ -12,7 +12,7 @@ platform :ios do
 
   desc "Run tests"
   lane :tests do
-    build_swift_package # running before .xcworkspace is created
+    build_swift_package # using dedicated xcworkspace
     cocoapods(repo_update: ENV['REM_FL_CP_REPO_UPDATE'] || false)
 
     scan(
@@ -21,8 +21,8 @@ platform :ios do
       output_directory: './artifacts/unit-tests',
       scheme: ENV['REM_FL_TESTS_SCHEME'] || 'Tests',
       device: ENV['REM_FL_TESTS_DEVICE'] || 'iPhone 11',
+      workspace: ENV['REM_FL_TESTS_WORKSPACE'],
       code_coverage: true,
-      xcodebuild_formatter: 'xcpretty',
       output_types: 'json-compilation-database,html,junit',
       output_files: 'compile_commands.json,report.html,report.junit')
 
@@ -47,8 +47,8 @@ platform :ios do
     # The simulator name can differ between Xcode versions
     # Example data: `{ platform:watchOS Simulator, id:9F48180C-4348-45DC-9462-23B243FC596D, OS:9.0, name:Apple Watch Series 6 (40mm) }`
     watchos_sim_id = sh("cd .. && \
-      xcodebuild -scheme RSDKUtilsMain -showdestinations 2>/dev/null \
-      | grep 'Apple Watch Series ' \
+      xcodebuild -scheme TestHost -showdestinations 2>/dev/null \
+      | grep 'Apple Watch ' \
       | head -n 1 \
       | awk -F 'id:' '{print $2}' \
       | cut -d ',' -f1 \
@@ -65,6 +65,7 @@ platform :ios do
       xcodebuild(
         clean: true,
         build: true,
+        workspace: 'RSDKUtils-Package.xcworkspace',
         scheme: build.scheme,
         destination: build.destination,
         xcargs: build.xcargs
