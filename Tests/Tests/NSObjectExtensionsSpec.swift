@@ -67,7 +67,6 @@ class NSObjectExtensionsSpec: QuickSpec {
                 #if os(iOS)
                 it("will return true for private apple class instance") {
                     let window = UIWindow()
-                    // swiftlint:disable:next force_cast
                     let object = window.value(forKey: "_systemGestureGateForGestures") as! NSObject // _UISystemGestureGateGestureRecognizer
                     expect(object.isApplePrivateClass()).to(beTrue())
                 }

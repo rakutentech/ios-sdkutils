@@ -50,8 +50,10 @@ public extension UIColor {
     /// - Parameter anotherColor: A color to compare with.
     /// - Returns: `true` if both colors have the same RGBA values.
     func isRGBAEqual(to anotherColor: UIColor) -> Bool {
-        var rgba1: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) = (0, 0, 0, 0)
-        var rgba2: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) = (0, 0, 0, 0)
+        // swiftlint:disable:next large_tuple
+        typealias RGBA = (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat)
+        var rgba1 = RGBA(0, 0, 0, 0)
+        var rgba2 = RGBA(0, 0, 0, 0)
 
         getRed(&rgba1.r, green: &rgba1.g, blue: &rgba1.b, alpha: &rgba1.a)
         anotherColor.getRed(&rgba2.r, green: &rgba2.g, blue: &rgba2.b, alpha: &rgba2.a)

@@ -2,18 +2,14 @@ included:
   - Sources
   - Tests
 
-disabled_rules:
-- identifier_name
-- nesting
-
 opt_in_rules:
 - empty_count
 - empty_string
 
-excluded:
-- Carthage
-- Pods
-- SwiftLint/Common/3rdPartyLib
+disabled_rules:
+- nesting
+- todo
+- identifier_name
 
 line_length:
     warning: 150
@@ -40,11 +36,12 @@ file_length:
     ignore_comment_only_lines: true
 
 cyclomatic_complexity:
-    warning: 15
+    warning: 25
     error: 25
 
 large_tuple:
-    warning: 4
-    error: 4
+    warning: 3
+    error: 3
 
 reporter: "xcode"
+
