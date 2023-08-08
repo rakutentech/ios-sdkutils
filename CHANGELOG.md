@@ -1,5 +1,9 @@
 # **Changelog**
 
+#### Unreleased
+- Fixes:
+    - Fixed Nimble Extensions for Xcode 15 beta 5 (SDKCF-6724)
+
 #### 4.0.0 (2022-11-09)
 - Features:
     - RSDKUtils macOS Support (SDKCF-5397)

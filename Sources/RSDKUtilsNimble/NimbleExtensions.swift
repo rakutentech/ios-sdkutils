@@ -5,7 +5,7 @@ public extension Expectation {
 
     func toAfterTimeout(file: FileString = #file,
                         line: UInt = #line,
-                        _ predicate: Predicate<T>,
+                        _ predicate: Nimble.Predicate<T>,
                         timeout: TimeInterval = 1.0) {
 
         let timeForExecution: TimeInterval = 1.0
@@ -20,7 +20,7 @@ public extension Expectation {
 
     func toAfterTimeoutNot(file: FileString = #file,
                            line: UInt = #line,
-                           _ predicate: Predicate<T>,
+                           _ predicate: Nimble.Predicate<T>,
                            timeout: TimeInterval = 1.0) {
 
         let timeForExecution: TimeInterval = 1.0
@@ -42,7 +42,7 @@ public extension Expectation {
 /// if they are not in the same order.
 public func elementsEqualOrderAgnostic<Col1: Collection, Col2: Collection>(
     _ expectedValue: Col2?
-) -> Predicate<Col1> where Col1.Element: Equatable, Col1.Element == Col2.Element {
+) -> Nimble.Predicate<Col1> where Col1.Element: Equatable, Col1.Element == Col2.Element {
     return Predicate.define("elementsEqualOrderAgnostic <\(stringify(expectedValue))>") { (actualExpression, msg) in
         let actualValue = try actualExpression.evaluate()
         switch (expectedValue, actualValue) {
