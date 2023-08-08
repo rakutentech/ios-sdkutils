@@ -1,8 +1,10 @@
 # **Changelog**
 
-#### Unreleased
+#### 4.0.1 (2023-08-08)
 - Fixes:
     - Fixed Nimble Extensions for Xcode 15 beta 5 (SDKCF-6724)
+    - Fixed `fastlane ci` errors (SDKCF-6015)
+    - Removed failing test (SDKCF-5988)
 
 #### 4.0.0 (2022-11-09)
 - Features:
