@@ -1,3 +1,4 @@
+#if os(macOS) || os(iOS)
 import Foundation
 import XCTest
 
@@ -27,3 +28,4 @@ public extension XCTestCase {
         XCTAssertEqual(value(), otherValue())
     }
 }
+#endif
