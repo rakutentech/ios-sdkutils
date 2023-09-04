@@ -1,5 +1,9 @@
 # **Changelog**
 
+#### 4.0.2 (2023-08-29)
+- Fixes:
+    - Set Quick and Nimble versions range in Package.swift (SDKCF-6742)
+
 #### 4.0.1 (2023-08-08)
 - Fixes:
     - Fixed Nimble Extensions for Xcode 15 beta 5 (SDKCF-6724)
