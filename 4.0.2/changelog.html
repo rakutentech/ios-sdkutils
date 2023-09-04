@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CHANGELOG  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="CHANGELOG  Reference"></a>
+    <header>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="css/version-select.css" />
+      <script src="js/version-select.js" defer></script>
+      <script src="../versions.js"></script>
+      <div class="content-wrapper">
+        <p><a href="index.html">RSDKUtils Docs</a></p>
+        <div class="version-dropdown">
+          <button onclick="toggleVersionSelect()" class="versionbtn">4.0.2 <i class="fa fa-caret-down"></i></button>
+          <div id="versions" class="version-dropdown-content"></div>
+        </div> 
+        <p class="header-right"><a href="https://github.com/rakutentech/ios-sdkutils"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">RSDKUtils Reference</a>
+        <img id="carat" src="img/carat.png" />
+        CHANGELOG  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="changelog.html">CHANGELOG</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AnalyticsBroadcaster.html">AnalyticsBroadcaster</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AnyDependenciesContainer.html">AnyDependenciesContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AtomicGetSet.html">AtomicGetSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/EnvironmentInformation.html">EnvironmentInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KeyStore.html">KeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/LockableObject.html">LockableObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Reachability.html">Reachability</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Reachability/Connection.html">– Connection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Reachability.html">Reachability</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Reachability/Connection.html">– Connection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TypedDependencyManager.html">TypedDependencyManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TypedDependencyManager/ContainerElement.html">– ContainerElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/URLSessionMock.html">URLSessionMock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/WeakWrapper.html">WeakWrapper</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/RLoggingLevel.html">RLoggingLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Bundle.html">Bundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/CharacterSet.html">CharacterSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Expectation.html">Expectation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSMutableURLRequest.html">NSMutableURLRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSNotification.html">NSNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSNotification/Name.html">– Name</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSObject.html">NSObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SCNetworkReachabilityFlags.html">SCNetworkReachabilityFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SCNetworkReachabilityFlags.html">SCNetworkReachabilityFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/URLSession.html">URLSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions.html#/c:objc(cs)NSURLSessionTask">URLSessionTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/XCTestCase.html">XCTestCase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/XCTestCase.html">XCTestCase</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:9RSDKUtils26elementsEqualOrderAgnosticy6Nimble9PredicateVyxGq_SgSlRzSlR_SQ7ElementRpzAHQy_AIRSr0_lF">elementsEqualOrderAgnostic(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/BundleProtocol.html">BundleProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Lockable.html">Lockable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/LockableResource.html">LockableResource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ReachabilityObserver.html">ReachabilityObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ReachabilityObserver.html">ReachabilityObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ReachabilityType.html">ReachabilityType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ReachabilityType.html">ReachabilityType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Sessionable.html">Sessionable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SwiftySessionable.html">SwiftySessionable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/URLSessionTaskable.html">URLSessionTaskable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/RLogger.html">RLogger</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='strong-changelog-strong' class='heading'><strong>Changelog</strong></h1>
+<h4 id='4-0-2-2023-08-29' class='heading'>4.0.2 (2023-08-29)</h4>
+
+<ul>
+<li>Fixes:
+
+<ul>
+<li>Set Quick and Nimble versions range in Package.swift (SDKCF-6742)</li>
+</ul></li>
+</ul>
+<h4 id='4-0-1-2023-08-08' class='heading'>4.0.1 (2023-08-08)</h4>
+
+<ul>
+<li>Fixes:
+
+<ul>
+<li>Fixed Nimble Extensions for Xcode 15 beta 5 (SDKCF-6724)</li>
+<li>Fixed <code>fastlane ci</code> errors (SDKCF-6015)</li>
+<li>Removed failing test (SDKCF-5988)</li>
+</ul></li>
+</ul>
+<h4 id='4-0-0-2022-11-09' class='heading'>4.0.0 (2022-11-09)</h4>
+
+<ul>
+<li>Features:
+
+<ul>
+<li>RSDKUtils macOS Support (SDKCF-5397)</li>
+<li>Handle the cookies storage in URLSessionMock (SDKCF-5966)</li>
+<li>Add <code>isRGBAEqual</code> UIColor extension method</li>
+</ul></li>
+<li>Improve:
+
+<ul>
+<li>Add <code>customAccountNumber</code> parameter in AnalyticsBroadcaster (SDKCF-5251)</li>
+</ul></li>
+<li>Deletion:
+
+<ul>
+<li>RLogger deprecated functions were removed (SDKCF-5579)</li>
+</ul></li>
+<li>Build:
+
+<ul>
+<li>Bump Quick to v5.0 (fix for Xcode 13.3)</li>
+<li>Improvements (SDKCF-5616):
+
+<ul>
+<li>xcresulttool GitHub Actions inline test report</li>
+<li>Update tests scheme name to fix tests report format</li>
+<li>Use xcpretty to fix fastlane test report generation format</li>
+</ul></li>
+</ul></li>
+<li>CI:
+
+<ul>
+<li>xcresulttool GitHub Actions inline test report (SDKCF-5616)</li>
+</ul></li>
+</ul>
+<h4 id='3-0-0-2022-04-06' class='heading'>3.0.0 (2022-04-06)</h4>
+
+<ul>
+<li>Features:
+
+<ul>
+<li>Align iOS version (SDKCF-5011)</li>
+<li>Align Swift version support (SDKCF-4824)</li>
+<li>Added support for watchOS and extensions (SDKCF-4990)</li>
+<li>Added Bundle appex, Optional Wrapped and SHA256 helpers (SDKCF-4901)</li>
+</ul></li>
+<li>Improve:
+
+<ul>
+<li>SDK bundle search extension methods</li>
+<li>Integrated SonarCloud/SonarQube and completed test coverage (SDKCF-4826)</li>
+</ul></li>
+<li>Fixes:
+
+<ul>
+<li>Fixed missing test file references in the project file</li>
+</ul></li>
+</ul>
+<h4 id='2-1-0-2021-10-27' class='heading'>2.1.0 (2021-10-27)</h4>
+
+<ul>
+<li>Features:
+
+<ul>
+<li>Added AnalyticsBroadcaster (SDKCF-4383)</li>
+<li>Added Dictionary and String extensions (SDKCF-4423)</li>
+</ul></li>
+<li>Improvements:
+
+<ul>
+<li>Added missing messages to deprecated RLogger functions</li>
+</ul></li>
+<li>Fixes:
+
+<ul>
+<li>Fixed XCTest linking issue for UI Tests targets</li>
+</ul></li>
+</ul>
+<h4 id='2-0-0-2021-10-14' class='heading'>2.0.0 (2021-10-14)</h4>
+
+<p><strong>Breaking change:</strong> Removed obsolete utilities, separated source files into subspecs. Minimum supported iOS version is now 11.0</p>
+
+<ul>
+<li>Features:
+
+<ul>
+<li>Added a lot of new utilities (including RLogger)</li>
+<li>Added SPM support</li>
+<li>Added Jazzy documentation (available at <a href="https://rakutentech.github.io/ios-sdkutils/">https://rakutentech.github.io/ios-sdkutils/</a>)</li>
+</ul></li>
+<li>Improvements:
+
+<ul>
+<li>Divided RSDKUtils into 4 subspecs and 4 SPM products - Main, TestHelpers, Nimble and RLogger</li>
+<li>Added Bitrise CI</li>
+</ul></li>
+</ul>
+<h4 id='1-1-0' class='heading'>1.1.0</h4>
+
+<ul>
+<li>Add <code><a href="Classes/KeyStore.html">KeyStore</a></code> class for securely storing values in the device KeyChain.</li>
+</ul>
+<h4 id='1-0-0' class='heading'>1.0.0</h4>
+
+<ul>
+<li>Initial release</li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="https://github.com/rakutentech/ios-sdkutils" target="_blank" rel="external noopener">Rakuten Group, Inc.</a>. All rights reserved. (Last updated: 2023-09-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

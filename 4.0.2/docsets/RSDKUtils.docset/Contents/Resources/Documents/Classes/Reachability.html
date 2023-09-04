@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Reachability Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Reachability" class="dashAnchor"></a>
+    <a title="Reachability Class Reference"></a>
+    <header>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/version-select.css" />
+      <script src="../js/version-select.js" defer></script>
+      <script src="../../versions.js"></script>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RSDKUtils Docs</a></p>
+        <div class="version-dropdown">
+          <button onclick="toggleVersionSelect()" class="versionbtn">4.0.2 <i class="fa fa-caret-down"></i></button>
+          <div id="versions" class="version-dropdown-content"></div>
+        </div> 
+        <p class="header-right"><a href="https://github.com/rakutentech/ios-sdkutils"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RSDKUtils Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Reachability Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../changelog.html">CHANGELOG</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AnalyticsBroadcaster.html">AnalyticsBroadcaster</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnyDependenciesContainer.html">AnyDependenciesContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AtomicGetSet.html">AtomicGetSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EnvironmentInformation.html">EnvironmentInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyStore.html">KeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LockableObject.html">LockableObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reachability.html">Reachability</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reachability/Connection.html">– Connection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reachability.html">Reachability</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reachability/Connection.html">– Connection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TypedDependencyManager.html">TypedDependencyManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TypedDependencyManager/ContainerElement.html">– ContainerElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/URLSessionMock.html">URLSessionMock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WeakWrapper.html">WeakWrapper</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/RLoggingLevel.html">RLoggingLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bundle.html">Bundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CharacterSet.html">CharacterSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Expectation.html">Expectation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSMutableURLRequest.html">NSMutableURLRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSNotification.html">NSNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSNotification/Name.html">– Name</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSObject.html">NSObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SCNetworkReachabilityFlags.html">SCNetworkReachabilityFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SCNetworkReachabilityFlags.html">SCNetworkReachabilityFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URLSession.html">URLSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:objc(cs)NSURLSessionTask">URLSessionTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/XCTestCase.html">XCTestCase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/XCTestCase.html">XCTestCase</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9RSDKUtils26elementsEqualOrderAgnosticy6Nimble9PredicateVyxGq_SgSlRzSlR_SQ7ElementRpzAHQy_AIRSr0_lF">elementsEqualOrderAgnostic(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BundleProtocol.html">BundleProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Lockable.html">Lockable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LockableResource.html">LockableResource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ReachabilityObserver.html">ReachabilityObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ReachabilityObserver.html">ReachabilityObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ReachabilityType.html">ReachabilityType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ReachabilityType.html">ReachabilityType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Sessionable.html">Sessionable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SwiftySessionable.html">SwiftySessionable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/URLSessionTaskable.html">URLSessionTaskable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/RLogger.html">RLogger</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Reachability</h1>
+            <p>Class that wraps <code>SCNetworkReachability</code> and provides
+information on network connectivity state</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Enum/Connection" class="dashAnchor"></a>
+                    <a class="token" href="#/">Connection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="../Classes/Reachability/Connection.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/allowsCellularConnection" class="dashAnchor"></a>
+                    <a class="token" href="#/">allowsCellularConnection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set to <code>false</code> to force Reachability.connection to <code>.unavailable</code> when on cellular connection (default value <code>true</code>)</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/connection" class="dashAnchor"></a>
+                    <a class="token" href="#/">connection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/init(hostname:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">init(hostname:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new Reachability and starts notifying</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/init(url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">init(url:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience method to create new Reachability with URL
+A hostname will be extracted from url and used to create an instance
+(ex. &lsquo;<a href="https://google.com/maps&#x27;">https://google.com/maps&rsquo;</a>) It will be turned into &lsquo;google.com&rsquo;</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/addObserver(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">addObserver(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/removeObserver(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">removeObserver(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="https://github.com/rakutentech/ios-sdkutils" target="_blank" rel="external noopener">Rakuten Group, Inc.</a>. All rights reserved. (Last updated: 2023-09-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
