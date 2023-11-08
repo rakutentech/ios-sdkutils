@@ -37,9 +37,10 @@ let package = Package(
         .target(
             name: "RSDKUtilsNimble", 
             dependencies: ["RSDKUtilsMain", "Nimble"]),
+        .target(name: "REventLogger"),
         .testTarget(
             name: "Tests",
-            dependencies: ["RSDKUtilsMain", "RSDKUtilsNimble", "RSDKUtilsTestHelpers", "RLogger", "Quick", "Nimble"])
+            dependencies: ["RSDKUtilsMain", "RSDKUtilsNimble", "RSDKUtilsTestHelpers", "RLogger", "Quick", "Nimble", "REventLogger"])
     ],
     swiftLanguageVersions: [
         .v5
