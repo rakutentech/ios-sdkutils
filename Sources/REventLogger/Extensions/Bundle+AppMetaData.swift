@@ -26,4 +26,3 @@ extension Bundle: EventLoggerAppBundleable {
         object(forInfoDictionaryKey: BundleKeys.shortVersion) as? String
     }
 }
-

@@ -10,7 +10,7 @@ class AppBundleSpec: QuickSpec {
         describe("check bundle info") {
             let bundleInfoMock = BundleInfoMock()
             BundleInfo.appBundle = bundleInfoMock
-            
+
             context("validate applicationId") {
                 it("should return nil if CFBundleIdentifier is not set") {
                     bundleInfoMock.infoDictionaryMock.removeValue(forKey: "CFBundleIdentifier")
@@ -34,7 +34,7 @@ class AppBundleSpec: QuickSpec {
                     expect(BundleInfo.appVersion).to(equal("1.2.3"))
                 }
             }
-            
+
             context("validate appName") {
                 it("should return nil if CFBundleDisplayName is not set") {
                     bundleInfoMock.infoDictionaryMock.removeValue(forKey: "CFBundleDisplayName")
