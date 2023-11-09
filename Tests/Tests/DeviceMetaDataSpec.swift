@@ -42,6 +42,5 @@ class DeviceInfoMock: UIDevice {
     }
     override var systemVersion: String {
         "iOS 17"
-    }    
+    }
 }
-
