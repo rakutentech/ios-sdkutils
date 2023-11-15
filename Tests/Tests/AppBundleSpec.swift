@@ -41,7 +41,7 @@ class AppBundleSpec: QuickSpec {
                     expect(BundleInfo.appName).to(beNil())
                 }
 
-                it("should return expected appVersion") {
+                it("should return expected appName") {
                     bundleInfoMock.infoDictionaryMock["CFBundleDisplayName"] = "MyRakuApp"
                     expect(BundleInfo.appName).to(equal("MyRakuApp"))
                 }
