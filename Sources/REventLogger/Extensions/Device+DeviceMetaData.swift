@@ -32,6 +32,7 @@ extension UIDevice: Deviceable {
     private func deviceModelName() -> String {
         var systemInfo = utsname()
         uname(&systemInfo)
-        return String(bytes: Data(bytes: &systemInfo.machine, count: Int(_SYS_NAMELEN)), encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
+        return String(bytes: Data(bytes: &systemInfo.machine,count: Int(_SYS_NAMELEN)),
+                      encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
     }
 }
