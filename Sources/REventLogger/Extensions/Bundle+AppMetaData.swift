@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 protocol Bundleable {
     var appId: String? { get }
