@@ -9,23 +9,23 @@ protocol Deviceable {
 }
 
 extension UIDevice: Deviceable {
-    public var platform: String {
+    var platform: String {
         systemName
     }
 
-    public var osVersion: String {
+    var osVersion: String {
         systemVersion
     }
 
-    public var deviceModel: String {
+    var deviceModel: String {
         deviceModelName()
     }
 
-    public var deviceBrand: String {
+    var deviceBrand: String {
         model
     }
 
-    public var deviceName: String {
+    var deviceName: String {
         deviceModelName()
     }
 

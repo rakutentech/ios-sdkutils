@@ -13,15 +13,15 @@ extension Bundle: Bundleable {
         static let appName = "CFBundleDisplayName"
     }
 
-    public var appId: String? {
+    var appId: String? {
         object(forInfoDictionaryKey: BundleKeys.bundleId) as? String
     }
 
-    public var appName: String? {
+    var appName: String? {
         object(forInfoDictionaryKey: BundleKeys.appName) as? String
     }
 
-    public var appVersion: String? {
+    var appVersion: String? {
         object(forInfoDictionaryKey: BundleKeys.shortVersion) as? String
     }
 }
