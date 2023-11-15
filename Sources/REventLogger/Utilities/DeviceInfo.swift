@@ -1,7 +1,7 @@
 import UIKit
 
 struct DeviceInfo {
-    static var deviceBundle: EventLoggerDeviceable = UIDevice.current
+    static var deviceBundle: Deviceable = UIDevice.current
 
     static var platform: String? {
         deviceBundle.platform

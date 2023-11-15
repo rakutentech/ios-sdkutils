@@ -5,27 +5,27 @@ import UIKit
 
 @testable import REventLogger
 
-class DeviceMetaDataSpec: QuickSpec {
+final class DeviceInfoSpec: QuickSpec {
 
     override func spec() {
         describe("check device info") {
             let deviceInfoMock = DeviceInfoMock()
             DeviceInfo.deviceBundle = deviceInfoMock
 
-            context("validate device model") {
-                it("should return expected device model") {
+            context("validate device brand") {
+                it("should return expected device brand") {
                     expect(DeviceInfo.deviceBrand).to(equal("iPhone"))
                 }
             }
 
-            context("validate appVersion") {
+            context("validate osVersion") {
                 it("should return expected OS Version of device") {
                     expect(DeviceInfo.osVersion).to(equal("iOS 17"))
                 }
             }
 
-            context("validate appName") {
-                it("should return expected appVersion") {
+            context("validate platform") {
+                it("should return expected platform") {
                     expect(DeviceInfo.platform).to(equal("iOS"))
                 }
             }
@@ -33,7 +33,7 @@ class DeviceMetaDataSpec: QuickSpec {
     }
 }
 
-class DeviceInfoMock: UIDevice {
+final class DeviceInfoMock: UIDevice {
     override var model: String {
         "iPhone"
     }

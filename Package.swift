@@ -20,7 +20,10 @@ let package = Package(
             targets: ["RSDKUtilsNimble"]),
         .library(
             name: "RLogger",
-            targets: ["RLogger"])
+            targets: ["RLogger"]),
+        .library(
+            name: "REventLogger",
+            targets: ["REventLogger"])
     ],
     dependencies: [
         .package(url: "https://github.com/Quick/Quick.git", "5.0.0"..<"7.2.0"),
@@ -40,7 +43,8 @@ let package = Package(
         .target(name: "REventLogger"),
         .testTarget(
             name: "Tests",
-            dependencies: ["RSDKUtilsMain", "RSDKUtilsNimble", "RSDKUtilsTestHelpers", "RLogger", "Quick", "Nimble", "REventLogger"])
+            dependencies: ["RSDKUtilsMain", "RSDKUtilsNimble", "RSDKUtilsTestHelpers", "RLogger", "Quick", "Nimble",
+                           "REventLogger"])
     ],
     swiftLanguageVersions: [
         .v5

@@ -1,7 +1,7 @@
 import Foundation
 
 struct BundleInfo {
-    static var appBundle: EventLoggerAppBundleable = Bundle.main
+    static var appBundle: Bundleable = Bundle.main
 
     static var appId: String? {
         appBundle.appId

@@ -1,13 +1,12 @@
-import Foundation
 import UIKit
 
-@objc public protocol EventLoggerAppBundleable {
+protocol Bundleable {
     var appId: String? { get }
     var appName: String? { get }
     var appVersion: String? { get }
 }
 
-extension Bundle: EventLoggerAppBundleable {
+extension Bundle: Bundleable {
     private enum BundleKeys {
         static let bundleId = "CFBundleIdentifier"
         static let shortVersion = "CFBundleShortVersionString"
