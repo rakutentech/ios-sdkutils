@@ -28,7 +28,7 @@ public final class REventLogger {
         }
         configration = EventLoggerConfiguration(apiKey: apiKey, apiUrl: apiUrl)
     }
-    
+
     /// Logs the event which will be pushed to the backend either on demand or at a later time, based on the criticality of the event.
     /// - Parameters:
     ///   - type: Event type,  will accept EventType enum cases
