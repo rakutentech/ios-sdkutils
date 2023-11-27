@@ -1,5 +1,10 @@
 # **Changelog**
 
+## Unreleased
+- Features:
+    - Retrive Meta-data for Event Logger (SDKCF-6846)
+    - Event Logger Public API & Manager Class (SDKCF-6845)
+
 #### 4.0.2 (2023-08-29)
 - Fixes:
     - Set Quick and Nimble versions range in Package.swift (SDKCF-6742)
