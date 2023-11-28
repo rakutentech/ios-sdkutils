@@ -1,6 +1,6 @@
 import Foundation
 
-/// Descripe the type of the event
+/// Describe the type of the event
 public enum EventType: Int, Codable {
     case critical, warning
 }
@@ -14,7 +14,7 @@ struct EventLoggerConfiguration {
 public final class REventLogger {
     /// Singleton shared instance of REventLogger
     public static let shared = REventLogger()
-    static var configration: EventLoggerConfiguration?
+    static var configuration: EventLoggerConfiguration?
 
     private init() { }
 
@@ -23,10 +23,10 @@ public final class REventLogger {
     ///   - apiKey: your API Key
     ///   - apiUrl: a API Endpoint
     public static func configure(apiKey: String, apiUrl: String) {
-        guard configration != nil else {
+        guard configuration != nil else {
             return
         }
-        configration = EventLoggerConfiguration(apiKey: apiKey, apiUrl: apiUrl)
+        configuration = EventLoggerConfiguration(apiKey: apiKey, apiUrl: apiUrl)
     }
 
     /// Logs the event which will be pushed to the backend either on demand or at a later time, based on the criticality of the event.
