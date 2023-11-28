@@ -29,21 +29,36 @@ public final class REventLogger {
         configuration = EventLoggerConfiguration(apiKey: apiKey, apiUrl: apiUrl)
     }
 
-    /// Logs the event which will be pushed to the backend either on demand or at a later time, based on the criticality of the event.
+    /// Logs the critical event
+    /// This event will be considered as high priority and will be sent immediately
     /// - Parameters:
-    ///   - type: Event type,  will accept EventType enum cases
     ///   - sourceName: Source name of the event e.g App name or SDK name
     ///   - sourceVersion: Version of the source e.g v1.0.0
     ///   - errorCode: Error code of the event, like custom error code or HTTP response error code
     ///   - errorMessage: Description of the error message.
     ///   - info: Any custom information. It's optional.
-    public static func logEvent(_ type: EventType,
-                                sourceName: String,
-                                sourceVersion: String,
-                                errorCode: String,
-                                errorMessage: String,
-                                info: [String: String]? = nil) {
+    public static func sendCriticalEvent(sourceName: String,
+                                         sourceVersion: String,
+                                         errorCode: String,
+                                         errorMessage: String,
+                                         info: [String: String]? = nil) {
         // Send the event to server
+        // Save it in the local DB, as warning
+    }
+
+    /// Logs the warning event
+    /// This event will be considered as low priority and will be sent with bacth update.
+    /// - Parameters:
+    ///   - sourceName: Source name of the event e.g App name or SDK name
+    ///   - sourceVersion: Version of the source e.g v1.0.0
+    ///   - errorCode: Error code of the event, like custom error code or HTTP response error code
+    ///   - errorMessage: Description of the error message.
+    ///   - info: Any custom information. It's optional.
+    public static func sendWarningEvent(sourceName: String,
+                                        sourceVersion: String,
+                                        errorCode: String,
+                                        errorMessage: String,
+                                        info: [String: String]? = nil) {
         // Save it in the local DB
     }
 }
