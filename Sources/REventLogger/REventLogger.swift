@@ -47,7 +47,7 @@ public final class REventLogger {
     }
 
     /// Logs the warning event
-    /// This event will be considered as low priority and will be sent with bacth update.
+    /// This event will be considered as low priority and will be sent with batch update.
     /// - Parameters:
     ///   - sourceName: Source name of the event e.g App name or SDK name
     ///   - sourceVersion: Version of the source e.g v1.0.0
