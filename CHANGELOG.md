@@ -1,5 +1,10 @@
 # **Changelog**
 
+## Unreleased
+- Features:
+    - Retrieve Meta-data for Event Logger (SDKCF-6846)
+    - Event Logger Public API & Manager Class (SDKCF-6845)
+    
 #### 4.1.0 (2024-04-08)
 - Improve:
     - Add Privacy Manifest File (SDKCF-6906)
