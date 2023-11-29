@@ -11,7 +11,7 @@ class NetworkManager {
 
     func executeRequest(with request: URLRequest, completion: @escaping ((Data?, Error?) -> Void)) {
 
-        dataTask = defaultSession.createDataTask(with: request) { [weak self] data, response, error in
+        dataTask = defaultSession.createDataTask(with: request) { data, response, error in
 
             if let error = error { completion(nil, error)
                 return
@@ -20,29 +20,11 @@ class NetworkManager {
                 completion(data, nil)
                 return
             }
-            do {
-                let errorModel = try JSONDecoder().decode(APIError.self, from: data ?? Data())
-                let serverError = NSError.error(code: errorModel.status, message: errorModel.error)
-                completion(nil, serverError)
-            } catch {
-                let serverError = NSError.error(code: (response as? HTTPURLResponse)?.statusCode ?? ErrorCode.unknown,
-                                                message: self?.errorMessage(data) ?? ErrorMessage.unknown)
-                return completion(nil, serverError)
-            }
+            let errorModel = try? JSONDecoder().decode(APIError.self, from: data ?? Data())
+            let serverError = NSError.error(code: (errorModel?.status ?? (response as? HTTPURLResponse)?.statusCode) ?? ErrorCode.unknown,
+                                            message: errorModel?.error ?? ErrorMessage.unknown)
+            completion(nil, serverError)
         }
-
         dataTask?.resume()
-    }
-
-    private func errorMessage(_ data: Data?) -> String? {
-        guard let data = data else {
-            return nil
-        }
-        let dataString = String(data: data, encoding: .utf8)
-        if let jsonData = try? JSONSerialization.jsonObject(with: data) as? [AnyHashable: Any] {
-            return jsonData["error_description"] as? String
-        } else {
-            return dataString
-        }
     }
 }

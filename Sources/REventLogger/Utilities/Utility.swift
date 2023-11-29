@@ -1,8 +1,8 @@
 import Foundation
 
 struct APIError: Decodable, Equatable {
-    let status: Int
-    let error: String
+    let status: Int?
+    let error: String?
 }
 
 extension NSError {
@@ -11,10 +11,16 @@ extension NSError {
     }
 }
 
-struct ErrorCode {
+enum ErrorCode {
     static let unknown = 1001
 }
 
-struct ErrorMessage {
+enum ErrorMessage {
     static let unknown = "Unspecified server error occurred."
+}
+
+enum REventConsants {
+    enum RequestHeaderKey {
+        static let clientApiKey = "x-client-apikey"
+    }
 }
