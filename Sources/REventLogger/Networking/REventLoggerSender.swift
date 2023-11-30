@@ -1,19 +1,18 @@
 import Foundation
 
-protocol REventLoggerSendable{
+protocol REventLoggerSendable {
     func sendEvents(_ apiUrl: String, events: [REvent], onCompletion: @escaping (Result<Data, Error>) -> Void)
 }
 
 struct REventLoggerSender: REventLoggerSendable {
-    
+
     private let networkManager: NetworkManager
 
     init(networkManager: NetworkManager) {
         self.networkManager = networkManager
     }
 
-    func sendEvents(_ apiUrl: String, events: [REvent],
-                  onCompletion: @escaping (Result<Data, Error>) -> Void) {
+    func sendEvents(_ apiUrl: String, events: [REvent], onCompletion: @escaping (Result<Data, Error>) -> Void) {
 
         guard let url = URL(string: apiUrl) else {
             onCompletion(.failure(RequestError.invalidURL))
@@ -41,18 +40,18 @@ struct REventLoggerSender: REventLoggerSendable {
 }
 
 extension REventLoggerSender: ConfigureUrlRequest {
-    
+
     var path: String {
         "/external/logging/error"
     }
-    
+
     var method: HTTPMethod {
         .post
     }
-    
+
     var header: [String : String]? {
         return [
-            REventConsants.RequestHeaderKey.clientApiKey: "apikey" //TODO fetchHeader()
+            REventConsants.RequestHeaderKey.clientApiKey: "apikey" // TODO fetchHeader()
         ]
     }
 }
