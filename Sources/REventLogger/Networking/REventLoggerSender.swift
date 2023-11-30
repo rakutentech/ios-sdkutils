@@ -49,7 +49,7 @@ extension REventLoggerSender: ConfigureUrlRequest {
         .post
     }
 
-    var header: [String : String]? {
+    var header: [String: String]? {
         return [
             REventConsants.RequestHeaderKey.clientApiKey: "apikey" // TODO fetchHeader()
         ]
