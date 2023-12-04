@@ -30,8 +30,7 @@ class REventLoggerSenderSpec: QuickSpec {
                     let mockSession = MockURLSession(statusCode: 400)
                     let eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession))
                     waitUntil { done in
-                        eventSender.sendEvents("https://testURL.com", events:[EVentLoggerMockData.REventModel] ) { result in
-                          
+                        eventSender.sendEvents("https://testURL.com", events: [EVentLoggerMockData.REventModel] ) { result in
                             guard case .failure(let error) = result else {
                                 fail()
                                 return
@@ -42,11 +41,12 @@ class REventLoggerSenderSpec: QuickSpec {
                         }
                     }
                 }
+
                 it("will receive response data nil error") {
                     let mockSession = MockURLSession()
                     let eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession))
                     waitUntil { done in
-                        eventSender.sendEvents("https://testURL.com", events:[EVentLoggerMockData.REventModel] ) { result in
+                        eventSender.sendEvents("https://testURL.com", events: [EVentLoggerMockData.REventModel] ) { result in
                             guard case .failure(let error) = result else {
                                 fail()
                                 return
@@ -61,7 +61,7 @@ class REventLoggerSenderSpec: QuickSpec {
                     let mockSession = MockURLSession()
                     let eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession))
                     waitUntil { done in
-                        eventSender.sendEvents("", events:[EVentLoggerMockData.REventModel] ) { result in
+                        eventSender.sendEvents("", events: [EVentLoggerMockData.REventModel] ) { result in
                             guard case .failure(let error) = result else {
                                 fail()
                                 return

@@ -15,7 +15,7 @@ enum EVentLoggerMockData {
     static let REventModel = REvent(.critical,
                                     sourceName: "IAM",
                                     sourceVersion: "8.0,0",
-                                    errorCode:"400",
+                                    errorCode: "400",
                                     errorMessage: "Network Error")
 }
 
