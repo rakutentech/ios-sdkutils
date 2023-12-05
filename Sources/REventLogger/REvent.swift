@@ -1,10 +1,14 @@
 import Foundation
 
-struct REvent: Codable {
+enum EventType: Int, Encodable {
+    case critical, warning
+}
+
+struct REvent: Encodable {
     let eventType: EventType
-    let appId: String?
-    let appName: String?
-    let appVersion: String?
+    let appId: String
+    let appName: String
+    let appVersion: String
     let osVersion: String
     let deviceModel: String
     let deviceBrand: String
@@ -14,26 +18,28 @@ struct REvent: Codable {
     let errorCode: String
     let errorMessage: String
     let eventVersion: String = "1.0"
-    let platform: String = "iOS"
+    let platform: String
     var occurrenceCount: Int = 0
     var firstOccurrenceOn: Double // unix time
     var info: [String: String]?
 
-    init(_ type: EventType,
+    init(_ eventType: EventType,
          sourceName: String,
          sourceVersion: String,
          errorCode: String,
          errorMessage: String,
          info: [String: String]? = nil) {
-        appId = BundleInfo.appId
-        appName = BundleInfo.appName
-        appVersion = BundleInfo.appVersion
-        osVersion = DeviceInfo.osVersion
-        deviceModel = DeviceInfo.deviceModel
-        deviceBrand = DeviceInfo.deviceBrand
-        deviceName = DeviceInfo.deviceName
-        firstOccurrenceOn = Date().timeIntervalSince1970
-        eventType = type
+        let environment = Environment()
+        self.appId = environment.appId
+        self.appName = environment.appName
+        self.appVersion = environment.appVersion
+        self.platform = environment.devicePlatform
+        self.osVersion = environment.deviceOsVersion
+        self.deviceModel = environment.deviceModel
+        self.deviceBrand = environment.deviceBrand
+        self.deviceName = environment.deviceName
+        self.firstOccurrenceOn = Date().timeIntervalSince1970
+        self.eventType = eventType
         self.sourceName = sourceName
         self.sourceVersion = sourceVersion
         self.errorCode = errorCode
