@@ -1,11 +1,7 @@
 import Foundation
 
-enum EventType: Int, Codable {
-    case critical, warning
-}
-
 struct REvent: Codable {
-    let eventType: EventType
+    var eventType: EventType
     let appId: String
     let appName: String
     let appVersion: String
@@ -45,5 +41,19 @@ struct REvent: Codable {
         self.errorCode = errorCode
         self.errorMessage = errorMessage
         self.info = info
+    }
+}
+
+extension REvent {
+    internal func getEventIdentifier()-> String {
+        return "\(eventType.rawValue)_\(String(describing: appVersion))_\(sourceName)_\(errorCode)_\(errorMessage)"
+    }
+
+    mutating func updateOccurrenceCount() {
+        occurrenceCount += 1
+    }
+
+    mutating func updateEventType(type: EventType) {
+        eventType = type
     }
 }
