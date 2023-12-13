@@ -42,7 +42,7 @@ struct REventLoggerSender: REventLoggerSendable {
 }
 
 extension REventLoggerSender: ConfigureUrlRequest {
-    var body: Encodable {
+    var body: Encodable? {
         eventsList
     }
 
