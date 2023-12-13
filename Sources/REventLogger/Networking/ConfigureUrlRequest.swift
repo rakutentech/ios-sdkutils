@@ -2,7 +2,8 @@ import Foundation
 
 protocol ConfigureUrlRequest {
     var method: HTTPMethod { get }
-    var header: [String: String]? { get }
+    var headers: [String: String]? { get }
+    var body: Encodable? { get }
     var path: String { get }
     func createURLRequest(with url: URL, body: [REvent]?) -> URLRequest?
 }
@@ -24,13 +25,17 @@ extension ConfigureUrlRequest {
             }
         }
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        header?.forEach { header in
+        headers?.forEach { header in
             request.setValue(header.value, forHTTPHeaderField: header.key)
         }
         return request
     }
 
-    var header: [String: String]? {
+    var headers: [String: String]? {
+        nil
+    }
+
+    var body: Encodable? {
         nil
     }
 
