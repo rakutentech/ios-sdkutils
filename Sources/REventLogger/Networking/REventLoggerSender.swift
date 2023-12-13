@@ -6,7 +6,7 @@ protocol REventLoggerSendable {
 
 struct REventLoggerSender: REventLoggerSendable {
 
-    private var eventsList : [REvent]
+    private var eventsList: [REvent]
     private let networkManager: NetworkManager
 
     init(networkManager: NetworkManager, eventsList: [REvent]) {

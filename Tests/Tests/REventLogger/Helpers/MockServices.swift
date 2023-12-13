@@ -31,5 +31,3 @@ extension REventError: LocalizedError {
         }
     }
 }
-
-
