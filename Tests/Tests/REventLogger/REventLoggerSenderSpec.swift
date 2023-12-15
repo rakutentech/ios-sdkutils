@@ -14,7 +14,7 @@ class REventLoggerSenderSpec: QuickSpec {
                     var eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession),
                                                          eventsList: [EVentLoggerMockData.REventModel])
                     waitUntil { done in
-                        eventSender.sendEvents("https://testURL.com", events: [EVentLoggerMockData.REventModel]) { result in
+                        eventSender.sendEvents("https://testURL.com") { result in
                             guard case .success(let data) = result else {
                                 fail()
                                 return
@@ -32,7 +32,7 @@ class REventLoggerSenderSpec: QuickSpec {
                     var eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession),
                                                          eventsList: [EVentLoggerMockData.REventModel])
                     waitUntil { done in
-                        eventSender.sendEvents("https://testURL.com", events: [EVentLoggerMockData.REventModel] ) { result in
+                        eventSender.sendEvents("https://testURL.com") { result in
                             guard case .failure(let error) = result else {
                                 fail()
                                 return
@@ -49,7 +49,7 @@ class REventLoggerSenderSpec: QuickSpec {
                     var eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession),
                                                          eventsList: [EVentLoggerMockData.REventModel])
                     waitUntil { done in
-                        eventSender.sendEvents("https://testURL.com", events: [EVentLoggerMockData.REventModel] ) { result in
+                        eventSender.sendEvents("https://testURL.com") { result in
                             guard case .failure(let error) = result else {
                                 fail()
                                 return
@@ -65,7 +65,7 @@ class REventLoggerSenderSpec: QuickSpec {
                     var eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession),
                                                          eventsList: [EVentLoggerMockData.REventModel])
                     waitUntil { done in
-                        eventSender.sendEvents("", events: [EVentLoggerMockData.REventModel] ) { result in
+                        eventSender.sendEvents("") { result in
                             guard case .failure(let error) = result else {
                                 fail()
                                 return

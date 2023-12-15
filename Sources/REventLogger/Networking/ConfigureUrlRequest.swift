@@ -5,11 +5,11 @@ protocol ConfigureUrlRequest {
     var headers: [String: String]? { get }
     var body: Encodable? { get }
     var path: String { get }
-    func createURLRequest(with url: URL, body: [REvent]?) -> URLRequest?
+    func createURLRequest(with url: URL) -> URLRequest?
 }
 
 extension ConfigureUrlRequest {
-    func createURLRequest(with url: URL, body: [REvent]?) -> URLRequest? {
+    func createURLRequest(with url: URL) -> URLRequest? {
         guard let url = buildUrlFrom(baseUrl: url) else {
             return nil
         }

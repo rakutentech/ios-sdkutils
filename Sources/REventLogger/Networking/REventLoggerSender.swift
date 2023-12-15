@@ -1,7 +1,7 @@
 import Foundation
 
 protocol REventLoggerSendable {
-    mutating func sendEvents(_ apiUrl: String, events: [REvent], onCompletion: @escaping (Result<Data, Error>) -> Void)
+    mutating func sendEvents(_ apiUrl: String, onCompletion: @escaping (Result<Data, Error>) -> Void)
 }
 
 struct REventLoggerSender: REventLoggerSendable {
@@ -14,14 +14,13 @@ struct REventLoggerSender: REventLoggerSendable {
         self.eventsList = eventsList
     }
 
-    mutating func sendEvents(_ apiUrl: String, events: [REvent], onCompletion: @escaping (Result<Data, Error>) -> Void) {
-        eventsList = events
+    mutating func sendEvents(_ apiUrl: String, onCompletion: @escaping (Result<Data, Error>) -> Void) {
         guard let url = URL(string: apiUrl) else {
             onCompletion(.failure(RequestError.invalidURL))
             return
         }
 
-        guard let request = createURLRequest(with: url, body: events) else {
+        guard let request = createURLRequest(with: url) else {
             onCompletion(.failure(RequestError.invalidRequest))
             return
         }

@@ -4,7 +4,7 @@ import Foundation
 
 final class REventSenderMock: REventLoggerSendable {
     var response: Result<Data, Error> = .failure(REventError.internalServicesNotFound)
-    func sendEvents(_ apiUrl: String, events: [REvent], onCompletion: @escaping (Result<Data, Error>) -> Void) {
+    func sendEvents(_ apiUrl: String, onCompletion: @escaping (Result<Data, Error>) -> Void) {
         onCompletion(response)
     }
 }
