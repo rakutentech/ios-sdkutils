@@ -1,6 +1,10 @@
 import Foundation
 
+#if canImport(RSDKUtils)
+@testable import RSDKUtils // Cocoapods version
+#else
 @testable import REventLogger
+#endif
 
 final class MockURLSessionDataTask: DataTaskProtocol {
     func cancel() {
@@ -28,7 +32,7 @@ final class MockURLSession: URLSessionProtocol {
         self.error = error
     }
 
-    func createDataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> DataTaskProtocol {
+    func createURLSessionDataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> DataTaskProtocol {
         receivedRequest = request
         let response = HTTPURLResponse(url: URL(string: "https://test.com")!,
                                        statusCode: serverErrorCode ?? 0,

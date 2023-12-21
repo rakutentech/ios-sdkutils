@@ -2,7 +2,11 @@ import Quick
 import Nimble
 import Foundation
 
+#if canImport(RSDKUtils)
+@testable import RSDKUtils // Cocoapods version
+#else
 @testable import REventLogger
+#endif
 
 class REventLoggerSenderSpec: QuickSpec {
     override func spec() {

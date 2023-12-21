@@ -8,11 +8,11 @@ protocol DataTaskProtocol {
 extension URLSessionDataTask: DataTaskProtocol {}
 
 protocol URLSessionProtocol {
-    func createDataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> DataTaskProtocol
+    func createURLSessionDataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> DataTaskProtocol
 }
 
 extension URLSession: URLSessionProtocol {
-    func createDataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> DataTaskProtocol {
+    func createURLSessionDataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> DataTaskProtocol {
         dataTask(with: request, completionHandler: completionHandler) as DataTaskProtocol
     }
 }

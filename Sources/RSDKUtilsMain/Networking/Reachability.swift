@@ -125,7 +125,7 @@ public class Reachability: ReachabilityType {
                 _ = unmanagedWeakSelf.retain()
                 return UnsafeRawPointer(unmanagedWeakSelf.toOpaque())
             },
-            release: { (info: UnsafeRawPointer) -> Void in
+            release: { (info: UnsafeRawPointer) in
                 let unmanagedWeakSelf = UnmanagedWeakSelf.fromOpaque(info)
                 unmanagedWeakSelf.release()
             },

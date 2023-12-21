@@ -1,6 +1,10 @@
 import Foundation
 
+#if canImport(RSDKUtils)
+@testable import RSDKUtils // Cocoapods version
+#else
 @testable import REventLogger
+#endif
 
 final class REventSenderMock: REventLoggerSendable {
     var response: Result<Data, Error> = .failure(REventError.internalServicesNotFound)

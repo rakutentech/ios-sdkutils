@@ -11,7 +11,7 @@ class NetworkManager {
 
     func executeRequest(with request: URLRequest, completion: @escaping ((Data?, Error?) -> Void)) {
 
-        dataTask = defaultSession.createDataTask(with: request) { data, response, error in
+        dataTask = defaultSession.createURLSessionDataTask(with: request) { data, response, error in
 
             if let error = error { completion(nil, error)
                 return

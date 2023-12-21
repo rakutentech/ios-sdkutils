@@ -24,3 +24,17 @@ enum REventConsants {
         static let clientApiKey = "x-client-apikey"
     }
 }
+
+internal enum Logger {
+    static func debug(_ value: Any) {
+        #if DEBUG
+        print("REventLogger: " + String(describing: value))
+        #endif
+    }
+
+    static func debug(_ message: String) {
+        #if DEBUG
+        print("REventLogger: " + message)
+        #endif
+    }
+}

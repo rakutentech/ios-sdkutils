@@ -18,9 +18,9 @@ extension ConfigureUrlRequest {
         if let body = body {
             do {
                 let encoder = JSONEncoder()
-                encoder.keyEncodingStrategy = .convertToSnakeCase
                 request.httpBody = try encoder.encode(body)
             } catch {
+                Logger.debug("failed creating a request body.")
                 return nil
             }
         }
