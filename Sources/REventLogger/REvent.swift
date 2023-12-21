@@ -1,10 +1,10 @@
 import Foundation
 
-enum EventType: Int, Encodable {
+enum EventType: Int, Codable {
     case critical, warning
 }
 
-struct REvent: Encodable {
+struct REvent: Codable {
     let eventType: EventType
     let appId: String
     let appName: String
@@ -17,8 +17,8 @@ struct REvent: Encodable {
     let sourceVersion: String
     let errorCode: String
     let errorMessage: String
-    let eventVersion: String = "1.0"
     let platform: String
+    var eventVersion: String = "1.0"
     var occurrenceCount: Int = 0
     var firstOccurrenceOn: Double // unix time
     var info: [String: String]?
