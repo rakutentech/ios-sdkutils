@@ -29,7 +29,7 @@ struct REvent: Codable {
          errorCode: String,
          errorMessage: String,
          info: [String: String]? = nil) {
-        let environment = Environment()
+        let environment = REventLoggerEnvironment()
         self.appId = environment.appId
         self.appName = environment.appName
         self.appVersion = environment.appVersion
