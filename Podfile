@@ -13,6 +13,7 @@ target 'Tests' do
   pod 'RSDKUtils/TestHelpers', :path => './RSDKUtils.podspec'
   pod 'RSDKUtils/Nimble', :path => './RSDKUtils.podspec'
   pod 'RSDKUtils/RLogger', :path => './RSDKUtils.podspec'
+  pod 'RSDKUtils/REventLogger', :path => './RSDKUtils.podspec'
 end
 
 # vim:syntax=ruby:et:sts=2:sw=2:ts=2:ff=unix:

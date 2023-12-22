@@ -33,6 +33,7 @@
 		45DAA17B27E293A300BC25A5 /* ReachabilitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA16427E293A300BC25A5 /* ReachabilitySpec.swift */; };
 		45DAA17C27E293A300BC25A5 /* KeyStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA16527E293A300BC25A5 /* KeyStoreTests.swift */; };
 		D06A23F124D4007300E84EE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A23F024D4007300E84EE2 /* AppDelegate.swift */; };
+		F9C41B452B34253B0020DF62 /* REventLoggerEnvironmentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C41B442B34253B0020DF62 /* REventLoggerEnvironmentSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		D06A23EE24D4007300E84EE2 /* TestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06A23F024D4007300E84EE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D06A23FE24D4007400E84EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9C41B442B34253B0020DF62 /* REventLoggerEnvironmentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REventLoggerEnvironmentSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		45DAA14E27E293A300BC25A5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				F9C41B432B34253B0020DF62 /* REventLogger */,
 				45DAA14F27E293A300BC25A5 /* LockableSpec.swift */,
 				45DAA15027E293A300BC25A5 /* EnvironmentInformationTests.swift */,
 				45DAA15127E293A300BC25A5 /* DataExtensionsSpec.swift */,
@@ -186,6 +189,14 @@
 				98FA83B632A50855FCFEA53F /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9C41B432B34253B0020DF62 /* REventLogger */ = {
+			isa = PBXGroup;
+			children = (
+				F9C41B442B34253B0020DF62 /* REventLoggerEnvironmentSpec.swift */,
+			);
+			path = REventLogger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C41B452B34253B0020DF62 /* REventLoggerEnvironmentSpec.swift in Sources */,
 				45DAA17027E293A300BC25A5 /* DictionaryExtensionsSpec.swift in Sources */,
 				45DAA16B27E293A300BC25A5 /* AnyDependenciesContainerSpec.swift in Sources */,
 				45DAA17A27E293A300BC25A5 /* TestHelpers.swift in Sources */,
