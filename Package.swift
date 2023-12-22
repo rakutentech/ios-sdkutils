@@ -40,7 +40,8 @@ let package = Package(
         .target(
             name: "RSDKUtilsNimble", 
             dependencies: ["RSDKUtilsMain", "Nimble"]),
-        .target(name: "REventLogger"),
+        .target(name: "REventLogger",
+                dependencies: ["RSDKUtilsMain"]),
         .testTarget(
             name: "Tests",
             dependencies: ["RSDKUtilsMain", "RSDKUtilsNimble", "RSDKUtilsTestHelpers", "RLogger", "Quick", "Nimble",
