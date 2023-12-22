@@ -12,6 +12,8 @@ import WatchKit
     func deviceModel() -> String
     func osVersion() -> String
     func sdkVersion() -> String
+    func devicePlatform() -> String
+    func deviceBrand() -> String
 }
 
 extension Bundle: BundleProtocol {
@@ -43,6 +45,26 @@ extension Bundle: BundleProtocol {
 
     public func value(for key: String) -> String? {
         self.object(forInfoDictionaryKey: key) as? String
+    }
+
+    public func devicePlatform() -> String {
+        #if os(watchOS)
+        WKInterfaceDevice.current().systemName
+        #elseif os(iOS)
+        UIDevice.current.systemName
+        #else
+        ""
+        #endif
+    }
+
+    public func deviceBrand() -> String {
+        #if os(watchOS)
+        WKInterfaceDevice.current().model
+        #elseif os(iOS)
+        UIDevice.current.model
+        #else
+        ""
+        #endif
     }
 }
 
