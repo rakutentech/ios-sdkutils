@@ -31,14 +31,6 @@ extension ConfigureUrlRequest {
         return request
     }
 
-    var headers: [String: String]? {
-        nil
-    }
-
-    var body: Encodable? {
-        nil
-    }
-
     func buildUrlFrom(baseUrl: URL) -> URL? {
         var urlComponents = URLComponents(url: baseUrl, resolvingAgainstBaseURL: true)
         var absolutePath = path
