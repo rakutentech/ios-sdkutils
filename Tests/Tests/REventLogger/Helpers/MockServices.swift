@@ -3,6 +3,7 @@ import Foundation
 #if canImport(RSDKUtils)
 @testable import RSDKUtils // Cocoapods version
 #else
+@testable import RSDKUtilsMain
 @testable import REventLogger
 #endif
 
