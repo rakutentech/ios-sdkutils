@@ -50,7 +50,6 @@ enum HTTPMethod: String {
 enum RequestError: Error, LocalizedError {
     case invalidURL
     case invalidRequest
-    case invalidHeader
     case noData
 
     var errorDescription: String? {
@@ -59,8 +58,6 @@ enum RequestError: Error, LocalizedError {
             return "URL is invalid"
         case .noData:
             return "Response data is nil"
-        case .invalidHeader:
-            return "Unable to build request header"
         case .invalidRequest:
             return "Unable to create URLRequest"
         }
