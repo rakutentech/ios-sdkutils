@@ -23,7 +23,7 @@ class REventsSpec: QuickSpec {
                                        sourceVersion: "8.0,0", errorCode: "500",
                                        errorMessage: "Network Error", info: nil)
                     event.updateOccurrenceCount()
-                    expect(event.occurrenceCount).to(equal(1))
+                    expect(event.occurrenceCount).to(equal(2))
                 }
                 it("will update the eventtype") {
                     var event = REvent(.warning, sourceName: "Pitari",
