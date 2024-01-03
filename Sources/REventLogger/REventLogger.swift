@@ -1,10 +1,5 @@
 import Foundation
 
-/// Describe the type of the event
-public enum EventType: String, Codable {
-    case critical, warning
-}
-
 struct EventLoggerConfiguration {
     let apiKey: String
     let apiUrl: String

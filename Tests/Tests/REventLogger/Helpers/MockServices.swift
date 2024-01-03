@@ -20,8 +20,18 @@ enum EVentLoggerMockData {
     static let REventModel = REvent(.critical,
                                     sourceName: "IAM",
                                     sourceVersion: "8.0,0",
-                                    errorCode: "400",
+                                    errorCode: "500",
                                     errorMessage: "Network Error")
+    static let REventModel1 = REvent(.warning,
+                                    sourceName: "IAM",
+                                    sourceVersion: "8.0,0",
+                                    errorCode: "400",
+                                    errorMessage: "request sent to the server is invalid")
+    static let REventModel2 = REvent(.warning,
+                                    sourceName: "PNP",
+                                    sourceVersion: "8.0,0",
+                                    errorCode: "400",
+                                    errorMessage: "request sent to the server is invalid")
 }
 
 enum REventError: Error {

@@ -16,7 +16,7 @@ class REventLoggerSenderSpec: QuickSpec {
                 it("it will get valid response") {
                     let mockResponse: [String: Any] = [:]
                     let mockSession = MockURLSession(json: mockResponse)
-                    var eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession),
+                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession),
                                                          eventsList: [EVentLoggerMockData.REventModel])
                     waitUntil { done in
                         eventSender.sendEvents("https://testURL.com") { result in
@@ -34,7 +34,7 @@ class REventLoggerSenderSpec: QuickSpec {
             context("when network response has error") {
                 it("will receive bad request error") {
                     let mockSession = MockURLSession(statusCode: 400)
-                    var eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession),
+                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession),
                                                          eventsList: [EVentLoggerMockData.REventModel])
                     waitUntil { done in
                         eventSender.sendEvents("https://testURL.com") { result in
@@ -51,7 +51,7 @@ class REventLoggerSenderSpec: QuickSpec {
 
                 it("will receive response data nil error") {
                     let mockSession = MockURLSession()
-                    var eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession),
+                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession),
                                                          eventsList: [EVentLoggerMockData.REventModel])
                     waitUntil { done in
                         eventSender.sendEvents("https://testURL.com") { result in
@@ -67,7 +67,7 @@ class REventLoggerSenderSpec: QuickSpec {
 
                 it("will receive invalid url error") {
                     let mockSession = MockURLSession()
-                    var eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession),
+                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession),
                                                          eventsList: [EVentLoggerMockData.REventModel])
                     waitUntil { done in
                         eventSender.sendEvents("") { result in

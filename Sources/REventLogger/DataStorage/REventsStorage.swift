@@ -6,7 +6,7 @@ import class RSDKUtilsMain.AtomicGetSet
 import class RSDKUtils.AtomicGetSet
 #endif
 
-internal protocol EventDataCacheable {
+protocol EventDataCacheable {
 
     func getAllEvents() -> [REvent]
     func retriveEvent(_ id: String) -> REvent?
@@ -16,8 +16,8 @@ internal protocol EventDataCacheable {
     func deleteOldEvents(maxCapacity: Int)
 }
 
-internal class EventDataCache: EventDataCacheable {
-    
+final class EventDataCache: EventDataCacheable {
+
     private typealias CacheContainer = [String: REvent]
     private let userDefaults: UserDefaults
     @AtomicGetSet private var cachedContainer: CacheContainer
@@ -25,16 +25,10 @@ internal class EventDataCache: EventDataCacheable {
 
     init(userDefaults: UserDefaults) {
         self.userDefaults = userDefaults
-
+        cachedContainer = [:]
         if let persistedData = userDefaults.object(forKey: persistedDataKey) as? Data {
-            do {
-                let decodedData = try JSONDecoder().decode(CacheContainer.self, from: persistedData)
-                cachedContainer = decodedData
-            } catch {
-                cachedContainer = [:]
-            }
-        } else {
-            cachedContainer = [:]
+            let decodedData = try? JSONDecoder().decode(CacheContainer.self, from: persistedData)
+            cachedContainer = decodedData ?? [:]
         }
     }
 
@@ -77,7 +71,7 @@ internal class EventDataCache: EventDataCacheable {
             let encodedData = try JSONEncoder().encode(cachedContainer)
             userDefaults.set(encodedData, forKey: persistedDataKey)
         } catch {
-            assertionFailure()
+            Logger.debug("failed to save event data in user defaults")
         }
     }
 }
