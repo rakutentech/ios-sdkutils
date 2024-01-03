@@ -42,8 +42,8 @@ class REventsStorageSpec: QuickSpec {
                     expect(event).to(equal(REventLoggerMockData.REventModel))
                 }
             }
-            context("Delete Events method ") {
-                it("will delete events for ") {
+            context("Delete Events method") {
+                it("will delete events for eventIds") {
                     let eventId = REventLoggerMockData.REventModel.eventId
                     eventCache.insertOrUpdateEvent(eventId, event: REventLoggerMockData.REventModel)
                     eventCache.deleteEvents([eventId])
@@ -51,7 +51,7 @@ class REventsStorageSpec: QuickSpec {
                 }
             }
             context("Delete Old Events method ") {
-                it("will not delete old events if the number of events in cache is equal or less than max capacity") {
+                it("will not delete old events if the number of events in cache is less than or equal to max capacity") {
                     let eventId1 = REventLoggerMockData.REventModel.eventId
                     let eventId2 = REventLoggerMockData.REventModel1.eventId
                     let eventId3 = REventLoggerMockData.REventModel2.eventId
