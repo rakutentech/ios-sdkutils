@@ -15,7 +15,7 @@ struct REvent: Codable, Equatable {
     let errorMessage: String
     let platform: String
     var eventVersion: String = "1.0"
-    var occurrenceCount: Int = 0
+    var occurrenceCount: Int = 1
     var firstOccurrenceOn: Double // unix time
     var info: [String: String]?
 
@@ -50,9 +50,9 @@ enum EventType: String, Codable {
 }
 
 extension REvent {
-    func getEventIdentifier() -> String {
-        var evendId = "\(eventType.rawValue)_\(String(describing: appVersion))_\(sourceName)_\(errorCode)_\(errorMessage)"
-        return evendId.replacingOccurrences(of: " ", with: "_").lowercased()
+    var eventId: String {
+        let id = "\(eventType.rawValue)_\(String(describing: appVersion))_\(sourceName)_\(errorCode)_\(errorMessage)"
+        return id.replacingOccurrences(of: " ", with: "_").lowercased()
     }
 
     mutating func updateOccurrenceCount() {

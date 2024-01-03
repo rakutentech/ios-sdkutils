@@ -20,15 +20,14 @@ final class EventDataCache: EventDataCacheable {
 
     private typealias CacheContainer = [String: REvent]
     private let userDefaults: UserDefaults
-    @AtomicGetSet private var cachedContainer: CacheContainer
+    @AtomicGetSet private var cachedContainer: CacheContainer = CacheContainer()
     private let persistedDataKey = "Event_logger_cache"
 
     init(userDefaults: UserDefaults) {
         self.userDefaults = userDefaults
-        cachedContainer = [:]
-        if let persistedData = userDefaults.object(forKey: persistedDataKey) as? Data {
-            let decodedData = try? JSONDecoder().decode(CacheContainer.self, from: persistedData)
-            cachedContainer = decodedData ?? [:]
+        if let persistedData = userDefaults.object(forKey: persistedDataKey) as? Data,
+           let decodedData = try? JSONDecoder().decode(CacheContainer.self, from: persistedData) {
+            cachedContainer = decodedData
         }
     }
 

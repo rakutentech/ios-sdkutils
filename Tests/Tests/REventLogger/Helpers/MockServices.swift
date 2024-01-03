@@ -14,7 +14,7 @@ final class REventSenderMock: REventLoggerSendable {
     }
 }
 
-enum EVentLoggerMockData {
+enum REventLoggerMockData {
     static let apiKey = "e2io-34nj-70bh-oki8"
     static let apiUrl = "https://mock.eventlogger.end.point"
     static let REventModel = REvent(.critical,

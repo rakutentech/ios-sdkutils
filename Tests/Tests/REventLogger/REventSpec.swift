@@ -16,8 +16,8 @@ class REventsSpec: QuickSpec {
                     let event = REvent(.warning, sourceName: "IAM",
                                        sourceVersion: "8.0,0", errorCode: "500",
                                        errorMessage: "Network Error", info: nil)
-                    let eventId = event.getEventIdentifier()
-                    expect(eventId).to(equal("warning_1.0_iam_500_network_error"))
+                    
+                    expect(event.eventId).to(equal("warning_1.0_iam_500_network_error"))
                 }
                 it("will increase the occurence count of event") {
                     var event = REvent(.warning, sourceName: "PNP",
