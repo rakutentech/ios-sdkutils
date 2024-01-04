@@ -36,6 +36,8 @@
 		E6594A042B3971CB00AC862F /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6594A022B3971CB00AC862F /* MockServices.swift */; };
 		E6594A052B3971CB00AC862F /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6594A032B3971CB00AC862F /* MockURLSession.swift */; };
 		E6594A092B3971E800AC862F /* REventLoggerSenderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6594A062B3971E800AC862F /* REventLoggerSenderSpec.swift */; };
+		E6594A0F2B3D509500AC862F /* REventsStorageSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6594A0E2B3D509500AC862F /* REventsStorageSpec.swift */; };
+		E6594A132B3D80B600AC862F /* REventSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6594A122B3D80B600AC862F /* REventSpec.swift */; };
 		F9C41B452B34253B0020DF62 /* REventLoggerEnvironmentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C41B442B34253B0020DF62 /* REventLoggerEnvironmentSpec.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		E6594A022B3971CB00AC862F /* MockServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
 		E6594A032B3971CB00AC862F /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		E6594A062B3971E800AC862F /* REventLoggerSenderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REventLoggerSenderSpec.swift; sourceTree = "<group>"; };
+		E6594A0E2B3D509500AC862F /* REventsStorageSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REventsStorageSpec.swift; sourceTree = "<group>"; };
+		E6594A122B3D80B600AC862F /* REventSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REventSpec.swift; sourceTree = "<group>"; };
 		F9C41B442B34253B0020DF62 /* REventLoggerEnvironmentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REventLoggerEnvironmentSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,6 +216,8 @@
 				E6594A012B3971CB00AC862F /* Helpers */,
 				F9C41B442B34253B0020DF62 /* REventLoggerEnvironmentSpec.swift */,
 				E6594A062B3971E800AC862F /* REventLoggerSenderSpec.swift */,
+				E6594A122B3D80B600AC862F /* REventSpec.swift */,
+				E6594A0E2B3D509500AC862F /* REventsStorageSpec.swift */,
 			);
 			path = REventLogger;
 			sourceTree = "<group>";
@@ -330,6 +336,8 @@
 			files = (
 				F9C41B452B34253B0020DF62 /* REventLoggerEnvironmentSpec.swift in Sources */,
 				45DAA17027E293A300BC25A5 /* DictionaryExtensionsSpec.swift in Sources */,
+				E6594A132B3D80B600AC862F /* REventSpec.swift in Sources */,
+				E6594A0F2B3D509500AC862F /* REventsStorageSpec.swift in Sources */,
 				45DAA16B27E293A300BC25A5 /* AnyDependenciesContainerSpec.swift in Sources */,
 				45DAA17A27E293A300BC25A5 /* TestHelpers.swift in Sources */,
 				45DAA16A27E293A300BC25A5 /* RLoggerSpec.swift in Sources */,
