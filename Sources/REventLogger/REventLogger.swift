@@ -1,5 +1,11 @@
 import Foundation
 
+#if canImport(RSDKUtils)
+import RSDKUtils // Cocoapods version
+#else
+import RSDKUtilsMain
+#endif
+
 struct EventLoggerConfiguration {
     let apiKey: String
     let apiUrl: String
@@ -9,7 +15,10 @@ struct EventLoggerConfiguration {
 public final class REventLogger {
     /// Singleton shared instance of REventLogger
     public static let shared = REventLogger()
+    internal private(set) var eventLogger: EventLoggerModule?
+    private(set) var dependencyManager: TypedDependencyManager?
     var configuration: EventLoggerConfiguration?
+    private var isConfigureCalled = false
 
     private init() { }
 
@@ -17,11 +26,29 @@ public final class REventLogger {
     /// - Parameters:
     ///   - apiKey: your API Key
     ///   - apiUrl: a API Endpoint
-    public func configure(apiKey: String, apiUrl: String) {
+    public func configure(apiKey: String?,
+                          apiUrl: String?,
+                          onCompletion: ((Bool, String) -> Void)? = nil) {
         guard configuration != nil else {
+            Logger.debug("EventLogger is already configured")
+            onCompletion?(true, "EventLogger is already configured")
             return
         }
+
+        guard let apiKey = apiKey, let apiUrl = apiUrl else {
+            onCompletion?(false, "EventLogger cannot be configured due to invalid api parameters")
+            return
+        }
+
         configuration = EventLoggerConfiguration(apiKey: apiKey, apiUrl: apiUrl)
+        guard let configuration = configuration else {
+            onCompletion?(false, "EventLogger cannot be configured due to invalid configuration")
+            return
+        }
+        configureModules(dependencyManager: resolveDependency())
+        eventLogger?.configure(apiConfiguration: configuration)
+        isConfigureCalled = true
+        onCompletion?(true, "EventLogger is configured")
     }
 
     /// Logs the critical event
@@ -37,8 +64,9 @@ public final class REventLogger {
                                   errorCode: String,
                                   errorMessage: String,
                                   info: [String: String]? = nil) {
-        // Send the event to server
-        // Save it in the local DB, as warning
+        if isConfigureCalled {
+            eventLogger?.logEvent(EventType.critical, sourceName, sourceVersion, errorCode, errorMessage, info)
+        }
     }
 
     /// Logs the warning event
@@ -54,6 +82,26 @@ public final class REventLogger {
                                  errorCode: String,
                                  errorMessage: String,
                                  info: [String: String]? = nil) {
-        // Save it in the local DB
+        if isConfigureCalled {
+            eventLogger?.logEvent(EventType.warning, sourceName, sourceVersion, errorCode, errorMessage, info)
+        }
+    }
+
+    private func resolveDependency() -> TypedDependencyManager {
+        let dependencyManager = TypedDependencyManager()
+        let mainContainer = MainContainerFactory.create(dependencyManager: dependencyManager)
+        dependencyManager.appendContainer(mainContainer)
+        return dependencyManager
+    }
+
+    func configureModules(dependencyManager: TypedDependencyManager) {
+        self.dependencyManager = dependencyManager
+        guard let dataStorage = dependencyManager.resolve(type: EventDataCacheable.self),
+              let eventsSender = dependencyManager.resolve(type: REventLoggerSendable.self)
+        else {
+            Logger.debug("❌ Unable to resolve dependencies of EventLogger")
+            return
+        }
+        eventLogger = EventLoggerModule(eventsStorage: dataStorage, eventsSender: eventsSender)
     }
 }

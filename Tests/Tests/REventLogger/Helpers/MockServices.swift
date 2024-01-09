@@ -9,9 +9,11 @@ import Foundation
 
 final class REventSenderMock: REventLoggerSendable {
     var response: Result<Data, Error> = .failure(REventError.internalServicesNotFound)
-    func sendEvents(_ apiUrl: String, onCompletion: @escaping (Result<Data, Error>) -> Void) {
+    func sendEvents(events: [REvent], onCompletion: @escaping (Result<Data, Error>) -> Void) {
         onCompletion(response)
     }
+
+    func updateApiConfiguration(_ apiConfiguration: EventLoggerConfiguration) {}
 }
 
 enum REventLoggerMockData {

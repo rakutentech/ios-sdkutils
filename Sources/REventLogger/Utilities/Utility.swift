@@ -19,10 +19,11 @@ enum ErrorMessage {
     static let unknown = "Unspecified server error occurred."
 }
 
-enum REventConsants {
+enum REventConstants {
     enum RequestHeaderKey {
         static let clientApiKey = "x-client-apikey"
     }
+    static let maxEventCount = 100
 }
 
 internal enum Logger {

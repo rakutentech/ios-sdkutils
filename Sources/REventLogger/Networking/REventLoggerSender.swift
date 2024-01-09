@@ -1,21 +1,31 @@
 import Foundation
 
 protocol REventLoggerSendable {
-    func sendEvents(_ apiUrl: String, onCompletion: @escaping (Result<Data, Error>) -> Void)
+    func sendEvents(events: [REvent], onCompletion: @escaping (Result<Data, Error>) -> Void)
+    func updateApiConfiguration(_ apiConfiguration: EventLoggerConfiguration)
 }
 
-struct REventLoggerSender: REventLoggerSendable {
+final class REventLoggerSender: REventLoggerSendable {
 
-    private var eventsList: [REvent]
+    private var events: [REvent]?
+    private var apiKey: String?
+    private var apiConfiguration: EventLoggerConfiguration?
     private let networkManager: NetworkManager
 
-    init(networkManager: NetworkManager, eventsList: [REvent]) {
+    init(networkManager: NetworkManager) {
         self.networkManager = networkManager
-        self.eventsList = eventsList
     }
 
-    func sendEvents(_ apiUrl: String, onCompletion: @escaping (Result<Data, Error>) -> Void) {
-        guard let url = URL(string: apiUrl) else {
+    func updateApiConfiguration(_ apiConfiguration: EventLoggerConfiguration) {
+        self.apiConfiguration = apiConfiguration
+    }
+
+    func sendEvents(events: [REvent], onCompletion: @escaping (Result<Data, Error>) -> Void) {
+        self.events = events
+
+        guard let apiUrl = apiConfiguration?.apiUrl,
+              let url = URL(string: apiUrl)
+        else {
             onCompletion(.failure(RequestError.invalidURL))
             return
         }
@@ -41,8 +51,9 @@ struct REventLoggerSender: REventLoggerSendable {
 }
 
 extension REventLoggerSender: ConfigureUrlRequest {
+
     var body: Encodable? {
-        eventsList
+        events
     }
 
     var path: String {
@@ -54,8 +65,9 @@ extension REventLoggerSender: ConfigureUrlRequest {
     }
 
     var headers: [String: String]? {
+        guard let apiKey = apiConfiguration?.apiKey else { return [REventConstants.RequestHeaderKey.clientApiKey: ""]}
         return [
-            REventConsants.RequestHeaderKey.clientApiKey: "apikey" // TODO fetchHeader()
+            REventConstants.RequestHeaderKey.clientApiKey: apiKey
         ]
     }
 }

@@ -11,10 +11,10 @@ import Foundation
 
 class REventsStorageSpec: QuickSpec {
     override func spec() {
-        var eventCache = EventDataCache(userDefaults: UserDefaults())
+        var eventCache = REventsStorage(userDefaults: UserDefaults())
         beforeEach {
             let userDefaults = UserDefaults(suiteName: "REventsStorageSpec")!
-            eventCache = EventDataCache(userDefaults: userDefaults)
+            eventCache = REventsStorage(userDefaults: userDefaults)
         }
         afterEach {
             UserDefaults.standard.removePersistentDomain(forName: "REventsStorageSpec")
@@ -23,7 +23,7 @@ class REventsStorageSpec: QuickSpec {
         describe("REvents Logger Storage ") {
             context("getAllEvents method") {
                 it("will return empty array if no cached data was found") {
-                    expect(eventCache.getAllEvents()).to(equal([]))
+                    expect(eventCache.getAllEvents()).to(equal([:]))
                     expect(eventCache.getEventCount()).to(equal(0))
                 }
                 it("will return array of Events if cached data is avaialble") {
