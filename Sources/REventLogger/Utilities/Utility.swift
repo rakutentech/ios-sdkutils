@@ -24,6 +24,7 @@ enum REventConstants {
         static let clientApiKey = "x-client-apikey"
     }
     static let maxEventCount = 100
+    static let ttlExpiryInMillis = 3600 * 1000 * 12
 }
 
 internal enum Logger {
