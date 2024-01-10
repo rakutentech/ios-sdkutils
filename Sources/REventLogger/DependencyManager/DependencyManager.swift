@@ -19,7 +19,9 @@ internal enum MainContainerFactory {
             ContainerElement(type: REventLoggerSendable.self, factory: {
                 REventLoggerSender(networkManager: manager.resolve(type: NetworkManager.self )!)
             }),
-            ContainerElement(type: EventDataCacheable.self, factory: { REventsStorage(userDefaults: UserDefaults.standard)
+            ContainerElement(type: EventDataCacheable.self, factory: {
+                let userDefaults = UserDefaults(suiteName: "group" + REventLoggerEnvironment().appId)
+                REventsStorage(userDefaults: userDefaults)
             })
         ]
         return TypedDependencyManager.Container(elements)
