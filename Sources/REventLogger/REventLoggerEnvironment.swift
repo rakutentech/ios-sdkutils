@@ -18,7 +18,7 @@ final class REventLoggerEnvironment {
     }
 
     var appId: String {
-        bundle.value(for: BundleKeys.bundleIdentifier) ?? bundle.valueNotFound
+            bundle.value(for: BundleKeys.bundleIdentifier) ?? bundle.valueNotFound
     }
 
     var appName: String {
