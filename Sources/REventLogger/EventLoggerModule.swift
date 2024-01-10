@@ -104,7 +104,7 @@ final class EventLoggerModule {
         var currentTime = eventsCache.getCurrentTimeInMilliseconds()
         var referenceTime = eventsCache.getTtlReferenceTime()
 
-        if (referenceTime == -1) { // never pushed before
+        if referenceTime == -1 { // never pushed before
             eventsCache.setTtlReferenceTime(currentTime)
             return false
        }

@@ -48,8 +48,8 @@ public final class REventLogger {
         configureModules(dependencyManager: resolveDependency())
         eventLogger?.configure(apiConfiguration: configuration)
         isConfigureCalled = true
-        //TODO: Implement App Life cycle
-        if ((eventLogger?.isTtlExpired()) != nil) {
+        // TODO: Implement App Life cycle
+        if (eventLogger?.isTtlExpired()) != nil {
             eventLogger?.sendAllEventsInStorage()
         }
 
