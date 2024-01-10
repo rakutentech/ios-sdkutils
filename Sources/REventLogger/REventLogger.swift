@@ -48,6 +48,11 @@ public final class REventLogger {
         configureModules(dependencyManager: resolveDependency())
         eventLogger?.configure(apiConfiguration: configuration)
         isConfigureCalled = true
+        //TODO: Implement App Life cycle
+        if ((eventLogger?.isTtlExpired()) != nil) {
+            eventLogger?.sendAllEventsInStorage()
+        }
+
         onCompletion?(true, "EventLogger is configured")
     }
 
@@ -96,12 +101,15 @@ public final class REventLogger {
 
     func configureModules(dependencyManager: TypedDependencyManager) {
         self.dependencyManager = dependencyManager
-        guard let dataStorage = dependencyManager.resolve(type: EventDataCacheable.self),
-              let eventsSender = dependencyManager.resolve(type: REventLoggerSendable.self)
+        guard let dataStorage = dependencyManager.resolve(type: REventDataCacheable.self),
+              let eventsSender = dependencyManager.resolve(type: REventLoggerSendable.self),
+              let eventsCache = dependencyManager.resolve(type: REventLoggerCacheable.self)
         else {
             Logger.debug("❌ Unable to resolve dependencies of EventLogger")
             return
         }
-        eventLogger = EventLoggerModule(eventsStorage: dataStorage, eventsSender: eventsSender)
+        eventLogger = EventLoggerModule(eventsStorage: dataStorage,
+                                        eventsSender: eventsSender,
+                                        eventsCache: eventsCache)
     }
 }

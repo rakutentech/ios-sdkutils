@@ -25,6 +25,7 @@ enum REventConstants {
     }
     static let maxEventCount = 100
     static let ttlExpiryInMillis = 3600 * 1000 * 12
+    static let ttlKey = "ttl_reference_time"
 }
 
 internal enum Logger {

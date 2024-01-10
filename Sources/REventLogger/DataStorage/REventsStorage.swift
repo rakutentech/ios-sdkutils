@@ -6,7 +6,7 @@ import class RSDKUtilsMain.AtomicGetSet
 import class RSDKUtils.AtomicGetSet
 #endif
 
-protocol EventDataCacheable {
+protocol REventDataCacheable {
     func getAllEvents() -> [String: REvent]
     func retriveEvent(_ id: String) -> REvent?
     func getEventCount() -> Int
@@ -15,7 +15,7 @@ protocol EventDataCacheable {
     func deleteOldEvents(maxCapacity: Int)
 }
 
-final class REventsStorage: EventDataCacheable {
+final class REventsStorage: REventDataCacheable {
 
     private typealias CacheContainer = [String: REvent]
     private let userDefaults: UserDefaults

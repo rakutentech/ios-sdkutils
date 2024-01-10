@@ -7,13 +7,15 @@ import RSDKUtils
 #endif
 
 final class EventLoggerModule {
-    private let eventsStorage: EventDataCacheable
+    private let eventsStorage: REventDataCacheable
     private let eventsSender: REventLoggerSendable
+    private let eventsCache: REventLoggerCacheable
     private let loggerQueue = DispatchQueue(label: "eventLogger", qos: .utility)
 
-    init(eventsStorage: EventDataCacheable, eventsSender: REventLoggerSendable) {
+    init(eventsStorage: REventDataCacheable, eventsSender: REventLoggerSendable, eventsCache: REventLoggerCacheable) {
         self.eventsStorage = eventsStorage
         self.eventsSender = eventsSender
+        self.eventsCache = eventsCache
     }
 
     func configure(apiConfiguration: EventLoggerConfiguration) {
@@ -82,6 +84,7 @@ final class EventLoggerModule {
             switch result {
             case .success:
                 self.eventsStorage.deleteEvents(storedEvents.ids)
+                self.eventsCache.setTtlReferenceTime(self.eventsCache.getCurrentTimeInMilliseconds())
             case .failure(let error):
                 Logger.debug(error)
                 if deleteOldEventsOnFailure {
@@ -95,5 +98,16 @@ final class EventLoggerModule {
         let isValidSourceInfo = !(sourceName.isEmpty) && !(sourceVersion.isEmpty)
         let isValidErrorInfo = !(errorCode.isEmpty) && !(errorMessage.isEmpty)
         return isValidSourceInfo && isValidErrorInfo
+    }
+
+    func isTtlExpired() -> Bool {
+        var currentTime = eventsCache.getCurrentTimeInMilliseconds()
+        var referenceTime = eventsCache.getTtlReferenceTime()
+
+        if (referenceTime == -1) { // never pushed before
+            eventsCache.setTtlReferenceTime(currentTime)
+            return false
+       }
+        return currentTime - referenceTime >= REventConstants.ttlExpiryInMillis
     }
 }
