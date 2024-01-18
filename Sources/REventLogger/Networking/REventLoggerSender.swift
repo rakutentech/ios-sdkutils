@@ -2,7 +2,7 @@ import Foundation
 
 protocol REventLoggerSendable {
     func sendEvents(events: [REvent], onCompletion: @escaping (Result<Data, Error>) -> Void)
-    func updateApiConfiguration(_ apiConfiguration: EventLoggerConfiguration)
+    func updateApiConfiguration(_ apiConfiguration: EventLoggerConfiguration?)
 }
 
 final class REventLoggerSender: REventLoggerSendable {
@@ -16,7 +16,7 @@ final class REventLoggerSender: REventLoggerSendable {
         self.networkManager = networkManager
     }
 
-    func updateApiConfiguration(_ apiConfiguration: EventLoggerConfiguration) {
+    func updateApiConfiguration(_ apiConfiguration: EventLoggerConfiguration?) {
         self.apiConfiguration = apiConfiguration
     }
 
@@ -65,7 +65,7 @@ extension REventLoggerSender: ConfigureUrlRequest {
     }
 
     var headers: [String: String]? {
-        guard let apiKey = apiConfiguration?.apiKey else { return [REventConstants.RequestHeaderKey.clientApiKey: ""]}
+        guard let apiKey = apiConfiguration?.apiKey else { return nil }
         return [
             REventConstants.RequestHeaderKey.clientApiKey: apiKey
         ]

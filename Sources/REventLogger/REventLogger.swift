@@ -41,10 +41,6 @@ public final class REventLogger {
         }
 
         configuration = EventLoggerConfiguration(apiKey: apiKey, apiUrl: apiUrl)
-        guard let configuration = configuration else {
-            onCompletion?(false, "EventLogger cannot be configured due to invalid configuration")
-            return
-        }
         configureModules(dependencyManager: resolveDependency())
         eventLogger?.configure(apiConfiguration: configuration)
         isConfigured = true
@@ -99,11 +95,11 @@ public final class REventLogger {
         return dependencyManager
     }
 
-    func configureModules(dependencyManager: TypedDependencyManager) {
+    private func configureModules(dependencyManager: TypedDependencyManager) {
         self.dependencyManager = dependencyManager
         guard let dataStorage = dependencyManager.resolve(type: REventDataCacheable.self),
               let eventsSender = dependencyManager.resolve(type: REventLoggerSendable.self),
-              let eventsCache = dependencyManager.resolve(type: REventLoggerCacheable.self)
+              let eventsCache = dependencyManager.resolve(type: REventExpirationCacheable.self)
         else {
             Logger.debug("❌ Unable to resolve dependencies of EventLogger")
             return

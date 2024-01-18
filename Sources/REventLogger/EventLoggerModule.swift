@@ -9,16 +9,16 @@ import RSDKUtils
 final class REventLoggerModule {
     private let eventsStorage: REventDataCacheable
     private let eventsSender: REventLoggerSendable
-    private let eventsCache: REventLoggerCacheable
+    private let eventsCache: REventExpirationCacheable
     private let loggerQueue = DispatchQueue(label: "eventLogger", qos: .utility)
 
-    init(eventsStorage: REventDataCacheable, eventsSender: REventLoggerSendable, eventsCache: REventLoggerCacheable) {
+    init(eventsStorage: REventDataCacheable, eventsSender: REventLoggerSendable, eventsCache: REventExpirationCacheable) {
         self.eventsStorage = eventsStorage
         self.eventsSender = eventsSender
         self.eventsCache = eventsCache
     }
 
-    func configure(apiConfiguration: EventLoggerConfiguration) {
+    func configure(apiConfiguration: EventLoggerConfiguration?) {
         eventsSender.updateApiConfiguration(apiConfiguration)
     }
 
@@ -52,9 +52,9 @@ final class REventLoggerModule {
         }
     }
 
-    func sendEventIfNeeded(_ eventType: EventType, _ eventId: String, _ event: REvent, _ isNewEvent: Bool) {
+    func sendEventIfNeeded(_ eventType: EventType, _ eventId: String, _ event: REvent, _ isNewEvent: Bool, maxEventCount: Int = REventConstants.maxEventCount) {
         // If full, send all of the events
-        if eventsStorage.getEventCount() >= REventConstants.maxEventCount {
+        if eventsStorage.getEventCount() >= maxEventCount {
             sendAllEventsInStorage(deleteOldEventsOnFailure: isNewEvent)
             return
         }
@@ -77,7 +77,7 @@ final class REventLoggerModule {
         }
     }
 
-     func sendAllEventsInStorage(deleteOldEventsOnFailure: Bool = false) {
+    func sendAllEventsInStorage(deleteOldEventsOnFailure: Bool = false) {
         let eventsStorage = self.eventsStorage.getAllEvents()
         let storedEvents = (ids: Array(eventsStorage.keys), events: Array(eventsStorage.values))
         eventsSender.sendEvents(events: storedEvents.events) { result in
@@ -88,7 +88,7 @@ final class REventLoggerModule {
             case .failure(let error):
                 Logger.debug(error)
                 if deleteOldEventsOnFailure {
-                    self.eventsStorage.deleteOldEvents(maxCapacity: 100)
+                    self.eventsStorage.deleteOldEvents(maxCapacity: REventConstants.maxEventCount)
                 }
             }
         }
@@ -104,10 +104,10 @@ final class REventLoggerModule {
         let currentTime = Date().timeInMilliseconds
         let referenceTime = eventsCache.getTtlReferenceTime()
 
-        if referenceTime == -1 { // never pushed before
+        if referenceTime == -1 {
             eventsCache.setTtlReferenceTime(currentTime)
             return false
-       }
+        }
         return currentTime - referenceTime >= REventConstants.ttlExpiryInMillis
     }
 }

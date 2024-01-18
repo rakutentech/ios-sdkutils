@@ -12,8 +12,14 @@ final class REventSenderMock: REventLoggerSendable {
     func sendEvents(events: [REvent], onCompletion: @escaping (Result<Data, Error>) -> Void) {
         onCompletion(response)
     }
-
-    func updateApiConfiguration(_ apiConfiguration: EventLoggerConfiguration) {}
+    var didConfigure = false
+    func updateApiConfiguration(_ apiConfiguration: EventLoggerConfiguration?) {
+        if let apiConfiguration = apiConfiguration {
+            didConfigure = true
+        } else {
+            didConfigure = false
+        }
+    }
 }
 
 final class REventStorageMock: REventDataCacheable {
@@ -51,7 +57,7 @@ final class REventStorageMock: REventDataCacheable {
     }
 }
 
-final class REventsLoggerCacheMock: REventLoggerCacheable {
+final class REventsLoggerCacheMock: REventExpirationCacheable {
     let ttlStorage = UserDefaults.standard
 
     func getTtlReferenceTime() -> Int64 {

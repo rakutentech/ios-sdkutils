@@ -16,6 +16,7 @@ class REventLoggerModuleSpec: QuickSpec {
             var mockEventStorage: REventStorageMock!
             var mockEventsCache: REventsLoggerCacheMock!
             var eventLoggerModule: REventLoggerModule!
+            let eventQueue = DispatchQueue(label: "eventLogger.test")
             beforeEach {
                 mockEventsSender = REventSenderMock()
                 mockEventStorage = REventStorageMock()
@@ -55,7 +56,7 @@ class REventLoggerModuleSpec: QuickSpec {
                     mockEventStorage.insertOrUpdateEvent("event2", event: REventLoggerMockData.REventModel2)
                     waitUntil { done in
                         expect(mockEventStorage.getEventCount()).to(equal(2))
-                        eventLoggerModule.sendAllEventsInStorage()
+                        eventLoggerModule.sendAllEventsInStorage(deleteOldEventsOnFailure: true)
                         expect(mockEventStorage.getEventCount()).to(equal(0))
                         done()
                     }
@@ -72,15 +73,36 @@ class REventLoggerModuleSpec: QuickSpec {
                         done()
                     }
                 }
+                it("will send the critical event if new critical event is logged ") {
+                    waitUntil { done in
+                        mockEventStorage.insertOrUpdateEvent("event1", event: REventLoggerMockData.REventModel)
+                        mockEventStorage.insertOrUpdateEvent("event2", event: REventLoggerMockData.REventModel2)
+                        let newEvent = REventLoggerMockData.REventModel
+                        eventLoggerModule.sendEventIfNeeded(.critical, newEvent.eventId, newEvent, true, maxEventCount: 2)
+                        expect(mockEventStorage.getEventCount()).to(equal(0))
+                        done()
+                    }
+                }
             }
-            context("isTtlExpired metod") {
-                it("will return true if the diffence betweer current time and reference time is less tahn ttl expiry time") {
+            context("isTtlExpired method") {
+                it("will return true if the diffence between current time and reference time is more than ttl expiry time") {
                     mockEventsCache.setTtlReferenceTime(REventLoggerMockData.mockRefTime)
                     expect(eventLoggerModule.isTtlExpired()).to(equal(true))
                 }
-                it("will return false if the diffence betweer current time and reference time is less tahn ttl expiry time") {
+                it("will return false if the diffence between current time and reference time is less than ttl expiry time") {
                     mockEventsCache.setTtlReferenceTime(REventLoggerMockData.mockRefTime2)
                     expect(eventLoggerModule.isTtlExpired()).to(equal(false))
+                }
+            }
+            context("configure method") {
+                it("will configure the api key and api url if valid value is sent") {
+                    eventLoggerModule.configure(apiConfiguration: EventLoggerConfiguration(apiKey: REventLoggerMockData.apiKey,
+                                                                             apiUrl: REventLoggerMockData.apiUrl))
+                    expect(mockEventsSender.didConfigure).to(beTrue())
+                }
+                it("will not configure api Key and url if valid values is not sent") {
+                    eventLoggerModule.configure(apiConfiguration: nil)
+                    expect(mockEventsSender.didConfigure).to(beFalse())
                 }
             }
         }

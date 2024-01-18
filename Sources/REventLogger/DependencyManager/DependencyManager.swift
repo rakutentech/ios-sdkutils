@@ -22,7 +22,7 @@ internal enum MainContainerFactory {
             ContainerElement(type: REventDataCacheable.self, factory: {
                 REventsStorage(userDefaults: UserDefaults(suiteName: "group" + REventLoggerEnvironment().appId) ?? UserDefaults.standard)
             }),
-            ContainerElement(type: REventLoggerCacheable.self, factory: { EventLoggerCache() })
+            ContainerElement(type: REventExpirationCacheable.self, factory: { EventLoggerCache(ttlStorage: UserDefaults.standard) })
         ]
         return TypedDependencyManager.Container(elements)
     }

@@ -1,13 +1,16 @@
 import Foundation
 
-protocol REventLoggerCacheable {
+protocol REventExpirationCacheable {
     func getTtlReferenceTime() -> Int64
     func setTtlReferenceTime(_ pushedTimeMs: Int64)
 }
 
-class EventLoggerCache: REventLoggerCacheable {
+class EventLoggerCache: REventExpirationCacheable {
 
-    let ttlStorage = UserDefaults.standard
+    private let ttlStorage: UserDefaults
+    init(ttlStorage: UserDefaults) {
+        self.ttlStorage = ttlStorage
+    }
 
     func getTtlReferenceTime() -> Int64 {
         if let ttlRefTime = ttlStorage.object(forKey: REventConstants.ttlKey) as? Int64 {
