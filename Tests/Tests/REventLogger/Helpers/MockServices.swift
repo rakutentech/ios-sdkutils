@@ -83,6 +83,9 @@ enum REventLoggerMockData {
                                     sourceVersion: "8.0,0",
                                     errorCode: "400",
                                     errorMessage: "request sent to the server is invalid")
+
+    static let mockRefTime: Int64 = 10000000000
+    static let mockRefTime2: Int64 = 1805542062408
 }
 
 enum REventError: Error {
