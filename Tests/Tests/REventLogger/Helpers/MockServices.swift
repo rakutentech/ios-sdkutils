@@ -16,6 +16,55 @@ final class REventSenderMock: REventLoggerSendable {
     func updateApiConfiguration(_ apiConfiguration: EventLoggerConfiguration) {}
 }
 
+final class REventStorageMock: REventDataCacheable {
+    var eventStorageDict: [String: REvent] = [:]
+
+    func getAllEvents() -> [String: REvent] {
+        return eventStorageDict
+    }
+
+    func retrieveEvent(_ id: String) -> REvent? {
+        eventStorageDict[id]
+    }
+
+    func getEventCount() -> Int {
+        eventStorageDict.count
+    }
+
+    func insertOrUpdateEvent(_ id: String, event: REvent) {
+        eventStorageDict[id] = event
+    }
+
+    func deleteEvents(_ ids: [String]) {
+        for key in ids {
+            eventStorageDict.removeValue(forKey: key)
+        }
+    }
+
+    func deleteOldEvents(maxCapacity: Int) {
+        if getEventCount() <= maxCapacity {
+            return
+        }
+
+        let sortedKeys = eventStorageDict.keys.sorted { eventStorageDict[$0]!.firstOccurrenceOn < eventStorageDict[$1]!.firstOccurrenceOn }
+        deleteEvents(Array(sortedKeys.prefix(getEventCount() - maxCapacity)))
+    }
+}
+
+final class REventsLoggerCacheMock: REventLoggerCacheable {
+    let ttlStorage = UserDefaults.standard
+
+    func getTtlReferenceTime() -> Int64 {
+        if let ttlRefTime = ttlStorage.object(forKey: REventConstants.ttlKey) as? Int64 {
+            return ttlRefTime
+        } else { return -1 }
+    }
+
+    func setTtlReferenceTime(_ pushedTimeMs: Int64) {
+        ttlStorage.set(pushedTimeMs, forKey: REventConstants.ttlKey)
+    }
+}
+
 enum REventLoggerMockData {
     static let apiKey = "e2io-34nj-70bh-oki8"
     static let apiUrl = "https://mock.eventlogger.end.point"

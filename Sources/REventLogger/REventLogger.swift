@@ -15,10 +15,10 @@ struct EventLoggerConfiguration {
 public final class REventLogger {
     /// Singleton shared instance of REventLogger
     public static let shared = REventLogger()
-    internal private(set) var eventLogger: EventLoggerModule?
+    private(set) var eventLogger: REventLoggerModule?
     private(set) var dependencyManager: TypedDependencyManager?
     var configuration: EventLoggerConfiguration?
-    private var isConfigureCalled = false
+    private var isConfigured = false
 
     private init() { }
 
@@ -29,7 +29,7 @@ public final class REventLogger {
     public func configure(apiKey: String?,
                           apiUrl: String?,
                           onCompletion: ((Bool, String) -> Void)? = nil) {
-        guard configuration != nil else {
+        guard configuration == nil else {
             Logger.debug("EventLogger is already configured")
             onCompletion?(true, "EventLogger is already configured")
             return
@@ -47,13 +47,13 @@ public final class REventLogger {
         }
         configureModules(dependencyManager: resolveDependency())
         eventLogger?.configure(apiConfiguration: configuration)
-        isConfigureCalled = true
+        isConfigured = true
+        onCompletion?(true, "EventLogger is configured")
+
         // TODO: Implement App Life cycle
-        if (eventLogger?.isTtlExpired()) != nil {
+        if eventLogger?.isTtlExpired() == true {
             eventLogger?.sendAllEventsInStorage()
         }
-
-        onCompletion?(true, "EventLogger is configured")
     }
 
     /// Logs the critical event
@@ -69,7 +69,7 @@ public final class REventLogger {
                                   errorCode: String,
                                   errorMessage: String,
                                   info: [String: String]? = nil) {
-        if isConfigureCalled {
+        if isConfigured {
             eventLogger?.logEvent(EventType.critical, sourceName, sourceVersion, errorCode, errorMessage, info)
         }
     }
@@ -87,7 +87,7 @@ public final class REventLogger {
                                  errorCode: String,
                                  errorMessage: String,
                                  info: [String: String]? = nil) {
-        if isConfigureCalled {
+        if isConfigured {
             eventLogger?.logEvent(EventType.warning, sourceName, sourceVersion, errorCode, errorMessage, info)
         }
     }
@@ -108,7 +108,7 @@ public final class REventLogger {
             Logger.debug("❌ Unable to resolve dependencies of EventLogger")
             return
         }
-        eventLogger = EventLoggerModule(eventsStorage: dataStorage,
+        eventLogger = REventLoggerModule(eventsStorage: dataStorage,
                                         eventsSender: eventsSender,
                                         eventsCache: eventsCache)
     }

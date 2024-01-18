@@ -8,7 +8,7 @@ import class RSDKUtils.AtomicGetSet
 
 protocol REventDataCacheable {
     func getAllEvents() -> [String: REvent]
-    func retriveEvent(_ id: String) -> REvent?
+    func retrieveEvent(_ id: String) -> REvent?
     func getEventCount() -> Int
     func insertOrUpdateEvent(_ id: String, event: REvent)
     func deleteEvents(_ ids: [String])
@@ -34,7 +34,7 @@ final class REventsStorage: REventDataCacheable {
         return cachedContainer
     }
 
-    func retriveEvent(_ id: String) -> REvent? {
+    func retrieveEvent(_ id: String) -> REvent? {
         cachedContainer[id]
     }
 

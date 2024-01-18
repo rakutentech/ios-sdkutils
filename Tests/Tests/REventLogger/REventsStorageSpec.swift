@@ -38,7 +38,7 @@ class REventsStorageSpec: QuickSpec {
                     let eventId = REventLoggerMockData.REventModel.eventId
                     eventCache.insertOrUpdateEvent(eventId, event: REventLoggerMockData.REventModel)
                     expect(eventCache.getEventCount()).to(equal(1))
-                    let event = eventCache.retriveEvent(eventId)
+                    let event = eventCache.retrieveEvent(eventId)
                     expect(event).to(equal(REventLoggerMockData.REventModel))
                 }
             }
@@ -70,7 +70,7 @@ class REventsStorageSpec: QuickSpec {
                     eventCache.insertOrUpdateEvent(eventId3, event: REventLoggerMockData.REventModel2)
                     eventCache.deleteOldEvents(maxCapacity: 1)
                     expect(eventCache.getEventCount()).to(equal(1))
-                    expect(eventCache.retriveEvent(eventId3)).to(equal(REventLoggerMockData.REventModel2))
+                    expect(eventCache.retrieveEvent(eventId3)).to(equal(REventLoggerMockData.REventModel2))
                 }
             }
         }

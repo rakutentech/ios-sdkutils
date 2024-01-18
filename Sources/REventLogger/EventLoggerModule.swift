@@ -6,7 +6,7 @@ import RSDKUtilsMain
 import RSDKUtils
 #endif
 
-final class EventLoggerModule {
+final class REventLoggerModule {
     private let eventsStorage: REventDataCacheable
     private let eventsSender: REventLoggerSendable
     private let eventsCache: REventLoggerCacheable
@@ -42,7 +42,7 @@ final class EventLoggerModule {
                                errorCode: errorCode,
                                errorMessage: errorMessage,
                                info: info)
-            if let storedEvent = self?.eventsStorage.retriveEvent(event.eventId) {
+            if let storedEvent = self?.eventsStorage.retrieveEvent(event.eventId) {
                 isNewEvent = false
                 event = storedEvent
                 event.updateOccurrenceCount()
@@ -84,7 +84,7 @@ final class EventLoggerModule {
             switch result {
             case .success:
                 self.eventsStorage.deleteEvents(storedEvents.ids)
-                self.eventsCache.setTtlReferenceTime(self.eventsCache.getCurrentTimeInMilliseconds())
+                self.eventsCache.setTtlReferenceTime(Date().timeInMilliseconds)
             case .failure(let error):
                 Logger.debug(error)
                 if deleteOldEventsOnFailure {
@@ -94,15 +94,15 @@ final class EventLoggerModule {
         }
      }
 
-    private func isEventValid(_ sourceName: String, _ sourceVersion: String, _ errorCode: String, _ errorMessage: String) -> Bool {
+    func isEventValid(_ sourceName: String, _ sourceVersion: String, _ errorCode: String, _ errorMessage: String) -> Bool {
         let isValidSourceInfo = !(sourceName.isEmpty) && !(sourceVersion.isEmpty)
         let isValidErrorInfo = !(errorCode.isEmpty) && !(errorMessage.isEmpty)
         return isValidSourceInfo && isValidErrorInfo
     }
 
     func isTtlExpired() -> Bool {
-        var currentTime = eventsCache.getCurrentTimeInMilliseconds()
-        var referenceTime = eventsCache.getTtlReferenceTime()
+        let currentTime = Date().timeInMilliseconds
+        let referenceTime = eventsCache.getTtlReferenceTime()
 
         if referenceTime == -1 { // never pushed before
             eventsCache.setTtlReferenceTime(currentTime)

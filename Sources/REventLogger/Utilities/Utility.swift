@@ -41,3 +41,9 @@ internal enum Logger {
         #endif
     }
 }
+
+extension Date {
+    var timeInMilliseconds: Int64 {
+        Int64(Date().timeIntervalSince1970 * 1000)
+    }
+}
