@@ -19,10 +19,13 @@ enum ErrorMessage {
     static let unknown = "Unspecified server error occurred."
 }
 
-enum REventConsants {
+enum REventConstants {
     enum RequestHeaderKey {
         static let clientApiKey = "x-client-apikey"
     }
+    static let maxEventCount = 100
+    static let ttlExpiryInMillis = 3600 * 1000 * 12
+    static let ttlKey = "ttl_reference_time"
 }
 
 internal enum Logger {
@@ -36,5 +39,11 @@ internal enum Logger {
         #if DEBUG
         print("REventLogger: " + message)
         #endif
+    }
+}
+
+extension Date {
+    var timeInMilliseconds: Int64 {
+        Int64(Date().timeIntervalSince1970 * 1000)
     }
 }
