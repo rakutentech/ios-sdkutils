@@ -16,7 +16,6 @@ class REventLoggerModuleSpec: QuickSpec {
             var mockEventStorage: REventStorageMock!
             var mockEventsCache: REventsLoggerCacheMock!
             var eventLoggerModule: REventLoggerModule!
-            let eventQueue = DispatchQueue(label: "eventLogger.test")
             beforeEach {
                 mockEventsSender = REventSenderMock()
                 mockEventStorage = REventStorageMock()
@@ -31,7 +30,7 @@ class REventLoggerModuleSpec: QuickSpec {
                     let isvalid = eventLoggerModule.isEventValid("IAM", "7.2.0", "500", "Network Error")
                     expect(isvalid).to(beTrue())
                 }
-                it("will return false for a valid event") {
+                it("will return false for an invalid event with empty values") {
                     let isvalid = eventLoggerModule.isEventValid("", "", "", "")
                     expect(isvalid).toNot(beTrue())
                 }
@@ -63,7 +62,7 @@ class REventLoggerModuleSpec: QuickSpec {
                 }
             }
             context("sendEventIfNeeded method") {
-                it("will send the critical event if new critical event is logged ") {
+                it("will send the critical event if new critical event is logged and store it as warning event") {
                     waitUntil { done in
                         let event = REventLoggerMockData.REventModel
                         eventLoggerModule.sendEventIfNeeded(.critical, event.eventId, event, true)
@@ -73,7 +72,7 @@ class REventLoggerModuleSpec: QuickSpec {
                         done()
                     }
                 }
-                it("will send the critical event if new critical event is logged ") {
+                it("will send all the events in storage and delete all the stored events if the max capacity is reached") {
                     waitUntil { done in
                         mockEventStorage.insertOrUpdateEvent("event1", event: REventLoggerMockData.REventModel)
                         mockEventStorage.insertOrUpdateEvent("event2", event: REventLoggerMockData.REventModel2)
