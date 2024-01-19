@@ -1,7 +1,7 @@
 import Foundation
 
 enum Constant {
-    static let eventLoggerKey = "user-default-key-of-events"    // event logger key needs to be updated
+    static let eventLoggerKey = "event_logger_cached_events"
 }
 
 struct EventLoggerInteractor: EventLogging {
