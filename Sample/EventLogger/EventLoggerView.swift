@@ -1,4 +1,5 @@
 import SwiftUI
+import RSDKUtils
 
 protocol EventLogging {
     func logEvent(_ event: EventModel)
@@ -43,6 +44,7 @@ struct EventLoggerView: View {
 
     init(interactor: EventLogging) {
         self.interactor = interactor
+        REventLogger.shared.configure(apiKey: "your-api-key", apiUrl: "https:/test/server")
     }
 
     var body: some View {
@@ -181,7 +183,7 @@ struct EventLoggerView: View {
 
     private func isCustomInfoValidJson() -> Bool {
         if let data = customInfo.data(using: .utf8),
-           let _ = try? JSONSerialization.jsonObject(with: data, options: []) {
+           let _ = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: String] {
             return true
         }
         return customInfo.isEmpty ? true : false

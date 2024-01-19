@@ -20,7 +20,7 @@ internal enum MainContainerFactory {
                 REventLoggerSender(networkManager: manager.resolve(type: NetworkManager.self )!)
             }),
             ContainerElement(type: REventDataCacheable.self, factory: {
-                REventsStorage(userDefaults: UserDefaults(suiteName: "group" + REventLoggerEnvironment().appId) ?? UserDefaults.standard)
+                REventsStorage(userDefaults: UserDefaults(suiteName: "group." + REventLoggerEnvironment().appId) ?? UserDefaults.standard)
             }),
             ContainerElement(type: REventExpirationCacheable.self, factory: { EventLoggerCache(ttlStorage: UserDefaults.standard) })
         ]

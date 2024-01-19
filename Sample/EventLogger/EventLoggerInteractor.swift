@@ -1,4 +1,5 @@
 import Foundation
+import RSDKUtils
 
 enum Constant {
     static let eventLoggerKey = "event_logger_cached_events"
@@ -8,9 +9,25 @@ struct EventLoggerInteractor: EventLogging {
     func logEvent(_ event: EventModel) {
         print(event)
         if event.isCritical {
-            // send REventLogger critical event
+            REventLogger.shared.sendCriticalEvent(sourceName: event.sdkName,
+                                                  sourceVersion: event.sdkVersion,
+                                                  errorCode: event.errorCode,
+                                                  errorMessage: event.errorMessage,
+                                                  info: convertToJson(event.info))
         }else{
-            // send REventLogger warning event
+            REventLogger.shared.sendWarningEvent(sourceName: event.sdkName,
+                                                  sourceVersion: event.sdkVersion,
+                                                  errorCode: event.errorCode,
+                                                  errorMessage: event.errorMessage,
+                                                  info: convertToJson(event.info))
+        }
+
+        func convertToJson(_ jsonString: String) -> [String: String]? {
+            guard let data = jsonString.data(using: .utf8),
+               let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: String] else {
+                return nil
+            }
+            return json
         }
     }
 
