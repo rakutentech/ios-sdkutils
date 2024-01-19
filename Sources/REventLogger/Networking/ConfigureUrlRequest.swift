@@ -51,9 +51,12 @@ enum RequestError: Error, LocalizedError {
     case invalidURL
     case invalidRequest
     case noData
+    case invalidHeader
 
     var errorDescription: String? {
         switch self {
+        case .invalidHeader:
+            return "Header is invalid"
         case .invalidURL:
             return "URL is invalid"
         case .noData:
