@@ -4,6 +4,7 @@ import RSDKUtils
 protocol EventLogging {
     func logEvent(_ event: EventModel)
     func getStoredEvents() -> [String]
+    func getConfiguration() -> (apiKey: String, apiEndpoint: String)
 }
 
 struct EventModel {
@@ -44,7 +45,8 @@ struct EventLoggerView: View {
 
     init(interactor: EventLogging) {
         self.interactor = interactor
-        REventLogger.shared.configure(apiKey: "your-api-key", apiUrl: "https:/test/server")
+        let appConfig = interactor.getConfiguration()
+        REventLogger.shared.configure(apiKey: appConfig.apiKey, apiUrl: appConfig.apiEndpoint)
     }
 
     var body: some View {

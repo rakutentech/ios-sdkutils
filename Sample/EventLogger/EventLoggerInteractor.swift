@@ -39,6 +39,12 @@ struct EventLoggerInteractor: EventLogging {
         return json.values.compactMap({ convertToString($0) })
     }
 
+    func getConfiguration() -> (apiKey: String, apiEndpoint: String) {
+        let apiKey = Bundle.main.object(forInfoDictionaryKey: "EventLoggerAPIKey") as? String ?? ""
+        let apiEndpoint = Bundle.main.object(forInfoDictionaryKey: "EventLoggerAPIEndpoint") as? String ?? ""
+        return (apiKey, apiEndpoint)
+    }
+
     private func convertToString(_ value: Any) -> String? {
         guard let dictionary = value as? [String: Any],
               let data = try? JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted),

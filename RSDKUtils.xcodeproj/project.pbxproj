@@ -614,6 +614,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.rsdkutils.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				REvent_Logger_API_Endpoint = "";
+				REvent_Logger_API_Key = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -652,6 +654,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.rsdkutils.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				REvent_Logger_API_Endpoint = "";
+				REvent_Logger_API_Key = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

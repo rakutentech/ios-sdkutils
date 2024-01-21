@@ -77,12 +77,15 @@ platform :ios do
   lane :archive do
     cocoapods(repo_update: ENV['REM_FL_CP_REPO_UPDATE'] || false)
 
+    config_url = ENV['REVENT_LOGGER_CONFIG_URL'] || 'http://localhost:6789/config'
+    api_key = ENV['REVENT_LOGGER_API_KEY']
+
     xcodebuild(
       archive: true,
       archive_path: "./artifacts/RSDKUtilsSample.xcarchive",
       scheme: ENV['REM_FL_SAMPLE_SCHEME'],
       workspace: ENV['REM_FL_SAMPLE_WORKSPACE'],
-      xcargs: "CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO ENABLE_BITCODE=NO",
+      xcargs: "CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO ENABLE_BITCODE=NO REvent_Logger_API_Key=#{api_key} REvent_Logger_API_Endpoint=#{config_url}",
     )
   end
 

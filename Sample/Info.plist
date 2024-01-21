@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>EventLoggerAPIEndpoint</key>
+	<string>$(REvent_Logger_API_Endpoint)</string>
+	<key>EventLoggerAPIKey</key>
+	<string>$(REvent_Logger_API_Key)</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
