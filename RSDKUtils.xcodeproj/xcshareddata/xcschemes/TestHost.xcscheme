@@ -46,9 +46,9 @@
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6B5C43754FD40875B2E65BC9D884FE5"
+            BlueprintIdentifier = "C057818AF0725CF51E59105552E26522"
             BuildableName = "RSDKUtils.framework"
-            BlueprintName = "RSDKUtils"
+            BlueprintName = "RSDKUtils.common-Nimble-TestHelpers"
             ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
