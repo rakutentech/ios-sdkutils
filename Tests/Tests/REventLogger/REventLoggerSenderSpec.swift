@@ -15,8 +15,7 @@ class REventLoggerSenderSpec: QuickSpec {
             context("when network response has success status code") {
                 it("it will get valid response") {
                     let mockResponse: [String: Any] = [:]
-                    let mockSession = MockURLSession(json: mockResponse)
-                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession))
+                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: MockURLSession(json: mockResponse)))
                     eventSender.updateApiConfiguration(EventLoggerConfiguration(apiKey: REventLoggerMockData.apiKey,
                                                                                 apiUrl: REventLoggerMockData.apiUrl))
                     waitUntil { done in
@@ -35,8 +34,7 @@ class REventLoggerSenderSpec: QuickSpec {
 
             context("when network response has error") {
                 it("will receive bad request error") {
-                    let mockSession = MockURLSession(statusCode: 400)
-                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession))
+                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: MockURLSession(statusCode: 400)))
                     eventSender.updateApiConfiguration(EventLoggerConfiguration(apiKey: REventLoggerMockData.apiKey,
                                                                                 apiUrl: REventLoggerMockData.apiUrl))
                     waitUntil { done in
@@ -53,8 +51,7 @@ class REventLoggerSenderSpec: QuickSpec {
                 }
 
                 it("will receive response data nil error") {
-                    let mockSession = MockURLSession()
-                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession))
+                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: MockURLSession()))
                     eventSender.updateApiConfiguration(EventLoggerConfiguration(apiKey: REventLoggerMockData.apiKey,
                                                                                 apiUrl: REventLoggerMockData.apiUrl))
                     waitUntil { done in
@@ -70,8 +67,7 @@ class REventLoggerSenderSpec: QuickSpec {
                 }
 
                 it("will receive invalid url error") {
-                    let mockSession = MockURLSession()
-                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession))
+                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: MockURLSession()))
                     eventSender.updateApiConfiguration(EventLoggerConfiguration(apiKey: REventLoggerMockData.apiKey,
                                                                                 apiUrl: ""))
                     waitUntil { done in
@@ -84,6 +80,32 @@ class REventLoggerSenderSpec: QuickSpec {
                             done()
                         })
                     }
+                }
+
+                it("will not retry for error code 500") {
+                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: MockURLSession(statusCode: 500)))
+                    eventSender.updateApiConfiguration(EventLoggerConfiguration(apiKey: REventLoggerMockData.apiKey,
+                                                                                apiUrl: REventLoggerMockData.apiUrl))
+                    eventSender.sendEvents(events: [REventLoggerMockData.REventModel2], onCompletion: { _ in})
+                    expect(eventSender.scheduledTask).toAfterTimeout(beNil(), timeout: 0.1)
+                }
+
+                it("will retry for notConnectedToInternet error") {
+                    let mockSession = MockURLSession(error: URLError(.notConnectedToInternet) as NSError)
+                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession))
+                    eventSender.updateApiConfiguration(EventLoggerConfiguration(apiKey: REventLoggerMockData.apiKey,
+                                                                                apiUrl: REventLoggerMockData.apiUrl))
+                    eventSender.sendEvents(events: [REventLoggerMockData.REventModel2], onCompletion: { _ in})
+                    expect(eventSender.scheduledTask).toEventuallyNot(beNil())
+                }
+
+                it("will retry for networkConnectionLost error") {
+                    let mockSession = MockURLSession(error: URLError(.networkConnectionLost) as NSError)
+                    let eventSender = REventLoggerSender(networkManager: NetworkManager(session: mockSession))
+                    eventSender.updateApiConfiguration(EventLoggerConfiguration(apiKey: REventLoggerMockData.apiKey,
+                                                                                apiUrl: REventLoggerMockData.apiUrl))
+                    eventSender.sendEvents(events: [REventLoggerMockData.REventModel2], onCompletion: { _ in})
+                    expect(eventSender.scheduledTask).toEventuallyNot(beNil())
                 }
             }
         }
