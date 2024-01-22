@@ -5,6 +5,11 @@ platform :ios, '12.0'
 
 use_frameworks!
 
+target 'Sample' do
+  pod 'RSDKUtils', :path => './RSDKUtils.podspec'
+  pod 'RSDKUtils/REventLogger', :path => './RSDKUtils.podspec'
+end
+
 target 'Tests' do
   pod 'Quick', '~> 5.0'
   pod 'Nimble'
