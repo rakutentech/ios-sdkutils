@@ -71,6 +71,14 @@ final class REventsLoggerCacheMock: REventExpirationCacheable {
     }
 }
 
+final class AppLifeCycleManagerMock: AppLifeCycleListener {
+    var appBecameActiveObserver: (() -> Void)?
+
+    func postDidBecomeActiveNotification() {
+        appBecameActiveObserver?()
+    }
+}
+
 enum REventLoggerMockData {
     static let apiKey = "e2io-34nj-70bh-oki8"
     static let apiUrl = "https://mock.eventlogger.end.point"

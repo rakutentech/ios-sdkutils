@@ -4,6 +4,7 @@
 - Features:
     - Retrieve Meta-data for Event Logger (SDKCF-6846)
     - Event Logger Public API & Manager Class (SDKCF-6845)
+    - Add App Lifecycle Listener For Event Logger (SDKCF-6850)
     
 #### 4.1.0 (2024-04-08)
 - Improve:
