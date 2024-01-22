@@ -10,12 +10,20 @@ final class REventLoggerModule {
     private let eventsStorage: REventDataCacheable
     private let eventsSender: REventLoggerSendable
     private let eventsCache: REventExpirationCacheable
+    private var appLifeCycleListener: AppLifeCycleListener
     private let loggerQueue = DispatchQueue(label: "eventLogger", qos: .utility)
 
-    init(eventsStorage: REventDataCacheable, eventsSender: REventLoggerSendable, eventsCache: REventExpirationCacheable) {
+    init(eventsStorage: REventDataCacheable,
+         eventsSender: REventLoggerSendable,
+         eventsCache: REventExpirationCacheable,
+         appLifeCycleListener: AppLifeCycleListener) {
         self.eventsStorage = eventsStorage
         self.eventsSender = eventsSender
         self.eventsCache = eventsCache
+        self.appLifeCycleListener = appLifeCycleListener
+        self.appLifeCycleListener.appBecameActiveObserver = { [weak self] in
+            self?.checkEventsExpirationAndStorage()
+        }
     }
 
     func configure(apiConfiguration: EventLoggerConfiguration?) {
@@ -72,7 +80,7 @@ final class REventLoggerModule {
                 criticalEvent.updateEventType(type: .warning)
                 self.eventsStorage.insertOrUpdateEvent(eventId, event: criticalEvent)
             case .failure(let error):
-                    Logger.debug(error)
+                Logger.debug(error)
             }
         }
     }
@@ -92,7 +100,7 @@ final class REventLoggerModule {
                 }
             }
         }
-     }
+    }
 
     func isEventValid(_ sourceName: String, _ sourceVersion: String, _ errorCode: String, _ errorMessage: String) -> Bool {
         let isValidSourceInfo = !(sourceName.isEmpty) && !(sourceVersion.isEmpty)
@@ -109,5 +117,15 @@ final class REventLoggerModule {
             return false
         }
         return currentTime - referenceTime >= REventConstants.ttlExpiryInMillis
+    }
+
+    private func checkEventsExpirationAndStorage() {
+        loggerQueue.async { [weak self] in
+            guard let self else { return }
+            if self.isTtlExpired() == true || self.eventsStorage.getEventCount() >= REventConstants.maxEventCount {
+                self.sendAllEventsInStorage()
+                return
+            }
+        }
     }
 }

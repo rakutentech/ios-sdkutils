@@ -16,14 +16,17 @@ class REventLoggerModuleSpec: QuickSpec {
             var mockEventStorage: REventStorageMock!
             var mockEventsCache: REventsLoggerCacheMock!
             var eventLoggerModule: REventLoggerModule!
+            var mockAppLifeCycleListener: AppLifeCycleManagerMock!
             beforeEach {
                 mockEventsSender = REventSenderMock()
                 mockEventStorage = REventStorageMock()
                 mockEventsCache = REventsLoggerCacheMock()
+                mockAppLifeCycleListener = AppLifeCycleManagerMock()
                 mockEventsSender.response = .success(Data())
                 eventLoggerModule = REventLoggerModule(eventsStorage: mockEventStorage,
-                                                   eventsSender: mockEventsSender,
-                                                   eventsCache: mockEventsCache)
+                                                       eventsSender: mockEventsSender,
+                                                       eventsCache: mockEventsCache,
+                                                       appLifeCycleListener: mockAppLifeCycleListener)
             }
             context("isEventValid method") {
                 it("will return true for a valid event") {
@@ -96,7 +99,7 @@ class REventLoggerModuleSpec: QuickSpec {
             context("configure method") {
                 it("will configure the api key and api url if valid value is sent") {
                     eventLoggerModule.configure(apiConfiguration: EventLoggerConfiguration(apiKey: REventLoggerMockData.apiKey,
-                                                                             apiUrl: REventLoggerMockData.apiUrl))
+                                                                                           apiUrl: REventLoggerMockData.apiUrl))
                     expect(mockEventsSender.didConfigure).to(beTrue())
                 }
                 it("will not configure api Key and url if valid values is not sent") {
@@ -104,6 +107,38 @@ class REventLoggerModuleSpec: QuickSpec {
                     expect(mockEventsSender.didConfigure).to(beFalse())
                 }
             }
+
+            describe("when app became active") {
+                context("should send all stored events & delete all once send") {
+                    beforeEach {
+                        mockEventStorage.insertOrUpdateEvent("event1", event: REventLoggerMockData.REventModel)
+                        mockEventStorage.insertOrUpdateEvent("event2", event: REventLoggerMockData.REventModel2)
+                    }
+                    it("if ttl is expired") {
+                        mockEventsCache.setTtlReferenceTime(Date.yesterday!.timeInMilliseconds)
+                        expect(mockEventStorage.getEventCount()).to(equal(2))
+                        mockAppLifeCycleListener.postDidBecomeActiveNotification()
+                        expect(mockEventStorage.getEventCount()).toEventually(equal(0), timeout: .seconds(2))
+                    }
+                }
+
+                context("should not send all stored events") {
+                    beforeEach {
+                        mockEventStorage.insertOrUpdateEvent("event1", event: REventLoggerMockData.REventModel)
+                        mockEventStorage.insertOrUpdateEvent("event2", event: REventLoggerMockData.REventModel2)
+                    }
+                    it("if ttl is not expired") {
+                        mockEventsCache.setTtlReferenceTime(Date().timeInMilliseconds)
+                        expect(mockEventStorage.getEventCount()).to(equal(2))
+                        mockAppLifeCycleListener.postDidBecomeActiveNotification()
+                        expect(mockEventStorage.getEventCount()).toEventually(equal(2), timeout: .seconds(2))
+                    }
+                }
+            }
         }
     }
+}
+
+extension Date {
+    static let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date())
 }
