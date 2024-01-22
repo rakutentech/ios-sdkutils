@@ -25,6 +25,7 @@ struct EventLoggerView: View {
         case custom, error1, error2
     }
     private let interactor: EventLogging
+    private let defaultErros = DefaultError()
 
     @State private var sdkName: String = ""
     @State private var sdkVersion: String = ""
@@ -63,7 +64,7 @@ struct EventLoggerView: View {
             set: { value in
                 if value {
                     errorMessageType = .error1
-                    errorMessage = DefaultErrors.error1
+                    errorMessage = defaultErros.error1
                 }
             })
         let error2Enabled = Binding<Bool>(
@@ -71,7 +72,7 @@ struct EventLoggerView: View {
             set: { value in
                 if value {
                     errorMessageType = .error2
-                    errorMessage = DefaultErrors.error2
+                    errorMessage = defaultErros.error2
                 }
             })
         NavigationView {
@@ -201,34 +202,36 @@ extension View {
 }
 #endif
 
-#Preview {
-    EventLoggerView(interactor: EventLoggerInteractor())
-}
+class DefaultError {
+    var error1: String = "Unbale to load realtime error"
+    var error2: String = "Unbale to load realtime error"
 
-enum DefaultErrors {
-    static var error1: String {
+    init() {
+        LoadError1()
+        loadError2()
+    }
+
+    private func LoadError1() {
         struct Error1Model: Decodable {
             let name: String
             let id: String
         }
-        var errorMessage: String = "Invalid Error Message"
         do {
             _ = try JSONDecoder().decode(Error1Model.self, from: "{\"name\":\"EventLogger\"}".data(using: .utf8)!)
         } catch {
-            errorMessage = error.localizedDescription
+            error1 = error.localizedDescription
         }
-        return errorMessage
     }
 
-    static var error2 : String {
-        var errorMessage: String = "Invalid Error Message"
-        if let data = "{\"name\":}".data(using: .utf8) {
-            do {
-                _ = try JSONSerialization.jsonObject(with: data, options: [])
-            } catch {
-                errorMessage = error.localizedDescription
-            }
+    private func loadError2() {
+        guard let url = URL(string: "https://sampe-eventlogger.com/sample-image") else { return }
+        let task = URLSession.shared.dataTask(with: url) { [weak self] _, _, error in
+            self?.error2 = error.debugDescription
         }
-        return errorMessage
+        task.resume()
     }
+}
+
+#Preview {
+    EventLoggerView(interactor: EventLoggerInteractor())
 }
