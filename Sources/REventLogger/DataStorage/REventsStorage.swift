@@ -20,7 +20,7 @@ final class REventsStorage: REventDataCacheable {
     private typealias CacheContainer = [String: REvent]
     private let userDefaults: UserDefaults
     @AtomicGetSet private var cachedContainer: CacheContainer = CacheContainer()
-    private let persistedDataKey = "Event_logger_cache"
+    private let persistedDataKey = "event_logger_cached_events"
 
     init(userDefaults: UserDefaults) {
         self.userDefaults = userDefaults
