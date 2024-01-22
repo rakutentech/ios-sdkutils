@@ -27,7 +27,7 @@ enum REventConstants {
     static let ttlExpiryInMillis = 3600 * 1000 * 12
     static let ttlKey = "ttl_reference_time"
     static let retryDelayMS = 15 * 1000
-    static let maxRetryAttempt = 3
+    static let maxRetryAttempt = 2
 }
 
 internal enum Logger {
@@ -51,9 +51,7 @@ extension Date {
 }
 
 extension NSError {
-    var isRetryable: Bool {
-        code == ErrorCode.unknown ||
-        code / 100 == 5 ||
-        domain == NSURLErrorDomain
+    var isNetworkConnectivityError: Bool {
+        return self.code == URLError.notConnectedToInternet.rawValue || self.code == URLError.networkConnectionLost.rawValue
     }
 }
