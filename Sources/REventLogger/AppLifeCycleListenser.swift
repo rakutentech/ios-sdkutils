@@ -1,12 +1,12 @@
 import Foundation
 import UIKit
 
-protocol AppLifeCycleListener: AnyObject {
-    func appDidBecomeActive()
+protocol AppLifeCycleListener {
+    var appBecameActiveObserver: (() -> Void)? { get set }
 }
 
-final class AppLifeCycleManager {
-    weak var listener: AppLifeCycleListener?
+final class AppLifeCycleManager: AppLifeCycleListener {
+    var appBecameActiveObserver: (() -> Void)?
     private let notificationCenter: NotificationCenter
 
     init(notificationCenter: NotificationCenter = .default) {
@@ -29,7 +29,7 @@ final class AppLifeCycleManager {
         notificationCenter.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
     }
 
-    @objc private func applicationDidBecomeActive() {
-        listener?.appDidBecomeActive()
+    @objc func applicationDidBecomeActive() {
+        appBecameActiveObserver?()
     }
 }

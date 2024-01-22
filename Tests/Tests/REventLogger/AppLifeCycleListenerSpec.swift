@@ -11,16 +11,14 @@ final class AppLifeCycleListenerSpec: QuickSpec {
     override func spec() {
         describe("AppLifeCycleListener") {
             var mockListener: MockAppLifeCycleListener!
-            var appLifeCycleManager: AppLifeCycleManager?
 
             beforeEach {
-                mockListener = MockAppLifeCycleListener()
-                appLifeCycleManager = AppLifeCycleManager()
-                appLifeCycleManager?.listener = mockListener
+                mockListener = MockAppLifeCycleListener(listener: AppLifeCycleManager())
             }
 
             context("when initiate the AppLifeCycleManager") {
                 it("should start observing didBecomeActiveNotification") {
+                    mockListener.startListening()
                     NotificationCenter.default.post(name: UIApplication.didBecomeActiveNotification, object: nil)
                     expect(mockListener.isAppBecomeActive).to(beTrue())
                 }
@@ -28,7 +26,6 @@ final class AppLifeCycleListenerSpec: QuickSpec {
 
             context("when deinit the AppLifeCycleManager") {
                 it("should stop observing didBecomeActiveNotification") {
-                    appLifeCycleManager = nil
                     NotificationCenter.default.post(name: UIApplication.didBecomeActiveNotification, object: nil)
                     expect(mockListener.isAppBecomeActive).to(beFalse())
                 }
@@ -37,9 +34,17 @@ final class AppLifeCycleListenerSpec: QuickSpec {
     }
 }
 
-final class MockAppLifeCycleListener: AppLifeCycleListener {
+final class MockAppLifeCycleListener {
     var isAppBecomeActive = false
-    func appDidBecomeActive() {
-        isAppBecomeActive = true
+    var listener: AppLifeCycleListener
+
+    init(listener: AppLifeCycleListener) {
+        self.listener = listener
+    }
+
+    func startListening() {
+        self.listener.appBecameActiveObserver = { [weak self] in
+            self?.isAppBecomeActive = true
+        }
     }
 }
