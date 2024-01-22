@@ -38,14 +38,15 @@ final class REventLoggerSender: REventLoggerSendable, TaskSchedulable {
         }
 
         networkManager.executeRequest(with: request) { data, error in
-            if let nsError = error as? NSError, nsError.isNetworkConnectivityError {
-                if self.retryAttempt < REventConstants.maxRetryAttempt {
+            if let nsError = error as? NSError,
+               nsError.isNetworkConnectivityError,
+               self.retryAttempt < REventConstants.maxRetryAttempt {
                     self.retryAttempt += 1
                     self.scheduleTask(milliseconds: self.retryAttempt * REventConstants.retryDelayMS,
                                       wallDeadline: true) {
                         self.sendEvents(events: events, onCompletion: onCompletion)
-                    }
                 }
+                self.retryAttempt = 0
                 return
             } else if let error = error {
                 onCompletion(.failure(error))
