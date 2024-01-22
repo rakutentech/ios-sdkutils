@@ -2,7 +2,7 @@ import SwiftUI
 import RSDKUtils
 
 protocol EventLogging {
-    func logEvent(_ event: EventModel)
+    func logEvent(_ event: EventModel, completionHandler: @escaping ((Bool) -> Void))
     func getStoredEvents() -> [String]
     func getConfiguration() -> (apiKey: String, apiEndpoint: String)
 }
@@ -179,8 +179,9 @@ struct EventLoggerView: View {
 
     private func sendEvent() {
         let event = EventModel(sdkName: sdkName, sdkVersion: sdkVersion, errorCode: errorCode, errorMessage: errorMessage, count: eventCount, isCritical: isCritical, info: customInfo)
-        interactor.logEvent(event)
-        isLoggingInprogress = false
+        interactor.logEvent(event) { isFinished in
+            isLoggingInprogress = false
+        }
     }
 
     private func isCustomInfoValidJson() -> Bool {

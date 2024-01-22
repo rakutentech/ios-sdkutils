@@ -6,25 +6,30 @@ enum Constant {
 }
 
 struct EventLoggerInteractor: EventLogging {
-    func logEvent(_ event: EventModel) {
-        print(event)
-        if event.isCritical {
-            REventLogger.shared.sendCriticalEvent(sourceName: event.sdkName,
-                                                  sourceVersion: event.sdkVersion,
-                                                  errorCode: event.errorCode,
-                                                  errorMessage: event.errorMessage,
-                                                  info: convertToJson(event.info))
-        }else{
-            REventLogger.shared.sendWarningEvent(sourceName: event.sdkName,
-                                                  sourceVersion: event.sdkVersion,
-                                                  errorCode: event.errorCode,
-                                                  errorMessage: event.errorMessage,
-                                                  info: convertToJson(event.info))
+    func logEvent(_ event: EventModel, completionHandler: @escaping ((Bool) -> Void)) {
+        let info = convertToJson(event.info)
+        for value in 1...event.count {
+            DispatchQueue.main.async {
+                if event.isCritical {
+                    REventLogger.shared.sendCriticalEvent(sourceName: event.sdkName,
+                                                          sourceVersion: event.sdkVersion,
+                                                          errorCode: event.errorCode,
+                                                          errorMessage: event.errorMessage,
+                                                          info: info)
+                }else{
+                    REventLogger.shared.sendWarningEvent(sourceName: event.sdkName,
+                                                         sourceVersion: event.sdkVersion,
+                                                         errorCode: event.errorCode,
+                                                         errorMessage: event.errorMessage,
+                                                         info: info)
+                }
+            }
         }
+        completionHandler(true)
 
         func convertToJson(_ jsonString: String) -> [String: String]? {
             guard let data = jsonString.data(using: .utf8),
-               let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: String] else {
+                  let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: String] else {
                 return nil
             }
             return json
