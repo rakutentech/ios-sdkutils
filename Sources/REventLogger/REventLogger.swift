@@ -99,13 +99,15 @@ public final class REventLogger {
         self.dependencyManager = dependencyManager
         guard let dataStorage = dependencyManager.resolve(type: REventDataCacheable.self),
               let eventsSender = dependencyManager.resolve(type: REventLoggerSendable.self),
-              let eventsCache = dependencyManager.resolve(type: REventExpirationCacheable.self)
+              let eventsCache = dependencyManager.resolve(type: REventExpirationCacheable.self),
+              let appLifeCycleManager = dependencyManager.resolve(type: AppLifeCycleListener.self)
         else {
             Logger.debug("❌ Unable to resolve dependencies of EventLogger")
             return
         }
         eventLogger = REventLoggerModule(eventsStorage: dataStorage,
-                                        eventsSender: eventsSender,
-                                        eventsCache: eventsCache)
+                                         eventsSender: eventsSender,
+                                         eventsCache: eventsCache,
+                                         appLifeCycleListener: appLifeCycleManager)
     }
 }
