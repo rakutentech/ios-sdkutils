@@ -50,7 +50,7 @@ extension Date {
     }
 }
 
-private extension NSError {
+extension NSError {
     var isRetryable: Bool {
         code == ErrorCode.unknown ||
         code / 100 == 5 ||
