@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E93FC4B5B8B4C60430398BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A04641D3B60ED0F410B68EB /* Foundation.framework */; };
 		2F17427BF74A50B45FA22CC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8783C5860B44767F3B2D0547 /* UIKit.framework */; };
+		45771F522B46B55A00C2E3A7 /* AppLifeCycleListenerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45771F512B46B55A00C2E3A7 /* AppLifeCycleListenerSpec.swift */; };
 		45DAA16627E293A300BC25A5 /* LockableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA14F27E293A300BC25A5 /* LockableSpec.swift */; };
 		45DAA16727E293A300BC25A5 /* EnvironmentInformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15027E293A300BC25A5 /* EnvironmentInformationTests.swift */; };
 		45DAA16827E293A300BC25A5 /* DataExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAA15127E293A300BC25A5 /* DataExtensionsSpec.swift */; };
@@ -62,6 +63,7 @@
 /* Begin PBXFileReference section */
 		3A04641D3B60ED0F410B68EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		454353BC2B5AA60400452130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		45771F512B46B55A00C2E3A7 /* AppLifeCycleListenerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifeCycleListenerSpec.swift; sourceTree = "<group>"; };
 		45DAA14F27E293A300BC25A5 /* LockableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockableSpec.swift; sourceTree = "<group>"; };
 		45DAA15027E293A300BC25A5 /* EnvironmentInformationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentInformationTests.swift; sourceTree = "<group>"; };
 		45DAA15127E293A300BC25A5 /* DataExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtensionsSpec.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				E6594A122B3D80B600AC862F /* REventSpec.swift */,
 				E6594A0E2B3D509500AC862F /* REventsStorageSpec.swift */,
 				E69A283E2B5130DE007403E3 /* REventLoggerModuleSpec.swift */,
+				45771F512B46B55A00C2E3A7 /* AppLifeCycleListenerSpec.swift */,
 			);
 			path = REventLogger;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				45DAA17227E293A300BC25A5 /* TypedDependencyManagerSpec.swift in Sources */,
 				45DAA17127E293A300BC25A5 /* StandardHeaderSpec.swift in Sources */,
 				45DAA17527E293A300BC25A5 /* URLSessionExtensionsSpec.swift in Sources */,
+				45771F522B46B55A00C2E3A7 /* AppLifeCycleListenerSpec.swift in Sources */,
 				45DAA17427E293A300BC25A5 /* SwiftyDependenciesContainerSpec.swift in Sources */,
 				45DAA16927E293A300BC25A5 /* UIViewExtensionSpec.swift in Sources */,
 				45DAA17727E293A300BC25A5 /* StringExtensionsSpec.swift in Sources */,

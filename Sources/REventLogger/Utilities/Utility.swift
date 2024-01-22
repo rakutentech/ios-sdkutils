@@ -46,7 +46,7 @@ internal enum Logger {
 
 extension Date {
     var timeInMilliseconds: Int64 {
-        Int64(Date().timeIntervalSince1970 * 1000)
+        Int64(self.timeIntervalSince1970 * 1000)
     }
 }
 
