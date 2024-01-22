@@ -5,12 +5,14 @@ protocol REventLoggerSendable {
     func updateApiConfiguration(_ apiConfiguration: EventLoggerConfiguration?)
 }
 
-final class REventLoggerSender: REventLoggerSendable {
+final class REventLoggerSender: REventLoggerSendable, TaskSchedulable {
 
     private var events: [REvent]?
     private var apiKey: String?
     private var apiConfiguration: EventLoggerConfiguration?
     private let networkManager: NetworkManager
+    var scheduledTask: DispatchWorkItem?
+    private var retryAttempt: Int = 0
 
     init(networkManager: NetworkManager) {
         self.networkManager = networkManager
@@ -36,8 +38,16 @@ final class REventLoggerSender: REventLoggerSendable {
         }
 
         networkManager.executeRequest(with: request) { data, error in
-            guard error == nil else {
-                onCompletion(.failure(error!))
+            if let nsError = error as? NSError, nsError.isRetryable {
+                if self.retryAttempt < REventConstants.maxRetryAttempt {
+                    self.retryAttempt += 1
+                    self.scheduleTask(milliseconds: REventConstants.retryDelayMS, wallDeadline: true) {
+                        self.sendEvents(events: events, onCompletion: onCompletion)
+                    }
+                }
+                return
+            } else if let error = error {
+                onCompletion(.failure(error))
                 return
             }
 
