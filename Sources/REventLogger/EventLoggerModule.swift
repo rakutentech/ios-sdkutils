@@ -31,13 +31,13 @@ final class REventLoggerModule {
     }
 
     func logEvent(_ eventType: EventType,
-                  _ sdkName: String,
-                  _ sdkVersion: String,
+                  _ sourceName: String,
+                  _ sourceVersion: String,
                   _ errorCode: String,
                   _ errorMessage: String,
                   _ info: [String: String]?) {
 
-        if !isEventValid(sdkName, sdkVersion, errorCode, errorMessage) {
+        if !isEventValid(sourceName, sourceVersion, errorCode, errorMessage) {
             Logger.debug("Event Logger event contains an empty parameter")
             return
         }
@@ -45,8 +45,8 @@ final class REventLoggerModule {
 
         loggerQueue.async { [weak self] in
             var event = REvent(eventType,
-                               sdkName: sdkName,
-                               sdkVersion: sdkVersion,
+                               sourceName: sourceName,
+                               sourceVersion: sourceVersion,
                                errorCode: errorCode,
                                errorMessage: errorMessage,
                                info: info)

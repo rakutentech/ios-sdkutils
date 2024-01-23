@@ -48,4 +48,27 @@ final class REventLoggerEnvironment {
     var deviceBrand: String {
         bundle.deviceBrand()
     }
+
+    var rmcBundle: Bundle? {
+        .rmcResources
+    }
+
+    var rmcSdks: [String: String]? {
+        rmcBundle?.getRMCSdks()
+    }
+}
+
+internal extension Bundle {
+    static var rmcResources: Bundle? {
+        guard let rmcBundleUrl = main.resourceURL?.appendingPathComponent("RMC_RMC.bundle"),
+              let bundle = Bundle(url: rmcBundleUrl) else {
+            return nil
+        }
+        return bundle
+    }
+
+    fileprivate func getRMCSdks() -> [String: String]? {
+        guard let path = path(forResource: "RmcInfo", ofType: "plist") else { return nil }
+        return NSDictionary(contentsOfFile: path) as? [String: String]
+    }
 }

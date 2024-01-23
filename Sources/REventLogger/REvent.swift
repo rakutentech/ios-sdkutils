@@ -9,19 +9,41 @@ struct REvent: Codable, Equatable {
     let deviceModel: String
     let deviceBrand: String
     let deviceName: String
-    let sdkName: String
-    let sdkVersion: String
+    let sourceName: String
+    let sourceVersion: String
     let errorCode: String
     let errorMessage: String
     let platform: String
+    let rmcSdks: [String: String]?
     var eventVersion: String = "1.0"
     var occurrenceCount: Int = 1
     var firstOccurrenceOn: Double // unix time
     var info: [String: String]?
+    
+    enum CodingKeys: String, CodingKey {
+        case sourceName = "sdkName"
+        case sourceVersion = "sdkVersion"
+        case eventType
+        case appId
+        case appName
+        case appVersion
+        case osVersion
+        case deviceModel
+        case deviceBrand
+        case deviceName
+        case errorCode
+        case errorMessage
+        case platform
+        case eventVersion
+        case occurrenceCount
+        case firstOccurrenceOn
+        case rmcSdks
+        case info
+    }
 
     init(_ eventType: EventType,
-         sdkName: String,
-         sdkVersion: String,
+         sourceName: String,
+         sourceVersion: String,
          errorCode: String,
          errorMessage: String,
          info: [String: String]? = nil) {
@@ -36,11 +58,12 @@ struct REvent: Codable, Equatable {
         self.deviceName = environment.deviceName
         self.firstOccurrenceOn = Date().timeIntervalSince1970
         self.eventType = eventType
-        self.sdkName = sdkName
-        self.sdkVersion = sdkVersion
+        self.sourceName = sourceName
+        self.sourceVersion = sourceVersion
         self.errorCode = errorCode
         self.errorMessage = errorMessage
         self.info = info
+        self.rmcSdks = environment.rmcSdks
     }
 }
 
@@ -51,7 +74,7 @@ enum EventType: String, Codable {
 
 extension REvent {
     var eventId: String {
-        let id = "\(eventType.rawValue)_\(String(describing: appVersion))_\(sdkName)_\(errorCode)_\(errorMessage)"
+        let id = "\(eventType.rawValue)_\(String(describing: appVersion))_\(sourceName)_\(errorCode)_\(errorMessage)"
         return id.replacingOccurrences(of: " ", with: "_").lowercased()
     }
 

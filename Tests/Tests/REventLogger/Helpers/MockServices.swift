@@ -83,25 +83,25 @@ enum REventLoggerMockData {
     static let apiKey = "e2io-34nj-70bh-oki8"
     static let apiUrl = "https://mock.eventlogger.end.point"
     static let REventModel = REvent(.critical,
-                                    sdkName: "IAM",
-                                    sdkVersion: "8.0,0",
+                                    sourceName: "IAM",
+                                    sourceVersion: "8.0,0",
                                     errorCode: "500",
                                     errorMessage: "Network Error")
     static let REventModel1 = REvent(.warning,
-                                    sdkName: "IAM",
-                                    sdkVersion: "8.0,0",
-                                    errorCode: "400",
-                                    errorMessage: "request sent to the server is invalid")
+                                     sourceName: "IAM",
+                                     sourceVersion: "8.0,0",
+                                     errorCode: "400",
+                                     errorMessage: "request sent to the server is invalid")
     static let REventModel2 = REvent(.warning,
-                                    sdkName: "PNP",
-                                    sdkVersion: "8.0,0",
-                                    errorCode: "400",
-                                    errorMessage: "request sent to the server is invalid")
+                                     sourceName: "PNP",
+                                     sourceVersion: "8.0,0",
+                                     errorCode: "400",
+                                     errorMessage: "request sent to the server is invalid")
     static let REventModel3 = REvent(.critical,
-                                    sdkName: "Pitari",
-                                    sdkVersion: "8.0,0",
-                                    errorCode: "400",
-                                    errorMessage: "request sent to the server is invalid")
+                                     sourceName: "Pitari",
+                                     sourceVersion: "8.0,0",
+                                     errorCode: "400",
+                                     errorMessage: "request sent to the server is invalid")
 
     static let mockRefTime: Int64 = 10000000000
     static let mockRefTime2: Int64 = 1805542062408
