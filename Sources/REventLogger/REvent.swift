@@ -19,7 +19,7 @@ struct REvent: Codable, Equatable {
     var occurrenceCount: Int = 1
     var firstOccurrenceOn: Double // unix time
     var info: [String: String]?
-    
+
     enum CodingKeys: String, CodingKey {
         case sourceName = "sdkName"
         case sourceVersion = "sdkVersion"
