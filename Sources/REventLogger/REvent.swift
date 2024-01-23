@@ -9,8 +9,8 @@ struct REvent: Codable, Equatable {
     let deviceModel: String
     let deviceBrand: String
     let deviceName: String
-    let sourceName: String
-    let sourceVersion: String
+    let sdkName: String
+    let sdkVersion: String
     let errorCode: String
     let errorMessage: String
     let platform: String
@@ -20,8 +20,8 @@ struct REvent: Codable, Equatable {
     var info: [String: String]?
 
     init(_ eventType: EventType,
-         sourceName: String,
-         sourceVersion: String,
+         sdkName: String,
+         sdkVersion: String,
          errorCode: String,
          errorMessage: String,
          info: [String: String]? = nil) {
@@ -36,8 +36,8 @@ struct REvent: Codable, Equatable {
         self.deviceName = environment.deviceName
         self.firstOccurrenceOn = Date().timeIntervalSince1970
         self.eventType = eventType
-        self.sourceName = sourceName
-        self.sourceVersion = sourceVersion
+        self.sdkName = sdkName
+        self.sdkVersion = sdkVersion
         self.errorCode = errorCode
         self.errorMessage = errorMessage
         self.info = info
@@ -51,7 +51,7 @@ enum EventType: String, Codable {
 
 extension REvent {
     var eventId: String {
-        let id = "\(eventType.rawValue)_\(String(describing: appVersion))_\(sourceName)_\(errorCode)_\(errorMessage)"
+        let id = "\(eventType.rawValue)_\(String(describing: appVersion))_\(sdkName)_\(errorCode)_\(errorMessage)"
         return id.replacingOccurrences(of: " ", with: "_").lowercased()
     }
 
