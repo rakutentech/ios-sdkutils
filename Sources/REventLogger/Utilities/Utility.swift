@@ -52,6 +52,7 @@ extension Date {
 
 extension NSError {
     var isNetworkConnectivityError: Bool {
-        return self.code == URLError.notConnectedToInternet.rawValue || self.code == URLError.networkConnectionLost.rawValue
+        self.code == URLError.notConnectedToInternet.rawValue ||
+        self.code == URLError.networkConnectionLost.rawValue
     }
 }

@@ -16,7 +16,7 @@ class REventsSpec: QuickSpec {
                     let event = REvent(.warning, sourceName: "IAM",
                                        sourceVersion: "8.0,0", errorCode: "500",
                                        errorMessage: "Network Error", info: nil)
-                    expect(event.eventId).to(equal("warning_1.0_iam_500_network_error"))
+                    expect(event.eventId).to(equal("1_1.0_iam_500_network_error"))
                 }
                 it("will increase the occurence count of event") {
                     var event = REvent(.warning, sourceName: "PNP",
@@ -30,7 +30,7 @@ class REventsSpec: QuickSpec {
                                        sourceVersion: "4.1.0", errorCode: "500",
                                        errorMessage: "Network", info: nil)
                     event.updateEventType(type: .critical)
-                    expect(event.eventType.rawValue).to(equal("critical"))
+                    expect(event.eventType.rawValue).to(equal("0"))
                 }
         }
     }

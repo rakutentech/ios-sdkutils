@@ -14,10 +14,32 @@ struct REvent: Codable, Equatable {
     let errorCode: String
     let errorMessage: String
     let platform: String
+    let rmcSdks: [String: String]?
     var eventVersion: String = "1.0"
     var occurrenceCount: Int = 1
     var firstOccurrenceOn: Double // unix time
     var info: [String: String]?
+
+    enum CodingKeys: String, CodingKey {
+        case sourceName = "sdkName"
+        case sourceVersion = "sdkVersion"
+        case eventType
+        case appId
+        case appName
+        case appVersion
+        case osVersion
+        case deviceModel
+        case deviceBrand
+        case deviceName
+        case errorCode
+        case errorMessage
+        case platform
+        case eventVersion
+        case occurrenceCount
+        case firstOccurrenceOn
+        case rmcSdks
+        case info
+    }
 
     init(_ eventType: EventType,
          sourceName: String,
@@ -34,6 +56,7 @@ struct REvent: Codable, Equatable {
         self.deviceModel = environment.deviceModel
         self.deviceBrand = environment.deviceBrand
         self.deviceName = environment.deviceName
+        self.rmcSdks = environment.rmcSDKs
         self.firstOccurrenceOn = Date().timeIntervalSince1970
         self.eventType = eventType
         self.sourceName = sourceName
@@ -46,7 +69,8 @@ struct REvent: Codable, Equatable {
 
 /// Describe the type of the event
 enum EventType: String, Codable {
-    case critical, warning
+    case critical = "0"
+    case warning = "1"
 }
 
 extension REvent {
