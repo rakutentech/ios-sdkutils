@@ -50,13 +50,14 @@ final class REventLoggerModule {
                                errorCode: errorCode,
                                errorMessage: errorMessage,
                                info: info)
-            if let storedEvent = self?.eventsStorage.retrieveEvent(event.eventId) {
+            let eventId = event.eventId
+            if let storedEvent = self?.eventsStorage.retrieveEvent(eventId) {
                 isNewEvent = false
                 event = storedEvent
                 event.updateOccurrenceCount()
             }
-            self?.eventsStorage.insertOrUpdateEvent(event.eventId, event: event)
-            self?.sendEventIfNeeded(eventType, event.eventId, event, isNewEvent)
+            self?.eventsStorage.insertOrUpdateEvent(eventId, event: event)
+            self?.sendEventIfNeeded(eventType, eventId, event, isNewEvent)
         }
     }
 

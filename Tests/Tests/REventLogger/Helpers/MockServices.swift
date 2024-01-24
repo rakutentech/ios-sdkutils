@@ -88,20 +88,20 @@ enum REventLoggerMockData {
                                     errorCode: "500",
                                     errorMessage: "Network Error")
     static let REventModel1 = REvent(.warning,
-                                    sourceName: "IAM",
-                                    sourceVersion: "8.0,0",
-                                    errorCode: "400",
-                                    errorMessage: "request sent to the server is invalid")
+                                     sourceName: "IAM",
+                                     sourceVersion: "8.0,0",
+                                     errorCode: "400",
+                                     errorMessage: "request sent to the server is invalid")
     static let REventModel2 = REvent(.warning,
-                                    sourceName: "PNP",
-                                    sourceVersion: "8.0,0",
-                                    errorCode: "400",
-                                    errorMessage: "request sent to the server is invalid")
+                                     sourceName: "PNP",
+                                     sourceVersion: "8.0,0",
+                                     errorCode: "400",
+                                     errorMessage: "request sent to the server is invalid")
     static let REventModel3 = REvent(.critical,
-                                    sourceName: "Pitari",
-                                    sourceVersion: "8.0,0",
-                                    errorCode: "400",
-                                    errorMessage: "request sent to the server is invalid")
+                                     sourceName: "Pitari",
+                                     sourceVersion: "8.0,0",
+                                     errorCode: "400",
+                                     errorMessage: "request sent to the server is invalid")
 
     static let mockRefTime: Int64 = 10000000000
     static let mockRefTime2: Int64 = 1805542062408
