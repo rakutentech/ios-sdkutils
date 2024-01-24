@@ -46,7 +46,7 @@ class REventLoggerModuleSpec: QuickSpec {
                         eventLoggerModule.sendCriticalEvent(event.eventId, event)
                         expect(mockEventStorage.getEventCount()).to(equal(1))
                         let storedEvent = mockEventStorage.retrieveEvent(event.eventId)
-                        expect(storedEvent?.eventType.rawValue).to(equal("warning"))
+                        expect(storedEvent?.eventType.rawValue).to(equal("1"))
                         done()
                     }
                 }
@@ -71,7 +71,7 @@ class REventLoggerModuleSpec: QuickSpec {
                         eventLoggerModule.sendEventIfNeeded(.critical, event.eventId, event, true)
                         expect(mockEventStorage.getEventCount()).to(equal(1))
                         let storedEvent = mockEventStorage.retrieveEvent(event.eventId)
-                        expect(storedEvent?.eventType.rawValue).to(equal("warning"))
+                        expect(storedEvent?.eventType.rawValue).to(equal("1"))
                         done()
                     }
                 }
