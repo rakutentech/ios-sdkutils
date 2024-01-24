@@ -63,13 +63,14 @@ struct REvent: Codable, Equatable {
         self.errorCode = errorCode
         self.errorMessage = errorMessage
         self.info = info
-        self.rmcSdks = environment.rmcSdks
+        self.rmcSdks = Bundler.rmcSdks
     }
 }
 
 /// Describe the type of the event
 enum EventType: String, Codable {
-    case critical, warning
+    case critical = "0"
+    case warning = "1"
 }
 
 extension REvent {
