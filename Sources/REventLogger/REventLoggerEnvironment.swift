@@ -8,10 +8,13 @@ private enum BundleKeys {
     static let bundleIdentifier = "CFBundleIdentifier"
     static let shortVersion = "CFBundleShortVersionString"
     static let displayName = "CFBundleDisplayName"
+    static let rmcBundleName = "RMC_RMC.bundle"
+    static let rmcVersionsInfoList = "RmcInfo"
 }
 
 final class REventLoggerEnvironment {
     private let bundle: BundleProtocol
+    private var rmcSDKsVersion: [String: String]?
 
     init(bundle: BundleProtocol = Bundle.main) {
         self.bundle = bundle
@@ -49,26 +52,25 @@ final class REventLoggerEnvironment {
         bundle.deviceBrand()
     }
 
-    var rmcBundle: Bundle? {
-        .rmcResources
+    var rmcSDKs: [String: String]? {
+        if rmcSDKsVersion == nil {
+            rmcSDKsVersion = getRMCSDKsVersion()
+        }
+        return rmcSDKsVersion
     }
 
-    var rmcSdks: [String: String]? {
-        rmcBundle?.getRMCSdks()
+    private func getRMCSDKsVersion() -> [String: String]? {
+        guard let path = Bundle.rmcBundle?.path(forResource: BundleKeys.rmcVersionsInfoList, ofType: "plist") else { return nil }
+        return NSDictionary(contentsOfFile: path) as? [String: String]
     }
 }
 
-internal extension Bundle {
-    static var rmcResources: Bundle? {
-        guard let rmcBundleUrl = main.resourceURL?.appendingPathComponent("RMC_RMC.bundle"),
+extension Bundle {
+    static var rmcBundle: Bundle? {
+        guard let rmcBundleUrl = main.resourceURL?.appendingPathComponent(BundleKeys.rmcBundleName),
               let bundle = Bundle(url: rmcBundleUrl) else {
             return nil
         }
         return bundle
-    }
-
-    fileprivate func getRMCSdks() -> [String: String]? {
-        guard let path = path(forResource: "RmcInfo", ofType: "plist") else { return nil }
-        return NSDictionary(contentsOfFile: path) as? [String: String]
     }
 }

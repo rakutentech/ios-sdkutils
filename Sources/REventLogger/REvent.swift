@@ -56,6 +56,7 @@ struct REvent: Codable, Equatable {
         self.deviceModel = environment.deviceModel
         self.deviceBrand = environment.deviceBrand
         self.deviceName = environment.deviceName
+        self.rmcSdks = environment.rmcSDKs
         self.firstOccurrenceOn = Date().timeIntervalSince1970
         self.eventType = eventType
         self.sourceName = sourceName
@@ -63,7 +64,6 @@ struct REvent: Codable, Equatable {
         self.errorCode = errorCode
         self.errorMessage = errorMessage
         self.info = info
-        self.rmcSdks = Bundler.rmcSdks
     }
 }
 

@@ -56,7 +56,3 @@ extension NSError {
         self.code == URLError.networkConnectionLost.rawValue
     }
 }
-
-enum Bundler {
-    static let rmcSdks = REventLoggerEnvironment().rmcSdks
-}
