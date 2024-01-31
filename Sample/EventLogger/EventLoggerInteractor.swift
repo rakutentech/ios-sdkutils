@@ -8,7 +8,7 @@ enum Constant {
 struct EventLoggerInteractor: EventLogging {
     func logEvent(_ event: EventModel, completionHandler: @escaping ((Bool) -> Void)) {
         let info = convertToJson(event.info)
-        for value in 1...event.count {
+        for _ in 1...event.count {
             DispatchQueue.main.async {
                 if event.isCritical {
                     REventLogger.shared.sendCriticalEvent(sourceName: event.sdkName,
@@ -41,7 +41,9 @@ struct EventLoggerInteractor: EventLogging {
               let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {
             return []
         }
-        return json.values.compactMap({ convertToString($0) })
+        let sortedValues = json.values.compactMap({$0 as? [String: Any]})
+            .sorted(by: { $0["firstOccurrenceOn"] as! Double > $1["firstOccurrenceOn"] as! Double })
+        return sortedValues.compactMap({ convertToString($0) })
     }
 
     func getConfiguration() -> (apiKey: String, apiEndpoint: String) {
@@ -50,9 +52,8 @@ struct EventLoggerInteractor: EventLogging {
         return (apiKey, apiEndpoint)
     }
 
-    private func convertToString(_ value: Any) -> String? {
-        guard let dictionary = value as? [String: Any],
-              let data = try? JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted),
+    private func convertToString(_ value: [String: Any]) -> String? {
+        guard let data = try? JSONSerialization.data(withJSONObject: value, options: [.sortedKeys, .prettyPrinted]),
               let jsonString = String(data: data, encoding: .utf8) else {
             return nil
         }

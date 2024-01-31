@@ -126,14 +126,25 @@ struct EventLoggerView: View {
                         updatedFocusFiled()
                     }
 
-                    Button(action: {
-                        isLoggingInprogress = true
-                        hideKeyboard()
-                        sendEvent()
-                    }) {
-                        Text(isCritical ? "Log Critical Event" : "Log Warning Event")
+                    Section {
+                        Button(action: {
+                            isLoggingInprogress = true
+                            hideKeyboard()
+                            sendEvent()
+                        }) {
+                            Text(isCritical ? "Log Critical Event" : "Log Warning Event")
+                        }
+                        .disabled(disableLogEvent())
+
+                        Button(action: {
+                            isLoggingInprogress = true
+                            hideKeyboard()
+                            sendUniqueEvent()
+                        }) {
+                            Text("Log Unique Event")
+                        }
+                        .disabled(disableLogEvent())
                     }
-                    .disabled(disableLogEvent())
 
                     Section {
                         NavigationLink(destination: EventListView(interactor: interactor)
@@ -191,6 +202,22 @@ struct EventLoggerView: View {
             return true
         }
         return customInfo.isEmpty ? true : false
+    }
+
+    private func sendUniqueEvent() {
+        for value in 0..<eventCount {
+            let eMessage = errorMessage + String(Date().timeIntervalSince1970)
+            let event = EventModel(sdkName: sdkName,
+                                   sdkVersion: sdkVersion,
+                                   errorCode: errorCode,
+                                   errorMessage: eMessage,
+                                   count: 1,
+                                   isCritical: isCritical,
+                                   info: customInfo)
+            interactor.logEvent(event) { isFinished in
+                isLoggingInprogress = (eventCount == value)
+            }
+        }
     }
 }
 
