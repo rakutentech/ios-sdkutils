@@ -9,6 +9,9 @@ struct EventListView: View {
     }
 
     var body: some View {
+        VStack(alignment: .leading) {
+            Text("Total number of Unique Count: \(eventList.count)")
+        }
         List(eventList, id: \.self) { item in
             Text(item)
         }
