@@ -129,7 +129,6 @@ struct EventLoggerView: View {
                     Section {
                         Button(action: {
                             isLoggingInprogress = true
-                            hideKeyboard()
                             sendEvent()
                         }) {
                             Text(isCritical ? "Log Critical Event" : "Log Warning Event")
@@ -138,7 +137,6 @@ struct EventLoggerView: View {
 
                         Button(action: {
                             isLoggingInprogress = true
-                            hideKeyboard()
                             sendUniqueEvent()
                         }) {
                             Text("Log Unique Event")
