@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/rakutentech/ios-sdkutils.git", :tag => s.version.to_s }
   s.platforms    = { :ios => '12.0', :watchos => '6.0' }
   s.swift_versions = ['5.4', '5.5']
+  s.resources = ['Sources/Resources/PrivacyInfo.xcprivacy']
   s.requires_arc = true
   s.pod_target_xcconfig = {
     'CLANG_ENABLE_MODULES'                                  => 'YES',
