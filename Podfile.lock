@@ -1,15 +1,15 @@
 PODS:
   - Nimble (10.0.0)
   - Quick (5.0.1)
-  - RSDKUtils (4.0.0):
-    - RSDKUtils/Main (= 4.0.0)
-  - RSDKUtils/Main (4.0.0):
+  - RSDKUtils (4.0.2):
+    - RSDKUtils/Main (= 4.0.2)
+  - RSDKUtils/Main (4.0.2):
     - RSDKUtils/RLogger
-  - RSDKUtils/Nimble (4.0.0):
+  - RSDKUtils/Nimble (4.0.2):
     - Nimble
     - RSDKUtils/Main
-  - RSDKUtils/RLogger (4.0.0)
-  - RSDKUtils/TestHelpers (4.0.0):
+  - RSDKUtils/RLogger (4.0.2)
+  - RSDKUtils/TestHelpers (4.0.2):
     - RSDKUtils/Main
   - SwiftLint (0.51.0)
 
@@ -35,9 +35,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
-  RSDKUtils: e2a63eb729298706abe02e735436a2586c65e164
+  RSDKUtils: 52f4e68f63a2e5c1e8589456aabcf631ffacdccb
   SwiftLint: 1b7561918a19e23bfed960e40759086e70f4dba5
 
 PODFILE CHECKSUM: f6ba2f14867e1900fb90942ba329b080648b55b0
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.2
