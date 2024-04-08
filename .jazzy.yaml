@@ -1,7 +1,7 @@
 clean: true
 author: Rakuten Group, Inc.
 github_url: https://github.com/rakutentech/ios-sdkutils
-module_version: 4.0.2
+module_version: 4.1.0
 module: RSDKUtils
 xcodebuild_arguments:
   - -workspace

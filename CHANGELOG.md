@@ -1,5 +1,9 @@
 # **Changelog**
 
+#### 4.1.0 (2024-04-08)
+- Improve:
+    - Add Privacy Manifest File (SDKCF-6906)
+
 #### 4.0.2 (2023-08-29)
 - Fixes:
     - Set Quick and Nimble versions range in Package.swift (SDKCF-6742)
