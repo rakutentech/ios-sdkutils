@@ -7,7 +7,8 @@ import RSDKUtilsMain
 private enum BundleKeys {
     static let bundleIdentifier = "CFBundleIdentifier"
     static let shortVersion = "CFBundleShortVersionString"
-    static let displayName = "CFBundleDisplayName"
+    static let displayName = "CFBundleName"
+    static let bundleDisplayName = "CFBundleDisplayName"
     static let rmcBundleName = "RMC_RMC.bundle"
     static let rmcVersionsInfoList = "RmcInfo"
 }
@@ -25,7 +26,12 @@ final class REventLoggerEnvironment {
     }
 
     var appName: String {
-        bundle.value(for: BundleKeys.displayName) ?? bundle.valueNotFound
+        if let bundleDisplayName = bundle.value(for: BundleKeys.bundleDisplayName) {
+            return bundleDisplayName
+        } else if let bundleName = bundle.value(for: BundleKeys.displayName) {
+            return bundleName
+        }
+        else { return bundle.valueNotFound }
     }
 
     var appVersion: String {
