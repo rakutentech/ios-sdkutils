@@ -5,7 +5,7 @@
     - Retrieve Meta-data for Event Logger (SDKCF-6846)
     - Event Logger Public API & Manager Class (SDKCF-6845)
     - Add App Lifecycle Listener For Event Logger (SDKCF-6850)
-    - Update fetching App name logic (SDKCF-)
+    - Update fetching App name logic (SDKCF-6915)
 
 #### 4.0.2 (2023-08-29)
 - Fixes:
