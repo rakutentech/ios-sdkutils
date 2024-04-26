@@ -30,8 +30,7 @@ final class REventLoggerEnvironment {
             return bundleDisplayName
         } else if let bundleName = bundle.value(for: BundleKeys.displayName) {
             return bundleName
-        }
-        else { return bundle.valueNotFound }
+        } else { return bundle.valueNotFound }
     }
 
     var appVersion: String {
