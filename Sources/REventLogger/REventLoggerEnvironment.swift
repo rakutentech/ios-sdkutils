@@ -26,11 +26,7 @@ final class REventLoggerEnvironment {
     }
 
     var appName: String {
-        if let bundleDisplayName = bundle.value(for: BundleKeys.bundleDisplayName) {
-            return bundleDisplayName
-        } else if let bundleName = bundle.value(for: BundleKeys.displayName) {
-            return bundleName
-        } else { return bundle.valueNotFound }
+       return bundle.value(for: BundleKeys.bundleDisplayName) ?? bundle.value(for: BundleKeys.displayName) ?? bundle.valueNotFound
     }
 
     var appVersion: String {
