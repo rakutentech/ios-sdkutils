@@ -23,7 +23,7 @@ enum REventConstants {
     enum RequestHeaderKey {
         static let clientApiKey = "x-client-apikey"
     }
-    static let maxEventCount = 100
+    static let maxEventCount = 50
     static let ttlExpiryInMillis = 3600 * 1000 * 12
     static let ttlKey = "ttl_reference_time"
     static let retryDelayMS = 15 * 1000
