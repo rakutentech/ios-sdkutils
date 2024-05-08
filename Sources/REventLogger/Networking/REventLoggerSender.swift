@@ -46,19 +46,23 @@ final class REventLoggerSender: REventLoggerSendable, TaskSchedulable {
                                       wallDeadline: true) {
                         self.sendEvents(events: events, onCompletion: onCompletion)
                 }
-                self.retryAttempt = 0
                 return
             } else if let error = error {
                 onCompletion(.failure(error))
+                self.resetRetryCount()
                 return
             }
-
+            self.resetRetryCount()
             guard let responseData = data else {
                 onCompletion(.failure(RequestError.noData))
                 return
             }
             onCompletion(.success(responseData))
         }
+    }
+
+    private func resetRetryCount() {
+        self.retryAttempt = 0
     }
 }
 
