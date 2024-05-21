@@ -1,6 +1,8 @@
 # **Changelog**
 
 ## Unreleased
+
+#### 4.2.0 (2024-05-21)
 - Features:
     - Retrieve Meta-data for Event Logger (SDKCF-6846)
     - Event Logger Public API & Manager Class (SDKCF-6845)

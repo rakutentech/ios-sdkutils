@@ -1,4 +1,5 @@
 import Quick
+import UIKit
 import Nimble
 
 #if canImport(RSDKUtils)
