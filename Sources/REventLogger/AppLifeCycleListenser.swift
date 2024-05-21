@@ -1,5 +1,7 @@
 import Foundation
+#if os(iOS)
 import UIKit
+#endif
 
 protocol AppLifeCycleListener {
     var appBecameActiveObserver: (() -> Void)? { get set }
@@ -19,14 +21,18 @@ final class AppLifeCycleManager: AppLifeCycleListener {
     }
 
     private func startObserving() {
+        #if os(iOS)
         notificationCenter.addObserver(self,
                                        selector: #selector(applicationDidBecomeActive),
                                        name: UIApplication.didBecomeActiveNotification,
                                        object: nil)
+        #endif
     }
 
     private func stopObserving() {
+        #if os(iOS)
         notificationCenter.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
+        #endif
     }
 
     @objc func applicationDidBecomeActive() {
