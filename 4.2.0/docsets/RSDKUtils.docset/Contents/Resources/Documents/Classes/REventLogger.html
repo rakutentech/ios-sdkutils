@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>REventLogger Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/REventLogger" class="dashAnchor"></a>
+    <a title="REventLogger Class Reference"></a>
+    <header>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/version-select.css" />
+      <script src="../js/version-select.js" defer></script>
+      <script src="../../versions.js"></script>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RSDKUtils Docs</a></p>
+        <div class="version-dropdown">
+          <button onclick="toggleVersionSelect()" class="versionbtn">4.2.0 <i class="fa fa-caret-down"></i></button>
+          <div id="versions" class="version-dropdown-content"></div>
+        </div> 
+        <p class="header-right"><a href="https://github.com/rakutentech/ios-sdkutils"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RSDKUtils Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        REventLogger Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../changelog.html">CHANGELOG</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AnalyticsBroadcaster.html">AnalyticsBroadcaster</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnyDependenciesContainer.html">AnyDependenciesContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AtomicGetSet.html">AtomicGetSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EnvironmentInformation.html">EnvironmentInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyStore.html">KeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LockableObject.html">LockableObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/REventLogger.html">REventLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reachability.html">Reachability</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reachability/Connection.html">– Connection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reachability.html">Reachability</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reachability/Connection.html">– Connection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TypedDependencyManager.html">TypedDependencyManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TypedDependencyManager/ContainerElement.html">– ContainerElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/URLSessionMock.html">URLSessionMock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WeakWrapper.html">WeakWrapper</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/RLoggingLevel.html">RLoggingLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bundle.html">Bundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CharacterSet.html">CharacterSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Expectation.html">Expectation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSMutableURLRequest.html">NSMutableURLRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSNotification.html">NSNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSNotification/Name.html">– Name</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSObject.html">NSObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SCNetworkReachabilityFlags.html">SCNetworkReachabilityFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SCNetworkReachabilityFlags.html">SCNetworkReachabilityFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URLSession.html">URLSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:objc(cs)NSURLSessionTask">URLSessionTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/XCTestCase.html">XCTestCase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/XCTestCase.html">XCTestCase</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9RSDKUtils26elementsEqualOrderAgnosticy6Nimble9PredicateVyxGq_SgSlRzSlR_SQ7ElementRpzAHQy_AIRSr0_lF">elementsEqualOrderAgnostic(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BundleProtocol.html">BundleProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Lockable.html">Lockable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LockableResource.html">LockableResource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ReachabilityObserver.html">ReachabilityObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ReachabilityObserver.html">ReachabilityObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ReachabilityType.html">ReachabilityType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ReachabilityType.html">ReachabilityType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Sessionable.html">Sessionable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SwiftySessionable.html">SwiftySessionable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/URLSessionTaskable.html">URLSessionTaskable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/RLogger.html">RLogger</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>REventLogger</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">REventLogger</span></code></pre>
+
+                </div>
+              </div>
+            <p>Event Logger that sends the custom events to the Event Logger Service</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9RSDKUtils12REventLoggerC6sharedACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9RSDKUtils12REventLoggerC6sharedACvpZ">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Singleton shared instance of REventLogger</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">REventLogger</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9RSDKUtils12REventLoggerC9configure6apiKey0E3Url12onCompletionySSSg_AHySb_SStcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/configure(apiKey:apiUrl:onCompletion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9RSDKUtils12REventLoggerC9configure6apiKey0E3Url12onCompletionySSSg_AHySb_SStcSgtF">configure(apiKey:<wbr>apiUrl:<wbr>onCompletion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Function to configure the Event Logger</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                      <span class="nv">apiUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                      <span class="nv">onCompletion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>apiKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>your API Key</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>apiUrl</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a API Endpoint</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9RSDKUtils12REventLoggerC17sendCriticalEvent10sourceName0G7Version9errorCode0J7Message4infoySS_S3SSDyS2SGSgtF"></a>
+                    <a name="//apple_ref/swift/Method/sendCriticalEvent(sourceName:sourceVersion:errorCode:errorMessage:info:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9RSDKUtils12REventLoggerC17sendCriticalEvent10sourceName0G7Version9errorCode0J7Message4infoySS_S3SSDyS2SGSgtF">sendCriticalEvent(sourceName:<wbr>sourceVersion:<wbr>errorCode:<wbr>errorMessage:<wbr>info:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Logs the critical event
+This event will be considered as high priority and will be sent immediately</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendCriticalEvent</span><span class="p">(</span><span class="nv">sourceName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                              <span class="nv">sourceVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                              <span class="nv">errorCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                              <span class="nv">errorMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                              <span class="nv">info</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sourceName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source name of the event e.g App name or SDK name</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sourceVersion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Version of the source e.g v1.0.0</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>errorCode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Error code of the event, like custom error code or HTTP response error code</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>errorMessage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Description of the error message.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>info</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Any custom information. It&rsquo;s optional.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9RSDKUtils12REventLoggerC16sendWarningEvent10sourceName0G7Version9errorCode0J7Message4infoySS_S3SSDyS2SGSgtF"></a>
+                    <a name="//apple_ref/swift/Method/sendWarningEvent(sourceName:sourceVersion:errorCode:errorMessage:info:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9RSDKUtils12REventLoggerC16sendWarningEvent10sourceName0G7Version9errorCode0J7Message4infoySS_S3SSDyS2SGSgtF">sendWarningEvent(sourceName:<wbr>sourceVersion:<wbr>errorCode:<wbr>errorMessage:<wbr>info:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Logs the warning event
+This event will be considered as low priority and will be sent with batch update.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendWarningEvent</span><span class="p">(</span><span class="nv">sourceName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                             <span class="nv">sourceVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                             <span class="nv">errorCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                             <span class="nv">errorMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                             <span class="nv">info</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sourceName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Source name of the event e.g App name or SDK name</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sourceVersion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Version of the source e.g v1.0.0</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>errorCode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Error code of the event, like custom error code or HTTP response error code</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>errorMessage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Description of the error message.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>info</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Any custom information. It&rsquo;s optional.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2024 <a class="link" href="https://github.com/rakutentech/ios-sdkutils" target="_blank" rel="external noopener">Rakuten Group, Inc.</a>. All rights reserved. (Last updated: 2024-05-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.15.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
