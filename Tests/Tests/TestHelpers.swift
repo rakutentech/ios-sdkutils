@@ -7,10 +7,13 @@ import Foundation
 
 class BundleMock: BundleProtocol {
     var mockRASAppId: String?
+    var mockAppName: String?
     var mockBundleId: String?
     var mockBundleVersion: String?
     var mockDeviceModel: String?
     var mockOsVersion: String?
+    var mockDevicePlatform: String?
+    var mockDeviceBrand: String?
     var mockNotFound: String?
 
     func value(for key: String) -> String? {
@@ -21,6 +24,8 @@ class BundleMock: BundleProtocol {
             return mockBundleVersion
         case "RASApplicationIdentifier":
             return mockRASAppId
+        case "CFBundleDisplayName":
+            return mockAppName
         default:
             return nil
         }
@@ -40,5 +45,13 @@ class BundleMock: BundleProtocol {
 
     func sdkVersion() -> String {
         return mockBundleVersion ?? valueNotFound
+    }
+
+    func devicePlatform() -> String {
+        return mockDevicePlatform ?? valueNotFound
+    }
+
+    func deviceBrand() -> String {
+        return mockDeviceBrand ?? valueNotFound
     }
 }
