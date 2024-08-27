@@ -1,19 +1,29 @@
 PODS:
-  - Nimble (10.0.0)
+  - CwlCatchException (2.2.0):
+    - CwlCatchExceptionSupport (~> 2.2.0)
+  - CwlCatchExceptionSupport (2.2.0)
+  - CwlMachBadInstructionHandler (2.2.0)
+  - CwlPosixPreconditionTesting (2.2.0)
+  - CwlPreconditionTesting (2.2.1):
+    - CwlCatchException (~> 2.2.0)
+    - CwlMachBadInstructionHandler (~> 2.2.0)
+    - CwlPosixPreconditionTesting (~> 2.2.0)
+  - Nimble (13.3.0):
+    - CwlPreconditionTesting (~> 2.2.0)
   - Quick (5.0.1)
-  - RSDKUtils (4.2.0):
-    - RSDKUtils/Main (= 4.2.0)
-  - RSDKUtils/Main (4.2.0):
+  - RSDKUtils (4.2.0-sanpshot):
+    - RSDKUtils/Main (= 4.2.0-sanpshot)
+  - RSDKUtils/Main (4.2.0-sanpshot):
     - RSDKUtils/RLogger
-  - RSDKUtils/Nimble (4.2.0):
+  - RSDKUtils/Nimble (4.2.0-sanpshot):
     - Nimble
     - RSDKUtils/Main
-  - RSDKUtils/REventLogger (4.2.0):
+  - RSDKUtils/REventLogger (4.2.0-sanpshot):
     - RSDKUtils/Main
-  - RSDKUtils/RLogger (4.2.0)
-  - RSDKUtils/TestHelpers (4.2.0):
+  - RSDKUtils/RLogger (4.2.0-sanpshot)
+  - RSDKUtils/TestHelpers (4.2.0-sanpshot):
     - RSDKUtils/Main
-  - SwiftLint (0.51.0)
+  - SwiftLint (0.55.1)
 
 DEPENDENCIES:
   - Nimble
@@ -27,6 +37,11 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - CwlCatchException
+    - CwlCatchExceptionSupport
+    - CwlMachBadInstructionHandler
+    - CwlPosixPreconditionTesting
+    - CwlPreconditionTesting
     - Nimble
     - Quick
     - SwiftLint
@@ -36,11 +51,16 @@ EXTERNAL SOURCES:
     :path: "./RSDKUtils.podspec"
 
 SPEC CHECKSUMS:
-  Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
+  CwlCatchException: 51bf8319009a31104ea6f0568730d1ecc25b6454
+  CwlCatchExceptionSupport: 1345d6adb01a505933f2bc972dab60dcb9ce3e50
+  CwlMachBadInstructionHandler: ea1030428925d9bf340882522af30712fb4bf356
+  CwlPosixPreconditionTesting: a125dee731883f2582715f548c6b6c92c7fde145
+  CwlPreconditionTesting: ccfd08aca58d14e04062b2a3dd2fd52e09857453
+  Nimble: 3ac6c6b0b7e9835d1540b6507d8054b12a415536
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
-  RSDKUtils: 4ef7a283108a78e879f335c788d78bbd5699f907
-  SwiftLint: 1b7561918a19e23bfed960e40759086e70f4dba5
+  RSDKUtils: 5ea71ba3d42b66fb3ae8934161acdbeb275a3d59
+  SwiftLint: 3fe909719babe5537c552ee8181c0031392be933
 
-PODFILE CHECKSUM: 8a4402b65acba7b2f575d044fe019c2be6438d7e
+PODFILE CHECKSUM: 9f29c14487bce601194343a3e0b8304e001bdd2d
 
 COCOAPODS: 1.15.2

@@ -55,14 +55,14 @@ struct SwiftyDependenciesContainer<T: Equatable> {
 
     /// Returns an instance for a given type
     /// @warning Returns the first found instance for a given type
-    func resolve<T>(_ typeToResolve: T.Type) -> T? {
+    func resolve<U>(_ typeToResolve: U.Type) -> U? {
         let result = elements.first {
-            guard let element = $0 as? T else {
+            guard let element = $0 as? U else {
                 return false
             }
             return type(of: element) == typeToResolve
         }
 
-        return result as? T
+        return result as? U
     }
 }

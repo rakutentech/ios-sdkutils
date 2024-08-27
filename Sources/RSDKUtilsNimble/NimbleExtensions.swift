@@ -1,11 +1,11 @@
 import Foundation
 import Nimble
 
-public extension Expectation {
+public extension SyncExpectation {
 
     func toAfterTimeout(file: FileString = #file,
                         line: UInt = #line,
-                        _ predicate: Nimble.Predicate<T>,
+                        _ predicate: Nimble.Matcher<Value>,
                         timeout: TimeInterval = 1.0) {
 
         let timeForExecution: TimeInterval = 1.0
@@ -20,7 +20,7 @@ public extension Expectation {
 
     func toAfterTimeoutNot(file: FileString = #file,
                            line: UInt = #line,
-                           _ predicate: Nimble.Predicate<T>,
+                           _ predicate: Nimble.Matcher<Value>,
                            timeout: TimeInterval = 1.0) {
 
         let timeForExecution: TimeInterval = 1.0
@@ -33,7 +33,7 @@ public extension Expectation {
         }
     }
 
-    private func evaluateExpression() throws -> T? {
+    private func evaluateExpression() throws -> Value? {
         try self.expression.evaluate()
     }
 }
@@ -42,17 +42,17 @@ public extension Expectation {
 /// if they are not in the same order.
 public func elementsEqualOrderAgnostic<Col1: Collection, Col2: Collection>(
     _ expectedValue: Col2?
-) -> Nimble.Predicate<Col1> where Col1.Element: Equatable, Col1.Element == Col2.Element {
-    return Predicate.define("elementsEqualOrderAgnostic <\(stringify(expectedValue))>") { (actualExpression, msg) in
+) -> Nimble.Matcher<Col1> where Col1.Element: Equatable, Col1.Element == Col2.Element {
+    return Matcher.define("elementsEqualOrderAgnostic <\(stringify(expectedValue))>") { (actualExpression, msg) in
         let actualValue = try actualExpression.evaluate()
         switch (expectedValue, actualValue) {
         case (nil, _?):
-            return PredicateResult(status: .fail, message: msg.appendedBeNilHint())
+            return MatcherResult(status: .fail, message: msg.appendedBeNilHint())
         case (nil, nil), (_, nil):
-            return PredicateResult(status: .fail, message: msg)
+            return MatcherResult(status: .fail, message: msg)
         case (let expected?, let actual?):
             let matches = expected.count == actual.count && expected.allSatisfy { actual.contains($0) }
-            return PredicateResult(bool: matches, message: msg)
+            return MatcherResult(bool: matches, message: msg)
         }
     }
 }

@@ -15,7 +15,7 @@ public extension NSNotification.Name {
     /// - Parameter dataObject: Optional dictionary to pass in any other data to RAT.
     /// - Parameter customAccountNumber: When set, the event will be sent to this RAT account number instead of the one set in the app (optional).
     ///                                  The value should be a positive integer.
-    @objc public class func sendEventName(_ name: String, dataObject: [String: Any]? = nil, customAccountNumber: NSNumber? = nil) {
+    @objc public static func sendEventName(_ name: String, dataObject: [String: Any]? = nil, customAccountNumber: NSNumber? = nil) {
         var parameters: [String: Any] = ["eventName": name]
         if let dataObject = dataObject {
             parameters["eventData"] = dataObject
