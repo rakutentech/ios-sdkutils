@@ -1,7 +1,7 @@
 workspace 'RSDKUtils.xcworkspace'
 project 'RSDKUtils.xcodeproj'
 
-platform :ios, '12.0'
+platform :ios, '14.0'
 
 use_frameworks!
 
@@ -12,7 +12,7 @@ end
 
 target 'Tests' do
   pod 'Quick', '~> 5.0'
-  pod 'Nimble'
+  pod 'Nimble', '~> 12.0'
   pod 'SwiftLint', '~> 0.50'
   pod 'RSDKUtils', :path => './RSDKUtils.podspec'
   pod 'RSDKUtils/TestHelpers', :path => './RSDKUtils.podspec'

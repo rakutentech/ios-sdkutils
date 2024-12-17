@@ -86,9 +86,7 @@ public final class URLSessionMock: URLSession {
             }
             return "\"\(item.name)\": \"\(value)\""
         }.compactMap { $0 }
-        guard let jsonData = "{\(array.joined(separator: ","))}".data(using: .utf8) else {
-            return nil
-        }
+        let jsonData = Data("{\(array.joined(separator: ","))}".utf8)
         return try? JSONDecoder().decode(modelType.self, from: jsonData)
     }
 

@@ -157,7 +157,7 @@ final class URLSessionMockSpec: QuickSpec {
                                                            httpVersion: nil,
                                                            headerFields: nil)
                     let expectedError = NSError(domain: "mock.domain", code: 1234, userInfo: ["user": "info"])
-                    let expectedData = "data".data(using: .utf8)
+                    let expectedData = Data("data".utf8)
                     sessionMock.httpResponse = expectedResponse
                     sessionMock.responseError = expectedError
                     sessionMock.responseData = expectedData
@@ -200,9 +200,9 @@ final class URLSessionMockSpec: QuickSpec {
                 context("when calling decodeSentData()") {
 
                     it("should succeed if all expected parameters are present") {
-                        let jsonData = """
+                        let jsonData = Data("""
                         {"identifier":100, "isTest":true, "appVersion":"1.2.3", "sdkVersion":"0.0.5"}
-                        """.data(using: .utf8)!
+                        """.utf8)
 
                         var request = URLRequest(url: URL(string: "https://google.com")!)
                         request.httpBody = jsonData
@@ -221,9 +221,9 @@ final class URLSessionMockSpec: QuickSpec {
                     }
 
                     it("should succeed if there are optional parameters in the json") {
-                        let jsonData = """
+                        let jsonData = Data("""
                         {"identifier":100, "isTest":true, "appVersion":"1.2.3", "sdkVersion":"0.0.5", "locale":"pl"}
-                        """.data(using: .utf8)!
+                        """.utf8)
 
                         var request = URLRequest(url: URL(string: "https://google.com")!)
                         request.httpBody = jsonData
@@ -242,9 +242,9 @@ final class URLSessionMockSpec: QuickSpec {
                     }
 
                     it("should fail if not all expected parameters are present") {
-                        let jsonData = """
+                        let jsonData = Data("""
                         {"identifier":100, "isTest":true, "appVersion":"1.2.3"}
-                        """.data(using: .utf8)!
+                        """.utf8)
 
                         var request = URLRequest(url: URL(string: "https://google.com")!)
                         request.httpBody = jsonData
@@ -259,9 +259,9 @@ final class URLSessionMockSpec: QuickSpec {
                     }
 
                     it("should fail if parameter type does not match") {
-                        let jsonData = """
+                        let jsonData = Data("""
                         {"identifier":"id", "isTest":true, "appVersion":"1.2.3", "sdkVersion":"0.0.5"}
-                        """.data(using: .utf8)!
+                        """.utf8)
 
                         var request = URLRequest(url: URL(string: "https://google.com")!)
                         request.httpBody = jsonData
