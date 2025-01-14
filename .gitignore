@@ -12,6 +12,7 @@ xcuserdata
 *.playground
 build
 .build
+/.swiftpm
 !RSDKUtils-Package.xcworkspace
 
 # Cocoapods
