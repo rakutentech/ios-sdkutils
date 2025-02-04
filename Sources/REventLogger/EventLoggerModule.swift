@@ -87,8 +87,8 @@ final class REventLoggerModule {
     }
 
     func sendAllEventsInStorage(deleteOldEventsOnFailure: Bool = false) {
-        let eventsStorage = self.eventsStorage.getAllEvents()
-        let storedEvents = (ids: Array(eventsStorage.keys), events: Array(eventsStorage.values))
+        let events = self.eventsStorage.getAllEvents()
+        let storedEvents = (ids: Array(events.keys), events: Array(events.values))
         eventsSender.sendEvents(events: storedEvents.events) { result in
             switch result {
             case .success:
@@ -123,9 +123,8 @@ final class REventLoggerModule {
     private func checkEventsExpirationAndStorage() {
         loggerQueue.async { [weak self] in
             guard let self else { return }
-            if self.isTtlExpired() == true || self.eventsStorage.getEventCount() >= REventConstants.maxEventCount {
+            if self.isTtlExpired() || self.eventsStorage.getEventCount() >= REventConstants.maxEventCount {
                 self.sendAllEventsInStorage()
-                return
             }
         }
     }

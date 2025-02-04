@@ -20,7 +20,9 @@ public final class REventLogger {
     var configuration: EventLoggerConfiguration?
     private var isConfigured = false
 
-    private init() { }
+    private init() {
+        // This initializer is private to prevent instantiation.
+    }
 
     /// Function to configure the Event Logger
     /// - Parameters:
@@ -46,7 +48,6 @@ public final class REventLogger {
         isConfigured = true
         onCompletion?(true, "EventLogger is configured")
 
-        // TODO: Implement App Life cycle
         if eventLogger?.isTtlExpired() == true {
             eventLogger?.sendAllEventsInStorage()
         }
@@ -89,10 +90,10 @@ public final class REventLogger {
     }
 
     private func resolveDependency() -> TypedDependencyManager {
-        let dependencyManager = TypedDependencyManager()
-        let mainContainer = MainContainerFactory.create(dependencyManager: dependencyManager)
-        dependencyManager.appendContainer(mainContainer)
-        return dependencyManager
+        let manager = TypedDependencyManager()
+        let mainContainer = MainContainerFactory.create(dependencyManager: manager)
+        manager.appendContainer(mainContainer)
+        return manager
     }
 
     private func configureModules(dependencyManager: TypedDependencyManager) {
