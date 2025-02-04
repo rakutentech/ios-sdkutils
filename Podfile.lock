@@ -1,23 +1,26 @@
 PODS:
-  - Nimble (10.0.0)
+  - Nimble (12.0.1)
   - Quick (5.0.1)
-  - RSDKUtils (4.0.2):
-    - RSDKUtils/Main (= 4.0.2)
-  - RSDKUtils/Main (4.0.2):
+  - RSDKUtils (4.2.0-sanpshot):
+    - RSDKUtils/Main (= 4.2.0-sanpshot)
+  - RSDKUtils/Main (4.2.0-sanpshot):
     - RSDKUtils/RLogger
-  - RSDKUtils/Nimble (4.0.2):
+  - RSDKUtils/Nimble (4.2.0-sanpshot):
     - Nimble
     - RSDKUtils/Main
-  - RSDKUtils/RLogger (4.0.2)
-  - RSDKUtils/TestHelpers (4.0.2):
+  - RSDKUtils/REventLogger (4.2.0-sanpshot):
     - RSDKUtils/Main
-  - SwiftLint (0.51.0)
+  - RSDKUtils/RLogger (4.2.0-sanpshot)
+  - RSDKUtils/TestHelpers (4.2.0-sanpshot):
+    - RSDKUtils/Main
+  - SwiftLint (0.55.1)
 
 DEPENDENCIES:
-  - Nimble
+  - Nimble (~> 12.0)
   - Quick (~> 5.0)
   - RSDKUtils (from `./RSDKUtils.podspec`)
   - RSDKUtils/Nimble (from `./RSDKUtils.podspec`)
+  - RSDKUtils/REventLogger (from `./RSDKUtils.podspec`)
   - RSDKUtils/RLogger (from `./RSDKUtils.podspec`)
   - RSDKUtils/TestHelpers (from `./RSDKUtils.podspec`)
   - SwiftLint (~> 0.50)
@@ -33,11 +36,11 @@ EXTERNAL SOURCES:
     :path: "./RSDKUtils.podspec"
 
 SPEC CHECKSUMS:
-  Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
+  Nimble: b279b3ca9e094508778aab5c76417be158d3ad04
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
-  RSDKUtils: 52f4e68f63a2e5c1e8589456aabcf631ffacdccb
-  SwiftLint: 1b7561918a19e23bfed960e40759086e70f4dba5
+  RSDKUtils: 5ea71ba3d42b66fb3ae8934161acdbeb275a3d59
+  SwiftLint: 3fe909719babe5537c552ee8181c0031392be933
 
-PODFILE CHECKSUM: f6ba2f14867e1900fb90942ba329b080648b55b0
+PODFILE CHECKSUM: 9e64d5c93a55bc21549225402cc5218dd558e1db
 
 COCOAPODS: 1.15.2

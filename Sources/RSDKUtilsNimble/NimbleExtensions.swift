@@ -1,11 +1,11 @@
 import Foundation
 import Nimble
 
-public extension Expectation {
+public extension SyncExpectation {
 
     func toAfterTimeout(file: FileString = #file,
                         line: UInt = #line,
-                        _ predicate: Nimble.Predicate<T>,
+                        _ predicate: Nimble.Predicate<Value>,
                         timeout: TimeInterval = 1.0) {
 
         let timeForExecution: TimeInterval = 1.0
@@ -20,7 +20,7 @@ public extension Expectation {
 
     func toAfterTimeoutNot(file: FileString = #file,
                            line: UInt = #line,
-                           _ predicate: Nimble.Predicate<T>,
+                           _ predicate: Nimble.Predicate<Value>,
                            timeout: TimeInterval = 1.0) {
 
         let timeForExecution: TimeInterval = 1.0
@@ -33,12 +33,12 @@ public extension Expectation {
         }
     }
 
-    private func evaluateExpression() throws -> T? {
+    private func evaluateExpression() throws -> Value? {
         try self.expression.evaluate()
     }
 }
 
-/// A Nimble matcher that succeeds when the actual sequence and the exepected sequence contain the same elements even
+/// A Nimble Predicate that succeeds when the actual sequence and the exepected sequence contain the same elements even
 /// if they are not in the same order.
 public func elementsEqualOrderAgnostic<Col1: Collection, Col2: Collection>(
     _ expectedValue: Col2?

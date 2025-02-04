@@ -72,5 +72,41 @@ platform :ios do
       )
     end
   end
+
+  desc "Archive Sample app"
+  lane :archive do
+    cocoapods(repo_update: ENV['REM_FL_CP_REPO_UPDATE'] || false)
+
+    config_url = ENV['REVENT_LOGGER_CONFIG_URL'] || 'http://localhost:6789/config'
+    api_key = ENV['REVENT_LOGGER_API_KEY']
+
+    xcodebuild(
+      archive: true,
+      archive_path: "./artifacts/RSDKUtilsSample.xcarchive",
+      scheme: ENV['REM_FL_SAMPLE_SCHEME'],
+      workspace: ENV['REM_FL_SAMPLE_WORKSPACE'],
+      xcargs: "CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO ENABLE_BITCODE=NO REvent_Logger_API_Key=#{api_key} REvent_Logger_API_Endpoint=#{config_url}",
+    )
+  end
+
+  desc "Create and sign ipa from generated xcarchive artifact"
+  lane :create_ipa do |options|
+    gym(
+      skip_build_archive: true,
+      export_team_id: options[:export_team_id] || ENV['REM_FL_EXPORT_TEAM_ID'],
+      output_directory: "./artifacts",
+      include_symbols: true,
+      scheme: ENV['REM_FL_SAMPLE_SCHEME'],
+      workspace: ENV['REM_FL_SAMPLE_WORKSPACE'],
+      output_name: "RSDKUtilsSample.ipa",
+      archive_path: "./artifacts/RSDKUtilsSample.xcarchive",
+      export_options: {
+        method: options[:export_method] || "ad-hoc",
+        provisioningProfiles: {
+          "jp.co.rakuten.rsdkutils.sample" => options[:provisioning_profile]
+        }
+      },
+    )
+  end
 end
 # vim:syntax=ruby:et:sts=2:sw=2:ts=2:ff=unix:
