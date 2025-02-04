@@ -1,6 +1,12 @@
 # **Changelog**
 
-## Unreleased
+#### 5.0.0 (2025-02-24)
+- Features:
+    - Update min iOS support version to iOS 14
+
+#### 4.3.0 (2024-08-27)
+- Features:
+    - Update Nimble version to 12.0 in pod file
 
 #### 4.2.0 (2024-05-21)
 - Features:

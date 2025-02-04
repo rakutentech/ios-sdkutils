@@ -13,15 +13,15 @@ RSDKUtils consists of 4 sub-modules:
 * *RLogger* - A tool for managing your log messages.
 
 This module supports the following operating systems:
-* iOS 12.0 and above (including extension contexts)
+* iOS 14.0 and above (including extension contexts)
 * watchOS 6.0 and above
-* macOS 10.13 and above
+* macOS 12.5 and above
 
-This module has been tested with iOS 12.0 and above.
+This module has been tested with iOS 14.0 and above.
 
 # **Requirements**
 
-Xcode 12.5.x or Xcode 13+
+Xcode 14+
 
 Swift >= 5.4 is supported.
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RSDKUtils"
-  s.version      = "4.2.0-sanpshot"
+  s.version      = "5.0.0"
   s.authors      = "Rakuten Ecosystem Mobile"
   s.summary      = "Rakuten's SDK Team internal utilities module."
   s.homepage     = "https://github.com/rakutentech/ios-sdkutils"
