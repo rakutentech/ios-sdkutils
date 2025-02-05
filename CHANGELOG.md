@@ -1,6 +1,9 @@
 # **Changelog**
 
-#### 5.0.0 (2025-02-24)
+#### 5.1.0 (2025-02-05)
+    - Version change to support spm
+    
+#### 5.0.0 (2025-02-04)
 - Features:
     - Update min iOS support version to iOS 14
 
