@@ -61,8 +61,26 @@ final class REventLoggerEnvironment {
     }
 
     private func getRMCSDKsVersion() -> [String: String]? {
-        guard let path = Bundle.rmcBundle?.path(forResource: BundleKeys.rmcVersionsInfoList, ofType: "plist") else { return nil }
-        return NSDictionary(contentsOfFile: path) as? [String: String]
+        guard let path = Bundle.rmcBundle?.path(forResource: BundleKeys.rmcVersionsInfoList, ofType: "plist") else {
+            return nil
+        }
+        let url = URL(fileURLWithPath: path)
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = PropertyListDecoder()
+            let versions = try decoder.decode(RMCSDKVersions.self, from: data)
+
+            let stringDictionary: [String: String] = [
+                "rmcSdkVersion": versions.rmcSdkVersion,
+                "rmcInAppMessagingSdkVersion": versions.rmcInAppMessagingSdkVersion,
+                "rmcAppblocksSdkVersion": versions.rmcAppblocksSdkVersion,
+                "rmcPushSdkVersion": versions.rmcPushSdkVersion
+            ]
+            return stringDictionary
+        } catch {
+            Logger.debug("❌ Error decoding RmcInfo.plist: \(error)")
+            return nil
+        }
     }
 }
 
