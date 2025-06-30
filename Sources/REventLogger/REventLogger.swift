@@ -65,9 +65,10 @@ public final class REventLogger {
                                   sourceVersion: String,
                                   errorCode: String,
                                   errorMessage: String,
-                                  info: [String: String]? = nil) {
+                                  info: [String: String]? = nil,
+                                  completion: (() -> Void?)? = nil) {
         if isConfigured {
-            eventLogger?.logEvent(EventType.critical, sourceName, sourceVersion, errorCode, errorMessage, info)
+            eventLogger?.logEvent(EventType.critical, sourceName, sourceVersion, errorCode, errorMessage, info, completion)
         }
     }
 
@@ -83,9 +84,10 @@ public final class REventLogger {
                                  sourceVersion: String,
                                  errorCode: String,
                                  errorMessage: String,
-                                 info: [String: String]? = nil) {
+                                 info: [String: String]? = nil,
+                                 completion: (() -> Void?)? = nil) {
         if isConfigured {
-            eventLogger?.logEvent(EventType.warning, sourceName, sourceVersion, errorCode, errorMessage, info)
+            eventLogger?.logEvent(EventType.warning, sourceName, sourceVersion, errorCode, errorMessage, info, completion)
         }
     }
 

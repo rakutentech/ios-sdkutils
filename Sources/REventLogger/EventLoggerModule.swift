@@ -35,7 +35,8 @@ final class REventLoggerModule {
                   _ sourceVersion: String,
                   _ errorCode: String,
                   _ errorMessage: String,
-                  _ info: [String: String]?) {
+                  _ info: [String: String]?,
+                  _ completion: (() -> Void?)? = nil) {
 
         if !isEventValid(sourceName, sourceVersion, errorCode, errorMessage) {
             Logger.debug("Event Logger event contains an empty parameter")
@@ -57,22 +58,22 @@ final class REventLoggerModule {
                 event.updateOccurrenceCount()
             }
             self?.eventsStorage.insertOrUpdateEvent(eventId, event: event)
-            self?.sendEventIfNeeded(eventType, eventId, event, isNewEvent)
+            self?.sendEventIfNeeded(eventType, eventId, event, isNewEvent, completion)
         }
     }
 
-    func sendEventIfNeeded(_ eventType: EventType, _ eventId: String, _ event: REvent, _ isNewEvent: Bool, maxEventCount: Int = REventConstants.maxEventCount) {
+    func sendEventIfNeeded(_ eventType: EventType, _ eventId: String, _ event: REvent, _ isNewEvent: Bool, maxEventCount: Int = REventConstants.maxEventCount, _ completion: (() -> Void?)? = nil) {
         // If full, send all of the events
         if eventsStorage.getEventCount() >= maxEventCount {
             sendAllEventsInStorage(deleteOldEventsOnFailure: isNewEvent)
             return
         }
         if isNewEvent && eventType == .critical {
-            sendCriticalEvent(eventId, event)
+            sendCriticalEvent(eventId, event, completion: completion)
         }
     }
 
-    func sendCriticalEvent(_ eventId: String, _ event: REvent) {
+    func sendCriticalEvent(_ eventId: String, _ event: REvent, completion: (() -> Void?)? = nil) {
         // Send the unique critical event immediately, and convert it to a warning type to prevent multiple alerts in server
         var criticalEvent = event
         eventsSender.sendEvents(events: [criticalEvent]) { result in
@@ -83,6 +84,7 @@ final class REventLoggerModule {
             case .failure(let error):
                 Logger.debug(error)
             }
+            completion?()
         }
     }
 
