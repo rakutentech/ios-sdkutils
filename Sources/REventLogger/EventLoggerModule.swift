@@ -56,7 +56,7 @@ final class REventLoggerModule {
             }
             self.eventsStorage.insertOrUpdateEvent(eventId, event: event)
             // Don't send events if it's app extension
-            guard self.appBundle.isAppExtension else {
+            guard !self.appBundle.isAppExtension else {
                 return
             }
             self.sendEventIfNeeded(eventType, eventId, event, isNewEvent, completion)
