@@ -1,7 +1,5 @@
 import Foundation
-#if canImport(RSDKUtils)
-import RSDKUtils // Cocoapods version
-#else
+#if canImport(RSDKUtilsMain)
 import RSDKUtilsMain
 #endif
 
@@ -10,7 +8,7 @@ internal enum MainContainerFactory {
 
     private typealias ContainerElement = TypedDependencyManager.ContainerElement
 
-    static func create(dependencyManager manager: TypedDependencyManager) -> TypedDependencyManager.Container {
+    static func create(dependencyManager manager: TypedDependencyManager, appGroupId: String?) -> TypedDependencyManager.Container {
 
         let elements = [
             ContainerElement(type: NetworkManager.self, factory: {
@@ -20,7 +18,12 @@ internal enum MainContainerFactory {
                 REventLoggerSender(networkManager: manager.resolve(type: NetworkManager.self )!)
             }),
             ContainerElement(type: REventDataCacheable.self, factory: {
-                REventsStorage(userDefaults: UserDefaults(suiteName: "group." + REventLoggerEnvironment().appId) ?? UserDefaults.standard)
+                var userDefaults = UserDefaults.standard
+                if let appGroupId,
+                    let sharedUserdefaults = UserDefaults(suiteName: appGroupId) {
+                    userDefaults = sharedUserdefaults
+                }
+                return REventsStorage(userDefaults: userDefaults)
             }),
             ContainerElement(type: REventExpirationCacheable.self, factory: { EventLoggerCache(ttlStorage: UserDefaults.standard)
             }),

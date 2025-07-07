@@ -2,8 +2,6 @@ import Foundation
 
 #if SWIFT_PACKAGE
 import class RSDKUtilsMain.AtomicGetSet
-#else
-import class RSDKUtils.AtomicGetSet
 #endif
 
 protocol REventDataCacheable {

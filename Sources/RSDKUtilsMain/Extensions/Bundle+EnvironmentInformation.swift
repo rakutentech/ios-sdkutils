@@ -14,6 +14,7 @@ import WatchKit
     func sdkVersion() -> String
     func devicePlatform() -> String
     func deviceBrand() -> String
+    var bundleURL: URL { get }
 }
 
 extension Bundle: BundleProtocol {
@@ -140,9 +141,5 @@ public extension Bundle {
 
     static func frameworkBundle(bundleIdPhrase: String) -> Bundle? {
         allFrameworks.first(where: { $0.bundleIdentifier?.contains(bundleIdPhrase) == true })
-    }
-
-    var isAppExtension: Bool {
-        bundleURL.pathExtension == "appex"
     }
 }

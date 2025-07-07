@@ -99,7 +99,7 @@ class REventLoggerModuleSpec: QuickSpec {
             context("configure method") {
                 it("will configure the api key and api url if valid value is sent") {
                     eventLoggerModule.configure(apiConfiguration: EventLoggerConfiguration(apiKey: REventLoggerMockData.apiKey,
-                                                                                           apiUrl: REventLoggerMockData.apiUrl))
+                                                                                           apiUrl: REventLoggerMockData.apiUrl, appGroupId: nil))
                     expect(mockEventsSender.didConfigure).to(beTrue())
                 }
                 it("will not configure api Key and url if valid values is not sent") {

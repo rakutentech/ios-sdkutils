@@ -60,6 +60,10 @@ final class REventLoggerEnvironment {
         return rmcSDKsVersion
     }
 
+    var isAppExtension: Bool {
+        bundle.bundleURL.pathExtension == "appex"
+    }
+
     private func getRMCSDKsVersion() -> [String: String]? {
         guard let path = Bundle.rmcBundle?.path(forResource: BundleKeys.rmcVersionsInfoList, ofType: "plist") else {
             return nil
