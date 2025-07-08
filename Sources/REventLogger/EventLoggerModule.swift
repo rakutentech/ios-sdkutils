@@ -5,18 +5,19 @@ final class REventLoggerModule {
     private let eventsSender: REventLoggerSendable
     private let eventsCache: REventExpirationCacheable
     private var appLifeCycleListener: AppLifeCycleListener
-    private var appBundle: REventLoggerEnvironment
+    private let appBundle: REventLoggerEnvironment
     private let loggerQueue = DispatchQueue(label: "eventLogger", qos: .utility)
 
     init(eventsStorage: REventDataCacheable,
          eventsSender: REventLoggerSendable,
          eventsCache: REventExpirationCacheable,
-         appLifeCycleListener: AppLifeCycleListener) {
+         appLifeCycleListener: AppLifeCycleListener,
+         appBundle: REventLoggerEnvironment) {
         self.eventsStorage = eventsStorage
         self.eventsSender = eventsSender
         self.eventsCache = eventsCache
         self.appLifeCycleListener = appLifeCycleListener
-        self.appBundle = REventLoggerEnvironment()
+        self.appBundle = appBundle
         self.appLifeCycleListener.appBecameActiveObserver = { [weak self] in
             self?.checkEventsExpirationAndStorage()
         }

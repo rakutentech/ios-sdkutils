@@ -29,6 +29,9 @@ internal enum MainContainerFactory {
             }),
             ContainerElement(type: AppLifeCycleListener.self, factory: {
                 AppLifeCycleManager()
+            }),
+            ContainerElement(type: REventLoggerEnvironment.self, factory: {
+                REventLoggerEnvironment()
             })
         ]
         return TypedDependencyManager.Container(elements)
