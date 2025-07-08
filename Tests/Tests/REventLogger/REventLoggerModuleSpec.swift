@@ -26,7 +26,7 @@ class REventLoggerModuleSpec: QuickSpec {
                 eventLoggerModule = REventLoggerModule(eventsStorage: mockEventStorage,
                                                        eventsSender: mockEventsSender,
                                                        eventsCache: mockEventsCache,
-                                                       appLifeCycleListener: mockAppLifeCycleListener)
+                                                       appLifeCycleListener: mockAppLifeCycleListener, appBundle: REventLoggerEnvironment())
             }
             context("isEventValid method") {
                 it("will return true for a valid event") {
