@@ -1,14 +1,13 @@
 import Foundation
 
-#if canImport(RSDKUtils)
-import RSDKUtils // Cocoapods version
-#else
+#if canImport(RSDKUtilsMain)
 import RSDKUtilsMain
 #endif
 
 struct EventLoggerConfiguration {
     let apiKey: String
     let apiUrl: String
+    let appGroupId: String?
 }
 
 /// Event Logger that sends the custom events to the Event Logger Service
@@ -30,6 +29,7 @@ public final class REventLogger {
     ///   - apiUrl: a API Endpoint
     public func configure(apiKey: String?,
                           apiUrl: String?,
+                          appGroupId: String?,
                           onCompletion: ((Bool, String) -> Void)? = nil) {
         guard configuration == nil else {
             Logger.debug("EventLogger is already configured")
@@ -42,7 +42,7 @@ public final class REventLogger {
             return
         }
 
-        configuration = EventLoggerConfiguration(apiKey: apiKey, apiUrl: apiUrl)
+        configuration = EventLoggerConfiguration(apiKey: apiKey, apiUrl: apiUrl, appGroupId: appGroupId)
         configureModules(dependencyManager: resolveDependency())
         eventLogger?.configure(apiConfiguration: configuration)
         isConfigured = true
@@ -93,7 +93,7 @@ public final class REventLogger {
 
     private func resolveDependency() -> TypedDependencyManager {
         let manager = TypedDependencyManager()
-        let mainContainer = MainContainerFactory.create(dependencyManager: manager)
+        let mainContainer = MainContainerFactory.create(dependencyManager: manager, appGroupId: configuration?.appGroupId)
         manager.appendContainer(mainContainer)
         return manager
     }
@@ -103,7 +103,8 @@ public final class REventLogger {
         guard let dataStorage = dependencyManager.resolve(type: REventDataCacheable.self),
               let eventsSender = dependencyManager.resolve(type: REventLoggerSendable.self),
               let eventsCache = dependencyManager.resolve(type: REventExpirationCacheable.self),
-              let appLifeCycleManager = dependencyManager.resolve(type: AppLifeCycleListener.self)
+              let appLifeCycleManager = dependencyManager.resolve(type: AppLifeCycleListener.self),
+              let appBundle = dependencyManager.resolve(type: REventLoggerEnvironment.self)
         else {
             Logger.debug("❌ Unable to resolve dependencies of EventLogger")
             return
@@ -111,6 +112,7 @@ public final class REventLogger {
         eventLogger = REventLoggerModule(eventsStorage: dataStorage,
                                          eventsSender: eventsSender,
                                          eventsCache: eventsCache,
-                                         appLifeCycleListener: appLifeCycleManager)
+                                         appLifeCycleListener: appLifeCycleManager,
+                                         appBundle: appBundle)
     }
 }

@@ -6,6 +6,7 @@ import Foundation
 #endif
 
 class BundleMock: BundleProtocol {
+    var bundleURL: URL = URL(string: "mock-bundle-url")!
     var mockRASAppId: String?
     var mockAppName: String?
     var mockBundleId: String?

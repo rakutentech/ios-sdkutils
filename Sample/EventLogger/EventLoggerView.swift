@@ -47,7 +47,7 @@ struct EventLoggerView: View {
     init(interactor: EventLogging) {
         self.interactor = interactor
         let appConfig = interactor.getConfiguration()
-        REventLogger.shared.configure(apiKey: appConfig.apiKey, apiUrl: appConfig.apiEndpoint)
+        REventLogger.shared.configure(apiKey: appConfig.apiKey, apiUrl: appConfig.apiEndpoint, appGroupId: nil)
     }
 
     var body: some View {

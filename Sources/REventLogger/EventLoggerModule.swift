@@ -1,26 +1,23 @@
 import Foundation
 
-#if SWIFT_PACKAGE
-import RSDKUtilsMain
-#else
-import RSDKUtils
-#endif
-
 final class REventLoggerModule {
     private let eventsStorage: REventDataCacheable
     private let eventsSender: REventLoggerSendable
     private let eventsCache: REventExpirationCacheable
     private var appLifeCycleListener: AppLifeCycleListener
+    private let appBundle: REventLoggerEnvironment
     private let loggerQueue = DispatchQueue(label: "eventLogger", qos: .utility)
 
     init(eventsStorage: REventDataCacheable,
          eventsSender: REventLoggerSendable,
          eventsCache: REventExpirationCacheable,
-         appLifeCycleListener: AppLifeCycleListener) {
+         appLifeCycleListener: AppLifeCycleListener,
+         appBundle: REventLoggerEnvironment) {
         self.eventsStorage = eventsStorage
         self.eventsSender = eventsSender
         self.eventsCache = eventsCache
         self.appLifeCycleListener = appLifeCycleListener
+        self.appBundle = appBundle
         self.appLifeCycleListener.appBecameActiveObserver = { [weak self] in
             self?.checkEventsExpirationAndStorage()
         }
@@ -45,6 +42,7 @@ final class REventLoggerModule {
         var isNewEvent = true
 
         loggerQueue.async { [weak self] in
+            guard let self else { return }
             var event = REvent(eventType,
                                sourceName: sourceName,
                                sourceVersion: sourceVersion,
@@ -52,13 +50,17 @@ final class REventLoggerModule {
                                errorMessage: errorMessage,
                                info: info)
             let eventId = event.eventId
-            if let storedEvent = self?.eventsStorage.retrieveEvent(eventId) {
+            if let storedEvent = self.eventsStorage.retrieveEvent(eventId) {
                 isNewEvent = false
                 event = storedEvent
                 event.updateOccurrenceCount()
             }
-            self?.eventsStorage.insertOrUpdateEvent(eventId, event: event)
-            self?.sendEventIfNeeded(eventType, eventId, event, isNewEvent, completion)
+            self.eventsStorage.insertOrUpdateEvent(eventId, event: event)
+            // Don't send events if it's app extension
+            guard !self.appBundle.isAppExtension else {
+                return
+            }
+            self.sendEventIfNeeded(eventType, eventId, event, isNewEvent, completion)
         }
     }
 

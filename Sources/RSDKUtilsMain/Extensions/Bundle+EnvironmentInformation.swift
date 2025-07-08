@@ -14,6 +14,7 @@ import WatchKit
     func sdkVersion() -> String
     func devicePlatform() -> String
     func deviceBrand() -> String
+    var bundleURL: URL { get }
 }
 
 extension Bundle: BundleProtocol {
