@@ -39,10 +39,21 @@ final class REventLoggerModule {
             Logger.debug("Event Logger event contains an empty parameter")
             return
         }
-        var isNewEvent = true
-
+        typealias InsertEventResult = (event: REvent, isNewEvent: Bool)
+        // Don't send events immediately if it's app extension(specifically for notification extension)
+        guard !self.appBundle.isAppExtension else {
+            insertEvent()
+            return
+        }
         loggerQueue.async { [weak self] in
             guard let self else { return }
+            let insertedEvent: InsertEventResult = insertEvent()
+            self.sendEventIfNeeded(eventType, insertedEvent.event.eventId, insertedEvent.event, insertedEvent.isNewEvent, completion)
+        }
+
+        @discardableResult
+        func insertEvent() -> InsertEventResult {
+            var isNewEvent = true
             var event = REvent(eventType,
                                sourceName: sourceName,
                                sourceVersion: sourceVersion,
@@ -56,11 +67,7 @@ final class REventLoggerModule {
                 event.updateOccurrenceCount()
             }
             self.eventsStorage.insertOrUpdateEvent(eventId, event: event)
-            // Don't send events if it's app extension
-            guard !self.appBundle.isAppExtension else {
-                return
-            }
-            self.sendEventIfNeeded(eventType, eventId, event, isNewEvent, completion)
+            return (event, isNewEvent)
         }
     }
 
