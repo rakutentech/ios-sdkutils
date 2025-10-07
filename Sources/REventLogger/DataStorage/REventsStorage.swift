@@ -22,6 +22,10 @@ final class REventsStorage: REventDataCacheable {
 
     init(userDefaults: UserDefaults) {
         self.userDefaults = userDefaults
+        updateCachedContainer()
+    }
+
+    private func updateCachedContainer() {
         if let persistedData = userDefaults.object(forKey: persistedDataKey) as? Data,
            let decodedData = try? JSONDecoder().decode(CacheContainer.self, from: persistedData) {
             cachedContainer = decodedData
@@ -29,6 +33,7 @@ final class REventsStorage: REventDataCacheable {
     }
 
     func getAllEvents() -> [String: REvent] {
+        updateCachedContainer()
         return cachedContainer
     }
 
