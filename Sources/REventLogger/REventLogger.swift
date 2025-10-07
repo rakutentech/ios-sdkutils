@@ -47,10 +47,6 @@ public final class REventLogger {
         eventLogger?.configure(apiConfiguration: configuration)
         isConfigured = true
         onCompletion?(true, "EventLogger is configured")
-
-        if eventLogger?.isTtlExpired() == true {
-            eventLogger?.sendAllEventsInStorage()
-        }
     }
 
     /// Logs the critical event
