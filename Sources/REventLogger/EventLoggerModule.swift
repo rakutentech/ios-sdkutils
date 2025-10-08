@@ -89,6 +89,7 @@ final class REventLoggerModule {
     func sendAllEventsInStorage(deleteOldEventsOnFailure: Bool = false) {
         let events = self.eventsStorage.getAllEvents()
         let storedEvents = (ids: Array(events.keys), events: Array(events.values))
+        guard storedEvents.events.count != 0 else { return }
         eventsSender.sendEvents(events: storedEvents.events) { result in
             switch result {
             case .success:
